@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.foreman img{
+    width: 69px;
+    height: 69px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.v2{
+    border-right: 1px dashed #00a53e;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    margin-left: -540px;
+    top: 15px;
+}
+
+.foreman h3{
+    font-size: 15px;
+    margin-left: 120px;
+    margin-top: -60px;
+    margin-bottom: 0px;
+}
+
+.header span{
+    font-size: 15px;
+    margin-left: 120px;
+   
+}
+
+.Logout{
+    margin-left: 1170px;
+    margin-top: -45px;
+}
+
+.Logout .head1{
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: -15px;
+}
+
+.foremantable h3{
+    margin-top: 90px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.foremantable{
+    font-size: 15px;
+    border-bottom: 1px solid #00a53e;
+    padding-bottom: 5px;
+    margin: 0 0px;
+    margin-top: -10px;
+}
+
+/********************************** Table *************************************************************/
+
+.App .tab{
+    width: 98%;
+    margin-left: 12px;
+    height: 40vh;
+}
+
+
+
+.App{
+    margin-top: 20px;
+}
+/*****************************************************************Foremanpage**************************************/
+
+
+.CardReference h3 {
+    font-size: 18px;
+  }
+  
+  .CardReference {
+    margin-top: 80px;
+    margin-left: 5px;
+  }
+  
+  .CardReference .loc {
+  
+      text-align: end;
+      margin-right: 15px;
+      /* margin-bottom: -17px; */
+      margin-top: -20px;
+  }
+
+  .line{
+  
+    border-bottom: 1px solid #00a53e;
+    padding-bottom: 5px;
+    margin: 0 0px;
+    margin-top: 15px;
+  }
+
+
+   p{
+    margin-left: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .tabular .start{
+    background-color: rgb(168, 249, 249)   ;
+  }
+
+  .tabular .End{
+    background-color: pink;
+  }
+
+  .datatable .tabular{
+    margin-top: 15px;
+  }
+
+  .chckbox .column{
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+  }
