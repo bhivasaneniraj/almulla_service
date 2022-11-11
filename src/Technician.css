@@ -1,0 +1,86 @@
+.foreman_class img{
+    width: 69px;
+    height: 69px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.v2{
+    border-right: 1px dashed #00a53e;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    margin-left: -540px;
+    top: 15px;
+}
+
+.foreman_class h3{
+    font-size: 15px;
+    margin-left: 120px;
+    margin-top: -60px;
+    margin-bottom: 0px;
+}
+
+.header_class span{
+    font-size: 15px;
+    margin-left: 120px;
+   
+}
+
+.Logout_class   {
+    margin-left: 1170px;
+    margin-top: -45px;
+}
+
+.Logout_class .head2{
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: -15px;
+}
+
+
+.foremantable_class h3{
+    margin-top: 90px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+
+.foremantable_class{
+    font-size: 15px;
+    border-bottom: 1px solid #00a53e;
+    padding-bottom: 5px;
+    margin: 0 0px;
+    margin-top: -10px;
+}
+
+
+/*********************************** Table *************************************************************/
+
+
+.App_class .tab_class{
+    width: 98%;
+    margin-left: 12px;
+    height: 40vh;
+    border-spacing: 2px 3px;
+    border-collapse: separate;
+    text-align: left;
+}
+
+.App_class{
+    margin-top: 20px;
+}
+
+.col_tabclass .new_jordcard{
+    width: 60%;
+    text-align: left;
+   
+}
+
+.col_tabclass th{
+    text-align: left;
+}
+
+.tabData td{
+    text-align: left;
+}

@@ -67,12 +67,23 @@
     width: 98%;
     margin-left: 12px;
     height: 40vh;
+    border-spacing: 2px 4px;
+    border-collapse: separate;
 }
 
 
 
 .App{
     margin-top: 20px;
+}
+
+
+.col_tab th{
+  text-align: left;
+}
+
+.dta td{
+  text-align: left;
 }
 /*****************************************************************Foremanpage**************************************/
 
@@ -83,7 +94,7 @@
   
   .CardReference {
     margin-top: 80px;
-    margin-left: 5px;
+    margin-left: 17px;
   }
   
   .CardReference .loc {
@@ -119,6 +130,8 @@
 
   .datatable .tabular{
     margin-top: 15px;
+    border-spacing: 2px 1px;
+    border-collapse: separate;
   }
 
   .chckbox .column{
@@ -129,3 +142,94 @@
     margin-bottom: 5px;
     margin-top: 30px;
   }
+
+  .chckbox h2{
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+  }
+
+
+  .tabular{
+    margin: 20px 0;
+    font-size: 18px;
+    margin: auto;
+    width: 97vw;
+    margin: 15px;
+  }
+
+  .paragraph{
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 17px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+  }
+
+.chckbox img{
+    width: 35vh;
+    /* margin-left: 0px; */
+    margin-top: 20px;
+}
+
+
+/*Foremanpage Table *************************************************************************************************************************/
+
+
+.chckbox .checktable_class{
+  width: 198vh;
+  /* top: 6%; */
+  margin-top: -125px;
+  margin-left: 222px;
+}
+  
+
+
+
+
+.checktable_class td{
+  text-align: left;
+}
+
+.checktable_class .click{
+  height: 3vh;
+  width: 20%;
+}
+
+.checktable_class label{
+  margin-left: 12px;
+}
+
+.checktable_class label p{
+  text-align: center;
+  margin-right: 18px;
+  margin-left: 0px;
+}
+
+.checktable_class label .damaged{
+ 
+  margin: auto;
+}
+
+.checktable_class label .guard{
+
+  margin: auto;
+}
+
+.checktable_class label .Broken{
+  margin: auto;
+}
+
+.checktable_class label .screen{
+  margin: auto;
+}
+
+
+.checktable_class{
+  border-collapse: separate;
+  border-spacing: 2px;
+}

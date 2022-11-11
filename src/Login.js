@@ -38,7 +38,7 @@ function Login() {
         <div className="images">
         <img
               className="image1"
-              src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Al_Mulla_Group_Logo.svg/1200px-Al_Mulla_Group_Logo.svg.png"
+              src="/images/bitmap@2x.png"
               alt="example"
             />
             <h3><b>Al-Mulla Industrial Service Mobile Solutions</b></h3>

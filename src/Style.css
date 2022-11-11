@@ -46,9 +46,9 @@
 }
 
 .Page_two_logoAndLogOut h3 {
-    font-size: 12px;
+    font-size: 16px;
     text-align: center;
-    margin-right: 827px;
+    margin-right: 700px;
     margin-bottom: 0px;
 }
 
@@ -94,6 +94,18 @@
 }
 
 
+.heading span{
+    font-size: 15px;
+    margin-left: 12px;
+}
+
+/* font-size: 15px;
+margin-left: 120px;
+margin-top: -60px;
+margin-bottom: 0px; */
+
+/* font-size: 15px;
+margin-left: 120px; */
 
 /* -------------------------------------------------------- ( / Page_two_logoAndLogOut ) --------------------------------------------------------- */
 
@@ -152,12 +164,15 @@
     font-size: 21px;
     font-weight: bold;
     height: 55px;
-    padding-top: 15px;
+    padding-top:6px;
 }
 
 .page_two_or span {
     border-right: 2px dashed #00a53e;
     /* font-size: 100px; */
+    height: 10vh;
+    margin-top: 10px;
+    margin-left: 4px;
 }
 
 .page_two_or {
@@ -236,6 +251,8 @@
     margin: auto;
     width: 97vw;
     margin: 15px;
+    border-spacing: 2px 1px;
+    border-collapse: separate;
 
 }
 
@@ -259,7 +276,7 @@ tr td {
     display: flex;
     font-size: 16px;
     font-weight: bold;
-    margin-left: 14px;
+    margin-left: 17px;
     margin-bottom: 5px;
     margin-top: 30px;
 }
@@ -268,9 +285,7 @@ tr td {
     margin: 0 10px;
 }
 
-.scratches{
-    
-}
+
 
 /* -------------------------------------------------------- ( / page_two_table ) --------------------------------------------------------- */
 
@@ -378,14 +393,14 @@ tr td {
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 65%;
+    /* height: 101vh; */
     padding: 20px 0;
     border-radius: 5px;
     box-shadow: 0px 0px 5px black;
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -399,24 +414,25 @@ tr td {
 
 .page_two_complaint_list h3 {
     font-weight: bold;
-    text-align: center;
+    /* text-align: center; */
+    margin-left: 20px;
     font-size: 21px;
     margin-bottom: 20px;
 }
 
 .complist {
     display: flex;
-    margin: 5px 20px;
+    margin: 0px 24px;
 }
 
 .complist p {
     font-size: 17px;
     margin-left: 10px;
-    margin-top: 4px;
+    margin-top: 0px;
 }
 
 .page_two_complaint_list button {
-    width: 85%;
+    width: 25%;
     height: 45px;
     font-size: 19px;
     color: white;
@@ -425,7 +441,7 @@ tr td {
     cursor: pointer;
     margin-top: 20px;
     border-radius: 4px;
-    margin-left: 30px;
+    margin-left: 200px;
 }
 
 
@@ -453,6 +469,8 @@ tr td {
     transform: translate(-50%, -50%);
 
 }
+
+
 
 .page_two_Failure h3 {
     font-weight: bold;
@@ -540,9 +558,9 @@ tr td {
 
 
 .tablecheckbox img{
-    width: 40vh;
-    margin-left: 30px;
-    margin-top: 15px;
+    width: 35vh;
+    /* margin-left: 0px; */
+    margin-top: 25px;
 }
 
 .tablecheckbox .tab{
@@ -552,10 +570,10 @@ tr td {
 
 
 .tablecheckbox .checktable{
-    width: 150vh;
+    width: 198vh;
     /* top: 6%; */
-    margin-top: -165px;
-    margin-left: 380px;
+    margin-top: -147px;
+    margin-left: 225px;
 }
 
 /* .checktable:hover{
@@ -575,7 +593,7 @@ tr td {
 }
 
 .labell{
-    margin-left: 15px;
+    margin-left: 17px;
 }
 
 .tdata{
@@ -600,17 +618,51 @@ tr td {
 
 .chck1{
     accent-color: #00a53e;
+    width: 40%;
 }
 
 .click{
     accent-color: #00a53e;
+   
 }
+
+.click:hover{
+    box-shadow: #00a53e;
+    }
 
 
 .tab {
 background-color:  rgb(237, 242, 242);
 }
 
+
+
+.checktable td{
+    text-align: left;
+}
+
+.checktable .click{
+    height: 3vh;
+    width: 20%;
+}
+
+.checktable label{
+    margin-left: 12px;
+}
+
+.checktable label p{
+    text-align: center;
+    margin-right: 18px;
+    margin-left: 0px;
+}
+
+.checktable label .damaged{
+    margin-left: 0px;
+}
+
+.checktable label .guard{
+    margin-left:0px;
+}
 /************************************************************** customer complaint tail &*****************************************/
 
 
@@ -644,6 +696,19 @@ background-color:  rgb(237, 242, 242);
     align-items: center;
     justify-content: space-between;
     padding-left: 10px;
+}
+
+.complaint1 i{
+    margin-right: 12px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #00a53e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 
@@ -705,7 +770,7 @@ background-color:  rgb(237, 242, 242);
     padding: 10px 0 0 10px;
 }
 .fail_list1{
-    width: 65%;
+    width: 45%;
     background-color: rgb(237, 242, 242);
     display: flex;
     margin-left: 5px;

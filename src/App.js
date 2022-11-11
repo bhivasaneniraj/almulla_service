@@ -5,6 +5,7 @@ import Login from "./Login";
 import VehicleRegister from "./VehicleRegister";
 import Foreman from "./Foreman";
 import Foremanview from "./Foremanview";
+import TechnicianView from "./TechnicianView";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <Route path="/Vehicleregister" element={<VehicleRegister />} />
     <Route path="/foremanview" element={<Foreman/>} />
     <Route path="/Foremanpage" element={<Foremanview/>} />
+    <Route path="/technicianview" element={<TechnicianView/>} />
   </Routes>
 </Router>
    </>

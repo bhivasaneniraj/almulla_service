@@ -9,6 +9,8 @@ function Foreman() {
     { jobcard: "17/92309", Date: "16.09.2022", Technician: "Hafizullah",Status:"Work in Progress"},
     { jobcard: "17/74123", Date: "17.09.2022", Technician: "Jameel",Status:"Work in Progress"},
   ]
+   
+var name= "Shabbir";
 
   return (
     <>
@@ -21,19 +23,19 @@ function Foreman() {
           <div className="v2"></div>
           <h3>
             {" "}
-            Welcome to Al Mulla Industries Service Mobile Solutions
+          <b>Welcome to Al Mulla Industries Service Mobile Solutions</b>  
            
           </h3>
             </div>
             <div className="header">
-            <span>Shabbir </span>
+            <span>{name} </span>
 
             <div className="Logout">
-            <i class="fa-solid fa-arrow-right-from-bracket"><h1 className="head1">Logout</h1></i>
+            <i class="fa-solid fa-arrow-right-from-bracket"><h1 className="head1"><b></b> Logout</h1></i>
             </div>
             </div>
             <div className="foremantable">
-                <h3>Foremen View</h3>
+                <h3><b>Foremen View</b> </h3>
             </div>
 
             <div className="App">
@@ -46,7 +48,7 @@ function Foreman() {
         </tr>
         {data.map((val, key) => {
           return (
-            <tr key={key}>
+            <tr key={key} className="dta">
               <td>{val.jobcard}</td>
               <td>{val.Date}</td>
               <td>{val.Technician}</td>
