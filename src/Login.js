@@ -33,29 +33,29 @@ function Login() {
    }
 
   return (
+   
+  
     <>
     <div className="Main">
-        <div className="images">
-        <img
-              className="image1"
-              src="/images/bitmap@2x.png"
-              alt="example"
-            />
-            <h3><b>Al-Mulla Industrial Service Mobile Solutions</b></h3>
-
-        </div>
-       <div className="inputbtn">
-        <input type="email" placeholder="user name" className="btn1" onChange={hello}/>
+      <div className="images">
+        <img src="/images/bitmap@2x.png" alt="example" />
+        <h3><b>Al Mulla Industries Service Mobile Solutions</b></h3>
+      </div>
+      <div className="inputbtn">
+        <input type="email" placeholder="User Name" className="btn1" onChange={hello}/>
         <div className="inputbtn2">
         <input type="password" placeholder="Password" className="btn2" onChange={passw}/>
         </div>
-       <div className="submitbtn">
+        <div className="submitbtn">
         <button className="sbbntn" onClick={Submit}>Login</button>
        </div>
-       <a href="#"className="anchortg"><b>Forgot Password?</b> </a>
+     
        </div>
-    
     </div>
+    <div className="anchortag">
+    <a href="#"className="anchortg"><b>Forgot Password?</b> </a>
+    </div>
+   
     </>
   )
 }

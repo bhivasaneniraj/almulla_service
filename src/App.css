@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,6 +17,7 @@
   text-align: center;
   margin-top: 24px;
   font-size: 18px;
+  width: ;
 }
 
 
@@ -31,23 +32,23 @@
   width: 30%;
   margin-top: 20px;
   /* border-radius: 4px; */
-  font-size: 18px;
-  box-sizing: border-box;
+  /* font-size: 18px;
+  box-sizing: border-box; */
   
 
-}
+/* } */
 
-.inputbtn2 .btn2{
+/* .inputbtn2 .btn2{
   margin-left: 438px;
   height: 8vh;
   width: 30%;
   margin-top: 8px;
   /* border-radius: 4px; */
-  font-size: 18px;
+  /* font-size: 18px;
   box-sizing: border-box;
-}
+} */ 
 
-.sbbntn{
+/* .sbbntn{
   margin-left: 438px;
   height: 11vh;
 
@@ -60,21 +61,21 @@
   font-size: 20px;
   cursor: pointer;
   
-}
-
+} */
+/* 
 .inputbtn .anchortg {
   margin-left: 575px;
   text-decoration: none;
   color: darkgreen;
-  }
+  } */
 
 
-  .sbbntn:hover{
+  /* .sbbntn:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+  } */
 
 
-  .images{
+  /* .images{
     margin-right: 23px;
   }
 
@@ -83,4 +84,124 @@
     
     color: black;
     margin-left: 10rem !important;
+}  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Main{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.Main .images img{
+  width: 238pt;
+  height: 65pt;
+  overflow-x: 286pt;
+  overflow-y: 322pt;
+  margin-left: -9%;
+}
+
+.Main .images h3{
+  width: 430pt;
+  height: 20pt;
+  color:rgb(51, 182, 82);
+  font-size: 17pt;
+  margin-left: -17%;
+  overflow-x: 190pt;
+  margin-top: 8%;
+  overflow-y: 418pt;
+  letter-spacing: -0.01pt;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Main .inputbtn input{
+  width: 350pt;
+  height: 49pt;
+  border-radius: 4pt;
+  margin-left: -116%; 
+ border-color: rgb(0,105,70);
+ box-sizing: border-box;
+ border-width: thin;
+ 
+}
+
+
+
+
+
+.Main .submitbtn button{
+  width: 350pt;
+  height: 55pt;
+  border-radius: 6pt;
+  color: rgb(255,255,255);
+  background-color: rgb(8,136,38);
+  font-size: 23pt;
+  letter-spacing: 0.89pt;
+  overflow-x: 374pt;
+  overflow-y: 643pt;
+  border-color:  rgb(8,136,38);
+  border-width: thin;
+}
+
+.anchortag .anchortg{
+  width: 131pt;
+  height: 18pt;
+  font-family: Roboto-Bold;
+  overflow-x: 330pt;
+  overflow-y: 706pt ;
+  color: rgb(0,105,70);
+  text-decoration: none;
+  margin-left: 44%;
+}
+
+.images{
+  margin-left: 50%;
+  margin-bottom: 15%;
+}
+
+.inputbtn{
+  margin-top: 20%;
+  margin-left: -140px;
+}
+
+.submitbtn{
+  
+  margin-left: -116%;
+  margin-top: 12px;
+
+}
+
+.inputbtn2 .btn2{
+  margin-top: 12px;
+}
+
+
+input::placeholder {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  margin-left: 10rem !important;
+} 
+
+.sbbntn:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.anchortg:hover{
+  color: rgb(0,105,70);
+}
+
+.anchortag{
+  margin-top: 15px;
 }

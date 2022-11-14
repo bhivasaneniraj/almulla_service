@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import CoolComplaints from "./Components/CoolComplaints";
+import TailComplaint from "./Components/TailComplaint";
 import "./Style.css";
 
 function VehicleRegister() {
@@ -10,7 +12,11 @@ function VehicleRegister() {
   const [completSubmite, setcompletSubmite] = useState();
   const [omdemo, setomdemo] = useState([]);
   const [data, setData] = useState([]);
-  const [show, setShow] = React.useState(true);
+  const [show, setShow] = useState(false);
+  const [checkedAllBox, setCheckedAllBox] = useState(false);
+  const [checkedFirst, setCheckedFirst] = useState(false);
+  const [checkedSecond, setCheckedSecond] = useState(false);
+  const [searchTextInput, setSearchTextInput] = useState("");
 
   // const [Showhide, setShowhide] = useState("Hello World")
 
@@ -18,11 +24,40 @@ function VehicleRegister() {
   //       console.log(Showhide);
   // }
 
-  const ktnum = (e) => {
-    settext(e.target.value);
+  const handleCheckedAll = () => {
+    if (!checkedAllBox) {
+      setCheckedAllBox(true);
+      setCheckedFirst(true);
+      setCheckedSecond(true);
+    } else {
+      setCheckedAllBox(false);
+      setCheckedFirst(false);
+      setCheckedSecond(false);
+    }
   };
 
+  const handleCheckedFirst = () => {
+    if (!checkedFirst && checkedSecond) {
+      setCheckedAllBox(true);
+    } else {
+      setCheckedAllBox(false);
+    }
+    setCheckedFirst(!checkedFirst);
+  };
 
+  const handleCheckedSecond = () => {
+    if (!checkedSecond && checkedFirst) {
+      setCheckedAllBox(true);
+    } else {
+      setCheckedAllBox(false);
+    }
+    setCheckedSecond(!checkedSecond);
+  };
+
+  const ktnum = (e) => {
+    settext(e.target.value);
+    setSearchTextInput(e.target.value);
+  };
 
   const complaint = () => {
     setblackBg("block");
@@ -108,9 +143,10 @@ function VehicleRegister() {
         WarrantyEnd: "26.06.2022",
       },
     ];
-    setData(tabledata);
-
-    setShow(!show);
+    if (searchTextInput === "17/30866") {
+      setData(tabledata);
+      setShow(true);
+    }
   }
 
   var name = " 915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES";
@@ -185,12 +221,11 @@ function VehicleRegister() {
     <>
       <div className="main_div">
         <div className="Page_two_logoAndLogOut">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Al_Mulla_Group_Logo.svg/1200px-Al_Mulla_Group_Logo.svg.png"
-            alt="logo"
-          />
+          <img src="/images/bitmap@2x.png" alt="example" />
           <div className="vl"></div>
-          <h3> Welcome to Al Mulla Industries Service Mobile Solutions</h3>
+          <h3>
+            <b> Welcome to Al Mulla Industries Service Mobile Solutions</b>
+          </h3>
           <br />
         </div>
         <div className="heading">
@@ -203,7 +238,9 @@ function VehicleRegister() {
           </div>
         </div>
         <div className="Page_two_search_Chooes_box">
-          <h2 className="bottom"> Vehicle Receiver </h2>
+          <h2 className="bottom">
+            <b> Vehicle Receiver</b>{" "}
+          </h2>
           <div className="page_two_middel_box">
             <div className="page_two_chooes">
               <div className="kt">
@@ -213,7 +250,9 @@ function VehicleRegister() {
                   checked
                   className="choesBTN"
                 />
-                <h2> KT Number </h2>
+                <h2>
+                  <b>KT Number</b>{" "}
+                </h2>
               </div>
               <div className="page_two_or">
                 <p> O </p>
@@ -222,7 +261,9 @@ function VehicleRegister() {
               </div>
               <div className="chassis">
                 <input type="radio" name="chooes" className="choesBTN" />
-                <h2> Chassis </h2>
+                <h2>
+                  <b>Chassis</b>{" "}
+                </h2>
               </div>
             </div>
             <div className="page_two_serchbar">
@@ -232,7 +273,7 @@ function VehicleRegister() {
           </div>
         </div>
 
-        {!show && (
+        {show && (
           <div className="hideshow">
             <div className="hideshow">
               <div className="page_two_table">
@@ -275,8 +316,11 @@ function VehicleRegister() {
                       <input
                         type="checkbox"
                         className="chck1"
-                        onChange={(event) => selectAll(event.target.checked)}
-                        checked={checkedAll}
+                        onChange={(event) => {
+                          handleCheckedAll();
+                          selectAll(event.target.checked);
+                        }}
+                        checked={checkedAllBox}
                       />
                     </th>
                     <th>Unit Details</th>
@@ -288,31 +332,57 @@ function VehicleRegister() {
                     <th>Warranty Start</th>
                     <th>Warranty End</th>
                   </tr>
-                  {data.map((val, key) => {
-                    return (
-                      <tr key={key}>
-                        <th className="tab">
-                          {" "}
-                          <input
-                            type="checkbox"
-                            name="id"
-                            className="chck1"
-                            onChange={() => toggleCheck(val.id)}
-                            checked={checked[val.id]}
-                          />
-                        </th>
-                        <td>{val.UnitDetail}</td>
-                        <td>{val.KTNo}</td>
-                        <td>{val.SerialNo} </td>
-                        <td>{val.Chassis} </td>
-                        <td> {val.Model} </td>
-                        <td> {val.Date}</td>
-                        <td className="tdata"> {val.WarrantyStart}</td>
 
-                        <td className="tdata2"> {val.WarrantyEnd}</td>
-                      </tr>
-                    );
-                  })}
+                  <tr>
+                    <th className="tab">
+                      {" "}
+                      <input
+                        type="checkbox"
+                        name="id"
+                        className="chck1"
+                        onChange={() => {
+                          toggleCheck(data[0].id);
+                          handleCheckedFirst();
+                        }}
+                        checked={checkedFirst}
+                      />
+                    </th>
+                    <td>{data[0].UnitDetail}</td>
+                    <td>{data[0].KTNo}</td>
+                    <td>{data[0].SerialNo} </td>
+                    <td>{data[0].Chassis} </td>
+                    <td> {data[0].Model} </td>
+                    <td> {data[0].Date}</td>
+                    <td className="tdata"> {data[0].WarrantyStart}</td>
+
+                    <td className="tdata2"> {data[0].WarrantyEnd}</td>
+                  </tr>
+
+                  <tr>
+                    <th className="tab">
+                      {" "}
+                      <input
+                        type="checkbox"
+                        name="id"
+                        className="chck1"
+                        onChange={() => {
+                          toggleCheck(data[1].id);
+                          handleCheckedSecond();
+                        }}
+                        checked={checkedSecond}
+                      />
+                    </th>
+                    <td>{data[1].UnitDetail}</td>
+                    <td>{data[1].KTNo}</td>
+                    <td>{data[1].SerialNo} </td>
+                    <td>{data[1].Chassis} </td>
+                    <td> {data[1].Model} </td>
+                    <td> {data[1].Date}</td>
+                    <td className="tdata3"> {data[1].WarrantyStart}</td>
+
+                    <td className="tdata4"> {data[1].WarrantyEnd}</td>
+                  </tr>
+
                   {/* {tabledata.map((val,key) => {
                   return(
                     <tr>
@@ -338,10 +408,7 @@ function VehicleRegister() {
                   <h2>
                     <b>Physical Remarks / Observation</b>{" "}
                   </h2>
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX3pwWb17B4t0KZcwIY9bxpC2QfIGeDD7beQ&usqp=CAU"
-                    alt="image"
-                  />
+                  <img src="./images/Truck@2x.png" alt="image" />
 
                   <table className="checktable">
                     <tr>
@@ -416,7 +483,7 @@ function VehicleRegister() {
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td className="scratches">
                         <b>2. Glass Broken</b>
                       </td>
                       <td>
@@ -470,7 +537,7 @@ function VehicleRegister() {
                       <td></td>
                     </tr>
                     <tr>
-                      <td>
+                      <td className="scratches">
                         <b>3. Lights Broken</b>
                       </td>
                       <td>
@@ -509,7 +576,7 @@ function VehicleRegister() {
                       <td></td>
                     </tr>
                     <tr>
-                      <td>
+                      <td className="scratches">
                         <b>4. Body Panel Condition</b>
                       </td>
                       <td>
@@ -548,7 +615,7 @@ function VehicleRegister() {
                       <td></td>
                     </tr>
                     <tr>
-                      <td>
+                      <td className="scratches">
                         <b>5. Body Accessories</b>
                       </td>
                       <td>
@@ -622,54 +689,15 @@ function VehicleRegister() {
                   </table>
                 </div>
               </div>
-
-              <div className="page_two_complaint_failure">
-                <h2>Breakdown Analysis For Cooling Unit</h2>
-                <div className="complaint_failure">
-                  <div className="complaint">
-                    <p> Customer complaint </p>
-                    <i class="fa-solid fa-plus" onClick={complaint}></i>
-                  </div>
-                  <div className="failure">
-                    <p> Failure Reason </p>
-                    <i class="fa-solid fa-plus" onClick={failure}></i>
-                  </div>
-                </div>
-              </div>
-
-              <div className="page_two_bothcomp_fail_list">
-                <div className="comp_list">
-                  <p>Periodic maintenance service </p>
-                </div>
-                <div className="fail_list">
-                  <p> Unit Service </p>
-                </div>
-              </div>
+              {checkedFirst && (
+                <CoolComplaints complaint={complaint} failure={failure} />
+              )}
             </div>
-
             {/* custome complaint tail */}
 
-            <div className="page_two_complaint_failure1">
-              <h2>Breakdown Analysis For Tail Lift</h2>
-              <div className="complaint_failure1">
-                <div className="complaint1">
-                  <p> Customer complaint </p>
-                  <i class="fa-solid fa-plus" onClick={complaint}></i>
-                </div>
-                <div className="failure1">
-                  <p> Failure Reason </p>
-                  <i class="fa-solid fa-plus" onClick={failure}></i>
-                </div>
-              </div>
-              <div className="page_two_bothcomp_fail_list1">
-                <div className="comp_list1">
-                  <p> Engine Oil Leak </p>
-                </div>
-                <div className="fail_list1">
-                  <p> Engine Oil drain extension </p>
-                </div>
-              </div>
-            </div>
+            {checkedSecond && (
+              <TailComplaint complaint={complaint} failure={failure} />
+            )}
 
             <div className="main_black_div" style={{ display: blackBg }}>
               <div
@@ -678,6 +706,9 @@ function VehicleRegister() {
                 style={{ display: omplistf }}
               >
                 <h3>Customer Complaint</h3>
+
+                <h3 className="freason">Failure Reason</h3>
+
                 <div className=" complist">
                   <input
                     type="radio"
@@ -685,7 +716,13 @@ function VehicleRegister() {
                     value={"Periodic maintenance service"}
                   />
                   <p>Periodic maintenance service</p>
+                  <input
+                      type="checkbox"
+                      value="Engine oil Drain extension leak"
+                   className="inpt" />
+                    <label className="lable"> Engine oil Drain extension leak </label>
                 </div>
+               
                 <div className=" complist ">
                   <input
                     type="radio"
@@ -693,6 +730,11 @@ function VehicleRegister() {
                     value={"Engine oil leak"}
                   />
                   <p>Engine oil leak</p>
+                  <input
+                      type="checkbox"
+                      value="Engine cylinder Head cover Gasket "
+                   className="inpt1" />
+                    <label className="lable"> Engine oil Hose </label>
                 </div>
                 <div className=" complist ">
                   <input
@@ -701,6 +743,12 @@ function VehicleRegister() {
                     value={"An abnormal noise from Engine"}
                   />
                   <p>An abnormal noise from Engine</p>
+                  <input
+                      type="checkbox"
+                      value="Engine cylinder Head cover Gasket "
+                    className="inpt2"/>
+                    <label className="lable"> Engine cylinder Head cover Gasket </label>
+
                 </div>
                 <div className=" complist ">
                   <input
@@ -709,6 +757,8 @@ function VehicleRegister() {
                     value={"Engine not cooling"}
                   />
                   <p>Engine not cooling</p>
+                  <input type="checkbox" value="Engine Oil filter leak" className="inpt3"/>
+                    <label className="lable"> Engine Oil filter leak</label>
                 </div>
                 <div className=" complist ">
                   <input type="radio" name="compChoes" value={"Engine Hot"} />
@@ -742,7 +792,48 @@ function VehicleRegister() {
                   />
                   <p>Compressor Stuck</p>
                 </div>
+                {/* <div className="reasons">
+                <input
+                    type="checkbox"
+                    value="Engine oil Drain extension leak"
+                  />
+                   <label> Engine oil Drain extension leak </label>
 
+                  
+
+                  
+                   
+                </div> */}
+                {/* <div className="reasonf"> */}
+                  {/* <div className="reasons">
+                    <input
+                      type="checkbox"
+                      value="Engine oil Drain extension leak"
+                    />
+                    <label> Engine oil Drain extension leak </label>
+                  </div>
+
+                  <div className="reasons">
+                    <input type="checkbox" value="Engine oil Hose" />
+                    <label> Engine oil Hose </label>
+                  </div>
+
+                  <div className="reasons">
+                    <input
+                      type="checkbox"
+                      value="Engine cylinder Head cover Gasket "
+                    />
+                    <label> Engine cylinder Head cover Gasket </label>
+                  </div>
+                  <div className="reasons">
+                    <input type="checkbox" value="Engine Oil filter leak" />
+                    <label> Engine Oil filter leak</label>
+                  </div>
+                </div>
+
+                <button onClick={compSubmite}> Save </button> */}
+
+              
                 <button onClick={compSubmite}> Save </button>
               </div>
               <div
@@ -776,7 +867,6 @@ function VehicleRegister() {
                 <button onClick={failuereSubmite}>Submit</button>
               </div>
             </div>
-
             <div className="search_foreman">
               <select className="select">
                 {options.map((option) => (
@@ -787,7 +877,9 @@ function VehicleRegister() {
               </select>
             </div>
             <div className="job_card">
-              <button className="job_cardbtn">Create Job Card</button>
+              <button className="job_cardbtn">
+                <b>Create Job Card</b>{" "}
+              </button>
             </div>
           </div>
         )}
