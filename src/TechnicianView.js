@@ -21,7 +21,7 @@ function TechnicianView() {
       <div className="Main_class">
             <div className="foreman_class">
             <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Al_Mulla_Group_Logo.svg/1200px-Al_Mulla_Group_Logo.svg.png"
+            src="/images/bitmap@2x.png"
             alt="logo"
           />
           <div className="v2"></div>

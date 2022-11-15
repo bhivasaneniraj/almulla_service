@@ -9,8 +9,11 @@ function Login() {
 
    
     
-    const username = "user@gmail.com";
-    const password = "123456";
+    const managerUsername = "anisurRahman";
+    const managerPassword = "123456";
+
+    const foremanUsername = "shabir@gmail.com";
+    const foremanPassword = "123456";
 
     const navigate = useNavigate();
 
@@ -27,8 +30,12 @@ function Login() {
    }
 
    const Submit = () => {
-       if (username === usernameText && password === passwordText){
+       if (managerUsername === usernameText && managerPassword === passwordText){
         navigate('/VehicleRegister')
+       }else if(foremanUsername === usernameText && foremanPassword === passwordText) {
+         navigate('/foremanv')
+       }else{
+        alert("Invalid username or password!!")
        }
    }
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600&display=swap');  
+/*****************************************************************ForemaView.js**************************************/
 * {
     margin: 0%;
     padding: 0%;
@@ -7,45 +8,126 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.main{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+/*************************************** <main/> ************************************************************/
+
+
+/*********************************************************** foremam *********************************************/
+
+.foreman{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+}
+
 .foreman img{
-    width: 69px;
-    height: 69px;
-    margin-top: 10px;
-    margin-left: 10px;
+  width: 133.3pt;
+  height: 38pt;
 }
 
 .v2{
-    border-right: 1px dashed #00a53e;
-    height: 70px;
-    position: absolute;
-    left: 50%;
-    margin-left: -540px;
-    top: 15px;
+  border-right: 1px dashed 
+  rgb(0,0,0);
+  height: 40pt;
+  width: 1pt;
+  position: absolute;
+  left: 58%;
+  margin-left: -540px;
+  top: 15px;
 }
 
 .foreman h3{
-    font-size: 15px;
-    margin-left: 120px;
-    margin-top: -60px;
-    margin-bottom: 0px;
+  font-size: 14pt;
+  color: rgb(0,0,0);
+  width: 372pt;
+  height: 37pt;
+  text-align: center;
+  margin-top: 1%;
+  margin-right: 45%;
 }
+/***************************************************************<foreman/> ***********************************/
+
+
+/********************************************************** <header> *****************************************/
 
 .header span{
-    font-size: 15px;
-    margin-left: 120px;
+  font-size: 14pt;
+    margin-left: 222px;
    
 }
 
+.header{
+  margin-top: -3%;
+}
+
+
+
+/************************************************************ <header/> ***************************************/
+
+
 .Logout{
-    margin-left: 1170px;
-    margin-top: -45px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.Logout i{
+  font-size: 14pt;
+  letter-spacing: -0.01pt;
+  padding-right: 6px;
+  margin-left: 92%;
+  /* margin-bottom: -15px; */
+  margin-top: -65px;  
 }
 
 .Logout .head1{
-    font-size: 12px;
-    margin-left: 20px;
-    margin-top: -15px;
+  font-size: 14pt;
+  letter-spacing: 0.01pt;
+  color: rgb(0,0,0);
+  margin-left: 25px;
+  margin-top: -20px;
 }
+
+
+/******************************************************************** <Logout/> ****************************************/
+
+
+/**********************************************************************<CardReference> **************************/
+
+.CardReference .card_ref{
+
+  font-size: 15pt;
+    color: rgb(0,0,0);;
+    border-bottom: 1px solid #00a53e;
+    padding-bottom: 5px;
+    margin: 20px 0px;
+}
+
+
+
+.CardReference .card_ref .loc{
+  
+  padding-left: 80%;
+  /* margin-bottom: 1%; */
+  margin-top: -2%;
+
+}
+
+.CardReference {
+  margin-top: 30px;
+  margin-left: 17px;
+}
+
+
+/***************************************************************<CardReference/> *******************************/
+
 
 .foremantable h3{
     margin-top: 90px;
@@ -60,6 +142,154 @@
     margin: 0 0px;
     margin-top: -10px;
 }
+
+
+/****************************************************** paragraph ************************************************/
+
+.paragraph{
+  display: flex;
+  font-size: 15pt;
+  color: rgb(0,0,0);
+  font-weight: bold;
+  margin-left: 17px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+
+
+
+/********************************************************<datatable> **************************************/
+
+.tabular .start{
+  background-color: rgb(168, 249, 249)   ;
+}
+
+.tabular .End{
+  background-color: pink;
+}
+
+.datatable .tabular{
+  margin: 20px 0;
+  font-size: 18px;
+  margin: auto;
+  width: 97vw;
+  margin: 15px;
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+
+
+.dataT{
+  background-color: rgb(188,242,204)  ;
+}
+
+.dataT2{
+  background-color: rgb(188,242,204)  ;
+}
+
+.dataT3{
+  background-color: rgb(255,190,186);
+}
+
+
+.dataT4{
+  background-color: rgb(255,190,186);
+}
+/*******************************************************<datatable/> ********************************************/
+
+
+
+/*********************************************  <chckbox> ************************************************************/
+
+.chckbox h2{
+  display: flex;
+  font-size: 18pt;
+  letter-spacing: -0.01pt;
+  color: rgb(0,0,0);
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+.chckbox img{
+  width: 50vh;
+  /* margin-left: 0px; */
+  margin-top: 25px;
+}
+
+
+.chckbox .checktable_class{
+  width: 166vh;
+    /* top: 6%; */
+    margin-top: -237px;
+    margin-left: 23%;
+}
+
+
+
+
+
+/*Foremanpage Table *************************************************************************************************************************/
+
+
+  
+
+
+
+.checktable_class .scratches_class{
+  background-color: rgb(243,243,243);
+}
+
+
+.checktable_class td{
+  text-align: left;
+}
+
+.checktable_class td:hover{
+  background-color:   rgb(219,255,227);
+}  
+
+
+.checktable_class .click{
+  height: 3vh;
+  width: 20%;
+}
+
+.checktable_class label{
+  margin-left: 12px;
+}
+
+.checktable_class label p{
+  text-align: center;
+  margin-right: 18px;
+  margin-left: 0px;
+  margin-top: -4%;
+}
+
+
+.checktable_class label .damaged{
+  margin-left: 0px;
+  margin-top: -4%;
+}
+
+.checktable_class label .guard{
+  margin-left:0px;
+  margin-top: -4%;
+}
+
+
+.checktable_class label{
+  cursor: pointer;
+}
+
+.checktable_class{
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+
+/************************************************************ ForemaView.js ***************************************/
 
 /********************************** Table *************************************************************/
 
@@ -85,54 +315,27 @@
 .dta td{
   text-align: left;
 }
-/*****************************************************************Foremanpage**************************************/
 
 
+/* 
 .CardReference h3 {
     font-size: 18px;
-  }
+  } */
   
-  .CardReference {
-    margin-top: 80px;
-    margin-left: 17px;
-  }
-  
-  .CardReference .loc {
-  
-      text-align: end;
-      margin-right: 15px;
-      /* margin-bottom: -17px; */
-      margin-top: -20px;
-  }
 
-  .line{
   
-    border-bottom: 1px solid #00a53e;
-    padding-bottom: 5px;
-    margin: 0 0px;
-    margin-top: 15px;
-  }
 
 
+ 
+
+/* 
    p{
     margin-left: 5px;
     font-size: 16px;
     margin-top: 15px;
-  }
+  } */
 
-  .tabular .start{
-    background-color: rgb(168, 249, 249)   ;
-  }
 
-  .tabular .End{
-    background-color: pink;
-  }
-
-  .datatable .tabular{
-    margin-top: 15px;
-    border-spacing: 2px 1px;
-    border-collapse: separate;
-  }
 
   .chckbox .column{
     display: flex;
@@ -143,93 +346,46 @@
     margin-top: 30px;
   }
 
-  .chckbox h2{
-    display: flex;
-    font-size: 16px;
-    font-weight: bold;
-    margin-left: 20px;
-    margin-bottom: 5px;
-    margin-top: 30px;
-  }
 
 
-  .tabular{
+
+  /* .tabular{
     margin: 20px 0;
     font-size: 18px;
     margin: auto;
     width: 97vw;
     margin: 15px;
-  }
+  } */
 
-  .paragraph{
-    display: flex;
-    font-size: 16px;
+ /***************************************************<ForemanCoolCOmplaint.js>********************************/
+
+ .tw0_page_complaint h2{
+    font-size: 18pt;
+    color: rgb(0,0,0);
+    padding-left: 1%;
+  } 
+
+
+  .foreman_cooling_table{
+    background-color: rgb(8,136,38);
+    margin-top: 5px;
+    color: white;
+    font-size: 14pt;
     font-weight: bold;
-    margin-left: 17px;
-    margin-bottom: 5px;
-    margin-top: 30px;
+    height: 50px;
+    display: flex;
   }
 
-.chckbox img{
-    width: 35vh;
-    /* margin-left: 0px; */
-    margin-top: 20px;
-}
 
-
-/*Foremanpage Table *************************************************************************************************************************/
-
-
-.chckbox .checktable_class{
-  width: 198vh;
-  /* top: 6%; */
-  margin-top: -125px;
-  margin-left: 222px;
-}
-  
+  .tw0_page_complaint  .custom_tab{
+    font-size: 16pt;
+    margin-left: 1%;
+    text-align: left;
+    width: 97%;
+    background-color: rgb(8,136,38);
+  }
 
 
 
 
-.checktable_class td{
-  text-align: left;
-}
 
-.checktable_class .click{
-  height: 3vh;
-  width: 20%;
-}
-
-.checktable_class label{
-  margin-left: 12px;
-}
-
-.checktable_class label p{
-  text-align: center;
-  margin-right: 18px;
-  margin-left: 0px;
-}
-
-.checktable_class label .damaged{
- 
-  margin: auto;
-}
-
-.checktable_class label .guard{
-
-  margin: auto;
-}
-
-.checktable_class label .Broken{
-  margin: auto;
-}
-
-.checktable_class label .screen{
-  margin: auto;
-}
-
-
-.checktable_class{
-  border-collapse: separate;
-  border-spacing: 2px;
-}

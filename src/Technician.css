@@ -1,39 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+}
+
+
 .foreman_class img{
-    width: 69px;
-    height: 69px;
-    margin-top: 10px;
+    width: 133.3pt;
+    height: 38pt;
+    margin-top: 20px;
     margin-left: 10px;
 }
 
 .v2{
-    border-right: 1px dashed #00a53e;
+    border-right: 1px dashed black;
     height: 70px;
     position: absolute;
-    left: 50%;
+    left: 58%;
     margin-left: -540px;
     top: 15px;
 }
 
 .foreman_class h3{
-    font-size: 15px;
-    margin-left: 120px;
-    margin-top: -60px;
+    font-size: 14pt;
+    margin-left: 17%;
+    margin-top: -40px;
+    width: 372pt;
+    height: 37pt;
     margin-bottom: 0px;
+    color: rgb(0,0,0);
 }
 
 .header_class span{
-    font-size: 15px;
-    margin-left: 120px;
+    font-size: 14pt;
+    margin-left: 244px;
+    width: 372pt;
+    height: 37pt;
+
    
 }
 
-.Logout_class   {
-    margin-left: 1170px;
-    margin-top: -45px;
+.header_class{
+    margin-top: -2%;
 }
 
+.Logout_class   {
+    margin-left: 91%;
+    margin-top: -58px;
+    width: 16pt;
+    height: 18.5pt;
+   
+}
+
+
+
 .Logout_class .head2{
-    font-size: 12px;
+    font-size: 14pt;
+    width: 44pt;
+    height: 16pt;
     margin-left: 20px;
     margin-top: -15px;
 }
@@ -42,7 +65,9 @@
 .foremantable_class h3{
     margin-top: 90px;
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 18pt;
+    color: 
+    rgb(0,0,0);
 }
 
 
@@ -62,7 +87,7 @@
     width: 98%;
     margin-left: 12px;
     height: 40vh;
-    border-spacing: 2px 3px;
+    border-spacing: 1px 1px;
     border-collapse: separate;
     text-align: left;
 }
@@ -84,3 +109,13 @@
 .tabData td{
     text-align: left;
 }
+
+
+.tab_class tr{
+    font-size: 16pt;
+    letter-spacing: 0.01pt;
+}
+
+
+/********************************************************  ForemanView ***********************************************/
+

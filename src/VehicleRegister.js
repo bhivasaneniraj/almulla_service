@@ -1,14 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import CoolComplaints from "./Components/CoolComplaints";
+import FailureReason from "./Components/FailureReason";
 import TailComplaint from "./Components/TailComplaint";
+import Pagetwocomponent from "./Components/pagetwocomplaintlist";
 import "./Style.css";
 
 function VehicleRegister() {
   const [text, settext] = useState();
   const [blackBg, setblackBg] = useState("none");
   const [faillist, setfaillist] = useState("none");
-  const [omplistf, setomplistf] = useState("none");
+  const [omplistf, setomplistf] = useState("block");
   const [completSubmite, setcompletSubmite] = useState();
   const [omdemo, setomdemo] = useState([]);
   const [data, setData] = useState([]);
@@ -17,7 +19,10 @@ function VehicleRegister() {
   const [checkedFirst, setCheckedFirst] = useState(false);
   const [checkedSecond, setCheckedSecond] = useState(false);
   const [searchTextInput, setSearchTextInput] = useState("");
-
+  const [failureComplaints, SetFailureComplaints] = useState("");
+  const [customerComplaint, setCustomerComplaint] = useState([]);
+  const [failureComplaintsList, setFailureComplaintsList] = useState([]);
+  const [pagetwocomplaintlist, setpagetwocomplainlist] = useState(false);
   // const [Showhide, setShowhide] = useState("Hello World")
 
   // const showhie = () => {
@@ -85,6 +90,7 @@ function VehicleRegister() {
   const compSubmite = () => {
     if (completSubmite != undefined) {
       console.log(completSubmite);
+      setCustomerComplaint(completSubmite);
       setblackBg("none");
       setomplistf("none");
     }
@@ -105,15 +111,15 @@ function VehicleRegister() {
       value: "Send Report to Foremen",
     },
     {
-      label: "Assigned to Foreman - Shabbir",
-      value: "Assigned to Foreman - Shabbir",
+      label: "Shabbir",
+      value: "Shabbir",
     },
     {
-      label: "Assigned to Foreman - Hafizullah",
-      value: "Assigned to Foreman - Hafizullah",
+      label: "Hafizullah",
+      value: "Hafizullah",
     },
     {
-      label: "Assigned to Foreman - Faisal",
+      label: "Faisal",
       value: "Assigned to Foreman - Faisal",
     },
   ];
@@ -216,6 +222,26 @@ function VehicleRegister() {
       setCheckedAll(false);
     }
   }, [checked]);
+
+  const handleRadioButton = (e) => {
+    SetFailureComplaints(e.target.value);
+  };
+
+  useEffect(() => {
+    console.log(failureComplaintsList, "failureList");
+  }, [failureComplaintsList]);
+
+  const handleFailureComplaintsList = (e) => {
+    if (e.target.checked) {
+      setFailureComplaintsList((prev) => prev.concat(e.target.value));
+    } else {
+      setFailureComplaintsList((prev) =>
+        prev.filter((item) => {
+          return item !== e.target.value;
+        })
+      );
+    }
+  };
 
   return (
     <>
@@ -690,7 +716,11 @@ function VehicleRegister() {
                 </div>
               </div>
               {checkedFirst && (
-                <CoolComplaints complaint={complaint} failure={failure} />
+                <CoolComplaints
+                  complaint={complaint}
+                  failure={failure}
+                  coolComponent={customerComplaint}
+                />
               )}
             </div>
             {/* custome complaint tail */}
@@ -705,138 +735,131 @@ function VehicleRegister() {
                 onChange={demooo}
                 style={{ display: omplistf }}
               >
-                <h3>Customer Complaint</h3>
-
-                <h3 className="freason">Failure Reason</h3>
-
-                <div className=" complist">
-                  <input
-                    type="radio"
-                    name="compChoes"
-                    value={"Periodic maintenance service"}
-                  />
-                  <p>Periodic maintenance service</p>
-                  <input
-                      type="checkbox"
-                      value="Engine oil Drain extension leak"
-                   className="inpt" />
-                    <label className="lable"> Engine oil Drain extension leak </label>
-                </div>
-               
-                <div className=" complist ">
-                  <input
-                    type="radio"
-                    name="compChoes"
-                    value={"Engine oil leak"}
-                  />
-                  <p>Engine oil leak</p>
-                  <input
-                      type="checkbox"
-                      value="Engine cylinder Head cover Gasket "
-                   className="inpt1" />
-                    <label className="lable"> Engine oil Hose </label>
-                </div>
-                <div className=" complist ">
-                  <input
-                    type="radio"
-                    name="compChoes"
-                    value={"An abnormal noise from Engine"}
-                  />
-                  <p>An abnormal noise from Engine</p>
-                  <input
-                      type="checkbox"
-                      value="Engine cylinder Head cover Gasket "
-                    className="inpt2"/>
-                    <label className="lable"> Engine cylinder Head cover Gasket </label>
-
-                </div>
-                <div className=" complist ">
-                  <input
-                    type="radio"
-                    name="compChoes"
-                    value={"Engine not cooling"}
-                  />
-                  <p>Engine not cooling</p>
-                  <input type="checkbox" value="Engine Oil filter leak" className="inpt3"/>
-                    <label className="lable"> Engine Oil filter leak</label>
-                </div>
-                <div className=" complist ">
-                  <input type="radio" name="compChoes" value={"Engine Hot"} />
-                  <p>Engine Hot</p>
-                </div>
-                <div className=" complist ">
-                  <input
-                    type="radio"
-                    name="compChoes"
-                    value={"Engine Not Staring"}
-                  />
-                  <p>Engine Not Staring</p>
-                </div>
-                <div className=" complist ">
-                  <input
-                    type="radio"
-                    name="compChoes"
-                    value={"Stand by not working & noisy"}
-                  />
-                  <p>Stand by not working & noisy</p>
-                </div>
-                <div className=" complist ">
-                  <input type="radio" name="compChoes" value={"UNIT AUX"} />
-                  <p>UNIT AUX</p>
-                </div>
-                <div className=" complist ">
-                  <input
-                    type="radio"
-                    name="compChoes"
-                    value={"Compressor Stuck"}
-                  />
-                  <p>Compressor Stuck</p>
-                </div>
-                {/* <div className="reasons">
-                <input
-                    type="checkbox"
-                    value="Engine oil Drain extension leak"
-                  />
-                   <label> Engine oil Drain extension leak </label>
-
-                  
-
-                  
-                   
-                </div> */}
-                {/* <div className="reasonf"> */}
-                  {/* <div className="reasons">
-                    <input
-                      type="checkbox"
-                      value="Engine oil Drain extension leak"
-                    />
-                    <label> Engine oil Drain extension leak </label>
-                  </div>
-
-                  <div className="reasons">
-                    <input type="checkbox" value="Engine oil Hose" />
-                    <label> Engine oil Hose </label>
-                  </div>
-
-                  <div className="reasons">
-                    <input
-                      type="checkbox"
-                      value="Engine cylinder Head cover Gasket "
-                    />
-                    <label> Engine cylinder Head cover Gasket </label>
-                  </div>
-                  <div className="reasons">
-                    <input type="checkbox" value="Engine Oil filter leak" />
-                    <label> Engine Oil filter leak</label>
-                  </div>
-                </div>
-
-                <button onClick={compSubmite}> Save </button> */}
-
-              
-                <button onClick={compSubmite}> Save </button>
+                <Pagetwocomponent
+                  compSubmite={compSubmite}
+                  failureComplaints={failureComplaints}
+                  handleRadioButton={handleRadioButton}
+                />
               </div>
-              <div
+              {/* <div className="complaints-container"> */}
+              {/* <h3>Customer Complaint</h3>
+          
+              <div className="complist">
+            
+              <input
+                  type="radio"
+                  name="compChoes"
+                 value={"Periodic maintenance service"}
+                 onChange={handleRadioButton}
+                  
+                
+                />
+                <p>Periodic maintenance service</p>
+              </div>
+
+              <div className="complist">
+              <input
+                  type="radio"
+                  name="compChoes"
+                  value={"Engine oil leak"}
+                  onChange={handleRadioButton}
+                  
+                
+                />
+                <p>Engine oil leak</p>
+              </div>
+
+              <div className="complist">
+              <input
+                  type="radio"
+                  name="compChoes"
+                 value={"An abnormal noise from Engine"}
+                 onChange={handleRadioButton}
+                  
+                
+                />
+                <p>An abnormal noise from Engine</p>
+              </div>
+
+
+              <div className="complist">
+              <input
+                  type="radio"
+                  name="compChoes"
+                 value={"Engine not cooling"}
+                 onChange={handleRadioButton}
+                  
+                
+                />
+                <p>Engine not cooling</p>
+              </div>
+
+              <div className="complist">
+              <input
+                  type="radio"
+                  name="compChoes"
+                 value={"Engine Hot"}
+                 onChange={handleRadioButton}
+                  
+                
+                />
+                <p>Engine Hot</p>
+              </div>
+
+              <div className="complist">
+              <input
+                  type="radio"
+                  name="compChoes"
+                 value={"Engine Not Staring"}
+                 onChange={handleRadioButton}
+                  
+                
+                />
+                <p>Engine Not Staring</p>
+              </div>
+
+              <div className="complist">
+              <input
+                  type="radio"
+                  name="compChoes"
+                 value={"Stand by not working & noisy"}
+                 onChange={handleRadioButton}
+                  
+                
+                />
+                <p>Stand by not working & noisy</p>
+              </div>
+
+              <div className="complist">
+              <input
+                  type="radio"
+                  name="compChoes"
+                 value={"UNIT AUX"}
+                 onChange={handleRadioButton}
+                  
+                
+                />
+                <p>UNIT AUX</p>
+              </div>
+
+              <div className="complist">
+              <input
+                  type="radio"
+                  name="compChoes"
+                 value={"Compressor Stuck"}
+                 onChange={handleRadioButton}
+                  
+                
+                />
+                <p>Compressor Stuck</p>
+              </div>
+               
+              </div>
+              {failureComplaints === 'Engine oil leak' && <FailureReason /> }
+<button onClick={compSubmite}> Save</button>
+              </div>  */}
+
+              {/* <div
                 className="page_two_Failure"
                 onChange={helomk}
                 style={{ display: faillist }}
@@ -846,29 +869,34 @@ function VehicleRegister() {
                   <input
                     type="checkbox"
                     value="Engine oil Drain extension leak"
+                    onChange={handleFailureComplaintsList}
                   />
                   <label> Engine oil Drain extension leak </label>
                 </div>
                 <div className="failure_reason">
-                  <input type="checkbox" value="Engine oil Hose" />
+                  <input type="checkbox" value="Engine oil Hose" onChange={handleFailureComplaintsList} />
                   <label> Engine oil Hose </label>
                 </div>
                 <div className="failure_reason">
                   <input
                     type="checkbox"
                     value="Engine cylinder Head cover Gasket "
+                    onChange={handleFailureComplaintsList}
                   />
                   <label> Engine cylinder Head cover Gasket </label>
                 </div>
                 <div className="failure_reason">
-                  <input type="checkbox" value="Engine Oil filter leak" />
+                  <input type="checkbox" value="Engine Oil filter leak" 
+                    onChange={handleFailureComplaintsList}
+                  />
                   <label> Engine Oil filter leak</label>
                 </div>
-                <button onClick={failuereSubmite}>Submit</button>
-              </div>
+                <button onClick={compSubmite}>Submit</button>
+              </div> */}
             </div>
             <div className="search_foreman">
               <select className="select">
+                <text>Assign To</text>
                 {options.map((option) => (
                   <option value={option.value}>
                     <b>{option.label}</b>
@@ -887,5 +915,4 @@ function VehicleRegister() {
     </>
   );
 }
-
 export default VehicleRegister;

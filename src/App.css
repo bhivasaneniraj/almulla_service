@@ -129,10 +129,11 @@
   width: 350pt;
   height: 49pt;
   border-radius: 4pt;
-  margin-left: -116%; 
- border-color: rgb(0,105,70);
- box-sizing: border-box;
- border-width: thin;
+  margin-left: -116%;
+  border-color: rgb(0,105,70);
+  box-sizing: border-box;
+  border-width: thin;
+  padding-left: 10px;
  
 }
 
@@ -190,8 +191,10 @@
 input::placeholder {
   font-weight: bold;
   font-size: 18px;
+
   color: black;
-  margin-left: 10rem !important;
+  
+  margin-left: 10% !important;
 } 
 
 .sbbntn:hover{

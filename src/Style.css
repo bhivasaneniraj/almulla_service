@@ -52,7 +52,7 @@
     height: 37pt;
     text-align: center;
     margin-top: 1%;
-    margin-right: 38%;
+    margin-right: 43%;
 }
 
 
@@ -96,8 +96,8 @@
     font-size: 14pt;
    
     /* margin-left: 123px; */
-    margin-left: 12%;
-    margin-left: 20%;
+    margin-left: 224px;
+   
 }
 
 .heading{
@@ -174,14 +174,14 @@ margin-left: 120px; */
     font-weight: bold;
     height: 55px;
     margin-right: -16%;
-    padding-top:6px;
+    padding-top:14px;
 }
 
 .page_two_or span {
     border-right: 2px dashed #00a53e;
     /* font-size: 100px; */
     height: 10vh;
-    margin-top: 10px;
+    margin-top: 3px;
     margin-left: 12px;
 }
 
@@ -242,7 +242,7 @@ margin-left: 120px; */
 .vl {
     border-right: 1px dashed 
     rgb(0,0,0);
-    height: 38pt;
+    height: 40pt;
     width: 1pt;
     position: absolute;
     left: 58%;
@@ -314,18 +314,18 @@ tr td {
 
 /* -------------------------------------------------------- (  complaint_failure ) --------------------------------------------------------- */
 
-.page_two_complaint_failure h2 {
+ .page_two_complaint_failure h2 {
     font-size: 18pt;
     color: rgb(0,0,0);
-}
+} 
 
-.page_two_complaint_failure {
+ .page_two_complaint_failure {
     width: 97%;
     margin: auto;
     margin-top: 20px;
-}
+} 
 
-.complaint_failure {
+ .complaint_failure {
     background-color: #00a53e;
     margin-top: 5px;
     color: white;
@@ -334,18 +334,18 @@ tr td {
     height: 50px;
     display: flex;
 
-}
+} 
 
-.complaint {
-    /* background-color: antiquewhite; */
-    width: 50%;
+ .complaint {
+    background-color: antiquewhite;
+     width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 10px;
-}
+} 
 
-.complaint i {
+ .complaint i {
     width: 30px;
     height: 30px;
     background-color: white;
@@ -358,14 +358,14 @@ tr td {
     margin-right: 10px;
 }
 
-.failure {
-    /* background-color: antiquewhite; */
-    width: 65%;
+ .failure {
+     background-color: antiquewhite; 
+     width: 65%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 10px;
-}
+} 
 
 .failure i {
     width: 30px;
@@ -378,7 +378,7 @@ tr td {
     border-radius: 50%;
     cursor: pointer;
     margin-right: 10px;
-}
+} 
 
 .main_div {
     position: relative;
@@ -395,8 +395,74 @@ tr td {
     height: 290vh;
 }
 
+.page_two_complaint_failure h2{
+    font-size: 18pt;
+    color: rgb(0,0,0);
+    margin-left: 0%;
+}
+
+.page_two_complaint_failure .customer_table{
+    width: 100%;
+    margin-left: 0%;
+}
+
+.customer_table .cust_tab0 .cust_tab{
+    font-size: 16pt;
+    text-align: left;
+    width: 45%;
+    background-color: rgb(8,136,38);;
+}
 
 
+.cust_tab i{
+    
+    margin-left: 94%;
+    margin-top: -5%;
+     margin-right: -3px; 
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #00a53e;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cust_tab1 i{
+    margin-left: 93%;
+    margin-top: -5%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #00a53e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.cust_tab0 .cust_tab1{
+    text-align: left;
+    font-size: 16pt;
+}
+
+.cust_tab2 td{
+    text-align: left;
+}
+
+.page_two_complaint_failure .customer_table{
+    border-spacing: 1px 1px;
+    border-collapse: separate;
+}
+
+.page_two_complaint_failure .cust_tab0{
+    width: 50%;
+} 
 
 /* -------------------------------------------------------- ( / complaint_failure ) --------------------------------------------------------- */
 
@@ -412,7 +478,7 @@ tr td {
     display: flex;
     flex-direction: column;
     width: 65%;
-    /* height: 101vh; */
+    height: 101vh;
     padding: 20px 0;
     border-radius: 5px;
     box-shadow: 0px 0px 5px black;
@@ -462,7 +528,13 @@ tr td {
     margin-left: 220px;
 }
 
-
+.page_two_complaint_list span{
+    border-right: 2px dashed #00a53e;
+    /* font-size: 100px; */
+    height: 10vh;
+    margin-top: 3px;
+    margin-left: 12px;
+}
 
 
 .complaint p{
@@ -533,7 +605,7 @@ tr td {
     height: 45px;
     font-size: 19px;
     color: white;
-    background-color: #00a53e;
+    background-color: rgb(8,136,38);
     border: none;
     cursor: pointer;
     margin-top: 20px;
@@ -542,6 +614,11 @@ tr td {
     /* margin: auto; */
 }
 
+
+
+.page_two_complaint_list .cust_tab{
+
+}
 /* -------------------------------------------------------- ( / page_two_complaint_list ) --------------------------------------------------------- */
 
 
@@ -678,7 +755,7 @@ tr td {
 }
 
 .click:hover{
-    box-shadow: #00a53e;
+    box-shadow: rgb(8,136,38);
   
     }
 
@@ -743,7 +820,7 @@ background-color:  rgb(237, 242, 242);
 
 
 .complaint_failure1 {
-    background-color: #00a53e;
+    background-color: rgb(8,136,38);
     margin-top: 5px;
     color: white;
     font-size: 18px;
@@ -768,7 +845,7 @@ background-color:  rgb(237, 242, 242);
     width: 30px;
     height: 30px;
     background-color: white;
-    color: #00a53e;
+    color:rgb(8,136,38);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -781,7 +858,7 @@ background-color:  rgb(237, 242, 242);
     width: 30px;
     height: 30px;
     background-color: white;
-    color: #00a53e;
+    color: rgb(8,136,38);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -803,7 +880,7 @@ background-color:  rgb(237, 242, 242);
     width: 30px;
     height: 30px;
     background-color: white;
-    color: #00a53e;
+    color: rgb(8,136,38);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -934,57 +1011,14 @@ background-color:  rgb(237, 242, 242);
 }
 
 
-/*********************************************************** failure reason *****************************************************/
+/*********************************************************** FailureReason *****************************************************/
 
-.page_two_complaint_list .freason{
 
-    margin-left: 60%;
-    margin-top: -6%;
+
+.Fail_reason .freason{
 
 }
 
-/* .reasons input{
-    text-align: center;
-    justify-content: center;
-    margin-left: 60%;
-    margin-top: 10px;
-} */
-
-.reasons{
-    margin-left: 10%;
-    
-}
-
-.reasonf{
-    margin-left: 50%;
-}
 
 
-.inpt{
-    margin-left: 29%;
-}
 
-.inpt1{
-    margin-left: 341px;
-}
-
-.inpt2{
-    margin-left: 213px; 
-}
-
-.inpt3{
-    margin-left: 312px;
-}
-
-
-.lable{
-    margin-left: 2%;
-}
-
-.S_pan{
-    border-right: 2px dashed #00a53e;
-    /* font-size: 100px; */
-    height: 10vh;
-    margin-top: 10px;
-    margin-left: 12px;
-}

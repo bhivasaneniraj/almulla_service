@@ -1,4 +1,5 @@
 import React from "react";
+import ForemanCoolComplaint from "./Components/Foreman/ForemanCoolComplaint";
 
 import "./foreman.css";
 
@@ -67,8 +68,9 @@ function Foremanview() {
   //   }
   // };
 
-  const tabdata = [
+  const tabledata = [
     {
+      id:1,
       UnitDetail: "Cooling Unit",
       KTNo: "17/30866",
       SerialNo: "VKA94286893",
@@ -79,6 +81,7 @@ function Foremanview() {
       WarrantyEnd: " 16.06.2023",
     },
     {
+      id:2,
       UnitDetail: "Tail Lift",
       KTNo: "17/30866",
       SerialNo: "21084589",
@@ -97,7 +100,7 @@ function Foremanview() {
       <div className="main">
         <div className="foreman">
           <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Al_Mulla_Group_Logo.svg/1200px-Al_Mulla_Group_Logo.svg.png"
+            src="/images/bitmap@2x.png"
             alt="logo"
           />
           <div className="v2"></div>
@@ -115,18 +118,21 @@ function Foremanview() {
           </div>
         </div>
         <div className="CardReference">
-          <h3>
+          <h2 className="card_ref">
             <b>Job Card Reference Number - {Referenceno}</b>{" "}
-          </h3>
+            <div className="loc">
+              <b> Location: <span>{location}</span></b>
+            </div>
+          </h2>
 
-          <h3 className="loc">
+          {/* <h3 className="loc">
             <b>
               {" "}
               Location: <span>{location}</span>
             </b>{" "}
-          </h3>
+          </h3> */}
 
-          <h3 className="line"></h3>
+        
         </div>
 
         <b>
@@ -134,7 +140,7 @@ function Foremanview() {
           <p className="paragraph">Customer {refer} </p>{" "}
         </b>
         <div className="datatable">
-          <table className="tabular">
+          {/* <table className="tabular">
             <tr className="column">
               <th>Unit Details</th>
               <th>KT No.</th>
@@ -154,26 +160,67 @@ function Foremanview() {
 
             {tabdata.map((val, key) => {
               return (
-                <tr key={key}>
-                  <td>{val.UnitDetail}</td>
-                  <td>{val.KTNo}</td>
-                  <td>{val.SerialNo}</td>
-                  <td>{val.Chassis}</td>
-                  <td>{val.Model}</td>
-                  <td>{val.Date}</td>
-                  <td className="start ">{val.WarrantyStart}</td>
-                  <td className="End">{val.WarrantyEnd}</td>
+                <tr key={val.id}>
+                    <td>{val.UnitDetail}</td>
+                    <td>{val.KTNo}</td>
+                    <td>{val.SerialNo}</td>
+                    <td>{val.Chassis}</td>
+                    <td>{val.Model}</td>
+                    <td>{val.Date}</td>
+                    <td className="start ">{val.WarrantyStart}</td>
+                    <td className="End">{val.WarrantyEnd}</td>
                 </tr>
               );
             })}
-          </table>
+          </table> */}
+          <table className="tabular">
+                  <tr>
+                 
+                    <th>Unit Details</th>
+                    <th>KT No.</th>
+                    <th>Serial No.</th>
+                    <th>Chassis</th>
+                    <th>Model</th>
+                    <th>Date</th>
+                    <th>Warranty Start</th>
+                    <th>Warranty End</th>
+                  </tr>
+
+                  <tr>
+                   
+                    <td>{tabledata[0].UnitDetail}</td>
+                    <td>{tabledata[0].KTNo}</td>
+                    <td>{tabledata[0].SerialNo} </td>
+                    <td>{tabledata[0].Chassis} </td>
+                    <td> {tabledata[0].Model} </td>
+                    <td> {tabledata[0].Date}</td>
+                    <td className="dataT"> {tabledata[0].WarrantyStart}</td>
+
+                    <td className="dataT2"> {tabledata[0].WarrantyEnd}</td>
+                  </tr>
+
+                  <tr>
+                 
+                    <td>{tabledata[1].UnitDetail}</td>
+                    <td>{tabledata[1].KTNo}</td>
+                    <td>{tabledata[1].SerialNo} </td>
+                    <td>{tabledata[1].Chassis} </td>
+                    <td> {tabledata[1].Model} </td>
+                    <td> {tabledata[1].Date}</td>
+                    <td className="dataT3"> {tabledata[1].WarrantyStart}</td>
+
+                    <td className="dataT4"> {tabledata[1].WarrantyEnd}</td>
+                  </tr>
+
+                  
+                </table>
         </div>
         <div className="chckbox">
           <h2>
             <b>Physical Remarks / Observation</b>{" "}
           </h2>
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX3pwWb17B4t0KZcwIY9bxpC2QfIGeDD7beQ&usqp=CAU"
+            src="./images/Truck@2x.png"
             alt="image"
           />
 
@@ -410,8 +457,9 @@ function Foremanview() {
             </tr>
           </table>
         </div>
+      <ForemanCoolComplaint/>
       </div>
-      <div className="Break_cool_unit">
+      {/* <div className="Break_cool_unit">
       <h2 >Breakdown Analysis For Cooling Unit</h2>
       <div className="fail_complaint">
         <div className="complain">
@@ -423,7 +471,7 @@ function Foremanview() {
         <i class="fa-solid fa-plus" ></i>
         </div>
       </div>
-      </div>
+      </div> */}
     </>
   );
 }
