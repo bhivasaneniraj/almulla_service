@@ -285,7 +285,7 @@ function Foremanview() {
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="scratches_class">
                 <b>2. Glass Broken</b>
               </td>
               <td>
@@ -330,7 +330,7 @@ function Foremanview() {
               <td></td>
             </tr>
             <tr>
-              <td>
+              <td className="scratches_class">
                 <b>3. Lights Broken</b>
               </td>
               <td>
@@ -363,7 +363,7 @@ function Foremanview() {
               <td></td>
             </tr>
             <tr>
-              <td>
+              <td className="scratches_class">
                 <b>4. Body Panel Condition</b>
               </td>
               <td>
@@ -396,7 +396,7 @@ function Foremanview() {
               <td></td>
             </tr>
             <tr>
-              <td>
+              <td className="scratches_class">
                 <b>5. Body Accessories</b>
               </td>
               <td>

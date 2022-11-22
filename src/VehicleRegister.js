@@ -1,9 +1,10 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect,} from "react";
+import { useNavigate } from 'react-router-dom';
 import CoolComplaints from "./Components/CoolComplaints";
 import FailureReason from "./Components/FailureReason";
 import TailComplaint from "./Components/TailComplaint";
-import Pagetwocomponent from "./Components/pagetwocomplaintlist";
+import Pagetwocomponent from "./Components/pagetwocomponent";
 import "./Style.css";
 
 function VehicleRegister() {
@@ -22,12 +23,16 @@ function VehicleRegister() {
   const [failureComplaints, SetFailureComplaints] = useState("");
   const [customerComplaint, setCustomerComplaint] = useState([]);
   const [failureComplaintsList, setFailureComplaintsList] = useState([]);
+  const [CustComplaint, setCustComplaint] = useState([]);
   const [pagetwocomplaintlist, setpagetwocomplainlist] = useState(false);
   // const [Showhide, setShowhide] = useState("Hello World")
 
   // const showhie = () => {
   //       console.log(Showhide);
   // }
+ 
+  const navigate =(useNavigate);
+
 
   const handleCheckedAll = () => {
     if (!checkedAllBox) {
@@ -107,8 +112,8 @@ function VehicleRegister() {
 
   const options = [
     {
-      label: "Send Report to Foremen",
-      value: "Send Report to Foremen",
+      label:"Foreman",
+      value:"Foreman",
     },
     {
       label: "Shabbir",
@@ -124,6 +129,22 @@ function VehicleRegister() {
     },
   ];
 
+
+  const Select_option = [
+    {
+      id:1,
+      label1:" Shuwaikh Van 1",
+      value:"Shuwaikh Van 1",
+    
+    },
+    {
+      id:2,
+      label2:"Shuwaikh Van 2",
+      value:"Shuwaikh Van 2",
+     
+    }
+  ];
+
   function Submit() {
     const tabledata = [
       {
@@ -135,7 +156,7 @@ function VehicleRegister() {
         Model: "CITIMAX-400",
         Date: "16.10.2022",
         WarrantyStart: " 13.06.2022",
-        WarrantyEnd: "16.06.2023",
+        WarrantyEnd: "16.06.2022",
       },
       {
         id: 2,
@@ -152,6 +173,9 @@ function VehicleRegister() {
     if (searchTextInput === "17/30866") {
       setData(tabledata);
       setShow(true);
+    }
+    else{
+      alert("Please Enter Correct Number");
     }
   }
 
@@ -227,21 +251,20 @@ function VehicleRegister() {
     SetFailureComplaints(e.target.value);
   };
 
-  useEffect(() => {
+ useEffect(() => {
     console.log(failureComplaintsList, "failureList");
   }, [failureComplaintsList]);
 
-  const handleFailureComplaintsList = (e) => {
-    if (e.target.checked) {
-      setFailureComplaintsList((prev) => prev.concat(e.target.value));
-    } else {
-      setFailureComplaintsList((prev) =>
-        prev.filter((item) => {
-          return item !== e.target.value;
-        })
-      );
-    }
-  };
+
+
+  const handlerAdioButton = (e) => {
+    setCustComplaint(e.target.value);
+  }
+useEffect(() => {
+  console.log(CustComplaint, "CustomerComplaint");
+}, [CustComplaint])
+
+ 
 
   return (
     <>
@@ -258,9 +281,11 @@ function VehicleRegister() {
           <span>Anisur Rahman </span>
 
           <div className="Page_two_LogOut">
-            <i class="fa-solid fa-arrow-right-from-bracket">
-              <h1 className="head">Logout</h1>
+            <i>
+            <img src="./images/shape.png" alt="" onClick={() =>  navigate("/")}/>
+            
             </i>
+            <h1 className="head"><b>Logout</b> </h1>
           </div>
         </div>
         <div className="Page_two_search_Chooes_box">
@@ -310,22 +335,19 @@ function VehicleRegister() {
                     </label>
 
                     <select className="dpdbtn">
-                      <option value=" Shuwaikh Van 1" className="op1">
-                        {" "}
-                        Shuwaikh Van 1
-                      </option>
+                    {Select_option.map((option) => (
+                      <>
 
-                      <option value="Shuwaikh Van 2" className="op2">
-                        <b> Shuwaikh Van 2 </b>
-                      </option>
-                      <option value="Kuwait" className="op3">
-                        {" "}
-                        <b>Kuwait</b>
-                      </option>
-                      <option value="Shuwaikh Van 3" className="op4">
-                        {" "}
-                        <b>Shuwaikh Van 3</b>
-                      </option>
+                    
+                  <option value={option.value}>
+                    <b>{option.label1}</b>
+                     </option>
+                  <option value={option.value}>
+                    <b>{option.label2}</b>
+                  </option>
+                  </>
+                  
+                ))}
                     </select>
                   </form>
                 </div>
@@ -715,14 +737,23 @@ function VehicleRegister() {
                   </table>
                 </div>
               </div>
+              
               {checkedFirst && (
                 <CoolComplaints
                   complaint={complaint}
                   failure={failure}
-                  coolComponent={customerComplaint}
+                  handlerAdioButton={handlerAdioButton}
+                  CustComplaint={CustComplaint}
+                  failureComplaintsList={failureComplaintsList}
+                  setCustComplaint={setCustComplaint}
+                  
                 />
+                
               )}
+             
+           
             </div>
+            {/* <hr style={{height:"1pt", width:"1000pt",color:"rgb(8,136,38)"}} /> */}
             {/* custome complaint tail */}
 
             {checkedSecond && (
@@ -739,8 +770,11 @@ function VehicleRegister() {
                   compSubmite={compSubmite}
                   failureComplaints={failureComplaints}
                   handleRadioButton={handleRadioButton}
+                  failureComplaintsList={failureComplaintsList}
+                  setFailureComplaintsList={setFailureComplaintsList}
                 />
               </div>
+          
               {/* <div className="complaints-container"> */}
               {/* <h3>Customer Complaint</h3>
           
@@ -894,9 +928,31 @@ function VehicleRegister() {
                 <button onClick={compSubmite}>Submit</button>
               </div> */}
             </div>
-            <div className="search_foreman">
-              <select className="select">
-                <text>Assign To</text>
+            <div className="drop_down_value">
+            <b>Send Report To - </b>
+              <select className="Drop_select"
+                style={{
+
+marginTop:"6%",
+
+width:"60%",
+
+
+border: "none",
+
+backgroundcolor:"rgb(226,245,231)",
+
+paddingLeft: "15px",
+
+fontSize: "16pt",
+
+color: "rgb(0,0,0)",
+
+fontFamily: "Roboto-Bold",
+
+}}
+              >
+               
                 {options.map((option) => (
                   <option value={option.value}>
                     <b>{option.label}</b>

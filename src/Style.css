@@ -79,16 +79,20 @@
     padding-right: 6px;
     margin-left: 92%;
     /* margin-bottom: -15px; */
-    margin-top: -65px;
+    margin-top: -77px;
 }
 
 .head{
     font-size: 14pt;
     letter-spacing: 0.01pt;
     color: rgb(0,0,0);
-    margin-left: 25px;
-    margin-top: -20px;
+    margin-left: 0px;
+    margin-top: -65px;
    
+}
+
+.Page_two_LogOut img{
+    height: 4vh;
 }
 
 
@@ -173,7 +177,7 @@ margin-left: 120px; */
     font-size: 21px;
     font-weight: bold;
     height: 55px;
-    margin-right: -16%;
+    margin-right: -30%;
     padding-top:14px;
 }
 
@@ -194,7 +198,7 @@ margin-left: 120px; */
     width: 425px;
     border-radius: 5px;
     position: relative;
-    margin-right: 300px;
+    margin-right: 260px;
 
 }
 
@@ -319,6 +323,10 @@ tr td {
     color: rgb(0,0,0);
 } 
 
+.page_two_complaint_tab{
+    border: 2px solid red;
+}
+
  .page_two_complaint_failure {
     width: 97%;
     margin: auto;
@@ -401,10 +409,54 @@ tr td {
     margin-left: 0%;
 }
 
+.page_two_complaint_tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .page_two_complaint_failure .customer_table{
     width: 100%;
     margin-left: 0%;
 }
+
+
+
+.page_two_complaint_failure_table{
+    margin-top: -244px;
+}
+
+
+
+.Cust_Table_tab th {
+    font-size: 16pt;
+    text-align: left;
+    width: 45%;
+}
+
+.Cust_Table th{
+    font-size: 16pt;
+    text-align: left;
+    width: 45%;
+}
+
+.Cust_t1 td{
+    font-size: 14pt;
+    text-align: left;
+    width: 45%;
+}
+
+
+.Cust_t0 td{
+    font-size: 14pt;
+    text-align: left;
+    width: 45%;
+}
+
+
+
+
+
+
 
 .customer_table .cust_tab0 .cust_tab{
     font-size: 16pt;
@@ -413,6 +465,39 @@ tr td {
     background-color: rgb(8,136,38);;
 }
 
+
+.Cust_t1 i{
+    margin-left: 94%;
+    margin-top: -5%;
+     margin-right: -3px; 
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #00a53e;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.Cust_t3 i{
+    margin-left: 94%;
+    margin-top: -5%;
+     margin-right: -3px; 
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #00a53e;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 .cust_tab i{
     
@@ -455,6 +540,9 @@ tr td {
     text-align: left;
 }
 
+.cust_tab3 td{
+    text-align: left;
+}
 .page_two_complaint_failure .customer_table{
     border-spacing: 1px 1px;
     border-collapse: separate;
@@ -463,6 +551,19 @@ tr td {
 .page_two_complaint_failure .cust_tab0{
     width: 50%;
 } 
+
+
+.Cust_Table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 2px solid black;
+   }
+   
+   .Cust_Table_tab {
+       width: 100%;
+       border: 2px solid blue;
+   }
 
 /* -------------------------------------------------------- ( / complaint_failure ) --------------------------------------------------------- */
 
@@ -477,8 +578,8 @@ tr td {
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 65%;
-    height: 101vh;
+    width: 795pt;
+    height: 520pt;
     padding: 20px 0;
     border-radius: 5px;
     box-shadow: 0px 0px 5px black;
@@ -490,8 +591,8 @@ tr td {
 
 .page_two_complaint_list input {
     accent-color: #00a53e;
-    width: 20px;
-    height: 20px;
+    width: 21pt;
+     height: 21pt;
     cursor: pointer;
     display: inline;
 }
@@ -510,23 +611,14 @@ tr td {
 }
 
 .complist p {
-    font-size: 17px;
+    font-size: 18pt;
     margin-left: 10px;
     margin-top: 0px;
+    letter-spacing: 0.01pt;
+    color:rgb(0,0,0);
 }
 
-.page_two_complaint_list button {
-    width: 45%;
-    height: 50px;
-    font-size: 19px;
-    color: white;
-    background-color: #00a53e;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 4px;
-    margin-left: 220px;
-}
+
 
 .page_two_complaint_list span{
     border-right: 2px dashed #00a53e;
@@ -537,22 +629,26 @@ tr td {
 }
 
 
-.complaint p{
-    font-size: 16pt;
+
+.page_two_component_button .Save_Button{
+    margin-left: 30%;
+    margin-top: 3%;
+    width: 301pt;
+    height: 50pt;
+    background-color: rgb(8,136,38);
+    border-radius: 6pt;
+    border-color: rgb(8,136,38);
+    border-right: rgb(8,136,38);
+    border-bottom: rgb(8,136,38);
+    color: rgb(255,255,255);
+    font-size: 23pt;
+    letter-spacing: 0.89pt; 
+   
 }
 
-.complaint1 p{
-    font-size: 16pt;
+.page_two_component_button .Save_Button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-
-.failure1 p{
-    font-size: 16pt;
-}
-
-.failure p{
-    font-size: 16pt;
-}
-
 
 
 .page_two_Failure {
@@ -616,9 +712,7 @@ tr td {
 
 
 
-.page_two_complaint_list .cust_tab{
 
-}
 /* -------------------------------------------------------- ( / page_two_complaint_list ) --------------------------------------------------------- */
 
 
@@ -650,7 +744,7 @@ tr td {
     padding: 10px 0 0 10px;
 }
 
-/********************************8*************  Checkboxes ******************************************************************************/
+/********************************8************* <VehicleRegister.js> tableCheckbox******************************************************************************/
 
 
 .tablecheckbox h2{
@@ -831,16 +925,16 @@ background-color:  rgb(237, 242, 242);
 }
 
 
-.complaint1 {
+/* .complaint1 {
     /* background-color: antiquewhite; */
-    width: 46%;
+    /* width: 46%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 10px;
-}
+    padding-left: 10px; */
+/* } */ 
 
-.complaint1 i{
+/* .complaint1 i{
     margin-right: 12px;
     width: 30px;
     height: 30px;
@@ -851,7 +945,7 @@ background-color:  rgb(237, 242, 242);
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-}
+} */
 
 
 .complaint i {
@@ -978,8 +1072,11 @@ background-color:  rgb(237, 242, 242);
 }  */
 
 .job_card{
-    margin-left: 1000px;
-    margin-top: -132px;
+    margin-top: -225px;
+
+    justify-content: center;
+    align-items: center;
+    margin-left: 79%;
     
 }
 
@@ -988,20 +1085,21 @@ background-color:  rgb(237, 242, 242);
    
     background-color: rgb(8,136,38);
     color: white;
-    font-size: 20pt; width: 320pt;
+    font-size: 20pt;
+    width: 320pt;
     color: rgb(255,255,255);
     letter-spacing: 0.89pt;
-
-   
     /* margin-right: 23px; */
     margin-left: -180px;
     /* margin-bottom: 109%; */
-    margin-top: -7%;
+ 
+    margin-top: 33%;
+
+    margin-bottom: 35px;
     height: 62pt;
     cursor: pointer;
     border: 1px solid white;
     border-radius: 6pt;
-
 }
 
 
@@ -1015,10 +1113,258 @@ background-color:  rgb(237, 242, 242);
 
 
 
+
+
+/*************************************************************<TailComplaint.js>***********************************/
+
+
+.page_two_complaint_failure1 .complaint1{
+    width: 100%;
+    margin-left: 0%;
+    border-spacing: 1px 1px;
+    border-collapse: separate;
+}
+
+.compl_aint0 i{
+    margin-left: 93%;
+    margin-top: -5%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #00a53e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.compl_aint1 i{
+    margin-left: 94%;
+    margin-top: -5%;
+    margin-right: -3px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #00a53e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.page_two_complaint_failure1 .compl_aint{
+    width: 50%;
+}
+
+
+.page_two_complaint_failure1 .compl_aint .compl_aint0{
+    font-size: 16pt;
+    text-align: left;
+    width: 45%;
+    /* background-color: rgb(8,136,38); */
+}
+
+/* .compl_aint0 .compl_aint1{
+    text-align: left;
+    font-size: 16pt;
+} */
+
+.complaint1 .compl_aint1{
+    text-align: left;
+    font-size: 16pt;
+}
+
+.complaint1 .comp_laint2 td{
+    text-align: left;
+}
+
+
+/********************************************************<FailureReason.js>*****************************/
 .Fail_reason .freason{
+font-size: 20pt;
+color: rgb(0,0,0);
+letter-spacing: 0.01pt;
+}
+
+.Fail_reason{
+    padding-left: 60%;
+    margin-top: -62%;
+}
+
+.Engine_oil_Drain .inpt{
+    width: 23pt;
+    height: 23pt;
+}
+
+.lable{
+    font-size: 18pt;
+    padding-left: 3%;
+    margin-bottom: 1%;
+    
+}
+
+.Fail_reason .inpt{
+    accent-color:  rgb(15,95,34);
+}
+
+/*************************************<pagetwocomponent.js> *****************************************/
+
+.complaints_container .Compla_int_container_heading{
+    font-size: 20pt;
+    letter-spacing: -0.01pt;
+    color: rgb(0,0,0);
+}
+
+/* .Spa_nn{
+
+    border-right: 2px dashed #00a53e;
+    /* font-size: 100px; */
+    /* height: 100vh;
+    margin-top: 3px;
+    margin-left: 12px;
+} */ 
+
+
+.arrow_img .arrow_imggg{
+    width: 26pt;
+    height: 26pt;
+    margin-left: 47%;
+    /* margin-bottom: 0%; */
+    margin-top: -50%;
+}
+
+
+.arrow_img .Spa_nn{
+    border-left: 1px dashed rgb(151,151,151);
+    height: 415pt;
+    margin-left: 515px;
+    margin-top: -51%;
+}
+
+
+/*********************************************<VehicelRegister.js> .Dropdown****************************/
+
+
+.Selec_t,
+
+.dropdown-center,
+
+.dropend,
+
+.dropstart,
+
+.dropup,
+
+.dropup-center {
+
+  position: relative;
+
+  border: none;
+
+  height: 37pt;
+
+  width: 410pt;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: rgb(245, 255, 248);
+
+  border-radius: 6pt;
+
+  font-size: 15pt;
+
+  letter-spacing: -0.01pt;
+
+  color: rgb(0, 0, 0);
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+}
+
+
+
+textarea:focus,
+
+input:focus {
+
+  outline: none;
+
+}
+
+
+
+*:focus {
+
+  outline: none;
 
 }
 
 
 
 
+
+.Drop_select {
+
+  -webkit-appearance: none;
+
+  -moz-appearance: none;
+ 
+
+  background: transparent;
+
+  background-image: url("C:\Almulla_Sevice\loginpage\public\logo\nounBottom2796543.png");
+  width: 10vh;
+
+  border-radius: 6pt;
+
+  background-repeat: no-repeat;
+
+  background-position-x: 100%;
+
+  background-position-y: 5px;
+
+  border: 1px solid #dfdfdf;
+
+  /* margin-top: 5pt; */
+
+  /* border-radius: 2px;
+
+    margin-right: 10rem;
+
+    padding: 1rem;
+
+    padding-right: 2rem; */
+
+}
+
+
+.Selec_t{
+    margin-top: 7%;
+    width: 38%;
+}
+
+.drop_down_value{
+    width: 370pt;
+    margin-top: 100px;
+    margin-left: 2%;
+    margin-bottom: 50px;
+    height: 68pt;
+    background-color: rgb(226,245,231);
+    border-radius: 6pt;
+}
+
+
+.drop_down_value b{
+    padding-left: 30px;
+    font-size: 16pt;
+}

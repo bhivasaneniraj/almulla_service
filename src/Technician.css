@@ -32,7 +32,7 @@
 
 .header_class span{
     font-size: 14pt;
-    margin-left: 244px;
+    margin-left: 218px;
     width: 372pt;
     height: 37pt;
 
@@ -57,8 +57,8 @@
     font-size: 14pt;
     width: 44pt;
     height: 16pt;
-    margin-left: 20px;
-    margin-top: -15px;
+    margin-left: 30px;
+    margin-top: -23px;
 }
 
 
@@ -79,6 +79,12 @@
     margin-top: -10px;
 }
 
+
+.Logout_class .Logout_logo img{
+width: 16pt;
+height: 18.5pt;
+margin-top: 10px;
+}
 
 /*********************************** Table *************************************************************/
 
@@ -102,12 +108,18 @@
    
 }
 
-.col_tabclass th{
+.new_jordcard th tr td{
     text-align: left;
 }
 
-.tabData td{
+.col_tabclass td{
     text-align: left;
+}
+
+.col_tabclass img{
+    float: right;
+    
+    width: 10%;
 }
 
 

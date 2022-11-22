@@ -17,7 +17,7 @@
 /*************************************** <main/> ************************************************************/
 
 
-/*********************************************************** foremam *********************************************/
+/*********************************************************** foreman *********************************************/
 
 .foreman{
   display: flex;
@@ -284,8 +284,8 @@
 }
 
 .checktable_class{
-  border-collapse: separate;
-  border-spacing: 1px;
+  border-spacing: 1px 1px;
+    border-collapse: separate;
 }
 
 
@@ -386,6 +386,27 @@
   }
 
 
+.tw0_page_complaint .head_ing .DPdown{
+ 
+    padding-left: 62%;
+    margin-bottom: 35px;
+}
 
 
 
+
+.head_ing h2{
+      margin-top: 10px;
+}
+
+.drop_down, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
+  position: relative;
+  border: none;
+  height: 34px;
+  width: 431px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(226, 245, 231);
+  border-radius: 0.5rem;
+} 

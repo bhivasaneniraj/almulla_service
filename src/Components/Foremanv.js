@@ -3,18 +3,46 @@ import './Foremanv.css'
 import { useNavigate } from 'react-router-dom';
 
 
-const Data = [
-    { jobcard: "17/30866", Date: "16.09.2022",Technician:"-", Status: "Assigned" },
-    { jobcard: "17/70875", Date: "16.09.2022",Technician:"Faisal",Status:"Work in Progress"},
-    { jobcard: "17/92309", Date: "16.09.2022",Technician:"Faisal",Status:"Work in Progress"},
-    { jobcard: "17/74123", Date: "17.09.2022",Technician:"Faisal", Status:"Work in Progress"},
-]
+
+const ForemanData = [
+  {
+    id: 1,
+  JobCard:"17/30866",
+  Date:"16.09.2022",
+  Technician:"-",
+  Status:"Assigned"
+  },
+  {
+    id: 2,
+    JobCard:"17/730847",
+    Date:"16.09.2022",
+    Technician:"Faisal  ",
+    Status:"Work in Progress"
+  },
+  {
+    id: 3,
+    JobCard:"17/83221",
+    Date:"16.09.2022",
+    Technician:"Hafizullah",
+    Status:"Work in Progress"
+  },
+  {
+    id: 4,
+    JobCard:"17/09384",
+    Date:"17.09.2022",
+    Technician:"Jameel",
+    Status:"Work in Progress "
+  },
+];
 
 var name= "Shabbir";
 
 
 function Formanv() {
     const navigate = useNavigate();
+
+
+
   return (
     <>
     <div className="Foreman_Main">
@@ -22,6 +50,7 @@ function Formanv() {
         <img
             src="/images/bitmap@2x.png"
             alt="logo"
+            className="bitmap_png"
           />
            <div className="V0"></div>
            <h3>
@@ -32,7 +61,10 @@ function Formanv() {
           <div className="headerss">
           <span>{name} </span>
           <div className="logoutss">
-          <i class="fa-solid fa-arrow-right-from-bracket" type="button"><h1 className="Head"><b>Logout</b> </h1></i>
+          <i className="logout_png" type="button">
+          <img src="./images/shape@2x.png" alt="logo" />
+          </i>
+          <h1 className="Head"><b>Logout</b> </h1>
           </div>
           </div>
           <div className="Table_foreman">
@@ -40,23 +72,46 @@ function Formanv() {
           </div>
           <div className="app_foreman">
           <table className='table_for'>
-        <tr className='column_for'>
+        <tr className='Fore_Man_Data'>
           <th className="Assiged_for">Job Cards</th>
           <th>Date</th>
           <th>Technician</th>
           <th>Status</th>
         </tr>
-        {Data.map((val, key) => {
-          return (
-            <tr key={key} className="taBData">
-              <td>{val.jobcard}</td>
-              <td>{val.Date}</td>
-            <td>{val.Technician}</td>
-          {val.Status === "Assigned" ? (<td>{val.Status} <button className="buttoni" onClick={() => navigate("/Foremanpage")}></button></td> ) : (<td>{val.Status} <button className="checkmark" onClick={() => navigate("/Foremanpage")}></button></td>)
-              }
-            </tr>
-          )
-        })}
+ 
+      <tr className='Fore_Man_Data'>
+        <td>{ForemanData[0].JobCard}</td>
+        <td>{ForemanData[0].Date}</td>
+        <td>{ForemanData[0].Technician}</td>
+        <td>{ForemanData[0].Status} <img src="./logo/assigned@3x.png" alt="logo" className='Assi_gned' onClick={()=> navigate("/Foremanpage")}/></td>
+     
+      </tr>
+
+      <tr className='Fore_Man_Data'>
+        <td>{ForemanData[1].JobCard}</td>
+        <td>{ForemanData[1].Date}</td>
+        <td>{ForemanData[1].Technician}</td>
+        <td>{ForemanData[1].Status} <img src="./logo/workinprogress@3x.png" alt="logo"  /></td>
+     
+      </tr>
+
+      
+      <tr className='Fore_Man_Data'>
+        <td>{ForemanData[2].JobCard}</td>
+        <td>{ForemanData[2].Date}</td>
+        <td>{ForemanData[2].Technician}</td>
+        <td>{ForemanData[2].Status} <img src="./logo/workinprogress@3x.png" alt="logo"  /></td>
+     
+      </tr>
+
+      
+      <tr className='Fore_Man_Data'>
+        <td>{ForemanData[3].JobCard}</td>
+        <td>{ForemanData[3].Date}</td>
+        <td>{ForemanData[3].Technician}</td>
+        <td>{ForemanData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo"  /></td>
+     
+      </tr>
       </table>
           </div>
         </div>

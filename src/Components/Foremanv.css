@@ -4,13 +4,18 @@
 }
 
 
-
-
-.Foreman_cl img{
+.Foreman_Main .Foreman_cl .bitmap_png{
     width: 133.3pt;
     height: 38pt;
     margin-top: 20px;
     margin-left: 10px;
+}
+
+.Foreman_cl img{
+    width: 16pt;
+    height: 18.5pt;
+    margin-top: 10px;
+    margin-left: 0px;
 }
 
 .V0{
@@ -54,12 +59,18 @@
    
 }
 
+
+.logoutss .logout_png{
+    width: 16pt;
+    height: 18.5pt;
+}
+
 .logoutss .Head{
     font-size: 14pt;
     width: 44pt;
     height: 16pt;
-    margin-left: 20px;
-    margin-top: -15px;
+    margin-left: 30px;
+    margin-top: -17px;
 }
 
 .Table_foreman h3{
@@ -96,23 +107,31 @@
 }
 
 
-.column_for th{
+.table_for .Fore_Man_Data td{
     text-align: left;
 }
 
 
-.col_tabclass th{
+
+
+.table_for .Fore_Man_Data th{
     text-align: left;
 }
 
-
-.taBData td{
-    text-align: left;
+.Fore_Man_Data img{
+    float: right;
 }
+
+
 
 .table_for tr{
     font-size: 16pt;
     letter-spacing: 0.01pt;
+}
+
+
+.Fore_Man_Data .Assi_gned{
+    cursor: pointer;
 }
 
 
@@ -122,22 +141,22 @@
 
 
 
-.buttoni {
-    width: 95px;
-    height: 51.9px;
-    position: relative;
-    transition: .2s ease-in-out;
-    cursor: pointer;
-    border: 0;
-  }
-  
-  .buttoni:before,
-  .buttoni:after {
-    position: absolute;
-    content: '';
-    transition: .2s ease-in-out;
-  }
-  
+    /* .buttoni {
+        width: 95px;
+        height: 51.9px;
+        position: relative;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+        border: 0;
+    }
+    
+    .buttoni:before,
+    .buttoni:after {
+        position: absolute;
+        content: '';
+        transition: .2s ease-in-out;
+    } */
+/*   
   .buttoni:before {
     background: rgb(197,77,77);
     border-radius: 50%;
@@ -146,8 +165,8 @@
     right: 15px;
     top: 10px;
   }
-  
-  .buttoni:after {
+   */
+  /* .buttoni:after {
     width: 0;
     height: 0;
     display: block;
@@ -157,17 +176,17 @@
     transform: rotate(-90deg);
     right: 20px;
     top: 19px;
-  }
+  } */
   
  
   
-  .buttoni:hover:before {
+  /* .buttoni:hover:before {
     background: 
     rgb(197,77,77);
-  }
+  } */
 
 
-  .checkmark {
+  /* .checkmark {
     display: inline-block;
     transform: rotate(45deg);
     height: 25px;
@@ -175,4 +194,4 @@
     margin-left: 60%; 
     border-bottom: 7px solid #78b13f;
     border-right: 7px solid #78b13f;
-  }
+  } */

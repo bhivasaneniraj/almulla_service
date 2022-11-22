@@ -1,15 +1,50 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Technician.css';
+
+
+
 
 
 function TechnicianView() {
 
-    const data = [
-        { jobcard: "17/30866", Date: "16.09.2022", Status: "Assigned" },
-        { jobcard: "17/70875", Date: "16.09.2022",Status:"Work in Progress"},
-        { jobcard: "17/92309", Date: "16.09.2022",Status:"Work in Progress"},
-        { jobcard: "17/74123", Date: "17.09.2022", Status:"Work in Progress"},
-      ]
+
+const navigate = useNavigate();
+
+  const Submit = () => {
+     if(TechnicianData.Status === "Assigned"){
+      navigate('/VehicleRegister')
+     }else{
+       alert("Sorry")
+     }
+  }
+
+    const TechnicianData = [
+      {
+        id: 1,
+      JobCard:"17/30866",
+      Date:"16.09.2022",
+      Status:"Assigned"
+      },
+      {
+        id: 2,
+        JobCard:"17/730847",
+        Date:"16.09.2022",
+        Status:"Completed"
+      },
+      {
+        id: 3,
+        JobCard:"17/83221",
+        Date:"16.09.2022",
+        Status:"Completed"
+      },
+      {
+        id: 4,
+        JobCard:"17/09384",
+        Date:"17.09.2022",
+        Status:"Work in Progress "
+      },
+    ];
     
       var named= "Shakeel Siddhiqui";
 
@@ -35,7 +70,10 @@ function TechnicianView() {
             <span>{named} </span>
 
             <div className="Logout_class">
-            <i class="fa-solid fa-arrow-right-from-bracket" type="button"><h1 className="head2"><b>Logout</b> </h1></i>
+            <i className="Logout_logo">
+            <img src="./images/shape@2x.png" alt="logo" />
+         </i>
+         <h1 className="head2"><b>Logout</b> </h1>
             </div>
             </div>
             <div className="foremantable_class">
@@ -50,17 +88,31 @@ function TechnicianView() {
           
           <th>Status</th>
         </tr>
-        {data.map((val, key) => {
-          return (
-            <tr key={key} className="tabData">
-              <td>{val.jobcard}</td>
-              <td>{val.Date}</td>
-            
-              <td>{val.Status}
-              </td>
-            </tr>
-          )
-        })}
+       <tr className='col_tabclass'>
+        <td>{TechnicianData[0].JobCard}</td>
+        <td>{TechnicianData[0].Date}</td>
+        <td>{TechnicianData[0].Status} <img src="./logo/assigned@3x.png" alt="logo" onClick={Submit} /></td>
+     
+       </tr>
+    
+    <tr className='col_tabclass'>
+    <td>{TechnicianData[1].JobCard}</td>
+    <td>{TechnicianData[1].Date}</td>
+    <td>{TechnicianData[1].Status} <img src="./logo/nounTick3923816@3x.png" alt="logo" /></td>
+    </tr>
+
+    <tr className='col_tabclass'>
+    <td>{TechnicianData[2].JobCard}</td>
+    <td>{TechnicianData[2].Date}</td>
+    <td>{TechnicianData[2].Status} <img src="./logo/nounTick3923816@3x.png" alt="logo" /></td>
+
+    </tr>
+
+    <tr className='col_tabclass'>
+    <td>{TechnicianData[3].JobCard}</td>
+    <td>{TechnicianData[3].Date}</td>
+    <td>{TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" /></td>
+    </tr>
       </table>
     </div>
     
@@ -69,4 +121,4 @@ function TechnicianView() {
   )
 }
 
-export default TechnicianView
+export default TechnicianView;

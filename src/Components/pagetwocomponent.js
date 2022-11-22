@@ -5,6 +5,8 @@ function pagetwocomplaintlist({
   handleRadioButton,
   compSubmite,
   failureComplaints,
+  failureComplaintsList,
+  setFailureComplaintsList
 }) {
   return (
     <>
@@ -14,8 +16,8 @@ function pagetwocomplaintlist({
                 style={{ display: omplistf }}
                
               > */}
-      <div className="complaints-container">
-        <h3>Customer Complaint</h3>
+      <div className="complaints_container">
+        <h3 className="Compla_int_container_heading">Customer Complaint</h3>
 
         <div className="complist">
           <input
@@ -106,9 +108,18 @@ function pagetwocomplaintlist({
           />
           <p>Compressor Stuck</p>
         </div>
+        <div className="arrow_img">
+        <img src=".\logo\shape@2x.png" alt="logo"  className="arrow_imggg"/>
+        <div className="Spa_nn"></div>
+        </div>
+      
+        <div className="page_two_component_button">
+
+<button onClick={compSubmite} className="Save_Button"> SAVE</button>
+</div>
       </div>
-      {failureComplaints === "Engine oil leak" && <FailureReason />}
-      <button onClick={compSubmite}> Save</button>
+      {failureComplaints === "Engine oil leak" && <FailureReason setFailureComplaintsList={setFailureComplaintsList} failureComplaintsList={failureComplaintsList}/>}
+     
       {/* </div> */}
     </>
   );
