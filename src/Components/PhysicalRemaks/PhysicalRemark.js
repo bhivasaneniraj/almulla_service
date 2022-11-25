@@ -1,4 +1,5 @@
 import React from 'react'
+import './PhysicalRemarks.css'
 
 function PhysicalRemark() {
   return (
@@ -89,7 +90,7 @@ function PhysicalRemark() {
                             for="tableDefaultCheck5"
                             className='Back'
                           >
-                           <p>Back</p> 
+                           Back 
                           </label>
                      
                       </td>

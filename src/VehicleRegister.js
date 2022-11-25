@@ -27,6 +27,11 @@ function VehicleRegister() {
   const [TailLiftComplaint, setTailLiftComplaint] = useState([]);
   const [CustComplaint, setCustComplaint] = useState([]);
   const [pagetwocomplaintlist, setpagetwocomplainlist] = useState(false);
+  const [msg, setMsg] = useState("")
+
+function submit(){
+  setMsg("")
+}
   // const [Showhide, setShowhide] = useState("Hello World")
 
   // const showhie = () => {
@@ -251,10 +256,9 @@ function VehicleRegister() {
     SetFailureComplaints(e.target.value);
   };
 
-
-  useEffect(()=> {
+  useEffect(() => {
     console.log(TailLiftComplaint, "failureListr");
-  }, [TailLiftComplaint]); 
+  }, [TailLiftComplaint]);
 
   useEffect(() => {
     console.log(failureComplaintsList, "failureList");
@@ -334,7 +338,16 @@ function VehicleRegister() {
           <div className="hideshow">
             <div className="hideshow">
               <div className="page_two_table">
-                <b style={{fontSize:"16pt",paddingLeft:"20px",display:"flex",paddingTop:"15px"}}>Location </b>
+                <b
+                  style={{
+                    fontSize: "16pt",
+                    paddingLeft: "20px",
+                    display: "flex",
+                    paddingTop: "15px",
+                  }}
+                >
+                  Location{" "}
+                </b>
                 <div
                   className="drop_down_value"
                   style={{
@@ -342,6 +355,7 @@ function VehicleRegister() {
                     /* padding-left: 59px; */
                     position: "relative",
                     left: "8%",
+                    border: "1.5px solid rgba(200,200,200,0.5)",
                     height: "40pt",
                     width: "407px",
                   }}
@@ -401,7 +415,12 @@ function VehicleRegister() {
                       <input
                         type="checkbox"
                         className="chck1"
-                        style={{width:"24px",height:"23px",border:"1px solid white"}}
+                        style={{
+                          width: "24px",
+                          height: "23px",
+                          border: "1px solid rgb(29,249,80)",
+                          cursor: "pointer",
+                        }}
                         onChange={(event) => {
                           handleCheckedAll();
                           selectAll(event.target.checked);
@@ -426,7 +445,12 @@ function VehicleRegister() {
                         type="checkbox"
                         name="id"
                         className="chck1"
-                        style={{width:"24px",height:"23px",border:"1px solid white"}}
+                        style={{
+                          width: "24px",
+                          height: "23px",
+                          border: "1px solid rgb(29,249,80)",
+                          cursor: "pointer",
+                        }}
                         onChange={() => {
                           toggleCheck(data[0].id);
                           handleCheckedFirst();
@@ -452,7 +476,12 @@ function VehicleRegister() {
                         type="checkbox"
                         name="id"
                         className="chck1"
-                        style={{width:"24px",height:"23px",border:"1px solid white"}}
+                        style={{
+                          width: "24px",
+                          height: "23px",
+                          border: "1px solid rgb(29,249,80)",
+                          cursor: "pointer",
+                        }}
                         onChange={() => {
                           toggleCheck(data[1].id);
                           handleCheckedSecond();
@@ -508,11 +537,9 @@ function VehicleRegister() {
             </div>
             {/* <hr style={{height:"1pt", width:"1000pt",color:"rgb(8,136,38)"}} /> */}
             {/* custome complaint tail */}
-
             {checkedSecond && (
-              <TailComplaint complaint={complaint} failure={failure}  />
+              <TailComplaint complaint={complaint} failure={failure} />
             )}
-
             <div className="main_black_div" style={{ display: blackBg }}>
               <div
                 className="page_two_complaint_list"
@@ -710,8 +737,16 @@ function VehicleRegister() {
                 ))}
               </select>
             </div>
+            {/* [7:44 PM] Shubham Rai
+            {error && (
+              <ErrorModel
+                title={error.title}
+                message={error.message}
+                onConfirm={errorHandler}
+              />
+            )} */}
             <div className="job_card">
-              <button className="job_cardbtn">
+              <button className="job_cardbtn" onClick={submit}>
                 <b>Create Job Card</b>{" "}
               </button>
             </div>

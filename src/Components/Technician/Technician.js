@@ -96,7 +96,7 @@ function Technician() {
                 <div className="loc">
                   <b>
                     {" "}
-                    <span>Location : {location}</span>
+                    <span style={{marginRight:"14px"}}>Location : {location}</span>
                   </b>
                 </div>
               </div>

@@ -116,11 +116,9 @@
   width: 430pt;
   height: 20pt;
   color: rgb(51, 182, 82);
-  font-size: 16pt;
-  margin-left: 41%;
-  overflow-x: 190pt;
-  margin-top: 8%;
-  overflow-y: 418pt;
+  font-size: 15pt;
+  margin-left: 45%;
+ margin-top: 8%;
   letter-spacing: -0.01pt;
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -247,7 +245,7 @@ input::placeholder {
  .inputbtn .images img{
   display: block;
     width: 50%;
-    margin-left: 115%;
+    margin-left: 130%;
 
  }
 .inputbtn .images h3{

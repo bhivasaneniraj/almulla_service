@@ -1,13 +1,20 @@
 import React from "react";
+import { useState } from "react";
 import FailureReason from "./FailureReason";
 
-function pagetwocomplaintlist({
+function Pagetwocomplaintlist({
   handleRadioButton,
   compSubmite,
   failureComplaints,
   failureComplaintsList,
-  setFailureComplaintsList
+  setFailureComplaintsList,
 }) {
+  const [engineOilDrain, setEngineOilDrain] = useState(false);
+  const [engineOilHose, setEngineOilHose] = useState(false);
+  const [engineCylinderHead, setEngineCylinderHead] = useState(false);
+  const [engineOilFilter, setEngineOilFilter] = useState(false);
+  
+
   return (
     <>
       {/* <div
@@ -109,20 +116,35 @@ function pagetwocomplaintlist({
           <p>Compressor Stuck</p>
         </div>
         <div className="arrow_img">
-        <img src=".\logo\shape@2x.png" alt="logo"  className="arrow_imggg"/>
-        <div className="Spa_nn"></div>
+          <img src=".\logo\shape@2x.png" alt="logo" className="arrow_imggg" />
+          <div className="Spa_nn"></div>
         </div>
-      
-        <div className="page_two_component_button">
 
-<button onClick={compSubmite} className="Save_Button"> SAVE</button>
-</div>
+        <div className="page_two_component_button">
+          <button onClick={compSubmite} className="Save_Button">
+            {" "}
+            SAVE
+          </button>
+        </div>
       </div>
-      {failureComplaints === "Engine oil leak" && <FailureReason setFailureComplaintsList={setFailureComplaintsList} failureComplaintsList={failureComplaintsList}/>}
-     
+      {failureComplaints === "Engine oil leak" && (
+        <FailureReason
+          setFailureComplaintsList={setFailureComplaintsList}
+          failureComplaintsList={failureComplaintsList}
+          engineOilDrain={engineOilDrain}
+          setEngineOilDrain={setEngineOilDrain}
+          engineOilHose={engineOilHose}
+          setEngineOilHose={setEngineOilHose}
+          engineCylinderHead={engineCylinderHead}
+          setEngineCylinderHead={setEngineCylinderHead}
+          engineOilFilter={engineOilFilter}
+          setEngineOilFilter={setEngineOilFilter}
+        />
+      )}
+
       {/* </div> */}
     </>
   );
 }
 
-export default pagetwocomplaintlist;
+export default Pagetwocomplaintlist;

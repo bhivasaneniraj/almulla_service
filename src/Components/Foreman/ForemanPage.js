@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-
 import ForemTailComponent from "./ForemanTailComponent";
 import ForemanCoolComplaint from "./ForemanCoolComplaint";
-import PhysicalRemark from "../PhysicalRemaks/PhysicalRemark";
+import PhysicalRemarks from '../PhysicalRemaks/PhysicalRemark'
 import Pagetwocomponent from "../pagetwocomponent";
 import "../../foreman.css";
+
 import { useNavigate } from "react-router-dom";
 
 
@@ -33,7 +33,7 @@ function Foremanpage() {
   //       console.log(Showhide);
   // }
 
-  const Nav = (useNavigate);
+  const Nav = useNavigate;
 
   const handleCheckedAll = () => {
     if (!checkedAllBox) {
@@ -325,22 +325,21 @@ function Foremanpage() {
         <div className="foreman">
           <img src="/images/bitmap@2x.png" alt="logo" />
           <div className="v2"></div>
-          <h3><b>Welcome to Al Mulla Industries Service Mobile Solutions</b> </h3>
+          <h3>
+            <b>Welcome to Al Mulla Industries Service Mobile Solutions</b>{" "}
+          </h3>
         </div>
         <div className="header">
           <span>Shabbir </span>
 
           <div className="Logout">
-       
-          <i>
-            <img src="./images/shape.png" alt="" onClick={() =>  Nav("/")}/>
-            
+            <i>
+              <img src="./images/shape.png" alt="" onClick={() => Nav("/")} />
             </i>
-        
-              <h1 className="head1">
-                <b>Logout</b>{" "}
-              </h1>
-            
+
+            <h1 className="head1">
+              <b>Logout</b>{" "}
+            </h1>
           </div>
         </div>
         <div className="CardReference">
@@ -436,10 +435,330 @@ function Foremanpage() {
               <td className="dataT4"> {tabledata[1].WarrantyEnd}</td>
             </tr>
           </table>
+         
         </div>
-        
-        <PhysicalRemark/>
-        
+        <div className="tablecheckbox">
+                  <h2>
+                    <b>Physical Remarks / Observation</b>{" "}
+                  </h2>
+                  <img src="./images/Truck@2x.png" alt="image" />
+
+                  <div className="checkboxes">
+
+                  <table className="checktable">
+                    <tr>
+                      <td className="scratches">
+                     <b> 1.Scratches</b>
+                      </td>
+                      <td>
+                        {" "}
+                       
+                      
+                          <input 
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck2"
+                            className="click"
+                            style={{width:"20px"}}
+                           
+                          />
+                        
+                        <label  class="custom-control-label"
+                            for="tableDefaultCheck2"
+                            className='Right'
+                          >
+                            {" "}
+                            Right
+                          </label>
+                       
+                      </td>
+                      <td>
+                      
+                      
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck3"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck3"
+                            className='Left'
+                          >
+                            Left
+                          </label>
+                       
+                      </td>
+                      <td>
+                     
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck4"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck4"
+                            className='Front'
+                          >
+                            Front
+                          </label>
+                    
+                      </td>
+                      <td>
+                       
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck5"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck5"
+                            className='Back'
+                          >
+                           <p>Back</p> 
+                          </label>
+                     
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="scratches">
+                     <b>   2. Glass Broken</b>
+                      </td>
+                      <td>
+                      
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck6"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck6"
+                            className='Driver'
+                          >
+                            Driver
+                          </label>
+                       
+                      </td>
+                      <td>
+                      
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck7"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck7"
+                            className='Left2'
+                          >
+                            Left
+                          </label>
+                      
+                      </td>
+                      <td>
+                      
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck8"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck8"
+                            className='Right2'
+                          >
+                            Right
+                          </label>
+                      
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td className="scratches">
+                       <b> 3. Lights Broken</b>
+                      </td>
+                      <td>
+                     
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck9"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck9"
+                            className='Front2'
+                          >
+                            Front
+                          </label>
+                     
+                      </td>
+                      <td>
+                       
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck10"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck10"
+                            className='Back2'
+                          >
+                            Back
+                          </label>
+                      
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td className="scratches">
+                      <b>  4. Body Panel Condition</b>
+                      </td>
+                      <td>
+                      
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck11"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck11"
+                            className='Bulged'
+                          >
+                            Bulged
+                          </label>
+                      
+                      </td>
+                      <td>
+                     
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck12"
+                            className="click"
+                            style={{width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck12"
+                            className='Accident'
+                          >
+                            Accident
+                          </label>
+                      
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td className="scratches">
+                       <b> 5. Body Accessories</b>
+                      </td>
+                      <td>
+                       
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck13"
+                            className="click"
+                            style={{marginTop:"-16px",width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck13"
+                            className='Lock_Screen'
+                          >
+                            Lock <br />
+                            <p> Screen</p>
+                          </label>
+                      
+                      </td>
+                      <td>
+                      
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck14"
+                            className="click"
+                            style={{marginTop:"-16px",width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck14"
+                            className='Door_Broken'
+                          >
+                            Door <br /> <p> Broken</p>
+                          </label>
+                      
+                      </td>
+                      <td>
+                       
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck15"
+                            className="click"
+                            style={{marginTop:"-16px",width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck15"
+                            className='Door_Lock'
+                          >
+                            Door Locks <br />
+                            <p className="damaged">Damaged</p>
+                          </label>
+                     
+                      </td>
+                      <td>
+                     
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="tableDefaultCheck16"
+                            className="click"
+                            style={{marginTop:"-16px",width:"20px"}}
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="tableDefaultCheck16"
+                            className='Back_Guard'
+                            
+                          >
+                            Back Side <br />
+                            <p className="guard"> Guard Damaged</p>
+                          </label>
+                      
+                      </td>
+                    </tr>
+                  </table>
+                  </div>
+
+                </div>
         {/* <div className="chckbox">
           <h2>
             <b>Physical Remarks / Observation</b>{" "}
@@ -701,30 +1020,32 @@ function Foremanpage() {
           datas={coolComponentData}
           complaint={complaint}
           failure={failure}
-      />
-
+        />
       </div>
       <ForemTailComponent datas={datas} />
 
       <div className="main_black_div" style={{ display: blackBg }}>
-              <div
-                className="page_two_complaint_list"
-                onChange={demooo}
-                style={{ display: omplistf }}
-              >
-                <Pagetwocomponent
-                  compSubmite={compSubmite}
-                  failureComplaints={failureComplaints}
-                  handleRadioButton={handleRadioButton}
-                />
-              </div>
-              </div>
+        <div
+          className="page_two_complaint_list"
+          onChange={demooo}
+          style={{ display: omplistf }}
+        >
+          <Pagetwocomponent
+            compSubmite={compSubmite}
+            failureComplaints={failureComplaints}
+            handleRadioButton={handleRadioButton}
+          />
+        </div>
+      </div>
       <div className="btn_div mt-5">
-      <div className="job_card"style={{paddingTop:"140%",marginLeft:"-156px"}}>
-              <button className="job_cardbtn" >
-                <b>Send</b>{" "}
-              </button>
-            </div>
+        <div
+          className="job_card"
+          style={{ paddingTop: "140%", marginLeft: "-156px" }}
+        >
+          <button className="job_cardbtn">
+            <b>Send</b>{" "}
+          </button>
+        </div>
       </div>
     </>
   );

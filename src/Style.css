@@ -263,7 +263,6 @@ margin-left: 120px; */
 
 /* -------------------------------------------------------- (  page_two_table ) --------------------------------------------------------- */
 
-
 .page_two_table table {
     margin: 20px 0;
     font-size: 18px;
@@ -274,6 +273,7 @@ margin-left: 120px; */
     border-collapse: separate;
 
 }
+
 
 tr th {
     background-color: rgb(8,136,38);
@@ -592,7 +592,7 @@ tr td {
     transform: translate(-50%, -50%);
 }
 
-.page_two_complaint_list input {
+.page_two_complaint_list .complist input {
     accent-color: #00a53e;
     width: 21pt;
      height: 21pt;
@@ -750,36 +750,23 @@ tr td {
 /********************************8************* <VehicleRegister.js> tableCheckbox******************************************************************************/
 
 
-.tablecheckbox h2{
-    display: flex;
-    font-size: 18pt;
-    letter-spacing: -0.01pt;
-    color: rgb(0,0,0);
-    font-weight: bold;
-    margin-left: 20px;
-    margin-bottom: 5px;
-    margin-top: 30px;
-}
 
 
-.tablecheckbox img{
-    width: 50vh;
-    /* margin-left: 0px; */
-    margin-top: 25px;
-}
 
+
+/* 
 .tablecheckbox .tab{
     width: 100vh;
    background-color: black;
-}
+} */
 
 
-.tablecheckbox .checktable{
+/* .tablecheckbox .checktable{
     width: 162vh;
     /* top: 6%; */
-    margin-left: 25%;
+    /* margin-left: 25%;
     margin-top: -20%;
-}
+} */ 
 
 /* .checktable:hover{
    background-color: cadetblue;
@@ -831,31 +818,31 @@ tr td {
 .tdata4{
     background-color: pink;
 } */
-
+/* 
 .inputt{
     accent-color: #00a53e;
-}
+} */
 
 
 
-.click{
+/* .click{
     accent-color: #00a53e;
     cursor: pointer;
    
-}
+} */
 
 .checktable label{
     cursor: pointer;
 }
 
-.click:hover{
+/* .click:hover{
     box-shadow: rgb(8,136,38);
   
-    }
+    } */
 
-  .checktable td:hover{
+  /* .checktable td:hover{
     background-color:   rgb(219,255,227);
-  }  
+  }   */
 
 
 .tab {
@@ -864,40 +851,7 @@ background-color:  rgb(237, 242, 242);
 
 
 
-.checktable td{
-    text-align: left;
- 
-}
 
-.checktable .scratches{
-    background-color:  rgb(243,243,243);
-}
-
-.checktable .click{
-    height: 3vh;
-    width: 20%;
-}
-
-.checktable label{
-    margin-left: 12px;
-}
-
-.checktable label p{
-    text-align: center;
-    margin-right: 18px;
-    margin-left: 0px;
-    margin-top: -4%;
-}
-
-.checktable label .damaged{
-    margin-left: 0px;
-    margin-top: -4%;
-}
-
-.checktable label .guard{
-    margin-left:0px;
-    margin-top: -4%;
-}
 /************************************************************** customer complaint tail &*****************************************/
 
 
@@ -1195,10 +1149,17 @@ letter-spacing: 0.01pt;
     margin-top: -62%;
 }
 
+
+.Fail_reason  input{
+    width: 30px;
+    height: 21.2pt;
+    margin-top: 7px;
+}
+/* 
 .Engine_oil_Drain .inpt{
     width: 23pt;
     height: 23pt;
-}
+} */
 
 .lable{
     
@@ -1208,10 +1169,10 @@ letter-spacing: 0.01pt;
     font-size: 18pt;
 }
 
-.Fail_reason .inpt{
+/* .Fail_reason .inpt{
     accent-color:  rgb(15,95,34);
     margin-top: 7px;
-}
+} */
 
 /*************************************<pagetwocomponent.js> *****************************************/
 /* 
@@ -1376,57 +1337,3 @@ input:focus {
 
 
 /*******************************************************<PhysicalRemark.js> *****************************/
-
-
-
-
-.checkboxes label {
-    display: inline-block;
-    padding-right: 10px;
-    white-space: nowrap;
-}
-.checkboxes input {
-    vertical-align: middle;
-}
-.checkboxes label span {
-    vertical-align: middle;
-}
-
-
-
-
-input[type="checkbox"]{
-    -webkit-appearance: initial;
-    appearance: initial;
-    width: 20px;
-    height: 32.2pt;
-    border: 1px solid rgb(15,95,34);
-    border-radius: 4pt;
-   
-    position: relative;
-}
-input[type="checkbox"]:checked {
-    background: rgb(15,95,34);
-}
-input[type="checkbox"]:checked:after {
-    /* Heres your symbol replacement - this is a tick in Unicode. */    content: "\2713";
-    color: #fff;
-    /* The following positions my tick in the center, 
-     * but you could just overlay the entire box
-     * with a full after element with a background if you want to */    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    /*
-     * If you want to fully change the check appearance, use the following:
-     * content: " ";
-     * width: 100%;
-     * height: 100%;
-     * background: blue;
-     * top: 0;
-     * left: 0;
-     */
-}
