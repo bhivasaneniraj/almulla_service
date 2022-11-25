@@ -35,7 +35,7 @@ function FailureReason({setFailureComplaintsList}) {
                       value="Engine oil Drain extension leak"
                    className="inpt"
                    onChange={handleFailureComplaintsList} />
-                    <label className="lable"> Engine oil Drain extension leak </label>
+                    <p className="lable"> Engine oil Drain extension leak </p>
         </div>
             <div className="Engine_oil_hose">
 
@@ -45,7 +45,7 @@ function FailureReason({setFailureComplaintsList}) {
                    className="inpt" 
                    onChange={handleFailureComplaintsList}
                    />
-                    <label className="lable"> Engine oil Hose </label>
+                    <p className="lable"> Engine oil Hose </p>
             </div>
                     <div className="Engine_cylinder_head">
 
@@ -55,14 +55,16 @@ function FailureReason({setFailureComplaintsList}) {
                     className="inpt"
                     onChange={handleFailureComplaintsList}
                     />
-                    <label className="lable"> Engine cylinder Head cover Gasket </label>
+                    <p className="lable"> Engine cylinder Head cover Gasket </p>
                     </div>
                       <div className="Engine_oil_filter_leak">
 
-                    <input type="checkbox" value="Engine Oil filter leak" className="inpt" 
+                    <input type="checkbox" 
+                    value="Engine Oil filter leak"
+                     className="inpt" 
                        onChange={handleFailureComplaintsList}
                     />
-                    <label className="lable"> Engine Oil filter leak</label>
+                    <p className="lable"> Engine Oil filter leak</p>
                       </div>
         </div>
         {/* </div> */}

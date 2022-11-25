@@ -15,6 +15,9 @@ function Login() {
     const foremanUsername = "shabir";
     const foremanPassword = "123456";
 
+    const technician = "shakil";
+    const technicianpassword = "123456";
+
     const navigate = useNavigate();
 
 
@@ -34,6 +37,8 @@ function Login() {
         navigate('/VehicleRegister')
        }else if(foremanUsername === usernameText && foremanPassword === passwordText) {
          navigate('/foremanv')
+       }else if(technician === usernameText && technicianpassword === passwordText) {
+        navigate('/technicianview')
        }else{
         alert("Invalid username or password!!")
        }

@@ -98,6 +98,7 @@
   display: flex;
  justify-content: center;
   margin: auto;
+  margin-left: 29%;
   width: 50%;
   padding: 10px;
   margin-top: -35px;
@@ -106,22 +107,22 @@
 
 .inputbtn .images img {
   display: block;
-  margin-left: 102%;
+  margin-left: 120%;
   margin-right: auto;
-  width: 50%;
+  width: 160%;
 }
 
 .inputbtn .images h3 {
   width: 430pt;
   height: 20pt;
   color: rgb(51, 182, 82);
-  font-size: 17pt;
-  margin-left: 80%;
+  font-size: 16pt;
+  margin-left: 41%;
   overflow-x: 190pt;
   margin-top: 8%;
   overflow-y: 418pt;
   letter-spacing: -0.01pt;
- text-align: center;
+  text-align: center;
   font-family: "Roboto", sans-serif;
 }
 
@@ -148,6 +149,13 @@
  
 } */
 
+.images{
+  width: 30vh;
+  height: 9vh;
+  margin-left: 290px;
+  margin-bottom: 65px;
+}
+
 .inputbtn{
   margin-top: 10%;
   margin-right: 150%;
@@ -173,12 +181,12 @@
 
 
 .inputbtn .achorTag a{
-font-size: 14pt;
-font-family: Roboto-Bold;
-color: rgb(0, 105, 70);
-text-decoration: none;
-position: absolute;
-left: 44%;
+  font-size: 14pt;
+  font-family: Roboto-Bold;
+  color: rgb(0, 105, 70);
+  text-decoration: none;
+  position: absolute;
+  left: 44.5%;
 }
 
 .inputbtn .achorTag{

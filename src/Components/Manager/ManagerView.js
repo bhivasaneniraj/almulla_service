@@ -1,20 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Technician.css';
+import "./Manager.css";
+
+function ManagerView() {
 
 
-
-
-
-function TechnicianView() {
-
-
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
   const Submit = () => {
    
-      navigate('/technicianpage')
-  
+      navigate('/Managerpage')
+   
   }
 
     const TechnicianData = [
@@ -44,14 +40,10 @@ const navigate = useNavigate();
       },
     ];
     
-      var named= "Shakeel Siddhiqui";
-
-
-
-
+      var named= "Anisur Rahman";
   return (
     <>
-      <div className="Main_class">
+       <div className="Main_class">
             <div className="foreman_class">
             <img
             src="/images/bitmap@2x.png"
@@ -119,4 +111,4 @@ const navigate = useNavigate();
   )
 }
 
-export default TechnicianView;
+export default ManagerView

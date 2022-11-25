@@ -1,11 +1,12 @@
 import React from "react";
-import { useState, useEffect,} from "react";
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import CoolComplaints from "./Components/CoolComplaints";
 import FailureReason from "./Components/FailureReason";
 import TailComplaint from "./Components/TailComplaint";
 import Pagetwocomponent from "./Components/pagetwocomponent";
 import "./Style.css";
+import PhysicalRemark from "./Components/PhysicalRemaks/PhysicalRemark";
 
 function VehicleRegister() {
   const [text, settext] = useState();
@@ -23,6 +24,7 @@ function VehicleRegister() {
   const [failureComplaints, SetFailureComplaints] = useState("");
   const [customerComplaint, setCustomerComplaint] = useState([]);
   const [failureComplaintsList, setFailureComplaintsList] = useState([]);
+  const [TailLiftComplaint, setTailLiftComplaint] = useState([]);
   const [CustComplaint, setCustComplaint] = useState([]);
   const [pagetwocomplaintlist, setpagetwocomplainlist] = useState(false);
   // const [Showhide, setShowhide] = useState("Hello World")
@@ -30,9 +32,8 @@ function VehicleRegister() {
   // const showhie = () => {
   //       console.log(Showhide);
   // }
- 
-  const navigate =(useNavigate);
 
+  const navigate = useNavigate;
 
   const handleCheckedAll = () => {
     if (!checkedAllBox) {
@@ -96,6 +97,9 @@ function VehicleRegister() {
     if (completSubmite != undefined) {
       console.log(completSubmite);
       setCustomerComplaint(completSubmite);
+      setCustComplaint((preValue) => {
+        return [...preValue, completSubmite];
+      });
       setblackBg("none");
       setomplistf("none");
     }
@@ -112,8 +116,8 @@ function VehicleRegister() {
 
   const options = [
     {
-      label:"Foreman",
-      value:"Foreman",
+      label: "Foreman",
+      value: "Foreman",
     },
     {
       label: "Shabbir",
@@ -129,20 +133,17 @@ function VehicleRegister() {
     },
   ];
 
-
   const Select_option = [
     {
-      id:1,
-      label1:" Shuwaikh Van 1",
-      value:"Shuwaikh Van 1",
-    
+      id: 1,
+      label1: " Shuwaikh Van 1",
+      value: "Shuwaikh Van 1",
     },
     {
-      id:2,
-      label2:"Shuwaikh Van 2",
-      value:"Shuwaikh Van 2",
-     
-    }
+      id: 2,
+      label2: "Shuwaikh Van 2",
+      value: "Shuwaikh Van 2",
+    },
   ];
 
   function Submit() {
@@ -173,8 +174,7 @@ function VehicleRegister() {
     if (searchTextInput === "17/30866") {
       setData(tabledata);
       setShow(true);
-    }
-    else{
+    } else {
       alert("Please Enter Correct Number");
     }
   }
@@ -251,20 +251,21 @@ function VehicleRegister() {
     SetFailureComplaints(e.target.value);
   };
 
- useEffect(() => {
+
+  useEffect(()=> {
+    console.log(TailLiftComplaint, "failureListr");
+  }, [TailLiftComplaint]); 
+
+  useEffect(() => {
     console.log(failureComplaintsList, "failureList");
   }, [failureComplaintsList]);
 
-
-
   const handlerAdioButton = (e) => {
     setCustComplaint(e.target.value);
-  }
-useEffect(() => {
-  console.log(CustComplaint, "CustomerComplaint");
-}, [CustComplaint])
-
- 
+  };
+  useEffect(() => {
+    console.log(CustComplaint, "CustomerComplaint");
+  }, [CustComplaint]);
 
   return (
     <>
@@ -282,10 +283,15 @@ useEffect(() => {
 
           <div className="Page_two_LogOut">
             <i>
-            <img src="./images/shape.png" alt="" onClick={() =>  navigate("/")}/>
-            
+              <img
+                src="./images/shape.png"
+                alt=""
+                onClick={() => navigate("/")}
+              />
             </i>
-            <h1 className="head"><b>Logout</b> </h1>
+            <h1 className="head">
+              <b>Logout</b>{" "}
+            </h1>
           </div>
         </div>
         <div className="Page_two_search_Chooes_box">
@@ -328,7 +334,38 @@ useEffect(() => {
           <div className="hideshow">
             <div className="hideshow">
               <div className="page_two_table">
-                <div className="dropdown">
+                <b style={{fontSize:"16pt",paddingLeft:"20px",display:"flex",paddingTop:"15px"}}>Location </b>
+                <div
+                  className="drop_down_value"
+                  style={{
+                    marginTop: "-33px",
+                    /* padding-left: 59px; */
+                    position: "relative",
+                    left: "8%",
+                    height: "40pt",
+                    width: "407px",
+                  }}
+                >
+                  <select
+                    className="Drop_select"
+                    style={{
+                      marginTop: "2%",
+                      width: "96%",
+                      border: "none",
+                      paddingLeft: "78px",
+                      fontSize: "16pt",
+                      color: "rgb(0, 0, 0)",
+                      fontFamily: "Roboto-Bold",
+                    }}
+                  >
+                    {Select_option.map((option) => (
+                      <option value={option.value}>
+                        <b>{option.value}</b>
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                {/* <div className="dropdown">
                   <form className="dpd">
                     <label className="labell">
                       <b>Location</b>{" "}
@@ -350,7 +387,7 @@ useEffect(() => {
                 ))}
                     </select>
                   </form>
-                </div>
+                </div> */}
 
                 <span>
                   {" "}
@@ -364,6 +401,7 @@ useEffect(() => {
                       <input
                         type="checkbox"
                         className="chck1"
+                        style={{width:"24px",height:"23px",border:"1px solid white"}}
                         onChange={(event) => {
                           handleCheckedAll();
                           selectAll(event.target.checked);
@@ -388,6 +426,7 @@ useEffect(() => {
                         type="checkbox"
                         name="id"
                         className="chck1"
+                        style={{width:"24px",height:"23px",border:"1px solid white"}}
                         onChange={() => {
                           toggleCheck(data[0].id);
                           handleCheckedFirst();
@@ -413,6 +452,7 @@ useEffect(() => {
                         type="checkbox"
                         name="id"
                         className="chck1"
+                        style={{width:"24px",height:"23px",border:"1px solid white"}}
                         onChange={() => {
                           toggleCheck(data[1].id);
                           handleCheckedSecond();
@@ -452,292 +492,9 @@ useEffect(() => {
                  */}
                 </table>
 
-                <div className="tablecheckbox">
-                  <h2>
-                    <b>Physical Remarks / Observation</b>{" "}
-                  </h2>
-                  <img src="./images/Truck@2x.png" alt="image" />
-
-                  <table className="checktable">
-                    <tr>
-                      <td className="scratches">
-                        <b> 1. Scratches</b>
-                      </td>
-                      <td>
-                        {" "}
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck2"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck2"
-                          >
-                            {" "}
-                            Right
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck3"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck3"
-                          >
-                            Left
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck4"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck4"
-                          >
-                            Front
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck5"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck5"
-                          >
-                            Back
-                          </label>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="scratches">
-                        <b>2. Glass Broken</b>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck6"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck6"
-                          >
-                            Driver
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck7"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck7"
-                          >
-                            Left
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck8"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck8"
-                          >
-                            Right
-                          </label>
-                        </div>
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td className="scratches">
-                        <b>3. Lights Broken</b>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck9"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck9"
-                          >
-                            Front
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck10"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck10"
-                          >
-                            Back
-                          </label>
-                        </div>
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td className="scratches">
-                        <b>4. Body Panel Condition</b>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck11"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck11"
-                          >
-                            Bulged
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck12"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck12"
-                          >
-                            Accident
-                          </label>
-                        </div>
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td className="scratches">
-                        <b>5. Body Accessories</b>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck13"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck13"
-                          >
-                            Lock <br />
-                            <p> Screen</p>
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck14"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck14"
-                          >
-                            Door <br /> <p> Broken</p>
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck15"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck15"
-                          >
-                            Door Locks <br />
-                            <p className="damaged">Damaged</p>
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="tableDefaultCheck16"
-                            className="click"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="tableDefaultCheck16"
-                          >
-                            Back Side <br />
-                            <p className="guard"> Guard Damaged</p>
-                          </label>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
+                <PhysicalRemark />
               </div>
-              
+
               {checkedFirst && (
                 <CoolComplaints
                   complaint={complaint}
@@ -746,18 +503,14 @@ useEffect(() => {
                   CustComplaint={CustComplaint}
                   failureComplaintsList={failureComplaintsList}
                   setCustComplaint={setCustComplaint}
-                  
                 />
-                
               )}
-             
-           
             </div>
             {/* <hr style={{height:"1pt", width:"1000pt",color:"rgb(8,136,38)"}} /> */}
             {/* custome complaint tail */}
 
             {checkedSecond && (
-              <TailComplaint complaint={complaint} failure={failure} />
+              <TailComplaint complaint={complaint} failure={failure}  />
             )}
 
             <div className="main_black_div" style={{ display: blackBg }}>
@@ -774,7 +527,7 @@ useEffect(() => {
                   setFailureComplaintsList={setFailureComplaintsList}
                 />
               </div>
-          
+
               {/* <div className="complaints-container"> */}
               {/* <h3>Customer Complaint</h3>
           
@@ -929,30 +682,27 @@ useEffect(() => {
               </div> */}
             </div>
             <div className="drop_down_value">
-            <b>Send Report To - </b>
-              <select className="Drop_select"
+              <b>Send Report To - </b>
+              <select
+                className="Drop_select"
                 style={{
+                  marginTop: "6%",
 
-marginTop:"6%",
+                  width: "60%",
 
-width:"60%",
+                  border: "none",
 
+                  backgroundcolor: "rgb(226,245,231)",
 
-border: "none",
+                  paddingLeft: "15px",
 
-backgroundcolor:"rgb(226,245,231)",
+                  fontSize: "16pt",
 
-paddingLeft: "15px",
+                  color: "rgb(0,0,0)",
 
-fontSize: "16pt",
-
-color: "rgb(0,0,0)",
-
-fontFamily: "Roboto-Bold",
-
-}}
+                  fontFamily: "Roboto-Bold",
+                }}
               >
-               
                 {options.map((option) => (
                   <option value={option.value}>
                     <b>{option.label}</b>

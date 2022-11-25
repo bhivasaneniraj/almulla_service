@@ -37,7 +37,7 @@ function CoolComplaints({
             <tr className="Cust_t1">
               <th className="Cust_t1">
                 Failure Reason{" "}
-                <i class="fa-solid fa-plus" onClick={failure}></i>
+                <i class="fa-solid fa-plus" onClick={complaint}></i>
               </th>
             </tr>
             {failureComplaintsList.map((item) => {

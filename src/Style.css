@@ -8,6 +8,7 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+  
 }
 
 .mainDiv {
@@ -48,11 +49,11 @@
 .Page_two_logoAndLogOut h3 {
     font-size: 14pt;
     color: rgb(0,0,0);
-    width: 372pt;
+    width: 500pt;
     height: 37pt;
     text-align: center;
     margin-top: 1%;
-    margin-right: 43%;
+    margin-right: 40%;
 }
 
 
@@ -100,7 +101,7 @@
     font-size: 14pt;
    
     /* margin-left: 123px; */
-    margin-left: 224px;
+    margin-left: 228px;
    
 }
 
@@ -199,10 +200,10 @@ margin-left: 120px; */
     border-radius: 5px;
     position: relative;
     margin-right: 260px;
-
+    
 }
-
 .page_two_serchbar input {
+
     width: 300px;
     background-color: rgb(245,255,248);
     height: 60px;
@@ -306,6 +307,9 @@ tr td {
     color: rgb(0,0,0);
 }
 
+.chck1{
+    accent-color:rgb(8,136,38) ;
+}
 
 
 /* -------------------------------------------------------- ( / page_two_table ) --------------------------------------------------------- */
@@ -323,9 +327,7 @@ tr td {
     color: rgb(0,0,0);
 } 
 
-.page_two_complaint_tab{
-    border: 2px solid red;
-}
+
 
  .page_two_complaint_failure {
     width: 97%;
@@ -392,6 +394,7 @@ tr td {
     position: relative;
     height: 100vh;
     width: 100vw;
+    background-color: white;
 }
 
 .main_black_div {
@@ -554,15 +557,15 @@ tr td {
 
 
 .Cust_Table {
-    width: 100%;
+    width: 99.9%;
     margin: 0;
     padding: 0;
-    border: 2px solid black;
+ 
    }
    
    .Cust_Table_tab {
        width: 100%;
-       border: 2px solid blue;
+     
    }
 
 /* -------------------------------------------------------- ( / complaint_failure ) --------------------------------------------------------- */
@@ -608,7 +611,7 @@ tr td {
 .complist {
     display: flex;
     margin: 0px 24px;
-}
+} 
 
 .complist p {
     font-size: 18pt;
@@ -772,10 +775,10 @@ tr td {
 
 
 .tablecheckbox .checktable{
-    width: 166vh;
+    width: 162vh;
     /* top: 6%; */
-    margin-top: -237px;
-    margin-left: 23%;
+    margin-left: 25%;
+    margin-top: -20%;
 }
 
 /* .checktable:hover{
@@ -833,10 +836,7 @@ tr td {
     accent-color: #00a53e;
 }
 
-.chck1{
-    accent-color: #00a53e;
-    width: 40%;
-}
+
 
 .click{
     accent-color: #00a53e;
@@ -870,7 +870,7 @@ background-color:  rgb(237, 242, 242);
 }
 
 .checktable .scratches{
-    background-color: rgb(243,243,243);
+    background-color:  rgb(243,243,243);
 }
 
 .checktable .click{
@@ -901,10 +901,10 @@ background-color:  rgb(237, 242, 242);
 /************************************************************** customer complaint tail &*****************************************/
 
 
-.page_two_complaint_failure1 h2 {
+/* .page_two_complaint_failure1 h2 {
     font-size: 18pt;
     color: rgb(0,0,0);
-}
+} */
 
 .page_two_complaint_failure1  {
     width: 97%;
@@ -1118,14 +1118,14 @@ background-color:  rgb(237, 242, 242);
 /*************************************************************<TailComplaint.js>***********************************/
 
 
-.page_two_complaint_failure1 .complaint1{
+/* .page_two_complaint_failure1 .complaint1{
     width: 100%;
     margin-left: 0%;
     border-spacing: 1px 1px;
     border-collapse: separate;
-}
+} */
 
-.compl_aint0 i{
+/* .compl_aint0 i{
     margin-left: 93%;
     margin-top: -5%;
     width: 30px;
@@ -1154,33 +1154,33 @@ background-color:  rgb(237, 242, 242);
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-}
-
+} */
+/* 
 .page_two_complaint_failure1 .compl_aint{
     width: 50%;
-}
+} */
 
 
-.page_two_complaint_failure1 .compl_aint .compl_aint0{
+/* .page_two_complaint_failure1 .compl_aint .compl_aint0{
     font-size: 16pt;
     text-align: left;
     width: 45%;
-    /* background-color: rgb(8,136,38); */
-}
+    /* background-color: rgb(8,136,38); 
+} */
 
 /* .compl_aint0 .compl_aint1{
     text-align: left;
     font-size: 16pt;
 } */
 
-.complaint1 .compl_aint1{
+/* .complaint1 .compl_aint1{
     text-align: left;
     font-size: 16pt;
 }
 
 .complaint1 .comp_laint2 td{
     text-align: left;
-}
+} */
 
 
 /********************************************************<FailureReason.js>*****************************/
@@ -1201,23 +1201,25 @@ letter-spacing: 0.01pt;
 }
 
 .lable{
-    font-size: 18pt;
-    padding-left: 3%;
-    margin-bottom: 1%;
     
+    padding-left: 40px;
+    margin-top: -38px;
+    color: rgb(0,0,0);
+    font-size: 18pt;
 }
 
 .Fail_reason .inpt{
     accent-color:  rgb(15,95,34);
+    margin-top: 7px;
 }
 
 /*************************************<pagetwocomponent.js> *****************************************/
-
+/* 
 .complaints_container .Compla_int_container_heading{
     font-size: 20pt;
     letter-spacing: -0.01pt;
     color: rgb(0,0,0);
-}
+} */
 
 /* .Spa_nn{
 
@@ -1247,6 +1249,8 @@ letter-spacing: 0.01pt;
 
 
 /*********************************************<VehicelRegister.js> .Dropdown****************************/
+
+
 
 
 .Selec_t,
@@ -1365,6 +1369,64 @@ input:focus {
 
 
 .drop_down_value b{
-    padding-left: 30px;
+    padding-left: 10px;
     font-size: 16pt;
+}
+
+
+
+/*******************************************************<PhysicalRemark.js> *****************************/
+
+
+
+
+.checkboxes label {
+    display: inline-block;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+.checkboxes input {
+    vertical-align: middle;
+}
+.checkboxes label span {
+    vertical-align: middle;
+}
+
+
+
+
+input[type="checkbox"]{
+    -webkit-appearance: initial;
+    appearance: initial;
+    width: 20px;
+    height: 32.2pt;
+    border: 1px solid rgb(15,95,34);
+    border-radius: 4pt;
+   
+    position: relative;
+}
+input[type="checkbox"]:checked {
+    background: rgb(15,95,34);
+}
+input[type="checkbox"]:checked:after {
+    /* Heres your symbol replacement - this is a tick in Unicode. */    content: "\2713";
+    color: #fff;
+    /* The following positions my tick in the center, 
+     * but you could just overlay the entire box
+     * with a full after element with a background if you want to */    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    /*
+     * If you want to fully change the check appearance, use the following:
+     * content: " ";
+     * width: 100%;
+     * height: 100%;
+     * background: blue;
+     * top: 0;
+     * left: 0;
+     */
 }

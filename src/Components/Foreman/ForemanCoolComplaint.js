@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, Col, Container, Row, Form } from "react-bootstrap";
+import "../../foreman.css";
 
-function ForemanCoolComplaint({ complaint, failure,  }) {
+function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
   const options = [
     {
       label: "Send Report to Foremen",
@@ -21,29 +22,46 @@ function ForemanCoolComplaint({ complaint, failure,  }) {
     },
   ];
 
-return (
-  <>
-<div className="tw0_page_complaint" style={{ height: "50%" }}>
-  <div className="heading">
-    <Col>
-      <Row>
-        <div className="d-flex flex-row justify-content-between mt-5 p-4 fs-5">
-          <b>Breakdown Analysis For Cooling Unit</b>{" "}
-          <div className="drop_down">
-            <div className="drop-down-value">
-              <b>Send Report To - </b>
-              <select
-                defaultValue=""
-                style={{
-                  border: "none",
-                  backgroundColor: "rgb(226,245,231)",
-                  paddingLeft: "33px",
-                }}
-              >
-                <option hidden value="">
-                  placeholder
-                </option>
 
+
+  return (
+    <>
+      <div
+        className="tw0_page_complaint"
+        style={{ height: "30%", marginTop: "50px" }}
+      >
+        <div className="heading">
+          <Col>
+            <Row>
+              <div className="d-flex flex-row justify-content-between">
+                <b style={{color:"rgb(0,0,0)", fontSize:"18pt",marginTop:"100px",dispalay:"flex",paddingLeft:"20px"}}>Breakdown Analysis For Cooling Unit</b>{" "}
+               
+                <div className="down_value">
+            <p><b> Assigned to Technician - </b></p>
+              <select className="Drop_select"
+                style={{
+
+marginTop:"1%",
+
+width:"60%",
+
+
+
+border: "none",
+
+backgroundcolor:"rgb(226,245,231)",
+
+paddingLeft: "20px",
+
+fontSize: "16pt",
+
+color: "rgb(0,0,0)",
+
+fontFamily: "Roboto-Bold",
+
+}}
+              >
+               
                 {options.map((option) => (
                   <option value={option.value}>
                     <b>{option.label}</b>
@@ -51,42 +69,61 @@ return (
                 ))}
               </select>
             </div>
-          </div>
+              
+              </div>
+            </Row>
+          </Col>
         </div>
-      </Row>
-    </Col>
-  </div>
 
-  <table className="custom_tab">
-    <tr className="custom_tab1">
-      <th className="custom_tab2">
-        Customer complaint{" "}
-        <i class="fa-solid fa-plus" onClick={complaint}></i>{" "}
-      </th>
+        <div className="datatable">
+          <table className="tabular">
+            <tr>
+              <th className="icon">
+                Customer complaint <i class="fa-solid fa-plus" onClick={complaint}></i>{" "}
+              </th>
+              <th className="icon">
+                Failure Reason <i class="fa-solid fa-plus" onClick={failure}></i>
+              </th>
 
-      <th className="custom_tab3">
-        Failure Reason <i class="fa-solid fa-plus" onClick={failure}></i>
-      </th>
-      <th className="custom_tab4">Probable Root Cause </th>
-      <th className="custom_tab4"> Suggested Rectifiction</th>
-    </tr>
-    <tr className="custom_tab5">
-      <td></td>
-      <td> Unit Service</td>
-      <td>Derive belt expand</td>
-      <td>Belt Replacement</td>
-    </tr>
-  </table>
+              <th>
+                Probable <br />
+                Root Cause
+              </th>
+              <th>
+                Suggested <br />
+                Rectifiction
+              </th>
+            </tr>
 
-  {/* <div className="complaint_failure">
-    <div className="complaint"></div>
-    <div className="failure"></div>
-  </div>
-</div>
-<div className="page_two_bothcomp_fail_list">
-  <div className="comp_list"></div> */}
-  {/* <div className="fail_list"></div> */}
-</div>
+            {datas.map((val, key) => {
+              return (
+                <tr key={val.id}>
+                  <td>{val.customerComplaint}</td>
+                  <td>{val.failureReason}</td>
+                  <td>{val.probableRootCause}</td>
+                  <td>{val.suggestedRectifiction}</td>
+                </tr>
+              );
+            })}
+          </table>
+        </div>
+
+        {/* <div className="complaint_failure">
+          <div className="complaint"></div>
+          <div className="failure"></div>
+        </div>
+      </div>
+
+      <div className="page_two_bothcomp_fail_list">
+        <div className="comp_list"></div> */}
+        {/* <div className="fail_list"></div> */}
+      </div>
+
+
+
+      <Container>
+        <div className="horizontal_line"></div>
+      </Container>
     </>
   );
 }
