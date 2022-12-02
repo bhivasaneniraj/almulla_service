@@ -91,6 +91,9 @@
     margin-top: -65px;
    
 }
+.summary Button{
+    margin-right: 10px;
+}
 
 .Page_two_LogOut img{
     height: 4vh;
@@ -132,7 +135,13 @@ margin-left: 120px; */
     color: rgb(0,0,0);;
     border-bottom: 1px solid #00a53e;
     padding-bottom: 5px;
+  width: 78rem;;
     margin: 20px 10px;
+}
+
+.Page_two_search_Chooes_box .Button{
+margin-left: 86%;
+margin-top: -121px;
 }
 
 .Page_two_search_Chooes_box {
@@ -199,7 +208,7 @@ margin-left: 120px; */
     width: 425px;
     border-radius: 5px;
     position: relative;
-    margin-right: 260px;
+    margin-right: 1rem;
     
 }
 .page_two_serchbar input {
@@ -237,8 +246,8 @@ margin-left: 120px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1515px;
-    margin: 10px auto;
+    width: 78rem;
+    margin: -25px auto;
     padding-bottom: 10px;
     border-bottom: 2px dashed #00a53e;
 }
@@ -264,14 +273,50 @@ margin-left: 120px; */
 /* -------------------------------------------------------- (  page_two_table ) --------------------------------------------------------- */
 
 .page_two_table table {
-    margin: 20px 0;
-    font-size: 18px;
-    margin: auto;
-    width: 97vw;
-    margin: 15px;
-    border-spacing: 2px 1px;
-    border-collapse: separate;
+margin: 20px 0;
+font-size: 18px;
+margin: auto;
+width: 217vh;
+margin: 15px;
+border-spacing: 2px 1px;
+border-collapse: separate;
 
+}
+
+
+
+.page_two_table .drop_down_value .drop_select{
+    -webkit-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAnUExURUdwTAaIJgeHJgaHJgCZMwaHJwaHJQaIJgaJJwaIJQaIJgaJJQaIJqFSFCMAAAAMdFJOUwD2RFEFVaTcitp01SQKMqIAAACLSURBVAjXY2BgYAmbKJnqwAAC5meAYDKIxXEGDBqAzB4I8wQDA/MZKDBgcIcxpzDEnFklc+bMwVVnjjLknGZQPHNGiGHPMYY5ZxSYZA4qMJ05ySADFFEEojMHgUygEFACyJwDUghSfpIh5wxIGGjIMaBhZ85ILQQSR5GtQLIYyTnIjoQ4vRjsC5iHAMEOY/3yhSU8AAAAAElFTkSuQmCC);
+    width: 85%;
+    font-size: 16pt;
+    height: 5vh;
+    /* padding-left: 0px; */
+    border-radius: 6pt;
+    margin-top: 3%;
+    margin-left: 46px;
+    /* margin-right: 2px; */
+    font-family: Roboto-Bold;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: none;
+}
+
+/* width: 162vh;
+top: 6%;
+margin-left: 25%;
+margin-top: -20%; */
+
+
+.page_two_table b{
+    font-size: 16pt;
+    padding-left: 20px;
+    display: flex;
+    padding-top: 50px;
 }
 
 
@@ -309,6 +354,10 @@ tr td {
 
 .chck1{
     accent-color:rgb(8,136,38) ;
+    width: 24px;
+    height: 23px;
+    border: 1px solid rgb(29, 249, 80);
+    cursor: pointer;
 }
 
 
@@ -760,13 +809,15 @@ tr td {
    background-color: black;
 } */
 
-
-/* .tablecheckbox .checktable{
+/* 
+ .tablecheckbox .checktable {
     width: 162vh;
-    /* top: 6%; */
-    /* margin-left: 25%;
-    margin-top: -20%;
-} */ 
+top: 6%;
+margin-left: 25%;
+margin-top: -20%;   
+}  */
+
+
 
 /* .checktable:hover{
    background-color: cadetblue;
@@ -1050,7 +1101,7 @@ background-color:  rgb(237, 242, 242);
     margin-top: 33%;
 
     margin-bottom: 35px;
-    height: 62pt;
+    height: 60pt;
     cursor: pointer;
     border: 1px solid white;
     border-radius: 6pt;
@@ -1278,31 +1329,27 @@ input:focus {
 
 
 
-.Drop_select {
+.drop_down_values .Drop_select {
 
-  -webkit-appearance: none;
-
-  -moz-appearance: none;
- 
-
-  background: transparent;
-
-  background-image: url("C:\Almulla_Sevice\loginpage\public\logo\nounBottom2796543.png");
-  width: 10vh;
-
-  border-radius: 6pt;
-
-  background-repeat: no-repeat;
-
-  background-position-x: 100%;
-
-  background-position-y: 5px;
-
-  border: 1px solid #dfdfdf;
+-webkit-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAnUExURUdwTAaIJgeHJgaHJgCZMwaHJwaHJQaIJgaJJwaIJQaIJgaJJQaIJqFSFCMAAAAMdFJOUwD2RFEFVaTcitp01SQKMqIAAACLSURBVAjXY2BgYAmbKJnqwAAC5meAYDKIxXEGDBqAzB4I8wQDA/MZKDBgcIcxpzDEnFklc+bMwVVnjjLknGZQPHNGiGHPMYY5ZxSYZA4qMJ05ySADFFEEojMHgUygEFACyJwDUghSfpIh5wxIGGjIMaBhZ85ILQQSR5GtQLIYyTnIjoQ4vRjsC5iHAMEOY/3yhSU8AAAAAElFTkSuQmCC);
+    width: 85%;
+    font-size: 16pt;
+    height: 5vh;
+    border-radius: 6pt;
+    margin-top: 4%;
+    margin-right: 15px;
+    font-family: Roboto-Bold;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: none;
 
   /* margin-top: 5pt; */
-
-  /* border-radius: 2px;
+/* border-radius: 2px;
 
     margin-right: 10rem;
 
@@ -1313,17 +1360,19 @@ input:focus {
 }
 
 
+
 .Selec_t{
     margin-top: 7%;
     width: 38%;
 }
 
-.drop_down_value{
-    width: 370pt;
-    margin-top: 100px;
-    margin-left: 2%;
+.drop_down_value {
+    width: 407px;
+    position: relative;
+    margin-top: -3%;
+    margin-left: 10%;
     margin-bottom: 50px;
-    height: 68pt;
+    height: 40pt;
     background-color: rgb(226,245,231);
     border-radius: 6pt;
 }
@@ -1336,4 +1385,277 @@ input:focus {
 
 
 
+.drop_down_values{
+    width: 345pt;
+    margin-left: 26px;
+    margin-bottom: 57px;
+    margin-top: 8%;
+    height: 50pt;
+    display: flex;
+    border: 1.5px solid rgba(200,200,200,0.5);
+    background-color: rgb(226,245,231);
+    border-radius: 6pt;
+}
+
+.drop_down_values b{
+    width: 65%;
+    padding-top: 19px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+/* .drop_down_values select{
+    
+    margin-top: 1%;
+    width: 60%;
+    border: none;
+    padding-left: 11px;
+    font-size: 16pt;
+    color: rgb(0, 0, 0);
+    font-family: Roboto-Bold;
+} */
+
+
 /*******************************************************<PhysicalRemark.js> *****************************/
+
+
+/***************************************MediaQuery For <VehicleRegister/> page *******************/
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .main_div {
+        justify-content: center;
+        align-items: center;
+      
+    }
+
+    .main_div .vl {
+        margin-left: -15.5rem;
+        height: 60px;
+    }
+
+    .main_div .Page_two_logoAndLogOut h3 {
+        font-size: 16px;
+        width: 15rem;
+    }
+
+    .heading span {
+        margin-left: 260px;
+    }
+
+    .Page_two_LogOut i {
+        margin-left: 40rem;
+    }
+
+    .Page_two_search_Chooes_box .bottom {
+        width: 47rem;
+    }
+
+    .Page_two_search_Chooes_box .Button {
+        width: 10rem;
+        margin-left: 37rem;
+    }
+
+    .page_two_middel_box {
+        width: 47rem;
+    }
+
+    .page_two_chooes .kt input[type=radio] {
+        border: 0px;
+        width: 2em;
+        height: 2rem;
+    }
+
+    .page_two_chooes .kt h2 {
+        padding-top: 6px;
+    }
+
+    .page_two_or p {
+        padding-top: 17px;
+    }
+
+    .page_two_or span {
+        height: 82px;
+        margin-top: -11px;
+    }
+
+    .chassis input[type=radio] {
+        border: 0px;
+        width: 2em;
+        height: 2rem;
+    }
+
+    .chassis h2 {
+        padding-top: 6px;
+    }
+}
+
+/* width: 162vh;
+top: 6%;
+margin-left: 25%;
+margin-top: -20%;
+} */
+
+/* 
+
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .main_div{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Page_two_logoAndLogOut img{
+        margin-top: 20px;
+        width: 35rem;
+        height: 5rem;
+    }
+
+    .Page_two_logoAndLogOut .vl{
+        height: 12vh;
+    margin-left: -17.9rem;
+    }
+    .Page_two_logoAndLogOut h3{
+        font-size: 20px;
+        width: 35rem;
+        margin-left: 12px;
+    }
+    .heading{
+        margin-left: 5.5rem;
+    }
+
+    .Page_two_LogOut i img{
+        margin-left: 14rem;
+    }
+.Page_two_search_Chooes_box .bottom{
+    font-size: 2rem;
+    width: 78rem;
+}
+
+.Page_two_search_Chooes_box .Button{
+    width: 15rem;
+    height: 4rem;
+    margin-left: 63rem;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.page_two_middel_box{
+    height: 6rem;
+}
+
+.page_two_chooes .kt input[type=radio] {
+    border: 0px;
+    width: 4rem;
+    height: 3em;
+}
+
+.page_two_chooes .kt h2{
+    font-size: 17pt;
+    padding-top: 10px;
+}
+
+.page_two_or p{
+    padding-top: 35px;
+    font-size: 26px;
+}
+
+.page_two_or span{
+    margin-bottom: 10px;
+}
+
+.chassis input[type=radio] {
+    border: 0px;
+    width: 4rem;
+    height: 3em;
+}
+
+.chassis h2{
+    font-size: 17pt;
+    padding-top: 10px;
+}
+
+.page_two_serchbar{
+  
+    margin-right: 1rem;
+}
+
+.page_two_serchbar input{
+    width: 22rem;
+    border: 1px solid rgba(200,200,200,0.5);
+    height: 80px;
+    margin-left: -90px;
+    font-size: 30px;
+}
+
+.page_two_serchbar button{
+    height: 80px;
+    width: 15rem;
+    font-size: 30px;
+}
+
+.page_two_middel_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80rem;
+    margin: -25px auto;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #00a53e;
+}
+
+.hideshow .page_two_table .Bol_d{
+    height: 5rem;
+}
+
+.hideshow .page_two_table .Bol_d{
+    font-size: 32px;
+}
+
+.page_two_table .drop_down_value{
+    margin-left: 12rem;
+    margin-top: -27px;
+    height: 4rem;
+
+}
+
+
+.drop_down_value .Drop_select{
+    font-size: 33px;
+}
+
+
+.hideshow .Name_Customer{
+    font-size: 23px;
+}
+
+.hideshow .Input_table_customer{
+   
+    width: 78rem;
+    height: 20vh;
+}
+
+.page_two_table .Input_table_customer input{
+    width: 2rem;
+    height: 3vh;
+}
+
+.page_two_table .Input_table_customer th{
+    font-size: 20px;
+}
+
+.page_two_table .Input_table_customer td{
+    font-size: 22px;
+}
+
+
+.tablecheckbox .Physical_Remarks{
+    font-size: 35px;
+}
+
+.tablecheckbox .Truck_png{
+    width: 20rem;
+}
+
+} */

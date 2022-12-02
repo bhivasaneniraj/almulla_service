@@ -27,40 +27,16 @@ function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
   return (
     <>
       <div
-        className="tw0_page_complaint"
-        style={{ height: "30%", marginTop: "50px" }}
-      >
+        className="tw0_page_complaint">
         <div className="heading">
           <Col>
             <Row>
               <div className="d-flex flex-row justify-content-between">
-                <b style={{color:"rgb(0,0,0)", fontSize:"18pt",marginTop:"100px",dispalay:"flex",paddingLeft:"20px"}}>Breakdown Analysis For Cooling Unit</b>{" "}
+                <b className="Break_down_analysis">Breakdown Analysis For Cooling Unit</b>{" "}
                
                 <div className="down_value">
             <p><b> Assigned to Technician - </b></p>
-              <select className="Drop_select"
-                style={{
-
-marginTop:"1%",
-
-width:"60%",
-
-
-
-border: "none",
-
-backgroundcolor:"rgb(226,245,231)",
-
-paddingLeft: "20px",
-
-fontSize: "16pt",
-
-color: "rgb(0,0,0)",
-
-fontFamily: "Roboto-Bold",
-
-}}
-              >
+              <select className="Drop_select">
                
                 {options.map((option) => (
                   <option value={option.value}>

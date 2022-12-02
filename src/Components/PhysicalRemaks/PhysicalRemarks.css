@@ -38,6 +38,7 @@
 }
 .checkboxes input {
     vertical-align: middle;
+    margin-top: -3px;
 }
 .checkboxes label span {
     vertical-align: middle;
@@ -53,10 +54,23 @@
     background-color:  rgb(243,243,243);
 }
 
-.checktable .click{
-    height: 3vh;
-    width: 20%;
+.checktable .click_btn{
+    width: 22px;
+    height: 4vh;
 }
+
+.checktable .click{
+    height: 4vh;
+    width: 22px;
+}
+
+.checktable .click1{
+margin-top: -16px;
+width: 23px;
+height: 4vh;
+}
+
+
 
 .checktable label{
     margin-left: 12px;
@@ -122,3 +136,7 @@ input[type="checkbox"]:checked:after {
      * left: 0;
      */
 }
+
+
+
+

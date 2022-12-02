@@ -57,6 +57,7 @@ function FailureReason(props) {
         <div className="Engine_oil_Drain">
           <input
             type="checkbox"
+            style={{cursor:"pointer"}}
             value="Engine oil Drain extension leak"
             className="inpt"
             defaultChecked={engineOilDrain}
@@ -68,6 +69,7 @@ function FailureReason(props) {
         <div className="Engine_oil_hose">
           <input
             type="checkbox"
+            style={{cursor:"pointer"}}
             value="Engine cylinder Head cover Gasket "
             className="inpt"
             defaultChecked={engineOilHose}
@@ -79,6 +81,7 @@ function FailureReason(props) {
         <div className="Engine_cylinder_head">
           <input
             type="checkbox"
+            style={{cursor:"pointer"}}
             value="Engine cylinder Head cover Gasket "
             className="inpt"
             defaultChecked={engineCylinderHead}
@@ -90,6 +93,7 @@ function FailureReason(props) {
         <div className="Engine_oil_filter_leak">
           <input
             type="checkbox"
+            style={{cursor:"pointer"}}
             value="Engine Oil filter leak"
             className="inpt"
             defaultChecked={engineOilFilter}

@@ -383,12 +383,23 @@ text-align: left;
 
  /***************************************************<ForemanCoolCOmplaint.js>********************************/
 
+.tw0_page_complaint{
+height: 30%;
+margin-top: 50px;
+}
+
+
  .tw0_page_complaint h2{
     font-size: 18pt;
     color: rgb(0,0,0);
     padding-left: 1%;
   } 
 
+  .Break_down_analysis{
+   font-size: 18pt;
+   margin-top: 100px;
+   padding-left: 20px;
+  }
 
   .foreman_cooling_table{
     background-color: rgb(8,136,38);
@@ -456,8 +467,10 @@ text-align: left;
 
 .down_value p{
   margin-top: 11px;
-  font-size: 15pt;
+  font-size: 14pt;
+  width: 55%;
   margin-left: 10px;
+
    
 }
 
@@ -474,11 +487,126 @@ text-align: left;
 
 .down_values p {
   margin-top: 11px;
-  font-size: 15pt;
+  font-size: 14pt;
+  width: 55%;
   margin-left: 10px;
+}
+
+
+
+.down_value .Drop_select{
+  -webkit-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAnUExURUdwTAaIJgeHJgaHJgCZMwaHJwaHJQaIJgaJJwaIJQaIJgaJJQaIJqFSFCMAAAAMdFJOUwD2RFEFVaTcitp01SQKMqIAAACLSURBVAjXY2BgYAmbKJnqwAAC5meAYDKIxXEGDBqAzB4I8wQDA/MZKDBgcIcxpzDEnFklc+bMwVVnjjLknGZQPHNGiGHPMYY5ZxSYZA4qMJ05ySADFFEEojMHgUygEFACyJwDUghSfpIh5wxIGGjIMaBhZ85ILQQSR5GtQLIYyTnIjoQ4vRjsC5iHAMEOY/3yhSU8AAAAAElFTkSuQmCC);
+    width: 85%;
+    font-size: 16pt;
+    height: 5vh;
+    border-radius: 6pt;
+    margin-top: 1.5%;
+    margin-right: 15px;
+    font-family: Roboto-Bold;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: none;
 }
 
 /****************************************<ForemanTailComponent> *********************************/
 
 
 
+.tw00_page_complaint{
+  height: 30%;
+  margin-top: 12%;
+}
+
+.tw00_page_complaint .headi_ng{
+margin-top: -12%;
+}
+
+
+.Break_down_Tail_lift{
+  color: rgb(0, 0, 0);
+  font-size: 18pt;
+  margin-top: 45px;
+  padding-left: 6px;
+}
+
+
+.down_values .Drop_select_btn{
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAnUExURUdwTAaIJgeHJgaHJgCZMwaHJwaHJQaIJgaJJwaIJQaIJgaJJQaIJqFSFCMAAAAMdFJOUwD2RFEFVaTcitp01SQKMqIAAACLSURBVAjXY2BgYAmbKJnqwAAC5meAYDKIxXEGDBqAzB4I8wQDA/MZKDBgcIcxpzDEnFklc+bMwVVnjjLknGZQPHNGiGHPMYY5ZxSYZA4qMJ05ySADFFEEojMHgUygEFACyJwDUghSfpIh5wxIGGjIMaBhZ85ILQQSR5GtQLIYyTnIjoQ4vRjsC5iHAMEOY/3yhSU8AAAAAElFTkSuQmCC);
+  width: 85%;
+  font-size: 16pt;
+  height: 5vh;
+  border-radius: 6pt;
+  margin-top: 1.5%;
+  margin-right: 15px;
+  font-family: Roboto-Bold;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border: none;
+}
+
+
+
+  .Logout i .Logout_Butoon{
+    height: 4vh;
+  }
+
+
+    .Card_job{
+      margin-top: 10%;
+      justify-content: center;
+      align-items: center;
+      margin-left: -170%;
+    }
+
+    .job_cardbtn_btn:hover{
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+
+    .Card_job .job_cardbtn_btn{
+      background-color: rgb(8,136,38);
+      color: white;
+      font-size: 20pt;
+      width: 320pt;
+      color: rgb(255,255,255);
+      letter-spacing: 0.89pt;
+      /* margin-right: 23px; */
+      margin-left: -180px;
+      /* margin-bottom: 109%; */
+   
+      margin-top: 33%;
+  
+      margin-bottom: 35px;
+      height: 62pt;
+      cursor: pointer;
+      border: 1px solid white;
+      border-radius: 6pt;
+    }
+
+   
+
+
+    
+
+
+    .checktable .click{
+      height: 4vh;
+    width: 22px;
+    }
+
+
+    .checktable .click1{
+      margin-top: -16px;
+      width: 23px;
+      height: 4vh;
+      }

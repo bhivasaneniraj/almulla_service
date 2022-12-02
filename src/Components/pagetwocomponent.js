@@ -8,12 +8,14 @@ function Pagetwocomplaintlist({
   failureComplaints,
   failureComplaintsList,
   setFailureComplaintsList,
+  custComplaint,
+  eValue
 }) {
   const [engineOilDrain, setEngineOilDrain] = useState(false);
   const [engineOilHose, setEngineOilHose] = useState(false);
   const [engineCylinderHead, setEngineCylinderHead] = useState(false);
   const [engineOilFilter, setEngineOilFilter] = useState(false);
-  
+  const [customerComplaintArray,setCustomerComplaint] = useState([])
 
   return (
     <>
@@ -127,7 +129,7 @@ function Pagetwocomplaintlist({
           </button>
         </div>
       </div>
-      {failureComplaints === "Engine oil leak" && (
+      {eValue === "Engine oil leak" && (
         <FailureReason
           setFailureComplaintsList={setFailureComplaintsList}
           failureComplaintsList={failureComplaintsList}

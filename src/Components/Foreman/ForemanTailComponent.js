@@ -23,40 +23,15 @@ function ForemTailComponent({ complaint, failure, coolComponent, datas }) {
 
   return (
     <div
-      className="tw0_page_complaint"
-      style={{ height: "50%", padding: "80px 0px 110px 0px" }}
-    >
-      <div className="headi_ng" style={{marginTop:"-12%"}}>
+      className="tw00_page_complaint">
+      <div className="headi_ng" >
        
             <div className="d-flex flex-row justify-content-between mt-5 p-4 fs-5">
-              <b style={{color:"rgb(0,0,0)", fontSize:"18pt",marginTop:"45px",dispalay:"flex",paddingLeft:"6px"}}>Breakdown Analysis For Tail Lift</b>{" "}
+              <b className="Break_down_Tail_lift">Breakdown Analysis For Tail Lift</b>{" "}
               
               <div className="down_values">
             <p> <b>Assigned to Technician - </b>  </p>
-              <select className="Drop_select"
-                style={{
-                
-
-                  marginTop:"1%",
-
-width:"60%",
-
-
-
-border: "none",
-
-backgroundcolor:"rgb(226,245,231)",
-
-paddingLeft: "11px",
-
-fontSize: "16pt",
-
-color: "rgb(0,0,0)",
-
-fontFamily: "Roboto-Bold",
-
-}}
-              >
+              <select className="Drop_select_btn">
                
                 {options.map((option) => (
                   <option value={option.value}>

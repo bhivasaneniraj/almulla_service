@@ -32,7 +32,12 @@ const tabledata = [
   },
 ];
 
+
+
+
 function Manager() {
+
+
   const navigate = useNavigate();
 
   const datas = [

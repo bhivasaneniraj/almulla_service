@@ -1,14 +1,15 @@
 import React from 'react'
 import './PhysicalRemarks.css'
 
+
 function PhysicalRemark() {
   return (
     <>
          <div className="tablecheckbox">
-                  <h2>
+                  <h2 className='Physical_Remarks'>
                     <b>Physical Remarks / Observation</b>{" "}
                   </h2>
-                  <img src="./images/Truck@2x.png" alt="image" />
+                  <img className="Truck_png" src="./images/Truck@2x.png" alt="image" />
 
                   <div className="checkboxes">
 
@@ -26,7 +27,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck2"
                             className="click"
-                            style={{width:"20px"}}
+                          
                            
                           />
                         
@@ -47,7 +48,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck3"
                             className="click"
-                            style={{width:"20px"}}
+                            
                           />
                           <label
                             class="custom-control-label"
@@ -64,8 +65,8 @@ function PhysicalRemark() {
                             type="checkbox"
                             class="custom-control-input"
                             id="tableDefaultCheck4"
-                            className="click"
-                            style={{width:"20px"}}
+                            className="click_btn"
+                          
                           />
                           <label
                             class="custom-control-label"
@@ -83,7 +84,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck5"
                             className="click"
-                            style={{width:"20px"}}
+                         
                           />
                           <label
                             class="custom-control-label"
@@ -106,7 +107,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck6"
                             className="click"
-                            style={{width:"20px"}}
+                         
                           />
                           <label
                             class="custom-control-label"
@@ -124,7 +125,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck7"
                             className="click"
-                            style={{width:"20px"}}
+                     
                           />
                           <label
                             class="custom-control-label"
@@ -142,7 +143,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck8"
                             className="click"
-                            style={{width:"20px"}}
+                           
                           />
                           <label
                             class="custom-control-label"
@@ -166,7 +167,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck9"
                             className="click"
-                            style={{width:"20px"}}
+                        
                           />
                           <label
                             class="custom-control-label"
@@ -184,7 +185,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck10"
                             className="click"
-                            style={{width:"20px"}}
+                         
                           />
                           <label
                             class="custom-control-label"
@@ -209,7 +210,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck11"
                             className="click"
-                            style={{width:"20px"}}
+                           
                           />
                           <label
                             class="custom-control-label"
@@ -227,7 +228,7 @@ function PhysicalRemark() {
                             class="custom-control-input"
                             id="tableDefaultCheck12"
                             className="click"
-                            style={{width:"20px"}}
+                           
                           />
                           <label
                             class="custom-control-label"
@@ -251,8 +252,8 @@ function PhysicalRemark() {
                             type="checkbox"
                             class="custom-control-input"
                             id="tableDefaultCheck13"
-                            className="click"
-                            style={{marginTop:"-16px",width:"20px"}}
+                            className="click1"
+                         
                           />
                           <label
                             class="custom-control-label"
@@ -270,8 +271,8 @@ function PhysicalRemark() {
                             type="checkbox"
                             class="custom-control-input"
                             id="tableDefaultCheck14"
-                            className="click"
-                            style={{marginTop:"-16px",width:"20px"}}
+                            className="click1"
+                           
                           />
                           <label
                             class="custom-control-label"
@@ -288,8 +289,8 @@ function PhysicalRemark() {
                             type="checkbox"
                             class="custom-control-input"
                             id="tableDefaultCheck15"
-                            className="click"
-                            style={{marginTop:"-16px",width:"20px"}}
+                            className="click1"
+                         
                           />
                           <label
                             class="custom-control-label"
@@ -307,8 +308,8 @@ function PhysicalRemark() {
                             type="checkbox"
                             class="custom-control-input"
                             id="tableDefaultCheck16"
-                            className="click"
-                            style={{marginTop:"-16px",width:"20px"}}
+                            className="click1"
+                           
                           />
                           <label
                             class="custom-control-label"

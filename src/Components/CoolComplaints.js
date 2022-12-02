@@ -3,8 +3,8 @@ import React from "react";
 function CoolComplaints({
   complaint,
   failure,
-  CustComplaint,
   failureComplaintsList,
+  arrayList
 }) {
 
 
@@ -22,15 +22,10 @@ function CoolComplaints({
                 <i class="fa-solid fa-plus" onClick={complaint}></i>{" "}
               </th>
             </tr>
-            {CustComplaint.map((item)=> {
-               return(
-                <tr className="Cust_t0">
-              <td>{item}</td>
-            </tr>
-               )
-            })}
-          
-          
+            {arrayList.map(item => <tr className="Cust_t0">
+            <td>{item}</td>
+             </tr>)}
+
           </table>
 
           <table className="Cust_Table_tab">
