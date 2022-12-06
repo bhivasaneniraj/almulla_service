@@ -48,7 +48,7 @@ function Formanv() {
     <div className="Foreman_Main">
         <div className="Foreman_cl">
         <img
-            src="/images/bitmap@2x.png"
+            src="/images/bitmap@3x.png"
             alt="logo"
             className="bitmap_png"
           />
@@ -62,7 +62,7 @@ function Formanv() {
           <span>{name} </span>
           <div className="logoutss">
           <i className="logout_png" type="button">
-          <img src="./images/shape@2x.png" alt="logo" />
+          <img src="./images/shape@3x.png" alt="logo" />
           </i>
           <h1 className="Head"><b>Logout</b> </h1>
           </div>

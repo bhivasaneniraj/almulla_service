@@ -4,10 +4,7 @@ import "../../foreman.css";
 
 function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
   const options = [
-    {
-      label: "Send Report to Foremen",
-      value: "Send Report to Foremen",
-    },
+ 
     {
       label: "Shabbir",
       value: "Shabbir",

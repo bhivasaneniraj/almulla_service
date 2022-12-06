@@ -1,9 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
-
-
+import "../../Technician.css";
 import TechnicianCoolingUnit from './TechnicianCoolUnit';
 import PhysicalRemark from '../PhysicalRemaks/PhysicalRemark';
 
@@ -61,7 +59,7 @@ function Technician() {
     <>
       <Col sm="12" md="12" lg="12">
         <Row>
-          <div className="Page_two_logoAndLogOut">
+          <div className="Page_two_logoAndLogOut_out">
             <img src="/images/bitmap@2x.png" alt="example" />
             <div className="vl"></div>
             <h3>
@@ -69,31 +67,32 @@ function Technician() {
             </h3>
             <br />
           </div>
-          <div className="heading">
+          <div className="heading_ing">
             <div className="header-text">
-              <span style={{marginLeft:"190px"}}>Shakeel Siddiqui</span>
+              <span>Shakeel Siddiqui</span>
             </div>
 
-            <div className="LogOut">
+            <div className="LogOut_out">
               <i
                 type="button"
                 className="correct-img"
                 onClick={() => navigate("/")}
-                style={{ display: "flex", justifyContent: "end" }}
               >
                 <img
                   src="Images/shape@2x.png"
-                  style={{ height: "18pt", width: "18pt" }}
                 />
-                <h5>Logout</h5>
+               
               </i>
+              <h1 className="head_er">
+              <b>Logout</b>{" "}
+            </h1>
             </div>
-            <div className="CardReference">
-              <h2 className="card_ref">
+            <div className="CardReference_ref">
+              <h2 className="card_ref_ref">
                 <b>Job Card Reference Number - {Referenceno}</b>{" "}
               </h2>
               <div className="d-flex justify-content-end loc">
-                <div className="loc">
+                <div className="locAt_tion">
                   <b>
                     {" "}
                     <span style={{marginRight:"14px"}}>Location : {location}</span>

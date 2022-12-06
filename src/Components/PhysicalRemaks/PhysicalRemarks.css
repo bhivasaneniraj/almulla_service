@@ -70,6 +70,11 @@ width: 23px;
 height: 4vh;
 }
 
+.checktable .click2 {
+    margin-top: -16px;
+width: 23px;
+height: 4vh;
+}
 
 
 .checktable label{
@@ -140,3 +145,68 @@ input[type="checkbox"]:checked:after {
 
 
 
+
+/********************************************* Media Query For <PhysicakRemarks.js> potrait mode *****************/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tablecheckbox {
+        display: list-item;
+    }
+
+    .tablecheckbox  h2 {
+    font-size: 2.5rem;
+    }
+
+    .tablecheckbox .checktable {
+        width: 87rem;
+    }
+
+    .tablecheckbox .checktable td {
+        font-size: 30px;
+    }
+
+    .tablecheckbox .checktable input {
+        
+    width: 2.5rem;
+    height: 2.5rem;
+
+    }
+
+.checktable .click2 {
+    margin-top: -2rem;
+}
+
+}
+
+
+/**************************************************** Media query for Tablets potrait mode **************/
+
+
+@media (min-width: 1025px) and (max-width: 1180px) {
+    .tablecheckbox {
+        display: list-item;
+    }
+
+    .tablecheckbox  h2 {
+    font-size: 2.5rem;
+    }
+
+    .tablecheckbox .checktable {
+        width: 87rem;
+    }
+
+    .tablecheckbox .checktable td {
+        font-size: 30px;
+    }
+
+    .tablecheckbox .checktable input {
+        
+    width: 2.5rem;
+    height: 2.5rem;
+
+    }
+
+    .checktable .click2 {
+        margin-top: -2rem;
+    }   
+
+}

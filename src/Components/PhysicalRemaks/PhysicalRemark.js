@@ -252,7 +252,7 @@ function PhysicalRemark() {
                             type="checkbox"
                             class="custom-control-input"
                             id="tableDefaultCheck13"
-                            className="click1"
+                            className="click2"
                          
                           />
                           <label
@@ -271,7 +271,7 @@ function PhysicalRemark() {
                             type="checkbox"
                             class="custom-control-input"
                             id="tableDefaultCheck14"
-                            className="click1"
+                            className="click2"
                            
                           />
                           <label
@@ -289,7 +289,7 @@ function PhysicalRemark() {
                             type="checkbox"
                             class="custom-control-input"
                             id="tableDefaultCheck15"
-                            className="click1"
+                            className="click2"
                          
                           />
                           <label
@@ -308,7 +308,7 @@ function PhysicalRemark() {
                             type="checkbox"
                             class="custom-control-input"
                             id="tableDefaultCheck16"
-                            className="click1"
+                            className="click2"
                            
                           />
                           <label

@@ -43,3 +43,14 @@
       width: 40rem;
     }
   }
+
+
+  /**************************************** Media Query **************************************/
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+    .Error_backdrop__DRpHj {
+
+    }
+  }
+

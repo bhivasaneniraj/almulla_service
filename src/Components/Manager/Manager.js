@@ -59,7 +59,7 @@ function Manager() {
       <Col sm="12" md="12" lg="12">
         <Row>
           <div className="Page_two_logoAndLogOut">
-            <img src="/images/bitmap@2x.png" alt="example" style={{paddingLeft:"10px"}}/>
+            <img src="/images/bitmap@3x.png" alt="example" style={{paddingLeft:"10px"}}/>
             <div className="vl"></div>
             <h3>
               <b> Welcome to Al Mulla Industries Service Mobile Solutions</b>
@@ -76,11 +76,11 @@ function Manager() {
                 type="button"
                 className="correct-img"
                 onClick={() => navigate("/")}
-                style={{ display: "flex", justifyContent: "end" }}
+                style={{ display: "flex", justifyContent: "end",cursor:"pointer" }}
               >
                 <img
-                  src="Images/shape@2x.png"
-                  style={{ height: "18pt", width: "18pt" }}
+                  src="Images/shape@3x.png"
+                  style={{ height: "18pt", width: "18pt", cursor:"pointer" }}
                 />
                 <h5>Logout</h5>
               </i>

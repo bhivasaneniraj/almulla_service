@@ -334,7 +334,7 @@ function Foremanpage() {
     <>
       <div className="main">
         <div className="foreman">
-          <img src="/images/bitmap@2x.png" alt="logo" />
+          <img src="/images/bitmap@3x.png" alt="logo" />
           <div className="v2"></div>
           <h3>
             <b>Welcome to Al Mulla Industries Service Mobile Solutions</b>{" "}
@@ -346,7 +346,7 @@ function Foremanpage() {
           <div className="Logout">
             <i>
               <img className="Logout_Butoon"
-                src="./images/shape.png"
+                src="./images/shape@3x.png"
                 alt=""
                 onClick={() => (window.location.href = "/")}
               />

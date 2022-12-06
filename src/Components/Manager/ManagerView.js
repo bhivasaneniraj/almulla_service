@@ -46,7 +46,7 @@ function ManagerView() {
        <div className="Main_class">
             <div className="foreman_class">
             <img
-            src="/images/bitmap@2x.png"
+            src="/images/bitmap@3x.png"
             alt="logo"
           />
           <div className="v2"></div>
@@ -61,9 +61,9 @@ function ManagerView() {
 
             <div className="Logout_class">
             <i className="Logout_logo">
-            <img src="./images/shape@2x.png" alt="logo" />
+            <img src="./images/shape@3x.png" alt="logo"  onClick={() => navigate("/")} />
          </i>
-         <h1 className="head2"><b>Logout</b> </h1>
+         <h1 className="head2" onClick={() => navigate("/")} ><b>Logout</b> </h1>
             </div>
             </div>
             <div className="foremantable_class">

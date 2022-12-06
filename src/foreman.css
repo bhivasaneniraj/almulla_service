@@ -32,14 +32,13 @@
 }
 
 .v2{
-  border-right: 1px dashed 
-  rgb(0,0,0);
+  border-right: 1px dashed rgb(0,0,0);
   height: 40pt;
   width: 1pt;
   position: absolute;
   left: 58%;
-  margin-left: -540px;
-  top: 24px;
+  /* margin-left: -540px; */
+  top: 16px;
 }
 
 .foreman h3{

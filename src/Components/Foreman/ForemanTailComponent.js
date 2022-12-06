@@ -3,10 +3,7 @@ import { Button, Col, Container, Row, Form } from "react-bootstrap";
 
 function ForemTailComponent({ complaint, failure, coolComponent, datas }) {
   const options = [
-    {
-      label: "Send Report to Foremen",
-      value: "Send Report to Foremen",
-    },
+   
     {
       label: "Shabbir",
       value: "Shabbir",

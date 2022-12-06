@@ -120,6 +120,7 @@
 
 .Fore_Man_Data img{
     float: right;
+    margin-top: 1px;
 }
 
 
@@ -132,6 +133,7 @@
 
 .Fore_Man_Data .Assi_gned{
     cursor: pointer;
+    margin-top: 1px;
 }
 
 

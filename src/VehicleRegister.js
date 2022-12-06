@@ -1,4 +1,6 @@
 import React from "react";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CoolComplaints from "./Components/CoolComplaints";
@@ -281,12 +283,13 @@ function VehicleRegister() {
     <>
       <div className="main_div">
         <div className="Page_two_logoAndLogOut">
-          <img src="/images/bitmap@2x.png" alt="example" />
+          <img src="/images/bitmap@3x.png" alt="example" />
           <div className="vl"></div>
           <h3>
             <b> Welcome to Al Mulla Industries Service Mobile Solutions</b>
           </h3>
           <br />
+          
         </div>
         <div className="heading">
           <span>Anisur Rahman </span>
@@ -294,7 +297,7 @@ function VehicleRegister() {
           <div className="Page_two_LogOut">
             <i>
               <img
-                src="./images/shape.png"
+                src="./images/shape@3x.png"
                 alt=""
                 onClick={() => (window.location.href = "/")}
               />
@@ -390,9 +393,10 @@ function VehicleRegister() {
                   Customer <p> {name} </p>
                 </span>
 
-                <table>
-                  <tr>
-                    <th>
+                <Table>
+                <Thead>
+                  <Tr>
+                    <Th>
                       {" "}
                       <input
                         type="checkbox"
@@ -403,19 +407,20 @@ function VehicleRegister() {
                         }}
                         checked={checkedAllBox}
                       />
-                    </th>
-                    <th>Unit Details</th>
-                    <th>KT No.</th>
-                    <th>Serial No.</th>
-                    <th>Chassis</th>
-                    <th>Model</th>
-                    <th>Date</th>
-                    <th>Warranty Start</th>
-                    <th>Warranty End</th>
-                  </tr>
-
-                  <tr>
-                    <th className="tab">
+                    </Th>
+                    <Th>Unit Details</Th>
+                    <Th>KT No.</Th>
+                    <Th>Serial No.</Th>
+                    <Th>Chassis</Th>
+                    <Th>Model</Th>
+                    <Th>Date</Th>
+                    <Th>Warranty Start</Th>
+                    <Th>Warranty End</Th>
+                  </Tr>
+</Thead>
+<Tbody>
+                  <Tr>
+                    <Th className="tab">
                       {" "}
                       <input
                         type="checkbox"
@@ -427,19 +432,19 @@ function VehicleRegister() {
                         }}
                         checked={checkedFirst}
                       />
-                    </th>
-                    <td>{data[0].UnitDetail}</td>
-                    <td>{data[0].KTNo}</td>
-                    <td>{data[0].SerialNo} </td>
-                    <td>{data[0].Chassis} </td>
-                    <td> {data[0].Model} </td>
-                    <td> {data[0].Date}</td>
-                    <td className="tdata"> {data[0].WarrantyStart}</td>
-                    <td className="tdata2"> {data[0].WarrantyEnd}</td>
-                  </tr>
+                    </Th>
+                    <Td>{data[0].UnitDetail}</Td>
+                    <Td>{data[0].KTNo}</Td>
+                    <Td>{data[0].SerialNo} </Td>
+                    <Td>{data[0].Chassis} </Td>
+                    <Td> {data[0].Model} </Td>
+                    <Td> {data[0].Date}</Td>
+                    <Td className="tdata"> {data[0].WarrantyStart}</Td>
+                    <Td className="tdata2"> {data[0].WarrantyEnd}</Td>
+                  </Tr>
 
-                  <tr>
-                    <th className="tab">
+                  <Tr>
+                    <Th className="tab">
                       {" "}
                       <input
                         type="checkbox"
@@ -451,17 +456,17 @@ function VehicleRegister() {
                         }}
                         checked={checkedSecond}
                       />
-                    </th>
-                    <td>{data[1].UnitDetail}</td>
-                    <td>{data[1].KTNo}</td>
-                    <td>{data[1].SerialNo} </td>
-                    <td>{data[1].Chassis} </td>
-                    <td> {data[1].Model} </td>
-                    <td> {data[1].Date}</td>
-                    <td className="tdata3"> {data[1].WarrantyStart}</td>
+                    </Th>
+                    <Td>{data[1].UnitDetail}</Td>
+                    <Td>{data[1].KTNo}</Td>
+                    <Td>{data[1].SerialNo} </Td>
+                    <Td>{data[1].Chassis} </Td>
+                    <Td> {data[1].Model} </Td>
+                    <Td> {data[1].Date}</Td>
+                    <Td className="tdata3"> {data[1].WarrantyStart}</Td>
 
-                    <td className="tdata4"> {data[1].WarrantyEnd}</td>
-                  </tr>
+                    <Td className="tdata4"> {data[1].WarrantyEnd}</Td>
+                  </Tr>
 
                   {/* {tabledata.map((val,key) => {
                   return(
@@ -482,7 +487,8 @@ function VehicleRegister() {
                   )
                 })}
                  */}
-                </table>
+                 </Tbody>
+                </Table>
               </div>
               <PhysicalRemark />
 
