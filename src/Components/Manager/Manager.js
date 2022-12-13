@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Col,  Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import ErrorModel from "../ThankYouFolder/Error"
 
 import PhysicalRemark from "../PhysicalRemaks/PhysicalRemark";
 import "./Manager.css";
@@ -37,8 +38,20 @@ const tabledata = [
 
 function Manager() {
 
+  const [msg, setMsg] = useState("");
 
   const navigate = useNavigate();
+
+  function submit() {
+    setMsg({
+      title: "Sent",
+      message: "Thank You!!",
+    });
+  }
+
+  const errorHandler = () => {
+    setMsg("");
+  };
 
   const datas = [
     {
@@ -76,14 +89,16 @@ function Manager() {
                 type="button"
                 className="correct-img"
                 onClick={() => navigate("/")}
-                style={{ display: "flex", justifyContent: "end",cursor:"pointer" }}
               >
                 <img
-                  src="Images/shape@3x.png"
-                  style={{ height: "18pt", width: "18pt", cursor:"pointer" }}
+                  src="images/shape@3x.png"
+                  className="Log_out_logo"
                 />
-                <h5>Logout</h5>
+              
               </i>
+              <h1 className="header_1">
+              <b onClick={() => navigate("/")}>Logout</b>{" "}
+            </h1>
             </div>
             <div className="CardReference">
               <h2 className="card_ref">
@@ -150,10 +165,16 @@ function Manager() {
       <div style={{ height: "700px" }}>
         <ManagerTailComplaint datas={datas} />
       </div>
-
+      {msg && (
+              <ErrorModel
+                title={msg.title}
+                message={msg.message}
+                onConfirm={errorHandler}
+              />
+            )}
       <div className="job_card">
-              <button className="job_cardbtn">
-                <b>Create Job Card</b>{" "}
+              <button className="job_cardbtn" onClick={submit}>
+                <b>Send for Quote Preparation</b>{" "}
               </button>
             </div>
 

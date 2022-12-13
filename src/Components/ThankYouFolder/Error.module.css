@@ -1,56 +1,90 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.75);
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  position: fixed;
+  top: 30vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.header {
+  background: rgb(8, 136, 38);
+  padding: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+  color: white;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
   .modal {
-    position: fixed;
-    top: 30vh;
-    left: 10%;
-    width: 80%;
-    z-index: 100;
-    overflow: hidden;
+    left: calc(50% - 20rem);
+    width: 40rem;
   }
-  
-  .header {
-    background: rgb(8,136,38);
-    padding: 1rem;
+}
+
+/**************************************** Media Query **************************************/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .backdrop {
+    height: 100rem;
   }
-  
+  .modal {
+    margin-top: 25rem;
+    height: 20rem;
+    width: 45rem;
+  }
   .header h2 {
-    margin: 0;
-    color: white;
+    font-size: 40px;
   }
-  
-  .content {
-    padding: 1rem;
+  .content p {
+    font-size: 40px;
   }
-  
-  .actions {
-    padding: 1rem;
-    display: flex;
-    justify-content: flex-end;
+  .actions Button {
+    font-size: 40px;
   }
-  
-  @media (min-width: 768px) {
-    .modal {
-      left: calc(50% - 20rem);
-      width: 40rem;
-    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (max-width: 767px) and (min-width: 481px) {
+  .backdrop {
+    height: 170rem;
   }
-
-
-  /**************************************** Media Query **************************************/
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-  
-    .Error_backdrop__DRpHj {
-
-    }
+  .modal {
+    height: 85vh;
+    margin-top: 50rem;
   }
-
+  .header h2 {
+    font-size: 55px;
+  }
+  .content p {
+    font-size: 60px;
+  }
+  .actions Button {
+    width: 15vh;
+    font-size: 40px;
+    height: 15vh;
+    margin-top: 16rem;
+  }
+}

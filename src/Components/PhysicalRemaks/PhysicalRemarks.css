@@ -1,137 +1,127 @@
-.checktable td:hover{
-    background-color:   rgb(219,255,227);
-  }  
-
-
-  .tablecheckbox .checktable{
-    width: 162vh;
-    top: 6%;
-     margin-left: 25%;
-    margin-top: -20%; 
+.checktable td:hover {
+  background-color: rgb(219, 255, 227);
 }
 
-
-.tablecheckbox h2{
-    display: flex;
-    font-size: 18pt;
-    letter-spacing: -0.01pt;
-    color: rgb(0,0,0);
-    font-weight: bold;
-    margin-left: 20px;
-    margin-bottom: 5px;
-    margin-top: 30px;
+.tablecheckbox .checktable {
+  width: 162vh;
+  top: 6%;
+  margin-left: 25%;
+  margin-top: -20%;
 }
 
-
-.tablecheckbox img{
-    width: 50vh;
-    /* margin-left: 0px; */
-    margin-top: 25px;
+.tablecheckbox h2 {
+  display: flex;
+  font-size: 18pt;
+  letter-spacing: -0.01pt;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  margin-top: 30px;
 }
 
-
+.tablecheckbox img {
+  width: 50vh;
+  /* margin-left: 0px; */
+  margin-top: 25px;
+}
 
 .checkboxes label {
-    display: inline-block;
-    padding-right: 10px;
-    white-space: nowrap;
+  display: inline-block;
+  padding-right: 10px;
+  white-space: nowrap;
 }
 .checkboxes input {
-    vertical-align: middle;
-    margin-top: -3px;
+  vertical-align: middle;
+  margin-top: -3px;
 }
 .checkboxes label span {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
-
-.checktable td{
-    text-align: left;
- 
+.checktable td {
+  text-align: left;
 }
 
-.checktable .scratches{
-    background-color:  rgb(243,243,243);
+.checktable .scratches {
+  background-color: rgb(243, 243, 243);
 }
 
-.checktable .click_btn{
-    width: 22px;
-    height: 4vh;
+.checktable .click_btn {
+  width: 22px;
+  height: 4vh;
 }
 
-.checktable .click{
-    height: 4vh;
-    width: 22px;
+.checktable .click {
+  height: 4vh;
+  width: 22px;
 }
 
-.checktable .click1{
-margin-top: -16px;
-width: 23px;
-height: 4vh;
+.checktable .click1 {
+  margin-top: -16px;
+  width: 23px;
+  height: 4vh;
 }
 
 .checktable .click2 {
-    margin-top: -16px;
-width: 23px;
-height: 4vh;
+  margin-top: -16px;
+  width: 23px;
+  height: 4vh;
 }
 
-
-.checktable label{
-    margin-left: 12px;
+.checktable label {
+  margin-left: 12px;
 }
 
-.checktable label p{
-    text-align: center;
-    margin-right: 18px;
-    margin-left: 0px;
-    margin-top: -4%;
+.checktable label p {
+  text-align: center;
+  margin-right: 18px;
+  margin-left: 0px;
+  margin-top: -4%;
 }
 
-.checktable label .damaged{
-    margin-left: 0px;
-    margin-top: -4%;
+.checktable label .damaged {
+  margin-left: 0px;
+  margin-top: -4%;
 }
 
-.checktable label .guard{
-    margin-left:0px;
-    margin-top: -4%;
+.checktable label .guard {
+  margin-left: 0px;
+  margin-top: -4%;
 }
 
-
-
-
-.checkboxes .checktable{
-    border-spacing: 2px 1px;
-    border-collapse: separate;
+.checkboxes .checktable {
+  border-spacing: 2px 1px;
+  border-collapse: separate;
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: initial;
+  appearance: initial;
 
-input[type="checkbox"]{
-    -webkit-appearance: initial;
-    appearance: initial;
-   
-    border: 1px solid rgb(29,249,80);
-    border-radius: 4pt;
-   
-    position: relative;
+  border: 1px solid rgb(29, 249, 80);
+  border-radius: 4pt;
+
+  position: relative;
 }
 input[type="checkbox"]:checked {
-    background: rgb(15,95,34);
+  background: rgb(15, 95, 34);
 }
 input[type="checkbox"]:checked:after {
-    /* Heres your symbol replacement - this is a tick in Unicode. */    content: "\2713";
-    color: #fff;
-    /* The following positions my tick in the center, 
+  /* Heres your symbol replacement - this is a tick in Unicode. */
+  content: "\2713";
+  color: #fff;
+  /* The following positions my tick in the center, 
      * but you could just overlay the entire box
-     * with a full after element with a background if you want to */    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    /*
+     * with a full after element with a background if you want to */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*
      * If you want to fully change the check appearance, use the following:
      * content: " ";
      * width: 100%;
@@ -142,71 +132,90 @@ input[type="checkbox"]:checked:after {
      */
 }
 
-
-
-
-
 /********************************************* Media Query For <PhysicakRemarks.js> potrait mode *****************/
 @media (min-width: 768px) and (max-width: 1024px) {
-    .tablecheckbox {
-        display: list-item;
-    }
+  .tablecheckbox {
+    display: list-item;
+  }
 
-    .tablecheckbox  h2 {
+  .tablecheckbox h2 {
     font-size: 2.5rem;
-    }
+  }
 
-    .tablecheckbox .checktable {
-        width: 87rem;
-    }
+  .tablecheckbox .checktable {
+    width: 95rem;
+    margin-left: 30rem;
+  }
 
-    .tablecheckbox .checktable td {
-        font-size: 30px;
-    }
+  .tablecheckbox .checktable td {
+    font-size: 30px;
+  }
 
-    .tablecheckbox .checktable input {
-        
+  .tablecheckbox .checktable input {
     width: 2.5rem;
     height: 2.5rem;
+  }
 
-    }
-
-.checktable .click2 {
+  .checktable .click2 {
     margin-top: -2rem;
+  }
 }
-
-}
-
 
 /**************************************************** Media query for Tablets potrait mode **************/
 
-
 @media (min-width: 1025px) and (max-width: 1180px) {
-    .tablecheckbox {
-        display: list-item;
-    }
+  .tablecheckbox {
+    display: list-item;
+  }
 
-    .tablecheckbox  h2 {
+  .tablecheckbox h2 {
     font-size: 2.5rem;
-    }
+  }
 
-    .tablecheckbox .checktable {
-        width: 87rem;
-    }
+  .tablecheckbox .checktable {
+    width: 87rem;
+  }
 
-    .tablecheckbox .checktable td {
-        font-size: 30px;
-    }
+  .tablecheckbox .checktable td {
+    font-size: 30px;
+  }
 
-    .tablecheckbox .checktable input {
-        
+  .tablecheckbox .checktable input {
     width: 2.5rem;
     height: 2.5rem;
+  }
 
-    }
+  .checktable .click2 {
+    margin-top: -2rem;
+  }
+}
+/***************************************MediaQuery For <PhysicalRemark.js/> page *******************/
 
-    .checktable .click2 {
-        margin-top: -2rem;
-    }   
+/* Media Query for low resolution  Tablets, Ipads */
+@media (max-width: 767px) and (min-width: 481px) {
+  .tablecheckbox h2 {
+    font-size: 50px;
+    width: 70rem;
+  }
 
+  .tablecheckbox img {
+    width: 22rem;
+  }
+  .checkboxes .checktable {
+    margin-left: 24rem;
+    width: 80rem;
+    margin-top: -20rem;
+  }
+  .checkboxes .checktable tr td {
+    font-size: 30px;
+  }
+  .checktable td .click {
+    width: 2rem;
+    height: 2rem;
+  }
+  .checktable td .click2 {
+    width: 2rem;
+    height: 2rem;
+    margin-top: -3rem;
+  }
 }

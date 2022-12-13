@@ -1,46 +1,52 @@
-import React from "react";
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import CoolComplaints from "./Components/CoolComplaints";
-import FailureReason from "./Components/FailureReason";
-import TailComplaint from "./Components/TailComplaint";
-import "./Style.css";
-import Pagetwocomponent from "./Components/pagetwocomponent";
+import React from "react"
+import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table"
+import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
+import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
+import CoolComplaints from "./Components/CoolComplaints"
+import FailureReason from "./Components/FailureReason"
+import TailComplaint from "./Components/TailComplaint"
+import "./Style.css"
+import Pagetwocomponent from "./Components/pagetwocomponent"
+import PageTwoTailComponent from "./PageTwoTailComponent"
 
-import ErrorModel from "./Components/ThankYouFolder/Error";
-import { Button } from "react-bootstrap";
-import PhysicalRemark from "./Components/PhysicalRemaks/PhysicalRemark";
+import ErrorModel from "./Components/ThankYouFolder/Error"
+import { Button } from "react-bootstrap"
+import PhysicalRemark from "./Components/PhysicalRemaks/PhysicalRemark"
 
 function VehicleRegister() {
-  const [text, settext] = useState();
-  const [blackBg, setblackBg] = useState("none");
-  const [faillist, setfaillist] = useState("none");
-  const [omplistf, setomplistf] = useState("block");
-  const [completSubmite, setcompletSubmite] = useState();
-  const [omdemo, setomdemo] = useState([]);
-  const [data, setData] = useState([]);
-  const [show, setShow] = useState(false);
-  const [checkedAllBox, setCheckedAllBox] = useState(false);
-  const [checkedFirst, setCheckedFirst] = useState(false);
-  const [checkedSecond, setCheckedSecond] = useState(false);
-  const [searchTextInput, setSearchTextInput] = useState("");
-  const [failureComplaints, SetFailureComplaints] = useState("");
-  const [customerComplaint, setCustomerComplaint] = useState([]);
-  const [failureComplaintsList, setFailureComplaintsList] = useState([]);
-  const [TailLiftComplaint, setTailLiftComplaint] = useState([]);
-  const [CustComplaint, setCustComplaint] = useState([]);
-  const [pagetwocomplaintlist, setpagetwocomplainlist] = useState(false);
-  const [msg, setMsg] = useState("");
-  const [eValue, setEValue] = useState();
-  const [arrayList, setArrayList] = useState([]);
+  const [text, settext] = useState()
+  const [blackBg, setblackBg] = useState("none")
+  const [tailBlackBg, setTailBlackBg] = useState("none")
+  const [faillist, setfaillist] = useState("none")
+  const [omplistf, setomplistf] = useState("block")
+  const [completSubmite, setcompletSubmite] = useState()
+  const [omdemo, setomdemo] = useState([])
+  const [data, setData] = useState([])
+  const [show, setShow] = useState(false)
+  const [checkedAllBox, setCheckedAllBox] = useState(false)
+  const [checkedFirst, setCheckedFirst] = useState(false)
+  const [checkedSecond, setCheckedSecond] = useState(false)
+  const [searchTextInput, setSearchTextInput] = useState("")
+  const [failureComplaints, SetFailureComplaints] = useState("")
+  const [customerComplaint, setCustomerComplaint] = useState([])
+  const [failureComplaintsList, setFailureComplaintsList] = useState([])
+  const [TailLiftComplaint, setTailLiftComplaint] = useState([])
+  const [CustComplaint, setCustComplaint] = useState([])
+  const [pagetwocomplaintlist, setpagetwocomplainlist] = useState(false)
+  const [msg, setMsg] = useState("")
+  const [eValue, setEValue] = useState()
+  const [arrayList, setArrayList] = useState([])
+  const [ListArray, setListArray] = useState([])
+  const [tailArrayList, setTailArrayList] = useState([])
+  const [tailCustomerComplaints, setTailCustomerComplaints] = useState()
+  const [tailFailureComplaints, setTailFailureComplaints] = useState([])
 
   function submit() {
     setMsg({
       title: "Job Created Successfully",
       message: "Thank You!!",
-    });
+    })
   }
   // const [Showhide, setShowhide] = useState("Hello World")
 
@@ -48,90 +54,100 @@ function VehicleRegister() {
   //       console.log(Showhide);
   // }
 
-  const navigate = useNavigate;
+  const navigate = useNavigate
 
   const handleCheckedAll = () => {
     if (!checkedAllBox) {
-      setCheckedAllBox(true);
-      setCheckedFirst(true);
-      setCheckedSecond(true);
+      setCheckedAllBox(true)
+      setCheckedFirst(true)
+      setCheckedSecond(true)
     } else {
-      setCheckedAllBox(false);
-      setCheckedFirst(false);
-      setCheckedSecond(false);
+      setCheckedAllBox(false)
+      setCheckedFirst(false)
+      setCheckedSecond(false)
     }
-  };
+  }
 
   const handleCheckedFirst = () => {
     if (!checkedFirst && checkedSecond) {
-      setCheckedAllBox(true);
+      setCheckedAllBox(true)
     } else {
-      setCheckedAllBox(false);
+      setCheckedAllBox(false)
     }
-    setCheckedFirst(!checkedFirst);
-  };
+    setCheckedFirst(!checkedFirst)
+  }
 
   const handleCheckedSecond = () => {
     if (!checkedSecond && checkedFirst) {
-      setCheckedAllBox(true);
+      setCheckedAllBox(true)
     } else {
-      setCheckedAllBox(false);
+      setCheckedAllBox(false)
     }
-    setCheckedSecond(!checkedSecond);
-  };
+    setCheckedSecond(!checkedSecond)
+  }
 
   const ktnum = (e) => {
-    settext(e.target.value);
-    setSearchTextInput(e.target.value);
-  };
+    settext(e.target.value)
+    setSearchTextInput(e.target.value)
+  }
 
   const complaint = () => {
-    setblackBg("block");
-    setomplistf("block");
-  };
+    setblackBg("block")
+
+    setomplistf("block")
+  }
+
+  const tailComplaint = () => {
+    setTailBlackBg("block")
+  }
+
   const failure = () => {
-    setblackBg("block");
-    setfaillist("block");
-  };
-  var a = [];
+    setblackBg("block")
+    setTailBlackBg("block")
+    setfaillist("block")
+  }
+  var a = []
 
   const demooo = (e) => {
-    setcompletSubmite(e.target.value);
-  };
+    setcompletSubmite(e.target.value)
+  }
   const helomk = (e) => {
-    var value = e.target.value;
-    var checked = e.target.checked;
+    var value = e.target.value
+    var checked = e.target.checked
     if (checked) {
-      setomdemo([...omdemo, value]);
+      setomdemo([...omdemo, value])
     } else {
-      setomdemo(omdemo.filter((e) => e !== value));
+      setomdemo(omdemo.filter((e) => e !== value))
     }
-  };
+  }
 
   const compSubmite = () => {
-    if (!arrayList.includes(eValue))
-      setArrayList((prev) => prev.concat(eValue));
-    console.log(completSubmite);
-    setCustomerComplaint(completSubmite);
-    setblackBg("none");
-    setomplistf("none");
-  };
+    if (!arrayList.includes(eValue)) setArrayList((prev) => prev.concat(eValue))
+    console.log(completSubmite)
+    setCustomerComplaint(completSubmite)
+    setblackBg("none")
+    setomplistf("none")
+  }
+
+  const compTailSumbite = () => {
+    if (!tailArrayList.includes(eValue)) setTailArrayList((prev) => prev.concat(eValue))
+    setTailBlackBg("none")
+  }
 
   const failuereSubmite = () => {
     if (omdemo.length === 0) {
     } else {
-      setblackBg("none");
-      setfaillist("none");
-      console.log(omdemo);
+      setblackBg("none")
+      setfaillist("none")
+      console.log(omdemo)
     }
-  };
+  }
 
   const errorHandler = () => {
-    setMsg("");
-  };
+    setMsg("")
+  }
 
   const options = [
- 
     {
       label: "Shabbir",
       value: "Shabbir",
@@ -144,7 +160,7 @@ function VehicleRegister() {
       label: "Faisal",
       value: "Assigned to Foreman - Faisal",
     },
-  ];
+  ]
 
   const Select_option = [
     {
@@ -157,7 +173,7 @@ function VehicleRegister() {
       label2: "Shuwaikh Van 2",
       value: "Shuwaikh Van 2",
     },
-  ];
+  ]
 
   function Submit() {
     const tabledata = [
@@ -183,18 +199,18 @@ function VehicleRegister() {
         WarrantyStart: " 27.06.2021",
         WarrantyEnd: "26.06.2022",
       },
-    ];
+    ]
     if (searchTextInput === "17/30866") {
-      setData(tabledata);
-      setShow(true);
+      setData(tabledata)
+      setShow(true)
     } else {
-      alert("Please Enter Correct Number");
+      alert("Please Enter Correct Number")
     }
   }
 
-  var name = " 915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES";
+  var name = " 915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES"
 
-  const [checkedAll, setCheckedAll] = useState(false);
+  const [checkedAll, setCheckedAll] = useState(false)
 
   const [checked, setChecked] = useState({
     1: false,
@@ -202,7 +218,7 @@ function VehicleRegister() {
     3: false,
     4: false,
     5: false,
-  });
+  })
 
   /* ################################################ */
 
@@ -212,13 +228,13 @@ function VehicleRegister() {
 
   const toggleCheck = (inputName) => {
     setChecked((prevState) => {
-      const newState = { ...prevState };
+      const newState = { ...prevState }
 
-      newState[inputName] = !prevState[inputName];
+      newState[inputName] = !prevState[inputName]
 
-      return newState;
-    });
-  };
+      return newState
+    })
+  }
 
   /* ###################################################### */
 
@@ -227,18 +243,18 @@ function VehicleRegister() {
   /* ###################################################### */
 
   const selectAll = (value) => {
-    setCheckedAll(value);
+    setCheckedAll(value)
 
     setChecked((prevState) => {
-      const newState = { ...prevState };
+      const newState = { ...prevState }
 
       for (const inputName in newState) {
-        newState[inputName] = value;
+        newState[inputName] = value
       }
 
-      return newState;
-    });
-  }; // IF YOU CHECK BOTH INDIVIDUALLY. IT WILL ACTIVATE THE checkedAll STATE // IF YOU UNCHECK ANY INDIVIDUALLY. IT WILL DE-ACTIVATE THE checkAll STATE
+      return newState
+    })
+  } // IF YOU CHECK BOTH INDIVIDUALLY. IT WILL ACTIVATE THE checkedAll STATE // IF YOU UNCHECK ANY INDIVIDUALLY. IT WILL DE-ACTIVATE THE checkAll STATE
 
   /* ############################################# */
 
@@ -247,37 +263,41 @@ function VehicleRegister() {
   /* ############################################# */
 
   useEffect(() => {
-    let allChecked = true;
+    let allChecked = true
     for (const inputName in checked) {
       if (checked[inputName] === false) {
-        allChecked = false;
+        allChecked = false
       }
     }
     if (allChecked) {
-      setCheckedAll(true);
+      setCheckedAll(true)
     } else {
-      setCheckedAll(false);
+      setCheckedAll(false)
     }
-  }, [checked]);
+  }, [checked])
 
   const handleRadioButton = (e) => {
-    setEValue(e.target.value);
-  };
+    setEValue(e.target.value)
+  }
+
+  const handleTailRadioButton = (e) => {
+    setEValue(e.target.value)
+  }
 
   useEffect(() => {
-    console.log(TailLiftComplaint, "failureListr");
-  }, [TailLiftComplaint]);
+    console.log(TailLiftComplaint, "failureListr")
+  }, [TailLiftComplaint])
 
   useEffect(() => {
-    console.log(failureComplaintsList, "failureList");
-  }, [failureComplaintsList]);
+    console.log(failureComplaintsList, "failureList")
+  }, [failureComplaintsList])
 
   const handlerAdioButton = (e) => {
-    setCustComplaint(e.target.value);
-  };
+    setCustComplaint(e.target.value)
+  }
   useEffect(() => {
-    console.log(CustComplaint, "CustomerComplaint");
-  }, [CustComplaint]);
+    console.log(CustComplaint, "CustomerComplaint")
+  }, [CustComplaint])
 
   return (
     <>
@@ -289,21 +309,17 @@ function VehicleRegister() {
             <b> Welcome to Al Mulla Industries Service Mobile Solutions</b>
           </h3>
           <br />
-          
         </div>
+
         <div className="heading">
           <span>Anisur Rahman </span>
 
           <div className="Page_two_LogOut">
             <i>
-              <img
-                src="./images/shape@3x.png"
-                alt=""
-                onClick={() => (window.location.href = "/")}
-              />
+              <img src="./images/shape@3x.png" alt="" onClick={() => (window.location.href = "/")} />
             </i>
             <h1 className="head">
-              <b>Logout</b>{" "}
+              <b onClick={() => (window.location.href = "/")}>Logout</b>{" "}
             </h1>
           </div>
         </div>
@@ -311,22 +327,13 @@ function VehicleRegister() {
           <h2 className="bottom">
             <b> Vehicle Receiver</b>{" "}
           </h2>
-          <Button
-            variant="outline-success"
-            className="Button"
-            onClick={() => (window.location.href = "/ManagerView")}
-          >
-            Assign Task Details
+          <Button variant="outline-success" className="Button" onClick={() => (window.location.href = "/ManagerView")}>
+            Pending Jobs
           </Button>
           <div className="page_two_middel_box">
             <div className="page_two_chooes">
               <div className="kt">
-                <input
-                  type="radio"
-                  name="chooes"
-                  checked
-                  className="choesBTN"
-                />
+                <input type="radio" name="chooes" checked className="choesBTN" />
                 <h2>
                   <b>KT Number</b>{" "}
                 </h2>
@@ -393,147 +400,106 @@ function VehicleRegister() {
                   Customer <p> {name} </p>
                 </span>
 
-                <Table>
-                <Thead>
-                  <Tr>
-                    <Th>
-                      {" "}
-                      <input
-                        type="checkbox"
-                        className="chck1"
-                        onChange={(event) => {
-                          handleCheckedAll();
-                          selectAll(event.target.checked);
-                        }}
-                        checked={checkedAllBox}
-                      />
-                    </Th>
-                    <Th>Unit Details</Th>
-                    <Th>KT No.</Th>
-                    <Th>Serial No.</Th>
-                    <Th>Chassis</Th>
-                    <Th>Model</Th>
-                    <Th>Date</Th>
-                    <Th>Warranty Start</Th>
-                    <Th>Warranty End</Th>
-                  </Tr>
-</Thead>
-<Tbody>
-                  <Tr>
-                    <Th className="tab">
-                      {" "}
-                      <input
-                        type="checkbox"
-                        name="id"
-                        className="chck1"
-                        onChange={() => {
-                          toggleCheck(data[0].id);
-                          handleCheckedFirst();
-                        }}
-                        checked={checkedFirst}
-                      />
-                    </Th>
-                    <Td>{data[0].UnitDetail}</Td>
-                    <Td>{data[0].KTNo}</Td>
-                    <Td>{data[0].SerialNo} </Td>
-                    <Td>{data[0].Chassis} </Td>
-                    <Td> {data[0].Model} </Td>
-                    <Td> {data[0].Date}</Td>
-                    <Td className="tdata"> {data[0].WarrantyStart}</Td>
-                    <Td className="tdata2"> {data[0].WarrantyEnd}</Td>
-                  </Tr>
-
-                  <Tr>
-                    <Th className="tab">
-                      {" "}
-                      <input
-                        type="checkbox"
-                        name="id"
-                        className="chck1"
-                        onChange={() => {
-                          toggleCheck(data[1].id);
-                          handleCheckedSecond();
-                        }}
-                        checked={checkedSecond}
-                      />
-                    </Th>
-                    <Td>{data[1].UnitDetail}</Td>
-                    <Td>{data[1].KTNo}</Td>
-                    <Td>{data[1].SerialNo} </Td>
-                    <Td>{data[1].Chassis} </Td>
-                    <Td> {data[1].Model} </Td>
-                    <Td> {data[1].Date}</Td>
-                    <Td className="tdata3"> {data[1].WarrantyStart}</Td>
-
-                    <Td className="tdata4"> {data[1].WarrantyEnd}</Td>
-                  </Tr>
-
-                  {/* {tabledata.map((val,key) => {
-                  return(
+                <table>
+                  <thead className="Vehicle_details">
                     <tr>
-                    <th>
-                      {" "}
-                      <input type="checkbox" className="chck1" />
-                    </th>
-                    <td>Tail Lift</td>
-                    <td>17/30866</td>
-                    <td> 21084589</td>
-                    <td>9031793-N</td>
-                    <td>ALU,24V,1500KG</td>
-                    <td> 16.09.2022</td>
-                    <td className="tdata3">27.06.2021</td>
-                    <td className="tdata4"> 26.06.2022</td>
-                  </tr>
-                  )
-                })}
-                 */}
-                 </Tbody>
-                </Table>
+                      <th>
+                        {" "}
+                        <input
+                          type="checkbox"
+                          className="chck1"
+                          onChange={(event) => {
+                            handleCheckedAll()
+                            selectAll(event.target.checked)
+                          }}
+                          checked={checkedAllBox}
+                        />
+                      </th>
+                      <th>Unit Details</th>
+                      <th>KT No.</th>
+                      <th>Serial No.</th>
+                      <th>Chassis</th>
+                      <th>Model</th>
+                      <th>Date</th>
+                      <th>Warranty Start</th>
+                      <th>Warranty End</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th className="tab">
+                        {" "}
+                        <input
+                          type="checkbox"
+                          name="id"
+                          className="chck1"
+                          onChange={() => {
+                            toggleCheck(data[0].id)
+                            handleCheckedFirst()
+                          }}
+                          checked={checkedFirst}
+                        />
+                      </th>
+                      <td>{data[0].UnitDetail}</td>
+                      <td>{data[0].KTNo}</td>
+                      <td>{data[0].SerialNo} </td>
+                      <td>{data[0].Chassis} </td>
+                      <td> {data[0].Model} </td>
+                      <td> {data[0].Date}</td>
+                      <td className="tdata"> {data[0].WarrantyStart}</td>
+                      <td className="tdata2"> {data[0].WarrantyEnd}</td>
+                    </tr>
+
+                    <tr>
+                      <th className="tab">
+                        {" "}
+                        <input
+                          type="checkbox"
+                          name="id"
+                          className="chck1"
+                          onChange={() => {
+                            toggleCheck(data[1].id)
+                            handleCheckedSecond()
+                          }}
+                          checked={checkedSecond}
+                        />
+                      </th>
+                      <td>{data[1].UnitDetail}</td>
+                      <td>{data[1].KTNo}</td>
+                      <td>{data[1].SerialNo} </td>
+                      <td>{data[1].Chassis} </td>
+                      <td> {data[1].Model} </td>
+                      <td> {data[1].Date}</td>
+                      <td className="tdata3"> {data[1].WarrantyStart}</td>
+
+                      <td className="tdata4"> {data[1].WarrantyEnd}</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
               <PhysicalRemark />
 
-              {checkedFirst && (
-                <CoolComplaints
-                  complaint={complaint}
-                  failure={failure}
-                  arrayList={arrayList}
-                  failureComplaintsList={failureComplaintsList}
-                />
-              )}
+              {checkedFirst && <CoolComplaints complaint={complaint} failure={failure} arrayList={arrayList} failureComplaintsList={failureComplaintsList} />}
             </div>
-            {/* <hr style={{height:"1pt", width:"1000pt",color:"rgb(8,136,38)"}} /> */}
-            {/* custome complaint tail */}
-            {checkedSecond && (
-              <TailComplaint
-                complaint={complaint}
-                failure={failure}
-                CustComplaint={CustComplaint}
-                failureComplaintsList={failureComplaintsList}
-                setCustComplaint={setCustComplaint}
-              />
-            )}
-            <div className="main_black_div" style={{ display: blackBg }}>
-              <div
-                className="page_two_complaint_list"
-                onChange={demooo}
-                style={{ display: omplistf }}
-              >
-                <Pagetwocomponent
-                  compSubmite={compSubmite}
-                  failureComplaints={failureComplaints}
-                  handleRadioButton={handleRadioButton}
-                  failureComplaintsList={failureComplaintsList}
-                  setFailureComplaintsList={setFailureComplaintsList}
-                  eValue={eValue}
-                />
-              </div>
 
-          
+            {checkedSecond && <TailComplaint tailArrayList={tailArrayList} tailFailureComplaints={tailFailureComplaints} tailComplaint={tailComplaint} />}
+
+            <div className="main_black_div" style={{ display: blackBg }}>
+              <div className="page_two_complaint_list" onChange={demooo} style={{ display: omplistf }}>
+                <Pagetwocomponent compSubmite={compSubmite} failureComplaints={failureComplaints} handleRadioButton={handleRadioButton} failureComplaintsList={failureComplaintsList} setFailureComplaintsList={setFailureComplaintsList} eValue={eValue} />
+              </div>
             </div>
+
+            <div className="main_black_div" style={{ display: tailBlackBg }}>
+              <div className="page_two_complaint_list">
+                <PageTwoTailComponent compTailSubmite={compTailSumbite} handleTailRadioButton={handleTailRadioButton} tailFailureComplaints={tailFailureComplaints} setTailFailureComplaints={setTailFailureComplaints} eValue={eValue} />
+              </div>
+            </div>
+
             <div className="drop_down_values">
               <b>Send Report To - </b>
-              <select
-                className="Drop_select">
+              <select className="Drop_select">
                 {options.map((option) => (
                   <option value={option.value}>
                     <b>{option.label}</b>
@@ -542,13 +508,7 @@ function VehicleRegister() {
               </select>
             </div>
 
-            {msg && (
-              <ErrorModel
-                title={msg.title}
-                message={msg.message}
-                onConfirm={errorHandler}
-              />
-            )}
+            {msg && <ErrorModel title={msg.title} message={msg.message} onConfirm={errorHandler} />}
             <div className="job_card">
               <button className="job_cardbtn" onClick={submit}>
                 <b>Create Job Card</b>{" "}
@@ -558,6 +518,6 @@ function VehicleRegister() {
         )}
       </div>
     </>
-  );
+  )
 }
-export default VehicleRegister;
+export default VehicleRegister

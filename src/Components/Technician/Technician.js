@@ -1,38 +1,52 @@
-import React from 'react'
-import { Col, Container, Row } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import "../../Technician.css";
-import TechnicianCoolingUnit from './TechnicianCoolUnit';
-import PhysicalRemark from '../PhysicalRemaks/PhysicalRemark';
+import React from "react"
+import { Col, Container, Row } from "react-bootstrap"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
+import "../../Technician.css"
+import TechnicianCoolingUnit from "./TechnicianCoolUnit"
+import PhysicalRemark from "../PhysicalRemaks/PhysicalRemark"
+import ErrorModel from "../ThankYouFolder/Error"
 
 const tabledata = [
-    {
-      id: 1,
-      UnitDetail: "Cooling Unit",
-      KTNo: "17/30866",
-      SerialNo: "VKA94286893",
-      Chassis: " NK004102-F",
-      Model: "CITIMAX-400",
-      Date: "16.10.2022",
-      WarrantyStart: " 13.06.2022",
-      WarrantyEnd: " 16.06.2023",
-    },
-    {
-      id: 2,
-      UnitDetail: "Tail Lift",
-      KTNo: "17/30866",
-      SerialNo: "21084589",
-      Chassis: "9031793-N",
-      Model: "ALU,24V,1500KG",
-      Date: " 16.09.2022",
-      WarrantyStart: " 27.06.2021",
-      WarrantyEnd: " 26.06.2022",
-    },
-  ];
+  {
+    id: 1,
+    UnitDetail: "Cooling Unit",
+    KTNo: "17/30866",
+    SerialNo: "VKA94286893",
+    Chassis: " NK004102-F",
+    Model: "CITIMAX-400",
+    Date: "16.10.2022",
+    WarrantyStart: " 13.06.2022",
+    WarrantyEnd: " 16.06.2023",
+  },
+  {
+    id: 2,
+    UnitDetail: "Tail Lift",
+    KTNo: "17/30866",
+    SerialNo: "21084589",
+    Chassis: "9031793-N",
+    Model: "ALU,24V,1500KG",
+    Date: " 16.09.2022",
+    WarrantyStart: " 27.06.2021",
+    WarrantyEnd: " 26.06.2022",
+  },
+]
 
 function Technician() {
+  // const [msg, setMsg] = useState("");
+  const [msg, setMsg] = useState("")
 
-    const navigate = useNavigate();
+  function submit() {
+    setMsg({
+      title: "Sent",
+      message: "Thank You!!",
+    })
+  }
+  const errorHandler = () => {
+    setMsg("")
+  }
+
+  const navigate = useNavigate()
 
   const datas = [
     {
@@ -43,17 +57,17 @@ function Technician() {
       suggestedRectifiction: "Belt Replacement",
     },
     {
-        id: 2,
-        // customerComplaint: "Engine oil leak ",
-        failureReason: "Engine oil Hose ",
-        probableRootCause: "Derive belt loose",
-        suggestedRectifiction: "Motor Replacemen",
-      },
-  ];
+      id: 2,
+      // customerComplaint: "Engine oil leak ",
+      failureReason: "Engine oil Hose ",
+      probableRootCause: "Derive belt loose",
+      suggestedRectifiction: "Motor Replacemen",
+    },
+  ]
 
-  var Referenceno = "300021572";
-  var location = "Shuwaikh Van 1";
-  var refer = "915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES";
+  var Referenceno = "300021572"
+  var location = "Shuwaikh Van 1"
+  var refer = "915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES"
 
   return (
     <>
@@ -73,19 +87,12 @@ function Technician() {
             </div>
 
             <div className="LogOut_out">
-              <i
-                type="button"
-                className="correct-img"
-                onClick={() => navigate("/")}
-              >
-                <img
-                  src="Images/shape@2x.png"
-                />
-               
+              <i type="button" className="correct-img" onClick={() => navigate("/")}>
+                <img src="Images/shape@2x.png" />
               </i>
               <h1 className="head_er">
-              <b>Logout</b>{" "}
-            </h1>
+                <b>Logout</b>{" "}
+              </h1>
             </div>
             <div className="CardReference_ref">
               <h2 className="card_ref_ref">
@@ -95,7 +102,7 @@ function Technician() {
                 <div className="locAt_tion">
                   <b>
                     {" "}
-                    <span style={{marginRight:"14px"}}>Location : {location}</span>
+                    <span style={{ marginRight: "14px" }}>Location : {location}</span>
                   </b>
                 </div>
               </div>
@@ -145,21 +152,20 @@ function Technician() {
           </tr>
         </table>
       </div>
-      <div style={{marginTop : "8rem"}}>
-        <PhysicalRemark/>
+      <div style={{ marginTop: "8rem" }}>
+        <PhysicalRemark />
       </div>
 
       <div style={{ height: "700px" }}>
-        <TechnicianCoolingUnit datas={datas}/>
+        <TechnicianCoolingUnit datas={datas} />
       </div>
 
-      
+      {msg && <ErrorModel title={msg.title} message={msg.message} onConfirm={errorHandler} />}
       <div className="job_card">
-              <button className="job_cardbtn">
-                <b>Create Job Card</b>{" "}
-              </button>
-            </div>
-   
+        <button className="job_cardbtn" onClick={submit}>
+          <b>Send for Quote Preparation</b>{" "}
+        </button>
+      </div>
 
       {/* <div className="Break_cool_unit">
       <h2 >Breakdown Analysis For Cooling Unit</h2>

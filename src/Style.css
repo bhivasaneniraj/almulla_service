@@ -87,7 +87,9 @@
 }
 
 .Page_two_LogOut img {
-  height: 4vh;
+  width: 16pt;
+  cursor: pointer;
+  height: 18.5pt;
 }
 
 .heading span {
@@ -220,8 +222,7 @@ margin-left: 120px; */
 }
 
 .page_two_serchbar button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .page_two_middel_box {
@@ -428,6 +429,22 @@ tr td {
   grid-template-columns: 1fr 1fr;
 }
 
+.page_two_complaint_tab .tables .Break_Cust {
+  width: 100%;
+}
+
+.page_two_complaint_tab .tables .Table_Customer {
+  width: 99.9%;
+  margin: 0;
+  padding: 0;
+}
+
+.page_two_complaint_tab .tables Th {
+  font-size: 16pt;
+  text-align: left;
+  width: 45%;
+}
+
 .page_two_complaint_failure .customer_table {
   width: 100%;
   margin-left: 0%;
@@ -449,7 +466,7 @@ tr td {
   width: 45%;
 }
 
-.Cust_t1 td {
+.Cust_t1 Td {
   font-size: 14pt;
   text-align: left;
   width: 45%;
@@ -583,6 +600,7 @@ tr td {
 .page_two_complaint_list .complist input {
   accent-color: #00a53e;
   width: 21pt;
+  margin-top: 6px;
   height: 21pt;
   cursor: pointer;
   display: inline;
@@ -633,8 +651,7 @@ tr td {
 }
 
 .page_two_component_button .Save_Button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .page_two_Failure {
@@ -987,22 +1004,17 @@ margin-top: -20%;
   width: 320pt;
   color: rgb(255, 255, 255);
   letter-spacing: 0.89pt;
-  /* margin-right: 23px; */
   margin-left: -180px;
-  /* margin-bottom: 109%; */
-
   margin-top: 33%;
-
   margin-bottom: 35px;
-  height: 60pt;
+  height: 55pt;
   cursor: pointer;
   border: 1px solid white;
   border-radius: 6pt;
 }
 
 .job_cardbtn:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*********************************************************** FailureReason *****************************************************/
@@ -1171,8 +1183,7 @@ margin-top: -20%;
 
   color: rgb(0, 0, 0);
 
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 textarea:focus,
@@ -1242,7 +1253,7 @@ input:focus {
   margin-left: 26px;
   margin-bottom: 57px;
   margin-top: 8%;
-  height: 50pt;
+  height: 55pt;
   display: flex;
   border: 1.5px solid rgba(200, 200, 200, 0.5);
   background-color: rgb(226, 245, 231);
@@ -1274,85 +1285,282 @@ input:focus {
 } */
 
 /***************************************MediaQuery For <VehicleRegister/> page *******************/
-
+/* Media Query for low resolution  Tablets, Ipads */
 @media (max-width: 767px) and (min-width: 481px) {
   .main_div {
     justify-content: center;
     align-items: center;
   }
 
+  .Page_two_logoAndLogOut img {
+    width: 30rem;
+    margin-top: 2rem;
+    height: 6rem;
+  }
+
   .main_div .vl {
-    height: 60px;
+    height: 140px;
+    display: none;
+    padding-left: 39rem;
     width: 18.5rem;
   }
 
   .main_div .Page_two_logoAndLogOut h3 {
-    font-size: 16px;
-    width: 15rem;
+    font-size: 35px;
+    width: 19rem;
+    padding-left: 1rem;
+    white-space: nowrap;
   }
 
+  .heading {
+    width: 75rem;
+    margin-top: -3rem;
+  }
   .heading span {
-    margin-left: 260px;
+    margin-left: 377px;
+    font-size: 35px;
   }
 
   .Page_two_LogOut i {
-    margin-left: 40rem;
+    margin-left: 90rem;
+    margin-top: -7rem;
+  }
+
+  .Page_two_LogOut img {
+    height: 4rem;
+    width: 3rem;
+  }
+  .Page_two_LogOut h1 {
+    font-size: 50px;
+    margin-top: -7rem;
   }
 
   .Page_two_search_Chooes_box .bottom {
-    width: 47rem;
+    width: 104rem;
+    font-size: 50px;
   }
 
   .Page_two_search_Chooes_box .Button {
-    width: 10rem;
-    margin-left: 37rem;
+    width: 16rem;
+    font-size: 35px;
+    margin-top: -10rem;
+    margin-left: 88rem;
   }
 
   .page_two_middel_box {
-    width: 47rem;
+    width: 104rem;
+    height: 20vh;
+  }
+
+  .page_two_chooes {
+    width: 55rem;
+  }
+
+  .page_two_chooes .kt {
+    width: 20rem;
   }
 
   .page_two_chooes .kt input[type="radio"] {
     border: 0px;
-    width: 2em;
-    height: 2rem;
+    width: 5em;
+    height: 4rem;
   }
 
   .page_two_chooes .kt h2 {
     padding-top: 6px;
+    font-size: 39px;
   }
 
   .page_two_or p {
-    padding-top: 17px;
+    padding-top: 58px;
+    font-size: 30px;
   }
 
   .page_two_or span {
-    height: 82px;
-    margin-top: -11px;
+    height: 20vh;
   }
 
   .chassis input[type="radio"] {
     border: 0px;
-    width: 2em;
-    height: 2rem;
+    width: 5em;
+    height: 4rem;
   }
 
   .chassis h2 {
     padding-top: 6px;
+    font-size: 39px;
   }
 
   .page_two_serchbar {
     width: 26rem;
-    margin-left: 1rem;
   }
 
   .page_two_serchbar input {
-    width: 20rem;
+    width: 26rem;
+    border: 1px solid black;
+    height: 12vh;
+    margin-left: -13rem;
   }
 
   .page_two_serchbar button {
-    margin-left: 0rem;
-    width: 12rem;
+    width: 40rem;
+    width: 17rem;
+    height: 12vh;
+    font-size: 42px;
+  }
+  .page_two_serchbar input::placeholder {
+    font-size: 35px;
+  }
+
+  .page_two_serchbar input[type="text"] {
+    font-size: 40px;
+  }
+
+  .page_two_table b {
+    font-size: 50px;
+  }
+
+  select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  Table .Vehicle_details th {
+    font-size: 32px;
+  }
+  table tbody td {
+    font-size: 32px;
+  }
+  .drop_down_value {
+    width: 40rem;
+    margin-top: -70px;
+    height: 75px;
+    margin-left: 16rem;
+  }
+  .page_two_table .drop_down_value .drop_select {
+    font-size: 40px;
+    height: 8vh;
+  }
+
+  .hideshow {
+    width: 104rem;
+  }
+
+  .page_two_table span {
+    width: 100rem;
+    font-size: 35px;
+    padding-top: 5rem;
+  }
+  .page_two_table table input[type="checkbox"] {
+    width: 7vh;
+    height: 7vh;
+  }
+  .page_two_complaint_failure h2 {
+    font-size: 50px;
+  }
+  .page_two_complaint_failure {
+    width: 97rem;
+    margin-right: 6rem;
+  }
+  .page_two_complaint_tab {
+    width: 104%;
+  }
+  .Cust_t0 td {
+    font-size: 45px;
+  }
+
+  .Cust_t1 Td {
+    font-size: 45px;
+  }
+  .page_two_complaint_tab .tables .Table_Customer thead tr th {
+    font-size: 40px;
+  }
+  .page_two_complaint_tab .tables .Break_Cust thead tr th {
+    font-size: 40px;
+  }
+  .Cust_t1 i {
+    width: 3rem;
+    height: 3rem;
+  }
+  .Cust_Table thead tr th {
+    font-size: 40px;
+  }
+  .Cust_Table_tab tr th {
+    font-size: 40px;
+  }
+  .main_black_div {
+    width: 106rem;
+    height: 170rem;
+  }
+  .page_two_complaint_list {
+    width: 100rem;
+    height: 75rem;
+  }
+  .page_two_complaint_list h3 {
+    font-size: 50px;
+  }
+  .page_two_complaint_list .complist input {
+    width: 4rem;
+    height: 5rem;
+  }
+  .complist p {
+    font-size: 40px;
+    padding-top: 22px;
+  }
+
+  .arrow_img .arrow_imggg {
+    width: 5rem;
+    height: 5rem;
+  }
+  .arrow_img .Spa_nn {
+    border-left: 10px dashed rgb(151, 151, 151);
+    margin-left: 48.4rem;
+    height: 100vh;
+    margin-top: -55rem;
+  }
+  .page_two_component_button .Save_Button {
+    font-size: 50px;
+    width: 35rem;
+    margin-left: 32rem;
+    height: 10vh;
+  }
+
+  .Fail_reason {
+    padding-left: 58%;
+    margin-top: -67rem;
+  }
+  .Fail_reason .freason {
+    font-size: 50px;
+  }
+  .Fail_reason input {
+    width: 4rem;
+    margin-left: -3rem;
+    height: 4rem;
+  }
+  .lable {
+    margin-top: -4rem;
+    font-size: 40px;
+  }
+  .drop_down_values {
+    width: 50rem;
+    height: 7rem;
+  }
+  .drop_down_values b {
+    font-size: 40px;
+  }
+  .drop_down_values .Drop_select {
+    font-size: 50px;
+    height: 10vh;
+    margin-top: 1rem;
+  }
+  .job_card {
+    margin-left: 70rem;
+    margin-top: -21rem;
+  }
+  .job_cardbtn {
+    width: 45rem;
+    height: 14vh;
+    font-size: 45px;
   }
 }
 
@@ -1363,7 +1571,7 @@ margin-top: -20%;
 } */
 
 /************************************** For Potrait mode **********************************/
-
+/* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
   .main_div {
     width: 150%;
@@ -1382,7 +1590,7 @@ margin-top: -20%;
     clear: both;
     display: inline-block;
     /* overflow: hidden; */
-    padding-left: 4rem;
+    padding-left: 5rem;
     white-space: nowrap;
     font-size: 35px;
   }
@@ -1392,7 +1600,7 @@ margin-top: -20%;
 
   .heading span {
     font-size: 35px;
-    padding-left: 3rem;
+    padding-left: 4rem;
   }
 
   .Page_two_LogOut {
@@ -1405,21 +1613,26 @@ margin-top: -20%;
     margin-top: -10rem;
   }
 
+  .Page_two_LogOut i {
+    margin-left: 94rem;
+  }
+
   .Page_two_LogOut i img {
     margin-left: 11rem;
     height: 8vh;
+    width: 3rem;
     margin-top: -5.5rem;
   }
   .Page_two_search_Chooes_box .bottom {
     font-size: 3rem;
-    width: 111rem;
+    width: 127rem;
   }
 
   .Page_two_search_Chooes_box .Button {
     width: 15rem;
     height: 4rem;
-    margin-left: 96rem;
-    font-size: 25px;
+    margin-left: 108rem;
+    font-size: 30px;
     margin-bottom: 30px;
   }
 
@@ -1471,7 +1684,7 @@ margin-top: -20%;
   }
 
   .page_two_serchbar {
-    margin-right: 17rem;
+    margin-right: 16rem;
   }
 
   .page_two_serchbar input {
@@ -1497,15 +1710,15 @@ margin-top: -20%;
     height: 20vh;
     align-items: center;
     justify-content: space-between;
-    width: 112rem;
+    width: 126rem;
     margin: -25px auto;
     padding-bottom: 10px;
     border-bottom: 2px dashed #00a53e;
   }
 
-.hideshow {
+  .hideshow {
     width: 100%;
-}
+  }
 
   .page_two_table b {
     font-size: 40px;
@@ -1513,21 +1726,23 @@ margin-top: -20%;
 
   .page_two_table .drop_down_value {
     margin-left: 12rem;
-    width: 30rem;
-    margin-top: -53px;
-    height: 4rem;
+    width: 38rem;
+    margin-top: -59px;
+    height: 5rem;
   }
 
   .page_two_table .drop_down_value .drop_select {
     font-size: 33px;
+    height: 3rem;
   }
 
   .page_two_table span {
     font-size: 35px;
+    width: 100rem;
   }
 
   .page_two_table Table {
-    width: 110rem;
+    width: 125rem;
   }
 
   .page_two_table Table Th {
@@ -1543,6 +1758,44 @@ margin-top: -20%;
     height: 2.5rem;
   }
 
+  .page_two_complaint_tab {
+    width: 125rem;
+    margin-left: 1rem;
+  }
+
+  /* .page_two_complaint_tab .Table_Customer {
+    height: 25vh;
+  } */
+
+  .page_two_complaint_tab .Table_Customer Th {
+    font-size: 40px;
+  }
+
+  .page_two_complaint_tab .Table_Customer Td {
+    font-size: 35px;
+  }
+
+  .page_two_complaint_tab .Table_Customer i {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .page_two_complaint_tab .tables Th {
+    font-size: 40px;
+  }
+  .page_two_complaint_tab .tables Td {
+    font-size: 35px;
+  }
+
+  .page_two_complaint_tab .tables i {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /* .page_two_complaint_tab .tables {
+    height: 25vh;
+  } */
+
   .page_two_complaint_failure {
     width: 110rem;
   }
@@ -1552,9 +1805,9 @@ margin-top: -20%;
     padding-left: 1rem;
   }
 
-  .page_two_complaint_failure .page_two_complaint_tab .Cust_Table {
+  /* .page_two_complaint_failure .page_two_complaint_tab .Cust_Table {
     height: 15vh;
-  }
+  } */
 
   .page_two_complaint_failure .page_two_complaint_tab .Cust_Table th {
     font-size: 40px;
@@ -1567,10 +1820,6 @@ margin-top: -20%;
 
   .page_two_complaint_failure .page_two_complaint_tab .Cust_Table td {
     font-size: 35px;
-  }
-
-  .Cust_Table_tab {
-    height: 15vh;
   }
 
   .Cust_Table_tab th {
@@ -1587,7 +1836,7 @@ margin-top: -20%;
   }
 
   .main_black_div {
-    width: 113rem;
+    width: 130rem;
   }
 
   .page_two_complaint_list {
@@ -1688,7 +1937,7 @@ margin-top: -20%;
   }
 
   .drop_down_values b {
-    font-size: 35px;
+    font-size: 34px;
     padding-top: 1.5rem;
   }
 
@@ -1701,13 +1950,17 @@ margin-top: -20%;
   .drop_down_values .Drop_select option {
   }
 
+  .job_card {
+    position: relative;
+    left: 4rem;
+  }
+
   .job_card .job_cardbtn {
     width: 40rem;
+    margin-left: 7rem;
     font-size: 39px;
     margin-top: 65px;
-    margin-left: -5rem;
     height: 7rem;
-
   }
 }
 
@@ -2058,33 +2311,96 @@ margin-top: -20%;
   }
 }
 
-/******************************************* Media Query For Ipad,Tablets *************************/
+/******************************************* Media Query For Mobiles <VehicleRegister.js> *************************/
 
-/* @media (min-width: 768px) and (max-width: 1024px) {
-    .main_div {
-        display: inline;
-    }
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .main_div {
+    width: 100rem;
+  }
+  .Page_two_logoAndLogOut img {
+    width: 15rem;
+    height: 5rem;
+    margin-top: 2rem;
+  }
+  .vl {
+    display: none;
+  }
+  .Page_two_logoAndLogOut h3 {
+    font-size: 30px;
+  }
+  .heading {
+    padding-left: 16rem;
+    padding-top: 2rem;
+  }
+  .heading span {
+    font-size: 35px;
+  }
+  .Page_two_LogOut {
+    margin-right: 6rem;
+    margin-top: 2rem;
+  }
+  .Page_two_LogOut i {
+    margin-top: -15rem;
+    padding-left: 3rem;
+  }
+  .Page_two_LogOut i img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .head {
+    font-size: 40px;
+    margin-top: -15rem;
+  }
+  .Page_two_search_Chooes_box {
+    width: 105rem;
+    height: 20vh;
+  }
+  .Page_two_search_Chooes_box .bottom {
+    font-size: 30pt;
+    width: 104rem;
+    color: rgb(0, 0, 0);
+    border-bottom: 3px solid #00a53e;
+  }
 
-    .Page_two_logoAndLogOut .vl {
-        padding-left: 9rem;
-    }
-
-    .Page_two_logoAndLogOut h3 {
-        padding-left: 1rem;
-    }
-
-    .heading  {
-        padding-top: 1rem;
-        padding-left: 7rem;
-    }
-
-
-    .Page_two_LogOut {
-        padding-right: 5rem;
-
-    }
-
-    .Page_two_search_Chooes_box .Button{
-
-    } 
-} */
+  .Page_two_search_Chooes_box .Button {
+    width: 14rem;
+    font-size: 33px;
+    height: 5rem;
+    margin-top: -12rem;
+  }
+  .Page_two_search_Chooes_box input[type="radio"] {
+    height: 20vh;
+    width: 4rem;
+    margin-left: 2rem;
+  }
+  .page_two_middel_box {
+    height: 20vh;
+    width: 104rem;
+  }
+  .page_two_chooes {
+  }
+  .kt {
+    width: 22rem;
+  }
+  .kt h2 {
+    width: 10rem;
+    font-size: 48px;
+  }
+  .page_two_or {
+    padding-left: 7rem;
+  }
+  .page_two_or span {
+    height: 22vh;
+  }
+  .page_two_or p {
+    font-size: 45px;
+    padding-top: 2rem;
+  }
+  .chassis {
+    width: 10rem;
+  }
+  .chassis h2 {
+    font-size: 50px;
+  }
+}

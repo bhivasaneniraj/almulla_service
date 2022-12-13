@@ -1,48 +1,43 @@
-import React from "react";
-import { Button, Col, Container, Row, Form } from "react-bootstrap";
-import "../../foreman.css";
+import React from "react"
+import { Button, Col, Container, Row, Form } from "react-bootstrap"
+import "../../foreman.css"
 
 function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
   const options = [
- 
     {
-      label: "Shabbir",
-      value: "Shabbir",
+      label: "Abdul Razi",
+      value: "Abdul Razi",
     },
     {
-      label: "Hafizullah",
-      value: "Hafizullah",
+      label: "Shakeel Siddhiqui",
+      value: "Shakeel Siddhiqui",
     },
     {
       label: "Faisal",
-      value: "Assigned to Foreman - Faisal",
+      value: " Faisal",
     },
-  ];
-
-
+  ]
 
   return (
     <>
-      <div
-        className="tw0_page_complaint">
+      <div className="tw0_page_complaint">
         <div className="heading">
           <Col>
             <Row>
               <div className="d-flex flex-row justify-content-between">
                 <b className="Break_down_analysis">Breakdown Analysis For Cooling Unit</b>{" "}
-               
                 <div className="down_value">
-            <p><b> Assigned to Technician - </b></p>
-              <select className="Drop_select">
-               
-                {options.map((option) => (
-                  <option value={option.value}>
-                    <b>{option.label}</b>
-                  </option>
-                ))}
-              </select>
-            </div>
-              
+                  <p>
+                    <b> Assigned to Technician - </b>
+                  </p>
+                  <select className="Drop_select">
+                    {options.map((option) => (
+                      <option value={option.value}>
+                        <b>{option.label}</b>
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </Row>
           </Col>
@@ -67,8 +62,29 @@ function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
                 Rectifiction
               </th>
             </tr>
+            <tr>
+              <td>Engine oil leak</td>
+              <td>Engine oil Drain extension leak</td>
+              <td class="width-md">
+                <select className="down_valuesss Drop_select">
+                  <option value="Derive belt expand">Derive belt expand</option>
+                  <option value="Belt Replacement">Belt Replacement</option>
+                  <option value="Belt lose">Belt lose</option>
+                  <option value="No belt">No belt</option>
+                </select>
+              </td>
 
-            {datas.map((val, key) => {
+              <td class="width-md">
+                <select className="down_valuesss Drop_select">
+                  <option value="Derive belt expand">Derive belt expand</option>
+                  <option value="Belt Replacement">Belt Replacement</option>
+                  <option value="Belt lose">Belt lose</option>
+                  <option value="No belt">No belt</option>
+                </select>
+              </td>
+            </tr>
+
+            {/* {datas.map((val, key) => {
               return (
                 <tr key={val.id}>
                   <td>{val.customerComplaint}</td>
@@ -77,7 +93,7 @@ function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
                   <td>{val.suggestedRectifiction}</td>
                 </tr>
               );
-            })}
+            })} */}
           </table>
         </div>
 
@@ -92,13 +108,11 @@ function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
         {/* <div className="fail_list"></div> */}
       </div>
 
-
-
       <Container>
         <div className="horizontal_line"></div>
       </Container>
     </>
-  );
+  )
 }
 
-export default ForemanCoolComplaint;
+export default ForemanCoolComplaint

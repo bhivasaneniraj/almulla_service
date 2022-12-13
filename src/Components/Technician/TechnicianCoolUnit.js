@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Row } from "react-bootstrap";
 import '../../Style.css'
+import '../../Technician.css'
 
 function TechnicianCoolingUnit(props) {
   return (
@@ -9,7 +10,7 @@ function TechnicianCoolingUnit(props) {
       <Col>
         <Row>
           <div className="mt-5 text">
-            <label style={{ fontWeight: "bold" }}>
+            <label style={{ fontWeight: "bold", fontSize:"25px"}}>
             Breakdown Analysis For Cooling Unit
             </label>
           </div>

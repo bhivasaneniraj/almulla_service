@@ -1,52 +1,58 @@
-import React from "react";
+import React from "react"
+import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table"
+import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 
-function CoolComplaints({
-  complaint,
-  failure,
-  failureComplaintsList,
-  arrayList
-}) {
-
-
+function CoolComplaints({ complaint, failure, failureComplaintsList, arrayList }) {
   return (
     <>
       <div className="page_two_complaint_failure">
         <h2>
           <b>Breakdown Analysis For Cooling Unit</b>{" "}
         </h2>
-        <div className="page_two_complaint_tab">
-          <table className="Cust_Table">
-            <tr className="Cust_t0">
-              <th className="Cust_t1">
-                Customer complaint{" "}
-                <i class="fa-solid fa-plus" onClick={complaint}></i>{" "}
-              </th>
-            </tr>
-            {arrayList.map(item => <tr className="Cust_t0">
-            <td>{item}</td>
-             </tr>)}
-
-          </table>
-
-          <table className="Cust_Table_tab">
-            <tr className="Cust_t1">
-              <th className="Cust_t1">
-                Failure Reason{" "}
-                <i class="fa-solid fa-plus" onClick={complaint}></i>
-              </th>
-            </tr>
-            {failureComplaintsList.map((item) => {
-              return (
-                <tr className="Cust_t1">
-                  <td>{item} </td>
+        <div className="page_two_complaint_tab" style={{ columnGap: "0.1rem" }}>
+          <div className="tables">
+            <table className="Table_Customer">
+              <thead>
+                <tr>
+                  <th className="Cust_t1">
+                    Customer complaint <i class="fa-solid fa-plus" onClick={() => complaint(456)}></i>{" "}
+                  </th>
                 </tr>
-              );
-            })}
-          </table>
+              </thead>
+              <tbody>
+                {arrayList.map((item) => (
+                  <tr className="Cust_t0">
+                    <td>{item}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="tables">
+            <table className="Break_Cust">
+              <thead>
+                <tr>
+                  <th className="Cust_t1">
+                    Failure Reason <i class="fa-solid fa-plus" onClick={() => complaint(456)}></i>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {failureComplaintsList.map((item) => {
+                  return (
+                    <tr className="Cust_t1">
+                      <td>{item} </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default CoolComplaints;
+export default CoolComplaints

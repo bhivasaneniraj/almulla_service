@@ -5,8 +5,8 @@ function ForemTailComponent({ complaint, failure, coolComponent, datas }) {
   const options = [
    
     {
-      label: "Shabbir",
-      value: "Shabbir",
+      label: "Salman",
+      value: "salman",
     },
     {
       label: "Hafizullah",
@@ -61,8 +61,29 @@ function ForemTailComponent({ complaint, failure, coolComponent, datas }) {
               Rectifiction
             </th>
           </tr>
+          <tr>
 
-          {datas.map((val, key) => {
+              <td>Engine oil leak</td>
+              <td>Engine oil Drain extension leak</td>
+              <td class="width-md">
+                <select className="down_valuesss Drop_select">
+                  <option value="Derive belt expand">Derive belt expand</option>
+                  <option value="Belt Replacement">Belt Replacement</option>
+                  <option value="Belt lose">Belt lose</option>
+                  <option value="No belt">No belt</option>
+                </select>
+              </td>
+              <td class="width-md">
+                <select className="down_valuesss Drop_select">
+                <option value="Derive belt expand">Derive belt expand</option>
+                  <option value="Belt Replacement">Belt Replacement</option>
+                  <option value="Belt lose">Belt lose</option>
+                  <option value="No belt">No belt</option>
+                </select>
+              </td>
+            </tr>
+
+          {/* {datas.map((val, key) => {
             return (
               <tr key={val.id}>
                 <td>{val.customerComplaint}</td>
@@ -71,7 +92,7 @@ function ForemTailComponent({ complaint, failure, coolComponent, datas }) {
                 <td>{val.suggestedRectifiction}</td>
               </tr>
             );
-          })}
+          })} */}
         </table>
       </div>
 

@@ -1,12 +1,12 @@
-import React from "react";
-import Button from "./Button";
-import Card from "./Card";
+import React from "react"
+import Button from "./Button"
+import Card from "./Card"
 import classes from "./Error.module.css"
 
 function Error(props) {
   return (
     <>
-      <div className= {classes.backdrop} onClick={props.onConfirm}>
+      <div className={classes.backdrop} onClick={props.onConfirm}>
         <Card className={classes.modal}>
           <header className={classes.header}>
             <h2>{props.title}</h2>
@@ -20,7 +20,7 @@ function Error(props) {
         </Card>
       </div>
     </>
-  );
+  )
 }
 
-export default Error;
+export default Error

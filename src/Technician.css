@@ -163,7 +163,7 @@ margin-top: 10px;
 
 
 .header-text span {
-    margin-left: 203px;
+    margin-left: 198px;
 }
 
 .LogOut_out  {
@@ -178,7 +178,16 @@ margin-top: 10px;
     
 }
 
-
+.vl {
+    border-right: 1px dashed rgb(0, 0, 0);
+    height: 40pt;
+    width: 1px;
+    position: absolute;
+    left: 58%;
+    margin-left: -33rem;
+    /* margin-left: -540px; */
+    top: 15px;
+}
 
 .LogOut_out img {
 
@@ -191,7 +200,7 @@ margin-top: 10px;
 
 .head_er {
     cursor: pointer;
-    padding-left: 75.5rem;
+    padding-left: 74.5rem;
     font-size: 19px;
     margin-top: -1.5rem;
 }

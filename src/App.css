@@ -183,7 +183,6 @@
   text-decoration: none;
   position: absolute;
   left: 44.5%;
-
 }
 
 .Main .achorTag {
@@ -216,236 +215,206 @@ input::placeholder {
   font-weight: bold;
   font-size: 18px;
 
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 
   margin-left: 10% !important;
 }
 
 .inputbtn .sbbntn:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .anchortg:hover {
   color: rgb(0, 105, 70);
 }
 
-
-
 /*********************************************** Media Query for login page *****************************/
-
-
-
- @media (max-width: 767px) {
-  .Main{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 0rem;
-    margin-top: 10rem;
-  }
-
-  .Main .inputbtn {
-
-  }
-
- .inputbtn .images img{
-  width: 30rem;
-  margin-left: 58rem;
- }
- .inputbtn .images h3 {
-  font-size: 33px;
-  width: 56rem;
-  margin-left: 46rem;
- }
-
- .inputbtn input {
-  width: 45rem;
-  margin-top: 8rem;
-  height: 10vh;
-  margin-left: 70rem;
-  font-size: 10px;
- }
-
- .inputbtn input[type=email] {
-font-size: 30px;
- }
-
-
- .inputbtn input[type=password] {
-  font-size: 30px;
-   }
-
- .inputbtn input::placeholder {
-  font-size: 30px;
-}
-
-.inputbtn .submitbtn {
-  margin-right: 37.2rem;
-}
-
-.inputbtn .submitbtn button {
-  width: 720px;
-  height: 7rem;
-  margin-top: 20px;
-  font-size: 48px;
-}
-
-
-
-.Main .inputbtn .achorTag a {
-font-size: 30px;
-margin-left: 0px;
-}
-
-}
-
-
-/* @media (max-width:740px) {
-  .Main .inputbtn .achorTag a {
-
-  } */
-/* } */
-
-/* @media (min-width:523px) {
-  .Main{
-    margin-top: 18rem;
-  } */
-
-  /* .Main .inputbtn .achorTag a {
-    padding-left: 8rem;
-    width: 42rem;
-  } */
-/* } */
-
-
-
-/* Media Query for Mobile Devices */
- @media (max-width: 480px) {
-.Main {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-left: 14rem;
-
-
-}
-
-
-
-.inputbtn .images img {
-  width: 18rem;
-  margin-left: 31rem;
-} 
-
-.inputbtn .images h3 {
-  margin-left: 13rem;
-  font-size: 20px;
-}
-
- .Main .inputbtn input {
-  margin-left: 45.5rem;
-  width: 27rem;
-  margin-top: 1rem;
-
-}
-
-.Main .inputbtn .submitbtn button {
-  width: 27rem;
-  margin-left: 45.5rem;
-}
-
-.inputbtn .achorTag  {
-
-}
-
- } 
-
-/* Media Query for low resolution  Tablets, Ipads */
-
-
 
 @media (min-width: 481px) and (max-width: 767px) {
   .Main {
-    align-items: center;
     justify-content: center;
+    align-items: center;
     display: flex;
+    margin-left: 25rem;
+    margin-top: 50rem;
+  }
+
+  .Main .inputbtn {
+  }
+
+  .inputbtn .images img {
+    width: 50rem;
+    margin-left: 85rem;
+  }
+  .inputbtn .images h3 {
+    font-size: 55px;
+    width: 78rem;
+    margin-left: 71rem;
+  }
+
+  .inputbtn input {
+    width: 70rem;
+    margin-top: 18rem;
+    height: 25vh;
+    margin-left: 94rem;
+  }
+
+  .inputbtn input[type="email"] {
+    font-size: 70px;
+  }
+
+  .inputbtn input[type="password"] {
+    font-size: 70px;
+  }
+
+  .inputbtn input::placeholder {
+    font-size: 65px;
+  }
+
+  .inputbtn .submitbtn {
+    margin-right: 60rem;
+  }
+
+  .inputbtn .submitbtn button {
+    width: 70rem;
+    height: 12rem;
+    margin-top: 20px;
+    font-size: 95px;
+  }
+
+  .Main .inputbtn .achorTag {
+    position: relative;
+    left: 24%;
+  }
+
+  .Main .inputbtn .achorTag a {
+    font-size: 60px;
+    width: 43rem;
   }
 }
 
-
-
-
-/* Media Query for Tablets Ipads portrait mode */
- @media (min-width: 768px) and (max-width: 1024px) {
+/* Media Query for Mobile Devices */
+@media (min-width: 320px) and (max-width: 480px) {
   .Main {
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-left: 23rem;
-  
+    margin-left: 10rem;
+    margin-top: 10rem;
   }
 
-.Main .inputbtn .images img {
-  margin-left: 22rem;
+  .inputbtn .images img {
+    width: 18rem;
+    margin-left: 7rem;
+  }
+
+  .inputbtn input::placeholder {
+    font-size: 25px;
+  }
+
+  .inputbtn input[type="email"] {
+    font-size: 25px;
+  }
+
+  .inputbtn input[type="password"] {
+    font-size: 25px;
+  }
+
+  .inputbtn .images h3 {
+    margin-left: -1rem;
+    font-size: 20px;
+  }
+
+  .Main .inputbtn input {
+    margin-left: 22.5rem;
+    width: 25rem;
+    margin-top: 1rem;
+  }
+
+  .Main .inputbtn .submitbtn {
+    margin-right: 24.5rem;
+  }
+
+  .Main .inputbtn .submitbtn button {
+    width: 25rem;
+  }
+
+  .inputbtn .achorTag {
+    position: relative;
+    left: 16%;
+  }
+  .Main .inputbtn .achorTag a {
+    font-size: 20px;
+    width: 11rem;
+  }
 }
 
-.Main .inputbtn .images h3 {
-  font-size: 27px;
-  margin-left: 15.5rem;
-}
-
-.inputbtn input {
-  margin-left: 32rem;
-  height: 11vh;
-  margin-top: 5rem;
-  width: 40rem;
-}
-
-.inputbtn .submitbtn button {
-  margin-left: 32rem;
-  height: 11vh;
-  margin-top: 5rem;
-  width: 40rem;
- margin-top: 1rem;
- 
-}
-.inputbtn input::placeholder {
-  font-size: 25px;
-}
-
-.inputbtn input[type=email] {
-  font-size: 25px;
-}
-
-.inputbtn input[type=password] {
-  font-size: 25px;
-}
-
-.inputbtn .achorTag a {
-  font-size: 25px;
-  margin-left: -4rem;
-}
-
-}
-
-
-
-
-/******************************** Media Query For Ipad Potraits ********************/
-
-
-
-@media (min-width: 1025px) and (max-width:1180px) {
-  .Main{
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Main {
     align-items: center;
     justify-content: center;
     display: flex;
-
+    margin-top: 5rem;
+    margin-left: 25rem;
   }
 
- .inputbtn .images img {
-  margin-left: 34rem;
+  .Main .inputbtn .images img {
+    margin-left: 22rem;
+  }
+
+  .Main .inputbtn .images h3 {
+    font-size: 27px;
+    margin-left: 15.5rem;
+  }
+
+  .inputbtn input {
+    margin-left: 32rem;
+    height: 11vh;
+    margin-top: 5rem;
+    width: 40rem;
+  }
+
+  .inputbtn .submitbtn button {
+    margin-left: 32rem;
+    height: 11vh;
+    margin-top: 5rem;
+    width: 40rem;
+    margin-top: 1rem;
+  }
+  .inputbtn input::placeholder {
+    font-size: 25px;
+  }
+
+  .inputbtn input[type="email"] {
+    font-size: 25px;
+  }
+
+  .inputbtn input[type="password"] {
+    font-size: 25px;
+  }
+
+  .inputbtn .achorTag {
+    position: relative;
+    left: 13rem;
+  }
+
+  .inputbtn .achorTag a {
+    font-size: 25px;
+  }
+}
+
+/******************************** Media Query For Ipad Potraits ********************/
+
+@media (min-width: 1025px) and (max-width: 1180px) {
+  .Main {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .inputbtn .images img {
+    margin-left: 34rem;
   }
 
   .inputbtn .images h3 {
@@ -468,11 +437,11 @@ margin-left: 0px;
     margin-top: 1rem;
   }
 
-  .inputbtn input[type=email] {
+  .inputbtn input[type="email"] {
     font-size: 28px;
   }
 
-  .inputbtn input[type=password] {
+  .inputbtn input[type="password"] {
     font-size: 28px;
   }
 
@@ -484,7 +453,6 @@ margin-left: 0px;
     font-size: 25px;
     margin-left: -4rem;
   }
-
 }
 
 /* Media Query for Laptops and Desktops */

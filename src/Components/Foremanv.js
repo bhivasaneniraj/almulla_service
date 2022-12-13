@@ -8,7 +8,7 @@ const ForemanData = [
   {
     id: 1,
   JobCard:"17/30866",
-  Date:"16.09.2022",
+  Date:"07.12.2022",
   Technician:"-",
   Status:"Assigned"
   },
@@ -64,7 +64,7 @@ function Formanv() {
           <i className="logout_png" type="button">
           <img src="./images/shape@3x.png" alt="logo" />
           </i>
-          <h1 className="Head"><b>Logout</b> </h1>
+          <h1 className="Head" style={{cursor:"pointer"}}><b>Logout</b> </h1>
           </div>
           </div>
           <div className="Table_foreman">

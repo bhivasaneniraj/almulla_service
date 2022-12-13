@@ -1,126 +1,126 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 
-import ForemTailComponent from "./ForemanTailComponent";
-import ForemanCoolComplaint from "./ForemanCoolComplaint";
-import PhysicalRemarks from "../PhysicalRemaks/PhysicalRemark";
-import Pagetwocomponent from "../pagetwocomponent";
-import "../../foreman.css";
-import ErrorModel from "../ThankYouFolder/Error";
+import ForemTailComponent from "./ForemanTailComponent"
+import ForemanCoolComplaint from "./ForemanCoolComplaint"
+import PhysicalRemarks from "../PhysicalRemaks/PhysicalRemark"
+import Pagetwocomponent from "../pagetwocomponent"
+import "../../foreman.css"
+import ErrorModel from "../ThankYouFolder/Error"
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 function Foremanpage() {
-  const [text, settext] = useState();
-  const [blackBg, setblackBg] = useState("none");
-  const [faillist, setfaillist] = useState("none");
-  const [omplistf, setomplistf] = useState("block");
-  const [completSubmite, setcompletSubmite] = useState();
-  const [omdemo, setomdemo] = useState([]);
-  const [data, setData] = useState([]);
-  const [show, setShow] = useState(false);
-  const [checkedAllBox, setCheckedAllBox] = useState(false);
-  const [checkedFirst, setCheckedFirst] = useState(false);
-  const [checkedSecond, setCheckedSecond] = useState(false);
-  const [searchTextInput, setSearchTextInput] = useState("");
-  const [failureComplaints, SetFailureComplaints] = useState("");
-  const [customerComplaint, setCustomerComplaint] = useState([]);
-  const [failureComplaintsList, setFailureComplaintsList] = useState([]);
-  const [details, setDetails] = useState([]);
+  const [text, settext] = useState()
+  const [blackBg, setblackBg] = useState("none")
+  const [faillist, setfaillist] = useState("none")
+  const [omplistf, setomplistf] = useState("block")
+  const [completSubmite, setcompletSubmite] = useState()
+  const [omdemo, setomdemo] = useState([])
+  const [data, setData] = useState([])
+  const [show, setShow] = useState(false)
+  const [checkedAllBox, setCheckedAllBox] = useState(false)
+  const [checkedFirst, setCheckedFirst] = useState(false)
+  const [checkedSecond, setCheckedSecond] = useState(false)
+  const [searchTextInput, setSearchTextInput] = useState("")
+  const [failureComplaints, SetFailureComplaints] = useState("")
+  const [customerComplaint, setCustomerComplaint] = useState([])
+  const [failureComplaintsList, setFailureComplaintsList] = useState([])
+  const [details, setDetails] = useState([])
   // const [pagetwocomplaintlist, setpagetwocomplainlist] = useState(false);
   // const [Showhide, setShowhide] = useState("Hello World")
-  const [msg, setMsg] = useState("");
+  const [msg, setMsg] = useState("")
 
   function submit() {
     setMsg({
-      title: "Sending..",
+      title: "Sent",
       message: "Thank You!!",
-    });
+    })
   }
   const errorHandler = () => {
-    setMsg("");
-  };
+    setMsg("")
+  }
 
   // const showhie = () => {
   //       console.log(Showhide);
   // }
 
-  const Nav = useNavigate;
+  const Nav = useNavigate
 
   const handleCheckedAll = () => {
     if (!checkedAllBox) {
-      setCheckedAllBox(true);
-      setCheckedFirst(true);
-      setCheckedSecond(true);
+      setCheckedAllBox(true)
+      setCheckedFirst(true)
+      setCheckedSecond(true)
     } else {
-      setCheckedAllBox(false);
-      setCheckedFirst(false);
-      setCheckedSecond(false);
+      setCheckedAllBox(false)
+      setCheckedFirst(false)
+      setCheckedSecond(false)
     }
-  };
+  }
 
   const handleCheckedFirst = () => {
     if (!checkedFirst && checkedSecond) {
-      setCheckedAllBox(true);
+      setCheckedAllBox(true)
     } else {
-      setCheckedAllBox(false);
+      setCheckedAllBox(false)
     }
-    setCheckedFirst(!checkedFirst);
-  };
+    setCheckedFirst(!checkedFirst)
+  }
 
   const handleCheckedSecond = () => {
     if (!checkedSecond && checkedFirst) {
-      setCheckedAllBox(true);
+      setCheckedAllBox(true)
     } else {
-      setCheckedAllBox(false);
+      setCheckedAllBox(false)
     }
-    setCheckedSecond(!checkedSecond);
-  };
+    setCheckedSecond(!checkedSecond)
+  }
 
   const ktnum = (e) => {
-    settext(e.target.value);
-    setSearchTextInput(e.target.value);
-  };
+    settext(e.target.value)
+    setSearchTextInput(e.target.value)
+  }
 
   const complaint = () => {
-    setblackBg("block");
-    setomplistf("block");
-  };
+    setblackBg("block")
+    setomplistf("block")
+  }
   const failure = () => {
-    setblackBg("block");
-    setfaillist("block");
-  };
-  var a = [];
+    setblackBg("block")
+    setfaillist("block")
+  }
+  var a = []
 
   const demooo = (e) => {
-    setcompletSubmite(e.target.value);
-  };
+    setcompletSubmite(e.target.value)
+  }
   const helomk = (e) => {
-    var value = e.target.value;
-    var checked = e.target.checked;
+    var value = e.target.value
+    var checked = e.target.checked
     if (checked) {
-      setomdemo([...omdemo, value]);
+      setomdemo([...omdemo, value])
     } else {
-      setomdemo(omdemo.filter((e) => e !== value));
+      setomdemo(omdemo.filter((e) => e !== value))
     }
-  };
+  }
 
   const compSubmite = () => {
     if (completSubmite != undefined) {
-      console.log(completSubmite);
-      setCustomerComplaint(completSubmite);
-      setblackBg("none");
-      setomplistf("none");
+      console.log(completSubmite)
+      setCustomerComplaint(completSubmite)
+      setblackBg("none")
+      setomplistf("none")
     }
-  };
+  }
 
   const failuereSubmite = () => {
     if (omdemo.length === 0) {
     } else {
-      setblackBg("none");
-      setfaillist("none");
-      console.log(omdemo);
+      setblackBg("none")
+      setfaillist("none")
+      console.log(omdemo)
     }
-  };
+  }
 
   const options = [
     {
@@ -128,8 +128,8 @@ function Foremanpage() {
       value: "Send Report to Foremen",
     },
     {
-      label: "Shabbir",
-      value: "Shabbir",
+      label: "Abdul Raza",
+      value: "Abdul Raza",
     },
     {
       label: "Hafizullah",
@@ -139,7 +139,7 @@ function Foremanpage() {
       label: "Faisal",
       value: "Assigned to Foreman - Faisal",
     },
-  ];
+  ]
 
   function Submit() {
     const tabledata = [
@@ -165,19 +165,19 @@ function Foremanpage() {
         WarrantyStart: " 27.06.2021",
         WarrantyEnd: "26.06.2022",
       },
-    ];
+    ]
 
-    setDetails(tabledata);
+    setDetails(tabledata)
 
     if (searchTextInput === "17/30866") {
-      setData(tabledata);
-      setShow(true);
+      setData(tabledata)
+      setShow(true)
     }
   }
 
-  var name = " 915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES";
+  var name = " 915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES"
 
-  const [checkedAll, setCheckedAll] = useState(false);
+  const [checkedAll, setCheckedAll] = useState(false)
 
   const [checked, setChecked] = useState({
     1: false,
@@ -185,7 +185,7 @@ function Foremanpage() {
     3: false,
     4: false,
     5: false,
-  });
+  })
 
   /* ################################################ */
 
@@ -195,13 +195,13 @@ function Foremanpage() {
 
   const toggleCheck = (inputName) => {
     setChecked((prevState) => {
-      const newState = { ...prevState };
+      const newState = { ...prevState }
 
-      newState[inputName] = !prevState[inputName];
+      newState[inputName] = !prevState[inputName]
 
-      return newState;
-    });
-  };
+      return newState
+    })
+  }
 
   /* ###################################################### */
 
@@ -210,18 +210,18 @@ function Foremanpage() {
   /* ###################################################### */
 
   const selectAll = (value) => {
-    setCheckedAll(value);
+    setCheckedAll(value)
 
     setChecked((prevState) => {
-      const newState = { ...prevState };
+      const newState = { ...prevState }
 
       for (const inputName in newState) {
-        newState[inputName] = value;
+        newState[inputName] = value
       }
 
-      return newState;
-    });
-  }; // IF YOU CHECK BOTH INDIVIDUALLY. IT WILL ACTIVATE THE checkedAll STATE // IF YOU UNCHECK ANY INDIVIDUALLY. IT WILL DE-ACTIVATE THE checkAll STATE
+      return newState
+    })
+  } // IF YOU CHECK BOTH INDIVIDUALLY. IT WILL ACTIVATE THE checkedAll STATE // IF YOU UNCHECK ANY INDIVIDUALLY. IT WILL DE-ACTIVATE THE checkAll STATE
 
   /* ############################################# */
 
@@ -230,44 +230,44 @@ function Foremanpage() {
   /* ############################################# */
 
   useEffect(() => {
-    let allChecked = true;
+    let allChecked = true
     for (const inputName in checked) {
       if (checked[inputName] === false) {
-        allChecked = false;
+        allChecked = false
       }
     }
     if (allChecked) {
-      setCheckedAll(true);
+      setCheckedAll(true)
     } else {
-      setCheckedAll(false);
+      setCheckedAll(false)
     }
-  }, [checked]);
+  }, [checked])
 
   const handleRadioButton = (e) => {
-    SetFailureComplaints(e.target.value);
-  };
+    SetFailureComplaints(e.target.value)
+  }
 
   useEffect(() => {
-    console.log(failureComplaintsList, "failureList");
-  }, [failureComplaintsList]);
+    console.log(failureComplaintsList, "failureList")
+  }, [failureComplaintsList])
 
   const handleFailureComplaintsList = (e) => {
     if (e.target.checked) {
-      setFailureComplaintsList((prev) => prev.concat(e.target.value));
+      setFailureComplaintsList((prev) => prev.concat(e.target.value))
     } else {
       setFailureComplaintsList((prev) =>
         prev.filter((item) => {
-          return item !== e.target.value;
+          return item !== e.target.value
         })
-      );
+      )
     }
-  };
+  }
 
   const getColor = (UnitDetail) => {
-    if (UnitDetail.length === 0) return "red";
-    if (UnitDetail.length < 10) return "blue";
-    return "";
-  };
+    if (UnitDetail.length === 0) return "red"
+    if (UnitDetail.length < 10) return "blue"
+    return ""
+  }
 
   const coolComponentData = [
     {
@@ -284,7 +284,7 @@ function Foremanpage() {
       probableRootCause: "Derive belt loose",
       suggestedRectifiction: "Motor Replacement",
     },
-  ];
+  ]
 
   const datas = [
     {
@@ -301,7 +301,7 @@ function Foremanpage() {
       probableRootCause: "Derive belt expand",
       suggestedRectifiction: "Belt Replacement",
     },
-  ];
+  ]
 
   const tabledata = [
     {
@@ -326,10 +326,10 @@ function Foremanpage() {
       WarrantyStart: " 27.06.2021",
       WarrantyEnd: " 26.06.2022",
     },
-  ];
-  var Referenceno = "300021572";
-  var location = "Shuwaikh Van 1";
-  var refer = "915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES";
+  ]
+  var Referenceno = "300021572"
+  var location = "Shuwaikh Van 1"
+  var refer = "915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES"
   return (
     <>
       <div className="main">
@@ -345,15 +345,11 @@ function Foremanpage() {
 
           <div className="Logout">
             <i>
-              <img className="Logout_Butoon"
-                src="./images/shape@3x.png"
-                alt=""
-                onClick={() => (window.location.href = "/")}
-              />
+              <img className="Logout_Butoon" src="./images/shape@3x.png" alt="" onClick={() => (window.location.href = "/")} />
             </i>
 
             <h1 className="head1">
-              <b>Logout</b>{" "}
+              <b onClick={() => (window.location.href = "/")}>Logout</b>{" "}
             </h1>
           </div>
         </div>
@@ -465,64 +461,27 @@ function Foremanpage() {
                 </td>
                 <td>
                   {" "}
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck2"
-                    className="click"
-                    />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck2"
-                    className="Right"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck2" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck2" className="Right">
                     {" "}
                     Right
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck3"
-                    className="click"
-                    style={{ width: "20px" }}
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck3"
-                    className="Left"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck3" className="Left">
                     Left
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck4"
-                    className="click"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck4"
-                    className="Front"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck4" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck4" className="Front">
                     Front
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck5"
-                    className="click"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck5"
-                    className="Back"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck5" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck5" className="Back">
                     <p>Back</p>
                   </label>
                 </td>
@@ -532,47 +491,20 @@ function Foremanpage() {
                   <b> 2. Glass Broken</b>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck6"
-                    className="click"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck6"
-                    className="Driver"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck6" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck6" className="Driver">
                     Driver
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck7"
-                    className="click"
-                   />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck7"
-                    className="Left2"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck7" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck7" className="Left2">
                     Left
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck8"
-                    className="click"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck8"
-                    className="Right2"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck8" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck8" className="Right2">
                     Right
                   </label>
                 </td>
@@ -583,32 +515,14 @@ function Foremanpage() {
                   <b> 3. Lights Broken</b>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck9"
-                    className="click"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck9"
-                    className="Front2"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck9" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck9" className="Front2">
                     Front
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck10"
-                    className="click"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck10"
-                    className="Back2"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck10" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck10" className="Back2">
                     Back
                   </label>
                 </td>
@@ -620,32 +534,14 @@ function Foremanpage() {
                   <b> 4. Body Panel Condition</b>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck11"
-                    className="click"
-                   />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck11"
-                    className="Bulged"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck11" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck11" className="Bulged">
                     Bulged
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck12"
-                    className="click"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck12"
-                    className="Accident"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck12" className="click" />
+                  <label class="custom-control-label" for="tableDefaultCheck12" className="Accident">
                     Accident
                   </label>
                 </td>
@@ -657,64 +553,28 @@ function Foremanpage() {
                   <b> 5. Body Accessories</b>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck13"
-                    className="click1"
-                 />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck13"
-                    className="Lock_Screen"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck13" className="click1" />
+                  <label class="custom-control-label" for="tableDefaultCheck13" className="Lock_Screen">
                     Lock <br />
                     <p> Screen</p>
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck14"
-                    className="click1"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck14"
-                    className="Door_Broken"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck14" className="click1" />
+                  <label class="custom-control-label" for="tableDefaultCheck14" className="Door_Broken">
                     Door <br /> <p> Broken</p>
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck15"
-                    className="click1"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck15"
-                    className="Door_Lock"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck15" className="click1" />
+                  <label class="custom-control-label" for="tableDefaultCheck15" className="Door_Lock">
                     Door Locks <br />
                     <p className="damaged">Damaged</p>
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="tableDefaultCheck16"
-                    className="click1"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="tableDefaultCheck16"
-                    className="Back_Guard"
-                  >
+                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck16" className="click1" />
+                  <label class="custom-control-label" for="tableDefaultCheck16" className="Back_Guard">
                     Back Side <br />
                     <p className="guard"> Guard Damaged</p>
                   </label>
@@ -726,34 +586,16 @@ function Foremanpage() {
       </div>
 
       <div style={{ marginTop: "9rem" }}>
-        <ForemanCoolComplaint
-          datas={coolComponentData}
-          complaint={complaint}
-          failure={failure}
-        />
+        <ForemanCoolComplaint datas={coolComponentData} complaint={complaint} failure={failure} />
       </div>
       <ForemTailComponent datas={datas} />
 
       <div className="main_black_div" style={{ display: blackBg }}>
-        <div
-          className="page_two_complaint_list"
-          onChange={demooo}
-          style={{ display: omplistf }}
-        >
-          <Pagetwocomponent
-            compSubmite={compSubmite}
-            failureComplaints={failureComplaints}
-            handleRadioButton={handleRadioButton}
-          />
+        <div className="page_two_complaint_list" onChange={demooo} style={{ display: omplistf }}>
+          <Pagetwocomponent compSubmite={compSubmite} failureComplaints={failureComplaints} handleRadioButton={handleRadioButton} />
         </div>
       </div>
-      {msg && (
-        <ErrorModel
-          title={msg.title}
-          message={msg.message}
-          onConfirm={errorHandler}
-        />
-      )}
+      {msg && <ErrorModel title={msg.title} message={msg.message} onConfirm={errorHandler} />}
       <div className="btn_div mt-5">
         <div className="Card_job">
           <button className="job_cardbtn_btn" onClick={submit}>
@@ -762,7 +604,7 @@ function Foremanpage() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Foremanpage;
+export default Foremanpage

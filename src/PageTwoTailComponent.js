@@ -1,32 +1,23 @@
 import React from "react";
 import { useState } from "react";
-import FailureReason from "./FailureReason";
+import FailureTailComplaint from "./FailureTailComplaint";
 
-function Pagetwocomplaintlist({
-  handleRadioButton,
-  compSubmite,
-  failureComplaints,
-  failureComplaintsList,
-  setFailureComplaintsList,
-  custComplaint,
+function PageTwoTailComponent({
+  handleTailRadioButton,
+  compTailSubmite,
   eValue,
-  popUpId,
-  setTailFailureComplaints
+  setTailFailureComplaints,
+  tailFailureComplaints
 }) {
-  const [engineOilDrain, setEngineOilDrain] = useState(false);
+
+const [engineOilDrain, setEngineOilDrain] = useState(false);
   const [engineOilHose, setEngineOilHose] = useState(false);
   const [engineCylinderHead, setEngineCylinderHead] = useState(false);
   const [engineOilFilter, setEngineOilFilter] = useState(false);
-  const [customerComplaintArray,setCustomerComplaint] = useState([])
+
 
   return (
     <>
-      {/* <div
-                className="page_two_complaint_list"
-                onChange={demooo}
-                style={{ display: omplistf }}
-               
-              > */}
       <div className="complaints_container">
         <h3 className="Compla_int_container_heading">Customer Complaint</h3>
 
@@ -34,18 +25,8 @@ function Pagetwocomplaintlist({
           <input
             type="radio"
             name="compChoes"
-            value={"Periodic maintenance service"}
-            onChange={handleRadioButton}
-          />
-          <p>Periodic maintenance service</p>
-        </div>
-
-        <div className="complist">
-          <input
-            type="radio"
-            name="compChoes"
             value={"Engine oil leak"}
-            onChange={handleRadioButton}
+            onChange={handleTailRadioButton}
           />
           <p>Engine oil leak</p>
         </div>
@@ -54,10 +35,20 @@ function Pagetwocomplaintlist({
           <input
             type="radio"
             name="compChoes"
-            value={"An abnormal noise from Engine"}
-            onChange={handleRadioButton}
+            value={"Periodic maintenance service"}
+            onChange={handleTailRadioButton}
           />
-          <p>An abnormal noise from Engine</p>
+          <p>Periodic maintenance service</p>
+        </div>
+
+        <div className="complist">
+          <input
+            type="radio"
+            name="compChoes"
+            value={"An abnormal noise from Engine"}
+            onChange={handleTailRadioButton}
+          />
+<p>An abnormal noise from Engine</p>
         </div>
 
         <div className="complist">
@@ -65,7 +56,7 @@ function Pagetwocomplaintlist({
             type="radio"
             name="compChoes"
             value={"Engine not cooling"}
-            onChange={handleRadioButton}
+            onChange={handleTailRadioButton}
           />
           <p>Engine not cooling</p>
         </div>
@@ -75,7 +66,7 @@ function Pagetwocomplaintlist({
             type="radio"
             name="compChoes"
             value={"Engine Hot"}
-            onChange={handleRadioButton}
+            onChange={handleTailRadioButton}
           />
           <p>Engine Hot</p>
         </div>
@@ -85,7 +76,7 @@ function Pagetwocomplaintlist({
             type="radio"
             name="compChoes"
             value={"Engine Not Staring"}
-            onChange={handleRadioButton}
+            onChange={handleTailRadioButton}
           />
           <p>Engine Not Staring</p>
         </div>
@@ -95,7 +86,7 @@ function Pagetwocomplaintlist({
             type="radio"
             name="compChoes"
             value={"Stand by not working & noisy"}
-            onChange={handleRadioButton}
+            onChange={handleTailRadioButton}
           />
           <p>Stand by not working & noisy</p>
         </div>
@@ -105,7 +96,7 @@ function Pagetwocomplaintlist({
             type="radio"
             name="compChoes"
             value={"UNIT AUX"}
-            onChange={handleRadioButton}
+            onChange={handleTailRadioButton}
           />
           <p>UNIT AUX</p>
         </div>
@@ -115,7 +106,7 @@ function Pagetwocomplaintlist({
             type="radio"
             name="compChoes"
             value={"Compressor Stuck"}
-            onChange={handleRadioButton}
+            onChange={handleTailRadioButton}
           />
           <p>Compressor Stuck</p>
         </div>
@@ -125,16 +116,14 @@ function Pagetwocomplaintlist({
         </div>
 
         <div className="page_two_component_button">
-          <button onClick={compSubmite} className="Save_Button">
+          <button onClick={compTailSubmite} className="Save_Button">
             {" "}
             SAVE
           </button>
         </div>
       </div>
-      {eValue === "Engine oil leak" && (
-        <FailureReason
-          setFailureComplaintsList={setFailureComplaintsList}
-          failureComplaintsList={failureComplaintsList}
+      {eValue === "Periodic maintenance service" && (
+        <FailureTailComplaint
           engineOilDrain={engineOilDrain}
           setEngineOilDrain={setEngineOilDrain}
           engineOilHose={engineOilHose}
@@ -143,12 +132,12 @@ function Pagetwocomplaintlist({
           setEngineCylinderHead={setEngineCylinderHead}
           engineOilFilter={engineOilFilter}
           setEngineOilFilter={setEngineOilFilter}
+          setTailFailureComplaints={setTailFailureComplaints}
+          tailFailureComplaints={tailFailureComplaints}
         />
       )}
-
-      {/* </div> */}
     </>
   );
 }
 
-export default Pagetwocomplaintlist;
+export default PageTwoTailComponent;

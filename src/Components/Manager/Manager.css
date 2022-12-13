@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   box-sizing: border-box;
 }
 
@@ -31,6 +30,28 @@
   position: absolute;
   top: 4%;
   right: 10px;
+}
+
+.Log_out_logo {
+  height: 18pt;
+  width: 18pt;
+  margin-right: 5rem;
+  cursor: pointer;
+}
+
+.correct-img {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.header_1 {
+  font-size: 14pt;
+  letter-spacing: 0.01pt;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin-left: 32px;
+  margin-top: -24px;
 }
 
 .Card {
@@ -105,11 +126,8 @@
   }
 } */
 
-
 /************************************************* Media query For Mobiles **************************/
 
-
- /* Media Query for Mobile Devices */
- @media (max-width: 480px) {
-
- }
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+}
