@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import { Col,  Row } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react"
+import { Col, Row } from "react-bootstrap"
+import { useNavigate } from "react-router-dom"
 import ErrorModel from "../ThankYouFolder/Error"
 
-import PhysicalRemark from "../PhysicalRemaks/PhysicalRemark";
-import "./Manager.css";
-import ManagerTailComplaint from "./ManagerTailComplaint";
-
+import PhysicalRemark from "../PhysicalRemaks/PhysicalRemark"
+import "./Manager.css"
+import ManagerTailComplaint from "./ManagerTailComplaint"
 
 const tabledata = [
   {
@@ -31,27 +30,22 @@ const tabledata = [
     WarrantyStart: " 27.06.2021",
     WarrantyEnd: " 26.06.2022",
   },
-];
-
-
-
+]
 
 function Manager() {
+  const [msg, setMsg] = useState("")
 
-  const [msg, setMsg] = useState("");
-
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   function submit() {
     setMsg({
-      title: "Sent",
-      message: "Thank You!!",
-    });
+      title: "Successfully Sent For Quote Preparation.",
+    })
   }
 
   const errorHandler = () => {
-    setMsg("");
-  };
+    setMsg("")
+  }
 
   const datas = [
     {
@@ -61,54 +55,46 @@ function Manager() {
       probableRootCause: "Derive belt expand",
       suggestedRectifiction: "Belt Replacement",
     },
-  ];
+  ]
 
-  var Referenceno = "300021572";
-  var location = "Shuwaikh Van 1";
-  var refer = "915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES";
+  var Referenceno = "300021572"
+  var location = "Shuwaikh Van 1"
+  var refer = "915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES"
 
   return (
     <>
       <Col sm="12" md="12" lg="12">
         <Row>
-          <div className="Page_two_logoAndLogOut">
-            <img src="/images/bitmap@3x.png" alt="example" style={{paddingLeft:"10px"}}/>
-            <div className="vl"></div>
+          <div className="Page_two_logoAndLogOut_log">
+            <img src="/images/bitmap@3x.png" alt="example" style={{ paddingLeft: "10px" }} />
+            <div className="verticle_l"></div>
             <h3>
               <b> Welcome to Al Mulla Industries Service Mobile Solutions</b>
             </h3>
             <br />
           </div>
-          <div className="heading" style={{marginLeft:"0px"}}>
+          <div className="heading">
             <div className="header-text">
-              <span style={{marginLeft:"190px"}}>Anisur Rahman </span>
+              <span className="log_name">Anisur Rahman </span>
             </div>
 
             <div className="LogOut">
-              <i
-                type="button"
-                className="correct-img"
-                onClick={() => navigate("/")}
-              >
-                <img
-                  src="images/shape@3x.png"
-                  className="Log_out_logo"
-                />
-              
+              <i type="button" className="correct-img" onClick={() => navigate("/")}>
+                <img src="images/shape@3x.png" className="Log_out_logo" />
               </i>
               <h1 className="header_1">
-              <b onClick={() => navigate("/")}>Logout</b>{" "}
-            </h1>
+                <b onClick={() => navigate("/")}>Logout</b>{" "}
+              </h1>
             </div>
-            <div className="CardReference">
-              <h2 className="card_ref">
-                <b style={{fontSize:"18pt"}}>Job Card Reference Number - {Referenceno}</b>{" "}
+            <div className="CardReference_ref">
+              <h2 className="cardref_ref">
+                <b>Job Card Reference Number - {Referenceno}</b>{" "}
               </h2>
               <div className="d-flex justify-content-end loc">
                 <div className="loc">
                   <b>
                     {" "}
-                    <span style={{marginRight:"10px",fontSize:"18pt"}}>Location : {location}</span>
+                    <span>Location : {location}</span>
                   </b>
                 </div>
               </div>
@@ -118,10 +104,10 @@ function Manager() {
       </Col>
       <b>
         {" "}
-        <p className="paragraph" style={{fontSize:"16pt"}}>Customer {refer} </p>{" "}
+        <p className="paragraph">Customer {refer} </p>{" "}
       </b>
-      <div className="datatable">
-        <table className="tabular">
+      <div className="datatable_data">
+        <table className="tabular_data">
           <tr>
             <th>Unit Details</th>
             <th>KT No.</th>
@@ -158,25 +144,19 @@ function Manager() {
           </tr>
         </table>
       </div>
-      <div style={{marginTop : "8rem"}}>
+      {/* <div style={{ marginTop: "8rem" }}>
         <PhysicalRemark />
-      </div>
+      </div> */}
 
       <div style={{ height: "700px" }}>
         <ManagerTailComplaint datas={datas} />
       </div>
-      {msg && (
-              <ErrorModel
-                title={msg.title}
-                message={msg.message}
-                onConfirm={errorHandler}
-              />
-            )}
-      <div className="job_card">
-              <button className="job_cardbtn" onClick={submit}>
-                <b>Send for Quote Preparation</b>{" "}
-              </button>
-            </div>
+      {msg && <ErrorModel title={msg.title} message={msg.message} onClick={() => (window.location.href = "/ManagerView")} />}
+      <div className="job_card_button">
+        <button className="job_cardbtn_btn_btn" onClick={submit}>
+          <b>Send for Quote Preparation</b>{" "}
+        </button>
+      </div>
 
       {/* <div className="Break_cool_unit">
       <h2 >Breakdown Analysis For Cooling Unit</h2>
@@ -192,7 +172,7 @@ function Manager() {
         </div>
       </div> */}
     </>
-  );
+  )
 }
 
-export default Manager;
+export default Manager

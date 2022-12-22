@@ -2,6 +2,9 @@
   background-color: rgb(219, 255, 227);
 }
 
+.tablecheckbox {
+  margin-top: 15rem;
+}
 .tablecheckbox .checktable {
   width: 162vh;
   top: 6%;
@@ -41,6 +44,7 @@
 
 .checktable td {
   text-align: left;
+  font-size: 16px;
 }
 
 .checktable .scratches {
@@ -48,7 +52,7 @@
 }
 
 .checktable .click_btn {
-  width: 22px;
+  width: 26px;
   height: 4vh;
 }
 
@@ -65,7 +69,7 @@
 
 .checktable .click2 {
   margin-top: -16px;
-  width: 23px;
+  width: 26px;
   height: 4vh;
 }
 
@@ -136,6 +140,7 @@ input[type="checkbox"]:checked:after {
 @media (min-width: 768px) and (max-width: 1024px) {
   .tablecheckbox {
     display: list-item;
+    margin-top: 25rem;
   }
 
   .tablecheckbox h2 {
@@ -217,5 +222,39 @@ input[type="checkbox"]:checked:after {
     width: 2rem;
     height: 2rem;
     margin-top: -3rem;
+  }
+}
+
+/*******************************Responsive page for Technician Page <physicalRemark.js>*******************/
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .tablecheckbox {
+    width: 80rem;
+  }
+  .tablecheckbox h2 {
+    font-size: 40px;
+  }
+  .checkboxes {
+    width: 122%;
+  }
+  .checkboxes .checktable {
+    margin-left: 24rem;
+    width: 77rem;
+    margin-top: -20rem;
+  }
+  .checkboxes .checktable tr td {
+    font-size: 30px;
+  }
+  .checktable td .click {
+    width: 2rem;
+    height: 2rem;
+  }
+  .checktable td .click2 {
+    width: 2rem;
+    height: 2rem;
+    margin-top: -3rem;
+  }
+  .checktable label {
+    margin-left: 2px;
   }
 }

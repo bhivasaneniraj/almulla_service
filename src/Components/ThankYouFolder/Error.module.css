@@ -20,11 +20,14 @@
 .header {
   background: rgb(8, 136, 38);
   padding: 1rem;
+  height: 18vh;
 }
 
 .header h2 {
-  margin: 0;
+  margin: 25px;
+  padding-left: 3rem;
   color: white;
+  font-size: 27px;
 }
 
 .content {
@@ -35,6 +38,7 @@
   padding: 1rem;
   display: flex;
   justify-content: flex-end;
+  width: 26.5rem;
 }
 
 @media (min-width: 768px) {

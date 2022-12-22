@@ -2,7 +2,7 @@ import React from "react"
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table"
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 
-function CoolComplaints({ complaint, failure, failureComplaintsList, arrayList }) {
+function CoolComplaints({ complaint, failure, deleteRow, deleteFailRow, failureComplaintsList, arrayList }) {
   return (
     <>
       <div className="page_two_complaint_failure">
@@ -20,9 +20,14 @@ function CoolComplaints({ complaint, failure, failureComplaintsList, arrayList }
                 </tr>
               </thead>
               <tbody>
-                {arrayList.map((item) => (
-                  <tr className="Cust_t0">
-                    <td>{item}</td>
+                {arrayList.map((key, val) => (
+                  <tr className="Cust_t0" key={val}>
+                    <td>
+                      {key}{" "}
+                      <button style={{ position: "absolute", left: "35.5em", border: "none" }} onClick={(e) => deleteRow(val, e)}>
+                        <img src="./images/minusbutton.png" style={{ height: "1.5rem", border: "none" }} />
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -39,10 +44,15 @@ function CoolComplaints({ complaint, failure, failureComplaintsList, arrayList }
                 </tr>
               </thead>
               <tbody>
-                {failureComplaintsList.map((item) => {
+                {failureComplaintsList.map((key, val) => {
                   return (
-                    <tr className="Cust_t1">
-                      <td>{item} </td>
+                    <tr className="Cust_t1" key={val}>
+                      <td>
+                        {key}
+                        <button style={{ position: "absolute", left: "72.6em", border: "none" }} onClick={(e) => deleteFailRow(val, e)}>
+                          <img src="./images/minusbutton.png" style={{ height: "1.5rem", border: "none" }} />
+                        </button>
+                      </td>
                     </tr>
                   )
                 })}

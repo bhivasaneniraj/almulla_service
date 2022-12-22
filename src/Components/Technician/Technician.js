@@ -33,13 +33,17 @@ const tabledata = [
 ]
 
 function Technician() {
-  // const [msg, setMsg] = useState("");
+  const [arrayList, setArrayList] = useState([])
+  const [blackBg, setblackBg] = useState("none")
+  const [eValue, setEValue] = useState()
   const [msg, setMsg] = useState("")
+  const [completSubmite, setcompletSubmite] = useState()
+  const [customerComplaint, setCustomerComplaint] = useState([])
+  const [omplistf, setomplistf] = useState("block")
 
   function submit() {
     setMsg({
-      title: "Sent",
-      message: "Thank You!!",
+      title: "Successfully Sent For Quote Preparation.",
     })
   }
   const errorHandler = () => {
@@ -75,14 +79,14 @@ function Technician() {
         <Row>
           <div className="Page_two_logoAndLogOut_out">
             <img src="/images/bitmap@2x.png" alt="example" />
-            <div className="vl"></div>
+            <div className="vert_line"></div>
             <h3>
               <b> Welcome to Al Mulla Industries Service Mobile Solutions</b>
             </h3>
             <br />
           </div>
           <div className="heading_ing">
-            <div className="header-text">
+            <div className="header_text">
               <span>Shakeel Siddiqui</span>
             </div>
 
@@ -94,15 +98,15 @@ function Technician() {
                 <b>Logout</b>{" "}
               </h1>
             </div>
-            <div className="CardReference_ref">
-              <h2 className="card_ref_ref">
+            <div className="CardReference_ref_card">
+              <h2 className="card_ref_ref_card">
                 <b>Job Card Reference Number - {Referenceno}</b>{" "}
               </h2>
               <div className="d-flex justify-content-end loc">
                 <div className="locAt_tion">
                   <b>
                     {" "}
-                    <span style={{ marginRight: "14px" }}>Location : {location}</span>
+                    <span>Location : {location}</span>
                   </b>
                 </div>
               </div>
@@ -112,10 +116,10 @@ function Technician() {
       </Col>
       <b>
         {" "}
-        <p className="paragraph">Customer {refer} </p>{" "}
+        <p className="para_graph">Customer {refer} </p>{" "}
       </b>
       <div className="datatable">
-        <table className="tabular">
+        <table className="tabular_table">
           <tr>
             <th>Unit Details</th>
             <th>KT No.</th>
@@ -123,8 +127,6 @@ function Technician() {
             <th>Chassis</th>
             <th>Model</th>
             <th>Date</th>
-            <th>Warranty Start</th>
-            <th>Warranty End</th>
           </tr>
 
           <tr>
@@ -134,9 +136,6 @@ function Technician() {
             <td>{tabledata[0].Chassis} </td>
             <td> {tabledata[0].Model} </td>
             <td> {tabledata[0].Date}</td>
-            <td className="dataT"> {tabledata[0].WarrantyStart}</td>
-
-            <td className="dataT2"> {tabledata[0].WarrantyEnd}</td>
           </tr>
 
           <tr>
@@ -146,23 +145,20 @@ function Technician() {
             <td>{tabledata[1].Chassis} </td>
             <td> {tabledata[1].Model} </td>
             <td> {tabledata[1].Date}</td>
-            <td className="dataT3"> {tabledata[1].WarrantyStart}</td>
-
-            <td className="dataT4"> {tabledata[1].WarrantyEnd}</td>
           </tr>
         </table>
       </div>
-      <div style={{ marginTop: "8rem" }}>
+      {/* <div style={{ marginTop: "8rem" }}>
         <PhysicalRemark />
-      </div>
+      </div> */}
 
       <div style={{ height: "700px" }}>
         <TechnicianCoolingUnit datas={datas} />
       </div>
 
-      {msg && <ErrorModel title={msg.title} message={msg.message} onConfirm={errorHandler} />}
-      <div className="job_card">
-        <button className="job_cardbtn" onClick={submit}>
+      {msg && <ErrorModel title={msg.title} message={msg.message} onClick={() => (window.location.href = "/technicianview")} />}
+      <div className="job_card_card">
+        <button className="job_cardbtn_btn" onClick={submit}>
           <b>Send for Quote Preparation</b>{" "}
         </button>
       </div>

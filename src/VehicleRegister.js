@@ -1,4 +1,5 @@
 import React from "react"
+import moment from "moment"
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table"
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 import { useState, useEffect } from "react"
@@ -41,21 +42,30 @@ function VehicleRegister() {
   const [tailArrayList, setTailArrayList] = useState([])
   const [tailCustomerComplaints, setTailCustomerComplaints] = useState()
   const [tailFailureComplaints, setTailFailureComplaints] = useState([])
+  const [close, setClose] = useState(true)
 
   function submit() {
     setMsg({
-      title: "Job Created Successfully",
-      message: "Thank You!!",
+      title: "Job Card Created Successfully.",
     })
   }
-  // const [Showhide, setShowhide] = useState("Hello World")
-
-  // const showhie = () => {
-  //       console.log(Showhide);
-  // }
 
   const navigate = useNavigate
 
+  const handleDelete = (index, e) => {
+    setArrayList(arrayList.filter((v, i) => i !== index))
+    if (index === 0) {
+      setFailureComplaintsList([])
+    }
+  }
+
+  const handleDeleteFun = (index, e) => {
+    setFailureComplaintsList(failureComplaintsList.filter((v, i) => i !== index))
+  }
+
+  const compCancel = () => {
+    setClose(false)
+  }
   const handleCheckedAll = () => {
     if (!checkedAllBox) {
       setCheckedAllBox(true)
@@ -93,7 +103,7 @@ function VehicleRegister() {
 
   const complaint = () => {
     setblackBg("block")
-
+    setClose(true)
     setomplistf("block")
   }
 
@@ -106,20 +116,19 @@ function VehicleRegister() {
     setTailBlackBg("block")
     setfaillist("block")
   }
-  var a = []
 
   const demooo = (e) => {
     setcompletSubmite(e.target.value)
   }
-  const helomk = (e) => {
-    var value = e.target.value
-    var checked = e.target.checked
-    if (checked) {
-      setomdemo([...omdemo, value])
-    } else {
-      setomdemo(omdemo.filter((e) => e !== value))
-    }
-  }
+  // const helomk = (e) => {
+  //   var value = e.target.value
+  //   var checked = e.target.checked
+  //   if (checked) {
+  //     setomdemo([...omdemo, value])
+  //   } else {
+  //     setomdemo(omdemo.filter((e) => e !== value))
+  //   }
+  // }
 
   const compSubmite = () => {
     if (!arrayList.includes(eValue)) setArrayList((prev) => prev.concat(eValue))
@@ -185,8 +194,8 @@ function VehicleRegister() {
         Chassis: " NK004102-F",
         Model: "CITIMAX-400",
         Date: "16.10.2022",
-        WarrantyStart: " 13.06.2022",
-        WarrantyEnd: "16.06.2022",
+        WarrantyStart: "2021-06-27",
+        WarrantyEnd: "2022-07-23",
       },
       {
         id: 2,
@@ -195,11 +204,12 @@ function VehicleRegister() {
         SerialNo: "21084589",
         Chassis: "9031793-N",
         Model: "ALU,24V,1500KG",
-        Date: " 16.09.2022",
-        WarrantyStart: " 27.06.2021",
-        WarrantyEnd: "26.06.2022",
+        Date: "16.09.2022",
+        WarrantyStart: "2021-06-27",
+        WarrantyEnd: "2022-06-28",
       },
     ]
+
     if (searchTextInput === "17/30866") {
       setData(tabledata)
       setShow(true)
@@ -292,9 +302,6 @@ function VehicleRegister() {
     console.log(failureComplaintsList, "failureList")
   }, [failureComplaintsList])
 
-  const handlerAdioButton = (e) => {
-    setCustComplaint(e.target.value)
-  }
   useEffect(() => {
     console.log(CustComplaint, "CustomerComplaint")
   }, [CustComplaint])
@@ -340,7 +347,6 @@ function VehicleRegister() {
               </div>
               <div className="page_two_or">
                 <p> O </p>
-                <span></span>
                 <p> R </p>
               </div>
               <div className="chassis">
@@ -371,30 +377,6 @@ function VehicleRegister() {
                     ))}
                   </select>
                 </div>
-                {/* <div className="dropdown">
-                  <form className="dpd">
-                    <label className="labell">
-                      <b>Location</b>{" "}
-                    </label>
-
-                    <select className="dpdbtn">
-                    {Select_option.map((option) => (
-                      <>
-
-                    
-                  <option value={option.value}>
-                    <b>{option.label1}</b>
-                     </option>
-                  <option value={option.value}>
-                    <b>{option.label2}</b>
-                  </option>
-                  </>
-                  
-                ))}
-                    </select>
-                  </form>
-                </div> */}
-
                 <span>
                   {" "}
                   Customer <p> {name} </p>
@@ -415,14 +397,14 @@ function VehicleRegister() {
                           checked={checkedAllBox}
                         />
                       </th>
-                      <th>Unit Details</th>
-                      <th>KT No.</th>
-                      <th>Serial No.</th>
-                      <th>Chassis</th>
-                      <th>Model</th>
-                      <th>Date</th>
-                      <th>Warranty Start</th>
-                      <th>Warranty End</th>
+                      <th className="Service">Unit Details</th>
+                      <th className="Service">KT No.</th>
+                      <th className="Service">Serial No.</th>
+                      <th className="Service">Chassis</th>
+                      <th className="Service">Model</th>
+                      <th className="Service">Date</th>
+                      <th className="Service">Warranty Start</th>
+                      <th className="Service">Warranty End</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -446,8 +428,8 @@ function VehicleRegister() {
                       <td>{data[0].Chassis} </td>
                       <td> {data[0].Model} </td>
                       <td> {data[0].Date}</td>
-                      <td className="tdata"> {data[0].WarrantyStart}</td>
-                      <td className="tdata2"> {data[0].WarrantyEnd}</td>
+                      {moment(data[0].WarrantyStart).unix() < moment(data[0].WarrantyEnd).unix() ? <td style={{ backgroundColor: " rgb(188, 242, 204)" }}>{moment(data[0].WarrantyStart).format("DD.MM.YYYY")}</td> : <td style={{ backgroundColor: "rgb(255, 190, 186)" }}>{data[0].WarrantyStart}</td>}
+                      {data[0].WarrantyEnd && <td style={{ backgroundColor: "rgb(255, 190, 186)" }}>{moment(data[1].WarrantyEnd).format("DD.MM.YYYY")}</td>}
                     </tr>
 
                     <tr>
@@ -470,9 +452,8 @@ function VehicleRegister() {
                       <td>{data[1].Chassis} </td>
                       <td> {data[1].Model} </td>
                       <td> {data[1].Date}</td>
-                      <td className="tdata3"> {data[1].WarrantyStart}</td>
-
-                      <td className="tdata4"> {data[1].WarrantyEnd}</td>
+                      {moment(data[1].WarrantyStart).unix() < moment(data[1].WarrantyEnd).unix() ? <td style={{ backgroundColor: " rgb(188, 242, 204)" }}>{moment(data[1].WarrantyStart).format("DD.MM.YYYY")}</td> : <td style={{ backgroundColor: "rgb(255, 190, 186)" }}>{data[1].WarrantyStart}</td>}
+                      {data[1].WarrantyEnd && <td style={{ backgroundColor: "rgb(255, 190, 186)" }}>{moment(data[1].WarrantyEnd).format("DD.MM.YYYY")}</td>}
                     </tr>
                   </tbody>
                 </table>
@@ -480,16 +461,17 @@ function VehicleRegister() {
 
               <PhysicalRemark />
 
-              {checkedFirst && <CoolComplaints complaint={complaint} failure={failure} arrayList={arrayList} failureComplaintsList={failureComplaintsList} />}
+              {checkedFirst && <CoolComplaints complaint={complaint} failure={failure} arrayList={arrayList} failureComplaintsList={failureComplaintsList} deleteRow={handleDelete} deleteFailRow={handleDeleteFun} />}
             </div>
 
             {checkedSecond && <TailComplaint tailArrayList={tailArrayList} tailFailureComplaints={tailFailureComplaints} tailComplaint={tailComplaint} />}
-
-            <div className="main_black_div" style={{ display: blackBg }}>
-              <div className="page_two_complaint_list" onChange={demooo} style={{ display: omplistf }}>
-                <Pagetwocomponent compSubmite={compSubmite} failureComplaints={failureComplaints} handleRadioButton={handleRadioButton} failureComplaintsList={failureComplaintsList} setFailureComplaintsList={setFailureComplaintsList} eValue={eValue} />
+            {close && (
+              <div className="main_black_div" style={{ display: blackBg }}>
+                <div className="page_two_complaint_list" onChange={demooo} style={{ display: omplistf }}>
+                  <Pagetwocomponent compSubmite={compSubmite} failureComplaints={failureComplaints} handleRadioButton={handleRadioButton} compCancel={compCancel} failureComplaintsList={failureComplaintsList} setFailureComplaintsList={setFailureComplaintsList} eValue={eValue} />
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="main_black_div" style={{ display: tailBlackBg }}>
               <div className="page_two_complaint_list">
@@ -498,7 +480,7 @@ function VehicleRegister() {
             </div>
 
             <div className="drop_down_values">
-              <b>Send Report To - </b>
+              <b>Assign to Foreman - </b>
               <select className="Drop_select">
                 {options.map((option) => (
                   <option value={option.value}>
@@ -508,7 +490,7 @@ function VehicleRegister() {
               </select>
             </div>
 
-            {msg && <ErrorModel title={msg.title} message={msg.message} onConfirm={errorHandler} />}
+            {msg && <ErrorModel title={msg.title} message={msg.message} onClick={errorHandler} />}
             <div className="job_card">
               <button className="job_cardbtn" onClick={submit}>
                 <b>Create Job Card</b>{" "}

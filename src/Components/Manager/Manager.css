@@ -5,10 +5,121 @@
   box-sizing: border-box;
 }
 
+.Page_two_logoAndLogOut_log {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+}
+
+.Page_two_logoAndLogOut_log img {
+  width: 133.3pt;
+  height: 38pt;
+}
+
+.verticle_l {
+  border-right: 2px dashed rgb(0, 0, 0);
+  height: 40pt;
+  width: 1px;
+  position: absolute;
+  left: 15%;
+  /* margin-left: -39rem; */
+  /* margin-left: -540px; */
+  top: 15px;
+}
+
+.Page_two_logoAndLogOut_log h3 {
+  font-size: 14pt;
+  color: rgb(0, 0, 0);
+  width: 500pt;
+  height: 37pt;
+  text-align: center;
+  margin-top: 1%;
+  margin-right: 44.5%;
+}
+
+.CardReference_ref {
+  margin-top: 20px;
+  margin-left: 17px;
+}
+
+.CardReference_ref .cardref_ref {
+  font-size: 15pt;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid #00a53e;
+  padding-bottom: 5px;
+  margin: 20px 0px;
+  font-size: 18pt;
+}
+.loc span {
+  font-size: 18pt;
+  margin-right: 15px;
+}
+
+.datatable_data .tabular_data {
+  margin: 20px 0;
+  font-size: 18px;
+  margin: auto;
+  width: 97vw;
+  margin: 15px;
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+
+.tabular_data th {
+  text-align: left;
+}
+.tabular_data td {
+  text-align: left;
+}
+.tabular_data .dataT2 {
+  background-color: rgb(188, 242, 204);
+}
+.tabular_data .dataT3 {
+  background-color: rgb(255, 190, 186);
+}
+.tabular_data .dataT4 {
+  background-color: rgb(255, 190, 186);
+}
+
+.tabular_data th {
+  text-align: left;
+}
+.job_card_button {
+  margin-top: -10%;
+}
+.job_cardbtn_btn_btn {
+  background-color: rgb(8, 136, 38);
+  color: white;
+  font-size: 20pt;
+  width: 320pt;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.89pt;
+  margin-left: 61rem;
+  /* margin-top: -4%; */
+  margin-bottom: 35px;
+  height: 55pt;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 6pt;
+}
+.Tail_lif_break {
+  font-weight: bold;
+  font-size: 18pt;
+  padding-left: 1rem;
+}
 .header {
   height: 12vh;
 }
-
+.paragraph {
+  display: flex;
+  font-size: 16pt;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-left: 17px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
 .header-img {
   position: absolute;
   right: 95%;
@@ -33,10 +144,10 @@
 }
 
 .Log_out_logo {
-  height: 18pt;
-  width: 18pt;
-  margin-right: 5rem;
+  width: 16pt;
   cursor: pointer;
+  height: 18.5pt;
+  margin-right: 5rem;
 }
 
 .correct-img {
@@ -72,62 +183,374 @@
   padding-left: 73rem;
 }
 
-/* Media Query for Mobile Devices */
-/* @media (max-width: 480px) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
+.header-text .log_name {
+  margin-left: 200px;
+}
 
-  .Page_two_logoAndLogOut{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  .Page_two_logoAndLogOut img{
-
-    position: absolute;
-
-  }
-  .Page_two_logoAndLogOut h3{
-    
-    margin-top: 8rem;
-   
-    
-    
-    
-  }
-
-}  */
-
-/* Media Query for low resolution  Tablets, Ipads */
-/* @media (min-width: 481px) and (max-width: 767px) {
-  body {
-    background-color: yellow;
-  }
-}  */
-/* Media Query for Tablets Ipads portrait mode
-@media (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background-color: blue;
-  }
-}  */
-/* Media Query for Laptops and Desktops */
-/* @media (min-width: 1025px) and (max-width: 1280px) {
-  body {
-    background-color: green;
-  }
-}  */
-/* Media Query for Large screens */
-/* @media (min-width: 1281px) {
-  body {
-    background-color: white;
-  }
-} */
-
-/************************************************* Media query For Mobiles **************************/
+/*************************************************<ManagerView.js> Media query For Mobiles **************************/
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
+  .Main_class {
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .foreman_class {
+    width: 30rem;
+  }
+  .foreman_class img {
+    width: 20%;
+    margin-top: 10px;
+    height: 5vh;
+  }
+  .v2 {
+    border-right: 3px dashed rgb(0, 0, 0);
+    height: 100pt;
+    width: 20pt;
+  }
+  .foreman_class h3 {
+    width: 25rem;
+    font-size: 13px;
+    padding-top: 18px;
+    padding-left: 3rem;
+  }
+  .header_class {
+    margin-top: -20px;
+  }
+
+  .header_class span {
+    font-size: 16px;
+    margin-left: 131px;
+  }
+
+  .Logout_class {
+    margin-top: -1.5rem;
+    margin-left: 94%;
+  }
+  .Logout_class .Logout_logo img {
+    width: 90%;
+    height: 90%;
+  }
+  .Logout_class i {
+    margin-left: -3.5rem;
+  }
+  .Logout_class .head2 {
+    margin-left: -2rem;
+    font-size: 16px;
+  }
+  .col_tabclass .new_jordcard {
+    width: 10rem;
+  }
+  .col_tabclass img {
+    width: 15%;
+  }
+  .App_class .tab_class {
+    margin-left: 5px;
+  }
+}
+
+/*********************************************<ManagerView.js>**********************************/
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (max-width: 767px) and (min-width: 481px) {
+  .Main_class {
+    width: 50rem;
+  }
+  .foreman_class {
+    width: 30rem;
+  }
+  .foreman_class img {
+    width: 135px;
+    margin-top: 10px;
+    height: 40px;
+  }
+  /* .v2 {
+    border: 5px dashed rgb(0, 0, 0);
+  } */
+  .foreman_class h3 {
+    width: 35rem;
+    font-size: 18px;
+    padding-top: 13px;
+    padding-left: 5rem;
+  }
+  .header_class {
+    margin-top: -20px;
+  }
+  .header_class span {
+    font-size: 20px;
+    margin-left: 162px;
+  }
+  .Logout_class {
+    margin-top: -3.5rem;
+    margin-left: 46rem;
+  }
+  .Logout_class i {
+    margin-left: -57px;
+  }
+  .Logout_class .head2 {
+    margin-left: -2rem;
+    font-size: 20px;
+  }
+  .tab_class tr th {
+    font-size: 15pt;
+  }
+  .col_tabclass td {
+    font-size: 15pt;
+  }
+  .col_tabclass .new_jordcard {
+    width: 10rem;
+  }
+  .col_tabclass img {
+    width: 12%;
+  }
+  .App_class .tab_class {
+    margin-left: 5px;
+  }
+}
+
+/******************************************<ManagerView.js>************************************/
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Main_class {
+    width: 64rem;
+  }
+  .foreman_class {
+    width: 50rem;
+  }
+  .foreman_class img {
+    width: 140px;
+    margin-top: 20px;
+    height: 40px;
+  }
+  .v2 {
+    border-right: 2px dashed rgb(0, 0, 0);
+    height: 7vh;
+    position: sticky;
+    margin-top: -5%;
+    margin-right: 39rem;
+  }
+  .foreman_class h3 {
+    width: 40rem;
+    font-size: 22px;
+    padding-top: 0px;
+    padding-left: 4rem;
+  }
+  .header_class span {
+    font-size: 20px;
+    margin-left: 185px;
+  }
+  .header_class {
+    margin-top: -28px;
+  }
+  .Logout_class {
+    margin-top: -3.5rem;
+    margin-left: 60rem;
+  }
+  .Logout_class i {
+    margin-left: -57px;
+  }
+  .Logout_class .head2 {
+    margin-left: -2rem;
+    font-size: 22px;
+  }
+  .foremantable_class h3 {
+    margin-top: 90px;
+    margin-left: 10px;
+    font-size: 18pt;
+    color: rgb(0, 0, 0);
+  }
+  .tab_class tr th {
+    font-size: 16pt;
+  }
+  .col_tabclass .new_jordcard {
+    width: 20rem;
+  }
+  .col_tabclass td {
+    font-size: 15pt;
+  }
+  .col_tabclass img {
+    width: 12%;
+  }
+}
+
+/****************************************<Manager.js>******************************/
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .Page_two_logoAndLogOut_log {
+    width: 102rem;
+  }
+  .Page_two_logoAndLogOut_log img {
+    width: 21rem;
+    margin-top: 58px;
+    height: 6rem;
+  }
+  .verticle_l {
+    display: none;
+  }
+  .Page_two_logoAndLogOut_log h3 {
+    margin-right: 724px;
+    font-size: 46px;
+    clear: both;
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 20px;
+    width: 65rem;
+  }
+  .header-text {
+    width: 100rem;
+    margin-top: -10px;
+    padding-left: 8rem;
+  }
+  .LogOut {
+    position: relative;
+    left: 45%;
+    margin-top: -110px;
+  }
+
+  .Log_out_logo {
+    width: 3rem;
+    height: 8vh;
+  }
+
+  .header_1 {
+    font-size: 58px;
+    margin-left: 42rem;
+    margin-top: -72px;
+  }
+  .header-text .log_name {
+    font-size: 50px;
+    padding-left: 2rem;
+  }
+  .LogOut i {
+    margin-left: 38rem;
+  }
+  .CardReference_ref {
+    margin-top: 10rem;
+    width: 99rem;
+  }
+  .CardReference_ref .cardref_ref {
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid #00a53e;
+    padding-bottom: 5px;
+    margin: -20px 0px;
+    width: 99rem;
+    font-size: 32pt;
+  }
+  .loc span {
+    margin-left: 60rem;
+    font-size: 48px;
+  }
+  .paragraph {
+    font-size: 38px;
+  }
+  .datatable_data .tabular_data {
+    width: 106%;
+    height: 35vh;
+  }
+  .tabular_data th {
+    font-size: 33px;
+  }
+  .tabular_data td {
+    white-space: nowrap;
+    font-size: 30px;
+  }
+
+  .job_card_button {
+    margin-left: 7rem;
+  }
+  .job_cardbtn_btn_btn {
+    font-size: 35px;
+    height: 12vh;
+    width: 32rem;
+  }
+}
+
+/********************************************<manager.js>*************************/
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .Page_two_logoAndLogOut_log {
+    width: 150rem;
+  }
+  .Page_two_logoAndLogOut_log img {
+    width: 18rem;
+    margin-top: 1rem;
+    height: 8vh;
+  }
+  .verticle_l {
+    border-right: 4px dashed rgb(0, 0, 0);
+    height: 70pt;
+    width: 1px;
+    position: absolute;
+    left: 38%;
+    /* margin-left: -39rem; */
+    /* margin-left: -540px; */
+    top: 15px;
+  }
+  .Page_two_logoAndLogOut_log h3 {
+    width: 30rem;
+    font-size: 37px;
+    padding-left: 2rem;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .heading {
+    width: 48rem;
+  }
+  .header-text {
+  }
+
+  .header-text .log_name {
+    font-size: 36px;
+    padding-left: 88px;
+  }
+  .LogOut {
+    position: absolute;
+    top: 0%;
+    left: 90rem;
+  }
+
+  .LogOut i {
+    margin-left: 6rem;
+    margin-top: 1rem;
+  }
+  .LogOut i img {
+    height: 3rem;
+    width: 3rem;
+    margin-top: 1rem;
+  }
+
+  .header_1 {
+    font-size: 38px;
+    margin-top: -49px;
+  }
+  .CardReference_ref {
+    width: 102rem;
+  }
+
+  .CardReference_ref .cardref_ref {
+    font-size: 38px;
+  }
+  .loc {
+    margin-top: -1rem;
+  }
+  .loc span {
+    font-size: 38px;
+  }
+  .paragraph {
+    font-size: 32px;
+    width: 100rem;
+  }
+  .datatable_data .tabular_data {
+    width: 102rem;
+  }
+  .tabular_data th {
+    font-size: 30px;
+  }
+  .tabular_data td {
+    font-size: 30px;
+  }
 }

@@ -1,25 +1,84 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
-.icon i{
-    margin-left: 90%;
-    margin-top: -9%;
-    margin-right: -3px;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    color: #00a53e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
+.data_table_tab .data_table_tab .icon i {
+  margin-left: 90%;
+  margin-top: -7%;
+  margin-right: -3px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #00a53e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.data_table_tab .Root_Caus {
+  width: 10%;
+}
+
+.data_table_tab .Reflect {
+  width: 10%;
+}
+.data_table_tab .data_table_tab {
+  margin: 20px 0;
+  font-size: 18px;
+  margin: auto;
+  width: 97vw;
+  margin: 15px;
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+
+.data_table_tab th {
+  text-align: left;
+}
+
+.data_table_tab tr th {
+  background-color: rgb(8, 136, 38);
+  padding: 10px;
+  width: 170px;
+  text-align: left;
+  color: white;
+  font-size: 17px;
+}
+
+.data_table_tab td {
+  text-align: left;
+  font-size: 18px;
+}
+
+/*************************************Responsive page for ManagerPage <ManagerTailComplaint.js>***********************/
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .data_table_tab .data_table_tab {
+    width: 100rem;
+  }
+
+  .Tail_lif_break {
+    font-size: 45px;
+  }
+  .data_table_tab tr th {
+    font-size: 35px;
+  }
+  .data_table_tab .data_table_tab .icon i {
+    width: 40px;
+    height: 40px;
+    margin-top: -43px;
+  }
+  .data_table_tab td {
+    font-size: 30px;
+  }
 }

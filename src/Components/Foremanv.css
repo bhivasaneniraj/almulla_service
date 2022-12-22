@@ -1,149 +1,128 @@
-*{
-    margin: 0;
-    padding: 0;box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.Foreman_Main .Foreman_cl .bitmap_png{
-    width: 133.3pt;
-    height: 38pt;
-    margin-top: 20px;
-    margin-left: 10px;
+.Foreman_Main .Foreman_cl .bitmap_png {
+  width: 133.3pt;
+  height: 38pt;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
-.Foreman_cl img{
-    width: 16pt;
-    height: 18.5pt;
-    margin-top: 10px;
-    margin-left: 0px;
+.Foreman_cl img {
+  width: 16pt;
+  height: 18.5pt;
+  margin-top: 10px;
+  margin-left: 0px;
 }
 
-.V0{
-    border-right: 1px dashed black;
-    height: 70px;
-    position: absolute;
-    left: 58%;
-    margin-left: -540px;
-    top: 15px;
+.V0 {
+  border-right: 2px dashed black;
+  height: 70px;
+  position: absolute;
+  left: 52%;
+  margin-left: -540px;
+  top: 15px;
 }
 
-
-.Foreman_cl h3{
-    font-size: 14pt;
-    margin-left: 17%;
-    margin-top: -40px;
-    width: 375pt;
-    height: 37pt;
-    margin-bottom: 0px;
-    color: rgb(0,0,0);
+.Foreman_cl h3 {
+  font-size: 14pt;
+  margin-left: 217px;
+  margin-top: -47px;
+  width: 375pt;
+  height: 37pt;
+  margin-bottom: 0px;
+  color: rgb(0, 0, 0);
 }
 
-.headerss span{
-    font-size: 14pt;
-    margin-left: 219px;
-    width: 372pt;
-    height: 37pt;
-
-   
+.headerss span {
+  font-size: 14pt;
+  margin-left: 219px;
+  width: 372pt;
+  height: 37pt;
 }
 
-.headerss{
-    margin-top: -2%;
+.headerss {
+  margin-top: -2%;
 }
 
-.logoutss   {
-    margin-left: 91%;
-    margin-top: -58px;
-    width: 16pt;
-    height: 18.5pt;
-   
+.logoutss {
+  margin-left: 91%;
+  margin-top: -58px;
+  width: 16pt;
+  height: 18.5pt;
 }
 
-
-.logoutss .logout_png{
-    width: 16pt;
-    height: 18.5pt;
+.logoutss .logout_png {
+  width: 16pt;
+  height: 18.5pt;
 }
 
-.logoutss .Head{
-    font-size: 14pt;
-    width: 44pt;
-    height: 16pt;
-    margin-left: 30px;
-    margin-top: -17px;
+.logoutss .Head {
+  font-size: 14pt;
+  width: 44pt;
+  height: 16pt;
+  margin-left: 30px;
+  margin-top: -17px;
 }
 
-.Table_foreman h3{
-    margin-top: 90px;
-    margin-left: 10px;
-    font-size: 18pt;
-    color: 
-    rgb(0,0,0);
+.Table_foreman h3 {
+  margin-top: 90px;
+  margin-left: 10px;
+  font-size: 18pt;
+  color: rgb(0, 0, 0);
 }
 
-
-.Table_foreman{
-    font-size: 15px;
-    border-bottom: 1px solid #00a53e;
-    padding-bottom: 5px;
-    margin: 0 0px;
-    margin-top: -10px;
+.Table_foreman {
+  font-size: 15px;
+  border-bottom: 1px solid #00a53e;
+  padding-bottom: 5px;
+  margin: 0 0px;
+  margin-top: -10px;
 }
 
-
-
-.app_foreman .table_for{
-    width: 98%;
-    margin-left: 12px;
-    height: 40vh;
-    border-spacing: 1px 1px;
-    border-collapse: separate;
-    text-align: left;
+.app_foreman .table_for {
+  width: 98%;
+  margin-left: 12px;
+  height: 40vh;
+  border-spacing: 1px 1px;
+  border-collapse: separate;
+  text-align: left;
 }
 
-
-.app_foreman{
-    margin-top: 20px;
+.app_foreman {
+  margin-top: 20px;
 }
 
-
-.table_for .Fore_Man_Data td{
-    text-align: left;
+.table_for .Fore_Man_Data td {
+  text-align: left;
 }
 
-
-
-
-.table_for .Fore_Man_Data th{
-    text-align: left;
+.table_for .Fore_Man_Data th {
+  text-align: left;
 }
 
-.Fore_Man_Data img{
-    float: right;
-    margin-top: 1px;
+.Fore_Man_Data img {
+  float: right;
+  margin-top: 1px;
 }
 
-
-
-.table_for tr{
-    font-size: 16pt;
-    letter-spacing: 0.01pt;
+.table_for tr {
+  font-size: 16pt;
+  letter-spacing: 0.01pt;
 }
 
-
-.Fore_Man_Data .Assi_gned{
-    cursor: pointer;
-    margin-top: 1px;
+.Fore_Man_Data .Assi_gned {
+  cursor: pointer;
+  margin-top: 1px;
+  width: 8%;
 }
-
-
-
 
 /*********************************************** button functionality*******************************/
 
-
-
-    /* .buttoni {
+/* .buttoni {
         width: 95px;
         height: 51.9px;
         position: relative;
@@ -168,7 +147,7 @@
     top: 10px;
   }
    */
-  /* .buttoni:after {
+/* .buttoni:after {
     width: 0;
     height: 0;
     display: block;
@@ -179,16 +158,13 @@
     right: 20px;
     top: 19px;
   } */
-  
- 
-  
-  /* .buttoni:hover:before {
+
+/* .buttoni:hover:before {
     background: 
     rgb(197,77,77);
   } */
 
-
-  /* .checkmark {
+/* .checkmark {
     display: inline-block;
     transform: rotate(45deg);
     height: 25px;
@@ -197,3 +173,203 @@
     border-bottom: 7px solid #78b13f;
     border-right: 7px solid #78b13f;
   } */
+
+/******************************************* Media Query <Foremanv > ***************/
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .Foreman_Main {
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .Foreman_cl {
+    width: 30rem;
+  }
+  .Foreman_Main .Foreman_cl .bitmap_png {
+    width: 20%;
+    margin-top: 10px;
+    height: 5vh;
+  }
+  .Foreman_Main .Foreman_cl .Welcome_head {
+    width: 25rem;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-left: 3rem;
+  }
+  .headerss {
+    margin-top: -25px;
+  }
+  .headerss span {
+    font-size: 16px;
+    margin-left: 131px;
+  }
+  .logoutss {
+    margin-top: -1.5rem;
+    margin-left: 245%;
+  }
+  .logoutss img {
+    width: 90%;
+    height: 90%;
+  }
+  .logoutss i {
+    margin-left: -3.5rem;
+  }
+  .logoutss .Head {
+    margin-left: -2rem;
+    font-size: 16px;
+  }
+  .app_foreman .table_for {
+    width: 103%;
+  }
+  .Fore_Man_Data .Assi_gned {
+    width: 25%;
+  }
+  .table_for .Fore_Man_Data th {
+    font-size: 20px;
+  }
+  .table_for .Fore_Man_Data td {
+    font-size: 16px;
+  }
+}
+
+/*******************************************************************************/
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (max-width: 767px) and (min-width: 481px) {
+  .Foreman_Main {
+    width: 50rem;
+  }
+  .Foreman_cl {
+    width: 47rem;
+  }
+  .V0 {
+    border-right: 2px dashed rgb(0, 0, 0);
+    height: 7vh;
+    position: sticky;
+    margin-top: -7%;
+    margin-right: 37rem;
+  }
+  .Foreman_Main .Foreman_cl .bitmap_png {
+    width: 135px;
+    margin-top: 12px;
+    height: 40px;
+  }
+  .Foreman_Main .Foreman_cl .Welcome_head {
+    width: 35rem;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-left: 3rem;
+  }
+  .headerss {
+    margin-top: -20px;
+  }
+  .headerss span {
+    font-size: 20px;
+    margin-left: 177px;
+  }
+  .logoutss {
+    margin-top: -3.5rem;
+    margin-left: 46rem;
+  }
+  .logoutss img {
+    width: 90%;
+    height: 90%;
+  }
+  .logoutss i {
+    margin-left: -57px;
+  }
+  .logoutss .Head {
+    margin-left: -2rem;
+    font-size: 20px;
+  }
+  .app_foreman .table_for {
+    width: 103%;
+  }
+  .Fore_Man_Data .Assi_gned {
+    width: 17%;
+  }
+
+  .Fore_Man_Data img {
+    width: 17%;
+  }
+  .Table_foreman {
+    width: 50rem;
+  }
+  .table_for .Fore_Man_Data th {
+    font-size: 25px;
+  }
+  .table_for .Fore_Man_Data td {
+    font-size: 17px;
+  }
+}
+
+/****************************************************************************/
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Foreman_Main {
+    width: 64rem;
+  }
+  .Foreman_cl {
+    width: 50rem;
+  }
+  .V0 {
+    border-right: 2px dashed rgb(0, 0, 0);
+    height: 7vh;
+    position: sticky;
+    margin-top: -5%;
+    margin-right: 39rem;
+  }
+  .Foreman_Main .Foreman_cl .bitmap_png {
+    width: 140px;
+    margin-top: 20px;
+    height: 40px;
+  }
+  .Foreman_Main .Foreman_cl .Welcome_head {
+    width: 40rem;
+    font-size: 22px;
+    padding-top: 0px;
+    margin-left: 23%;
+  }
+  .headerss {
+    margin-top: -28px;
+  }
+  .headerss span {
+    font-size: 20px;
+    margin-left: 185px;
+  }
+  .logoutss {
+    margin-top: -3.5rem;
+    margin-left: 60rem;
+  }
+  .logoutss img {
+    width: 100%;
+    height: 100%;
+  }
+  .logoutss i {
+    margin-left: -57px;
+  }
+  .logoutss .Head {
+    margin-left: -2rem;
+    font-size: 22px;
+  }
+  .app_foreman .table_for {
+    width: 125%;
+  }
+  .Fore_Man_Data .Assi_gned {
+    width: 13%;
+  }
+
+  .Fore_Man_Data img {
+    width: 13%;
+  }
+  .Table_foreman {
+    width: 63rem;
+  }
+  .table_for .Fore_Man_Data th {
+    font-size: 25px;
+  }
+  .table_for .Fore_Man_Data td {
+    font-size: 17pt;
+  }
+}

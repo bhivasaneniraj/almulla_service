@@ -47,17 +47,17 @@ function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
           <table className="tabular">
             <tr>
               <th className="icon">
-                Customer complaint <i class="fa-solid fa-plus" onClick={complaint}></i>{" "}
+                Customer complaint <i class="fa-solid fa-plus" onClick={() => complaint(456)}></i>{" "}
               </th>
               <th className="icon">
-                Failure Reason <i class="fa-solid fa-plus" onClick={failure}></i>
+                Failure Reason <i class="fa-solid fa-plus" onClick={() => complaint(456)}></i>
               </th>
 
-              <th>
+              <th className="Root_Caus">
                 Probable <br />
                 Root Cause
               </th>
-              <th>
+              <th className="Reflect">
                 Suggested <br />
                 Rectifiction
               </th>
@@ -76,7 +76,28 @@ function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
 
               <td class="width-md">
                 <select className="down_valuesss Drop_select">
-                  <option value="Derive belt expand">Derive belt expand</option>
+                  <option value="Derive belt expand">Belt Replacement</option>
+                  <option value="Belt Replacement">Derive belt expand</option>
+                  <option value="Belt lose">Belt lose</option>
+                  <option value="No belt">No belt</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Engine oil Hose</td>
+              <td class="width-md">
+                <select className="down_valuesss Drop_select">
+                  <option value="Derive belt expand">Derive belt loose</option>
+                  <option value="Belt Replacement">Belt Replacement</option>
+                  <option value="Belt lose">Belt lose</option>
+                  <option value="No belt">No belt</option>
+                </select>
+              </td>
+
+              <td class="width-md">
+                <select className="down_valuesss Drop_select">
+                  <option value="Derive belt expand">Motor Replacement</option>
                   <option value="Belt Replacement">Belt Replacement</option>
                   <option value="Belt lose">Belt lose</option>
                   <option value="No belt">No belt</option>

@@ -8,12 +8,12 @@ function ManagerTailComplaint(props) {
       <Col>
         <Row>
           <div className="mt-5 text">
-            <label style={{ fontWeight: "bold", fontSize: "18pt" }}>Breakdown Analysis For Tail Lift</label>
+            <label className="Tail_lif_break">Breakdown Analysis For Tail Lift</label>
           </div>
         </Row>
       </Col>
-      <div className="datatable">
-        <table className="tabular">
+      <div className="data_table_tab">
+        <table className="data_table_tab">
           <tr>
             <th className="icon">
               Customer complaint <i class="fa-solid fa-plus"></i>{" "}
@@ -22,11 +22,11 @@ function ManagerTailComplaint(props) {
               Failure Reason <i class="fa-solid fa-plus"></i>
             </th>
 
-            <th>
+            <th className="Root_Caus">
               Probable <br />
               Root Cause
             </th>
-            <th>
+            <th className="Reflect">
               Suggested <br />
               Rectifiction
             </th>
