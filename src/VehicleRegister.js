@@ -44,14 +44,14 @@ function VehicleRegister() {
   const [tailFailureComplaints, setTailFailureComplaints] = useState([])
   const [close, setClose] = useState(true)
 
+  // This function on Submit popup message .
   function submit() {
     setMsg({
       title: "Job Card Created Successfully.",
     })
   }
 
-  const navigate = useNavigate
-
+  // This function used to delete the complaint (minus button)
   const handleDelete = (index, e) => {
     setArrayList(arrayList.filter((v, i) => i !== index))
     if (index === 0) {
@@ -59,13 +59,17 @@ function VehicleRegister() {
     }
   }
 
+  // This function used to delete the Failure reason (minus button)
   const handleDeleteFun = (index, e) => {
     setFailureComplaintsList(failureComplaintsList.filter((v, i) => i !== index))
   }
 
+  // This function used to cancel the customer complaint popup
   const compCancel = () => {
     setClose(false)
   }
+
+  //  function used for multiple checkbox in Customer Catering Service table.
   const handleCheckedAll = () => {
     if (!checkedAllBox) {
       setCheckedAllBox(true)
@@ -78,6 +82,8 @@ function VehicleRegister() {
     }
   }
 
+  // function used to click single checkbox in Customer Catering Service table
+
   const handleCheckedFirst = () => {
     if (!checkedFirst && checkedSecond) {
       setCheckedAllBox(true)
@@ -87,6 +93,7 @@ function VehicleRegister() {
     setCheckedFirst(!checkedFirst)
   }
 
+  //  function used to click single checkbox in Customer Catering Service table
   const handleCheckedSecond = () => {
     if (!checkedSecond && checkedFirst) {
       setCheckedAllBox(true)
@@ -96,11 +103,13 @@ function VehicleRegister() {
     setCheckedSecond(!checkedSecond)
   }
 
+  // used to getting the value for kt number
   const ktnum = (e) => {
     settext(e.target.value)
     setSearchTextInput(e.target.value)
   }
 
+  // used to display the customer complaint and failure reason checkbox
   const complaint = () => {
     setblackBg("block")
     setClose(true)
@@ -111,11 +120,11 @@ function VehicleRegister() {
     setTailBlackBg("block")
   }
 
-  const failure = () => {
-    setblackBg("block")
-    setTailBlackBg("block")
-    setfaillist("block")
-  }
+  // const failure = () => {
+  //   setblackBg("block")
+  //   setTailBlackBg("block")
+  //   setfaillist("block")
+  // }
 
   const demooo = (e) => {
     setcompletSubmite(e.target.value)
@@ -130,6 +139,7 @@ function VehicleRegister() {
   //   }
   // }
 
+  // function used to save the customer complaint to the table for cooling unit.
   const compSubmite = () => {
     if (!arrayList.includes(eValue)) setArrayList((prev) => prev.concat(eValue))
     console.log(completSubmite)
@@ -138,20 +148,13 @@ function VehicleRegister() {
     setomplistf("none")
   }
 
+  // function used to save the customer complaint to tbale for tail lift
   const compTailSumbite = () => {
     if (!tailArrayList.includes(eValue)) setTailArrayList((prev) => prev.concat(eValue))
     setTailBlackBg("none")
   }
 
-  const failuereSubmite = () => {
-    if (omdemo.length === 0) {
-    } else {
-      setblackBg("none")
-      setfaillist("none")
-      console.log(omdemo)
-    }
-  }
-
+  // used for popup after clicking on job card create button
   const errorHandler = () => {
     setMsg("")
   }
@@ -236,6 +239,7 @@ function VehicleRegister() {
 
   /* ################################################ */
 
+  // used for checkbox in Customer Catering Service table
   const toggleCheck = (inputName) => {
     setChecked((prevState) => {
       const newState = { ...prevState }
@@ -461,7 +465,7 @@ function VehicleRegister() {
 
               <PhysicalRemark />
 
-              {checkedFirst && <CoolComplaints complaint={complaint} failure={failure} arrayList={arrayList} failureComplaintsList={failureComplaintsList} deleteRow={handleDelete} deleteFailRow={handleDeleteFun} />}
+              {checkedFirst && <CoolComplaints complaint={complaint} arrayList={arrayList} failureComplaintsList={failureComplaintsList} deleteRow={handleDelete} deleteFailRow={handleDeleteFun} />}
             </div>
 
             {checkedSecond && <TailComplaint tailArrayList={tailArrayList} tailFailureComplaints={tailFailureComplaints} tailComplaint={tailComplaint} />}
