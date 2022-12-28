@@ -14,7 +14,6 @@ function FailureReason(props) {
       )
     }
   }
-
   return (
     <>
       <div className="Fail_reason">

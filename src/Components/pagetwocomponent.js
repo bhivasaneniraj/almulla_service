@@ -2,14 +2,18 @@ import React from "react"
 import { useState } from "react"
 import FailureReason from "./FailureReason"
 import FailureTailComplaint from "../FailureTailComplaint"
+import AbnormalFailure from "./AbnormalFailure"
 
-function Pagetwocomplaintlist({ handleRadioButton, compSubmite, compCancel, failureComplaints, failureComplaintsList, setFailureComplaintsList, custComplaint, eValue, popUpId, setTailFailureComplaints, tailFailureComplaints }) {
+function Pagetwocomplaintlist({ handleRadioButton, compSubmite, compCancel, failureComplaintsList, setFailureComplaintsList, eValue, setTailFailureComplaints, tailFailureComplaints }) {
   const [engineOilDrain, setEngineOilDrain] = useState(false)
   const [engineOilHose, setEngineOilHose] = useState(false)
   const [engineCylinderHead, setEngineCylinderHead] = useState(false)
   const [engineOilFilter, setEngineOilFilter] = useState(false)
-  const [customerComplaintArray, setCustomerComplaint] = useState([])
-
+  const [engineClutchDefective, setEngineClutchDefective] = useState(false)
+  const [clucthKitDefective, setClucthKitDefective] = useState(false)
+  const [unitSkinVibrating, setUnitSkinVibrating] = useState(false)
+  const [mountingBoltLoose, setMountingBoltLoose] = useState(false)
+  const [airHoseBroken, setAirHoseBroken] = useState(false)
   return (
     <>
       <div className="complaints_container">
@@ -76,7 +80,7 @@ function Pagetwocomplaintlist({ handleRadioButton, compSubmite, compCancel, fail
         </div>
       </div>
       {eValue === "Engine oil leak" && <FailureReason setFailureComplaintsList={setFailureComplaintsList} failureComplaintsList={failureComplaintsList} engineOilDrain={engineOilDrain} setEngineOilDrain={setEngineOilDrain} engineOilHose={engineOilHose} setEngineOilHose={setEngineOilHose} engineCylinderHead={engineCylinderHead} setEngineCylinderHead={setEngineCylinderHead} engineOilFilter={engineOilFilter} setEngineOilFilter={setEngineOilFilter} />}
-      {eValue === "Periodic maintenance service" && <FailureTailComplaint engineOilDrain={engineOilDrain} setEngineOilDrain={setEngineOilDrain} engineOilHose={engineOilHose} setEngineOilHose={setEngineOilHose} engineCylinderHead={engineCylinderHead} setEngineCylinderHead={setEngineCylinderHead} engineOilFilter={engineOilFilter} setEngineOilFilter={setEngineOilFilter} setTailFailureComplaints={setTailFailureComplaints} tailFailureComplaints={tailFailureComplaints} />}
+      {eValue === "An abnormal noise from Engine" && <AbnormalFailure setFailureComplaintsList={setFailureComplaintsList} failureComplaintsList={failureComplaintsList} engineClutchDefective={engineClutchDefective} setEngineClutchDefective={setEngineClutchDefective} clucthKitDefective={clucthKitDefective} setClucthKitDefective={setClucthKitDefective} unitSkinVibrating={unitSkinVibrating} setUnitSkinVibrating={setUnitSkinVibrating} mountingBoltLoose={mountingBoltLoose} setMountingBoltLoose={setMountingBoltLoose} airHoseBroken={airHoseBroken} setAirHoseBroken={setAirHoseBroken} />}
 
       {/* </div> */}
     </>

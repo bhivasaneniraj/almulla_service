@@ -120,24 +120,9 @@ function VehicleRegister() {
     setTailBlackBg("block")
   }
 
-  // const failure = () => {
-  //   setblackBg("block")
-  //   setTailBlackBg("block")
-  //   setfaillist("block")
-  // }
-
   const demooo = (e) => {
     setcompletSubmite(e.target.value)
   }
-  // const helomk = (e) => {
-  //   var value = e.target.value
-  //   var checked = e.target.checked
-  //   if (checked) {
-  //     setomdemo([...omdemo, value])
-  //   } else {
-  //     setomdemo(omdemo.filter((e) => e !== value))
-  //   }
-  // }
 
   // function used to save the customer complaint to the table for cooling unit.
   const compSubmite = () => {
@@ -299,7 +284,7 @@ function VehicleRegister() {
   }
 
   useEffect(() => {
-    console.log(TailLiftComplaint, "failureListr")
+    console.log(TailLiftComplaint, "failureList")
   }, [TailLiftComplaint])
 
   useEffect(() => {

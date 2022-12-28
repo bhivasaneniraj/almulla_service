@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react"
 import FailureTailComplaint from "./FailureTailComplaint"
 
-function PageTwoTailComponent({ handleTailRadioButton, compTailSubmite, eValue, setTailFailureComplaints, tailFailureComplaints }) {
+function PageTwoTailComponent({ handleTailRadioButton, compTailSubmite, eValue, setTailFailureComplaints, tailFailureComplaints, compCancel }) {
   const [engineOilDrain, setEngineOilDrain] = useState(false)
   const [engineOilHose, setEngineOilHose] = useState(false)
   const [engineCylinderHead, setEngineCylinderHead] = useState(false)

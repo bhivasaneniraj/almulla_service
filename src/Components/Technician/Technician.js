@@ -1,36 +1,16 @@
-import React from "react"
+import React, { useRef } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import "../../Technician.css"
 import TechnicianCoolingUnit from "./TechnicianCoolUnit"
-import PhysicalRemark from "../PhysicalRemaks/PhysicalRemark"
-import ErrorModel from "../ThankYouFolder/Error"
 
-const tabledata = [
-  {
-    id: 1,
-    UnitDetail: "Cooling Unit",
-    KTNo: "17/30866",
-    SerialNo: "VKA94286893",
-    Chassis: " NK004102-F",
-    Model: "CITIMAX-400",
-    Date: "16.10.2022",
-    WarrantyStart: " 13.06.2022",
-    WarrantyEnd: " 16.06.2023",
-  },
-  {
-    id: 2,
-    UnitDetail: "Tail Lift",
-    KTNo: "17/30866",
-    SerialNo: "21084589",
-    Chassis: "9031793-N",
-    Model: "ALU,24V,1500KG",
-    Date: " 16.09.2022",
-    WarrantyStart: " 27.06.2021",
-    WarrantyEnd: " 26.06.2022",
-  },
-]
+import "./Technician.css"
+
+import ErrorModel from "../ThankYouFolder/Error"
+import RootCause from "./RootCause"
+import FailureReason from "../FailureReason"
+import RootCauseComplaintList from "./RootCauseComplaintList"
 
 function Technician() {
   const [arrayList, setArrayList] = useState([])
@@ -40,35 +20,83 @@ function Technician() {
   const [completSubmite, setcompletSubmite] = useState()
   const [customerComplaint, setCustomerComplaint] = useState([])
   const [omplistf, setomplistf] = useState("block")
+  const [close, setClose] = useState(true)
+  const [engineOilDrain, setEngineOilDrain] = useState(false)
+  const [engineOilHose, setEngineOilHose] = useState(false)
+  const [engineCylinderHead, setEngineCylinderHead] = useState(false)
+  const [engineOilFilter, setEngineOilFilter] = useState(false)
+  const [failureComplaintsList, setFailureComplaintsList] = useState([])
 
+  const [rootCauseCauseComplaintList, setRootCauseComplaintList] = useState([])
+  const [loseBelt, setLoseBelt] = useState(false)
+  const [noBelt, setNoBelt] = useState(false)
+  const [beltIssue, setBeltIssue] = useState(false)
+  const [changeBelt, setChangeBelt] = useState(false)
+  const show = useRef(false)
+
+  // const handleShowBtn = () => {
+  //   show.current = true;
+  // };
+
+  const reasonSubmit = (e) => {
+    if (!failureComplaintsList.includes(eValue)) setFailureComplaintsList((prev) => prev.concat(eValue))
+    //setFailureComplaintsList(failureComplaintsList);
+    // eslint-disable-next-line no-lone-blocks
+
+    setblackBg("none")
+    setomplistf("none")
+  }
+
+  const complaint = () => {
+    console.log("button is clicked")
+    setblackBg("block")
+    show.current = true
+    setomplistf("block")
+  }
+
+  const tabledata = [
+    {
+      id: 1,
+      UnitDetail: "Cooling Unit",
+      KTNo: "17/30866",
+      SerialNo: "VKA94286893",
+      Chassis: " NK004102-F",
+      Model: "CITIMAX-400",
+      Date: "16.10.2022",
+      WarrantyStart: " 13.06.2022",
+      WarrantyEnd: " 16.06.2023",
+    },
+    {
+      id: 2,
+      UnitDetail: "Tail Lift",
+      KTNo: "17/30866",
+      SerialNo: "21084589",
+      Chassis: "9031793-N",
+      Model: "ALU,24V,1500KG",
+      Date: " 16.09.2022",
+      WarrantyStart: " 27.06.2021",
+      WarrantyEnd: " 26.06.2022",
+    },
+  ]
   function submit() {
     setMsg({
       title: "Successfully Sent For Quote Preparation.",
     })
   }
+
+  const handleCheckComponent = (e) => {
+    setEValue(engineOilDrain)
+  }
+
+  const demooo = (e) => {
+    setcompletSubmite(e.target.value)
+  }
+
   const errorHandler = () => {
     setMsg("")
   }
 
   const navigate = useNavigate()
-
-  const datas = [
-    {
-      id: 1,
-      customerComplaint: "Engine oil leak ",
-      failureReason: "Engine oil Drain extension leakEngine",
-      probableRootCause: "Derive belt expand",
-      suggestedRectifiction: "Belt Replacement",
-    },
-    {
-      id: 2,
-      // customerComplaint: "Engine oil leak ",
-      failureReason: "Engine oil Hose ",
-      probableRootCause: "Derive belt loose",
-      suggestedRectifiction: "Motor Replacemen",
-    },
-  ]
-
   var Referenceno = "300021572"
   var location = "Shuwaikh Van 1"
   var refer = "915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES"
@@ -77,28 +105,30 @@ function Technician() {
     <>
       <Col sm="12" md="12" lg="12">
         <Row>
-          <div className="Page_two_logoAndLogOut_out">
-            <img src="/images/bitmap@2x.png" alt="example" />
-            <div className="vert_line"></div>
+          {/* <Header name={"shakeel siddiqui"} /> */}
+          <div className="Page_two_logoAndLogOut">
+            <img src="/images/bitmap@3x.png" alt="example" />
+            <div className="vl"></div>
             <h3>
               <b> Welcome to Al Mulla Industries Service Mobile Solutions</b>
             </h3>
             <br />
           </div>
-          <div className="heading_ing">
-            <div className="header_text">
-              <span>Shakeel Siddiqui</span>
-            </div>
 
-            <div className="LogOut_out">
-              <i type="button" className="correct-img" onClick={() => navigate("/")}>
-                <img src="Images/shape@2x.png" />
+          <div className="heading" style={{ marginTop: "-40px" }}>
+            <span style={{ marginLeft: "13.7rem" }}>Anisur Rahman </span>
+
+            <div className="Page_two_LogOut">
+              <i>
+                <img src="./images/shape@3x.png" alt="" onClick={() => (window.location.href = "/")} />
               </i>
-              <h1 className="head_er">
-                <b>Logout</b>{" "}
+              <h1 className="head">
+                <b onClick={() => (window.location.href = "/")}>Logout</b>{" "}
               </h1>
             </div>
-            <div className="CardReference_ref_card">
+          </div>
+          <div className="Page_two_logoAndLogOut_out">
+            <div className="CardReference_ref_card" style={{ width: "100rem" }}>
               <h2 className="card_ref_ref_card">
                 <b>Job Card Reference Number - {Referenceno}</b>{" "}
               </h2>
@@ -148,13 +178,25 @@ function Technician() {
           </tr>
         </table>
       </div>
-      {/* <div style={{ marginTop: "8rem" }}>
-        <PhysicalRemark />
-      </div> */}
 
-      <div style={{ height: "700px" }}>
-        <TechnicianCoolingUnit datas={datas} />
+      <div style={{ height: "600px", width: "50rem", marginTop: "15.3rem" }}>
+        <TechnicianCoolingUnit complaint={complaint} failureComplaintsList={failureComplaintsList} />
+        <RootCause rootCauseComplaintList={rootCauseCauseComplaintList} handleShowBtn={complaint} />
       </div>
+
+      {show && (
+        <div className="main_black_div" style={{ display: blackBg }}>
+          <div className="page_two_complaint_list" onChange={demooo} style={{ display: omplistf, position: "absolute", top: "25rem" }}>
+            <div className="failureReason">
+              <FailureReason handleCheckComponent={handleCheckComponent} setFailureComplaintsList={setFailureComplaintsList} failureComplaintsList={failureComplaintsList} engineOilDrain={engineOilDrain} setEngineOilDrain={setEngineOilDrain} engineOilHose={engineOilHose} setEngineOilHose={setEngineOilHose} engineCylinderHead={engineCylinderHead} setEngineCylinderHead={setEngineCylinderHead} engineOilFilter={engineOilFilter} setEngineOilFilter={setEngineOilFilter} />
+            </div>
+
+            <div className="RootCauseReason">
+              <RootCauseComplaintList submitComplaint={reasonSubmit} rootCauseCauseComplaintList={rootCauseCauseComplaintList} setRootCauseComplaint={setRootCauseComplaintList} loseBelt={loseBelt} setLoseBelt={setLoseBelt} noBelt={noBelt} setNoBelt={setNoBelt} setbeltIssue={setBeltIssue} beltIssue={beltIssue} changeBelt={changeBelt} setChangeBelt={setChangeBelt} />
+            </div>
+          </div>
+        </div>
+      )}
 
       {msg && <ErrorModel title={msg.title} message={msg.message} onClick={() => (window.location.href = "/technicianview")} />}
       <div className="job_card_card">
@@ -162,20 +204,6 @@ function Technician() {
           <b>Send for Quote Preparation</b>{" "}
         </button>
       </div>
-
-      {/* <div className="Break_cool_unit">
-      <h2 >Breakdown Analysis For Cooling Unit</h2>
-      <div className="fail_complaint">
-      <div className="complain">
-      <p> Customer complaint </p>
-      <i class="fa-solid fa-plus"></i>
-      </div>
-        <div className="fail">
-        <p> Failure Reason </p>
-        <i class="fa-solid fa-plus" ></i>
-        </div>
-        </div>
-      </div> */}
     </>
   )
 }

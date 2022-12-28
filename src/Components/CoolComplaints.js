@@ -17,6 +17,9 @@ function CoolComplaints({ complaint, failure, deleteRow, deleteFailRow, failureC
                   <th className="Cust_t1">
                     Customer complaint <i class="fa-solid fa-plus" onClick={() => complaint(456)}></i>{" "}
                   </th>
+                  <th className="Cust_t1">
+                    Failure Reason <i class="fa-solid fa-plus" onClick={() => complaint(456)}></i>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -24,38 +27,25 @@ function CoolComplaints({ complaint, failure, deleteRow, deleteFailRow, failureC
                   <tr className="Cust_t0" key={val}>
                     <td>
                       {key}{" "}
-                      <button style={{ position: "absolute", left: "35.5em", border: "none" }} onClick={(e) => deleteRow(val, e)}>
+                      <button className="Minus_btn" onClick={(e) => deleteRow(val, e)}>
                         <img src="./images/minusbutton.png" style={{ height: "1.5rem", border: "none" }} />
                       </button>
                     </td>
+
+                    <table className="Faliure_table">
+                      {failureComplaintsList.map((key, val) => {
+                        return (
+                          <tr className="Failure_data">
+                            {key}
+                            <button className="minus_btn" onClick={(e) => deleteFailRow(val, e)}>
+                              <img src="./images/minusbutton.png" />
+                            </button>
+                          </tr>
+                        )
+                      })}
+                    </table>
                   </tr>
                 ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="tables">
-            <table className="Break_Cust">
-              <thead>
-                <tr>
-                  <th className="Cust_t1">
-                    Failure Reason <i class="fa-solid fa-plus" onClick={() => complaint(456)}></i>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {failureComplaintsList.map((key, val) => {
-                  return (
-                    <tr className="Cust_t1" key={val}>
-                      <td>
-                        {key}
-                        <button style={{ position: "absolute", left: "72.6em", border: "none" }} onClick={(e) => deleteFailRow(val, e)}>
-                          <img src="./images/minusbutton.png" style={{ height: "1.5rem", border: "none" }} />
-                        </button>
-                      </td>
-                    </tr>
-                  )
-                })}
               </tbody>
             </table>
           </div>
