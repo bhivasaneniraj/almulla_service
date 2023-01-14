@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "../../Technician.css"
+import "../Technician/Technician.css"
 
 function RootCause({ rootCauseComplaintList, handleShowBtn }) {
   return (
@@ -11,7 +11,7 @@ function RootCause({ rootCauseComplaintList, handleShowBtn }) {
               <thead>
                 <tr>
                   <th className="Cust_t1">
-                    Probable Root <i class="fa-solid fa-plus" onClick={() => handleShowBtn()} style={{ marginTop: "-2rem" }}></i>{" "}
+                    Probable Root <i class="fa-solid fa-plus" onClick={() => ""} style={{}}></i>{" "}
                   </th>
                 </tr>
               </thead>

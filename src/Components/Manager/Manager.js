@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Col, Row } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import ErrorModel from "../ThankYouFolder/Error"
-
+import Header from "../HeadingComponents/Header"
 import PhysicalRemark from "../PhysicalRemaks/PhysicalRemark"
 import "./Manager.css"
 import ManagerTailComplaint from "./ManagerTailComplaint"
@@ -63,45 +63,21 @@ function Manager() {
 
   return (
     <>
-      <Col sm="12" md="12" lg="12">
-        <Row>
-          <div className="Page_two_logoAndLogOut_log">
-            <img src="/images/bitmap@3x.png" alt="example" style={{ paddingLeft: "10px" }} />
-            <div className="verticle_l"></div>
-            <h3>
-              <b> Welcome to Al Mulla Industries Service Mobile Solutions</b>
-            </h3>
-            <br />
+      <Header name={"Anisur Rahman"} />
+      <div className="CardReference_ref">
+        <h2 className="cardref_ref">
+          <b>Job Card Reference Number - {Referenceno}</b>{" "}
+        </h2>
+        <div className="d-flex justify-content-end loc">
+          <div className="loc">
+            <b>
+              {" "}
+              <span>Location : {location}</span>
+            </b>
           </div>
-          <div className="heading">
-            <div className="header-text">
-              <span className="log_name">Anisur Rahman </span>
-            </div>
+        </div>
+      </div>
 
-            <div className="LogOut">
-              <i type="button" className="correct-img" onClick={() => navigate("/")}>
-                <img src="images/shape@3x.png" className="Log_out_logo" />
-              </i>
-              <h1 className="header_1">
-                <b onClick={() => navigate("/")}>Logout</b>{" "}
-              </h1>
-            </div>
-            <div className="CardReference_ref">
-              <h2 className="cardref_ref">
-                <b>Job Card Reference Number - {Referenceno}</b>{" "}
-              </h2>
-              <div className="d-flex justify-content-end loc">
-                <div className="loc">
-                  <b>
-                    {" "}
-                    <span>Location : {location}</span>
-                  </b>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Row>
-      </Col>
       <b>
         {" "}
         <p className="paragraph">Customer {refer} </p>{" "}

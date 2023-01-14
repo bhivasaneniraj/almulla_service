@@ -21,7 +21,9 @@ function Register() {
             <b>Al Mulla Industries Service Mobile Solutions</b>
           </h3>
         </div>
-        <h2>Register</h2>
+        <h2>
+          <b>Register</b>{" "}
+        </h2>
         <div className="Register_form">
           <div className="inputBox">
             <i className="fa-solid fa-user icon"></i>
@@ -30,8 +32,8 @@ function Register() {
             <label className="Register_page"> Employee ID</label>
           </div>
           <div className="inputBox">
-            <i className="fa-solid fa-mobile"></i>
-            <input type="password" required />
+            <i className="fa-solid fa-mobile icon"></i>
+            <input type="text" required />
             <div className="underline"></div>
             <label className="Register_page">Mobile Number </label>
           </div>
@@ -44,7 +46,7 @@ function Register() {
           </div>
           {show && (
             <div className="inputBox">
-              <i className="fa-solid fa-messages"></i>
+              <i class="fa-sharp fa-solid fa-envelope icons"></i>
               <input type="otp" required />
               <div className="underline"></div>
               <label className="Register_page"> Enter the OTP you received</label>

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useNavigate, useSearchParams } from "react-router-dom"
-import "./App.css"
+import "./login.css"
 
 function Login() {
   const managerUsername = "anisurRahman"
@@ -27,11 +27,11 @@ function Login() {
 
   const Submit = () => {
     if (managerUsername === usernameText && managerPassword === passwordText) {
-      navigate("/VehicleRegister")
+      navigate("/SupervisorJobs")
     } else if (foremanUsername === usernameText && foremanPassword === passwordText) {
-      navigate("/foremanv")
+      navigate("/ForemanJobs")
     } else if (technician === usernameText && technicianpassword === passwordText) {
-      navigate("/technicianview")
+      navigate("/TechnicianJobs")
     } else {
       alert("Invalid username or password!!")
     }

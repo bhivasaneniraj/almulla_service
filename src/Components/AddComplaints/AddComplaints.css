@@ -1,0 +1,47 @@
+.add_Complaint {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 495pt;
+  height: 220pt;
+  padding: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add_Complaint label {
+}
+
+.add_Complaint input {
+  width: 26rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  border-color: #70f02b;
+  margin-top: 2rem;
+}
+
+.add_Complaint input::placeholder {
+  font-weight: calc(5);
+  font-size: 15px;
+}
+
+.btn-save button {
+  margin-left: 15.5rem;
+  margin-top: 4rem;
+  height: 3rem;
+  width: 9rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #279127;
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.btn-save button:hover {
+  background-color: black;
+}

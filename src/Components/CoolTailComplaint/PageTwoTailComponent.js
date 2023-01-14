@@ -1,16 +1,22 @@
 import React from "react"
 import { useState } from "react"
-import FailureTailComplaint from "./FailureTailComplaint"
+// import FailureTailComplaint from "./FailureTailComplaint"
 
-function PageTwoTailComponent({ handleTailRadioButton, compTailSubmite, eValue, setTailFailureComplaints, tailFailureComplaints, compCancel }) {
-  const [engineOilDrain, setEngineOilDrain] = useState(false)
-  const [engineOilHose, setEngineOilHose] = useState(false)
-  const [engineCylinderHead, setEngineCylinderHead] = useState(false)
-  const [engineOilFilter, setEngineOilFilter] = useState(false)
+function PageTwoTailComponent({ handleTailRadioButton, compTailSubmite, eValue, setTailFailureComplaints, tailFailureComplaints, ComplaintCancel }) {
+  // const [engineOilDrain, setEngineOilDrain] = useState(false)
+  // const [engineOilHose, setEngineOilHose] = useState(false)
+  // const [engineCylinderHead, setEngineCylinderHead] = useState(false)
+  // const [engineOilFilter, setEngineOilFilter] = useState(false)
+  const [textBox, setTextBox] = useState()
+
+  const handleChanged = (textBox) => {
+    setTextBox(textBox)
+  }
 
   return (
     <>
       <div className="complaints_container">
+        <i className="fa-sharp fa-solid fa-arrow-left " onClick={ComplaintCancel}></i>
         <h3 className="Compla_int_container_heading">Customer Complaint</h3>
 
         <div className="complist">
@@ -57,19 +63,39 @@ function PageTwoTailComponent({ handleTailRadioButton, compTailSubmite, eValue, 
           <input type="radio" name="compChoes" value={"Compressor Stuck"} onChange={handleTailRadioButton} />
           <p>Compressor Stuck</p>
         </div>
-        <div className="arrow_img">
+
+        <div className="complist">
+          <input type="radio" name="compChoes" onClick={(e) => handleChanged(1)} />
+          <p>Other</p>
+        </div>
+        {textBox && (
+          <form>
+            <div className="form-group Form-text">
+              <label for="exampleFormControlTextarea1">
+                {" "}
+                <b>Customer Complaints</b>{" "}
+              </label>
+              <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" onChange={handleTailRadioButton}></textarea>
+            </div>
+          </form>
+        )}
+        {/* <div className="arrow_img">
           <img src=".\logo\shape@2x.png" alt="logo" className="arrow_imggg" />
           <div className="Spa_nn"></div>
-        </div>
+        </div> */}
 
         <div className="page_two_component_button">
           <button onClick={compTailSubmite} className="Save_Button">
             {" "}
             SAVE
           </button>
+          {/* <button onClick={compCancel} className="Save_Button">
+            {" "}
+            Cancel
+          </button> */}
         </div>
       </div>
-      {eValue === "Periodic maintenance service" && <FailureTailComplaint engineOilDrain={engineOilDrain} setEngineOilDrain={setEngineOilDrain} engineOilHose={engineOilHose} setEngineOilHose={setEngineOilHose} engineCylinderHead={engineCylinderHead} setEngineCylinderHead={setEngineCylinderHead} engineOilFilter={engineOilFilter} setEngineOilFilter={setEngineOilFilter} setTailFailureComplaints={setTailFailureComplaints} tailFailureComplaints={tailFailureComplaints} />}
+      {/* {eValue === "Periodic maintenance service" && <FailureTailComplaint engineOilDrain={engineOilDrain} setEngineOilDrain={setEngineOilDrain} engineOilHose={engineOilHose} setEngineOilHose={setEngineOilHose} engineCylinderHead={engineCylinderHead} setEngineCylinderHead={setEngineCylinderHead} engineOilFilter={engineOilFilter} setEngineOilFilter={setEngineOilFilter} setTailFailureComplaints={setTailFailureComplaints} tailFailureComplaints={tailFailureComplaints} />} */}
     </>
   )
 }

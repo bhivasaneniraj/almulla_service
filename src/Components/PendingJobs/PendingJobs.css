@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Main-Jobs .Jobs {
+  margin-left: 15rem;
+  margin-bottom: 5rem;
+}
+
+.Main-Jobs .Jobs .Supervisor-view {
+  text-align: center;
+  margin-top: 3rem;
+  margin-right: 24.5rem;
+  font-size: 30pt;
+  font-family: "Roboto-Black", sans-serif;
+}
+
+.job-card {
+  display: inline-block;
+  white-space: nowrap;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Roboto-Light", sans-serif;
+}
+
+.Main-Jobs button {
+  width: 365pt;
+  font-family: "Roboto", sans-serif;
+  font-size: 25pt;
+  text-align: center;
+  margin-left: 20rem;
+  border-radius: 20pt;
+  letter-spacing: 1.52pt;
+  height: 65pt;
+}
+
+.Main-Jobs button img {
+  width: 4rem;
+  height: 10vh;
+  float: left;
+  margin-top: 4px;
+}
+
+.Create-job {
+  margin-top: 0px;
+  background-color: rgb(8, 136, 38);
+}
+
+.Create-job:hover {
+  background-color: rgb(8, 136, 38);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Assign-job {
+  margin-top: 30px;
+  background-color: rgb(4, 94, 25);
+}
+
+.Assign-job:hover {
+  background-color: rgb(4, 94, 25);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Complete-job {
+  margin-top: 30px;
+  background-color: rgb(0, 49, 12);
+}
+
+.Complete-job:hover {
+  background-color: rgb(0, 49, 12);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Progress-job {
+  margin-top: 30px;
+  background-color: rgb(81, 105, 87);
+}
+
+.Progress-job:hover {
+  background-color: rgb(81, 105, 87);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/****************************************<ForemanJobsButton.js>***********************************/
+.Jobs .Foreman-view {
+  text-align: center;
+  margin-top: 6rem;
+  margin-right: 27.5rem;
+  font-size: 30pt;
+  font-family: "Roboto-Black", sans-serif;
+}
+
+/*****************************************<ForemanJobsButton.js/>**********************************/
+
+/*****************************************<TechnicianJobsButtons.js>*******************************/
+
+.Jobs .Technician-view {
+  text-align: center;
+  margin-top: 8rem;
+  margin-right: 27.5rem;
+  font-size: 30pt;
+  font-family: "Roboto-Black", sans-serif;
+}
+
+/*****************************************<TechnicianJobsButtons.js/>*******************************/
+/************************************** Media query For Mobile Screen *************************/
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .Main-Jobs .Jobs .Supervisor-view {
+    margin-top: 20rem;
+    font-size: 60px;
+  }
+  .Main-Jobs button {
+    width: 50rem;
+    height: 25vh;
+    font-size: 55px;
+    padding-top: 5rem;
+    margin-left: 5rem;
+  }
+  .Main-Jobs button img {
+    width: 10rem;
+    height: 17vh;
+    margin-top: -50px;
+  }
+  .Jobs .Foreman-view {
+    margin-top: 30rem;
+    font-size: 65px;
+    margin-left: -1rem;
+  }
+  .Jobs .Technician-view {
+    margin-top: 30rem;
+    font-size: 58px;
+  }
+}
+
+/********************************************Media Query for low resolution  Tablets, Ipads*************************/
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .Main-Jobs .Jobs {
+    margin-left: 35rem;
+  }
+  .Main-Jobs .Jobs .Supervisor-view {
+    margin-top: 30rem;
+    font-size: 80px;
+    width: 40rem;
+    margin-left: -2rem;
+  }
+  .Main-Jobs button {
+    width: 70rem;
+    height: 35vh;
+    font-size: 80px;
+    margin-top: 3rem;
+    margin-left: 5rem;
+  }
+  .Main-Jobs button img {
+    width: 10rem;
+    margin-left: 15px;
+    height: 20vh;
+  }
+  .Jobs .Foreman-view {
+    margin-top: 30rem;
+    font-size: 80px;
+    width: 35rem;
+    margin-left: -2rem;
+  }
+  .Jobs .Technician-view {
+    margin-top: 40rem;
+    font-size: 80px;
+    width: 40rem;
+    margin-left: -2rem;
+  }
+}
+
+/******************************************************Media query for Tablets ****************************************/
+
+/******************************************************* Media Query for Tablets Ipads portrait mode*********************************/
+
+/*working only in ipad portrait device*/
+@media only screen and (width: 768px) and (height: 1024px) and (orientation: portrait) {
+  .Main-Jobs {
+    width: 175rem;
+  }
+  .Main-Jobs .Jobs {
+    margin-left: 45rem;
+  }
+  .Main-Jobs .Jobs .Supervisor-view {
+    margin-top: 40rem;
+    font-size: 100px;
+    width: 50rem;
+    margin-left: -2rem;
+  }
+  .Main-Jobs button {
+    width: 100rem;
+    height: 35vh;
+    font-size: 110px;
+    margin-top: 3rem;
+    margin-left: 5rem;
+  }
+  .Main-Jobs button img {
+    width: 14rem;
+    margin-left: 25px;
+    height: 22vh;
+  }
+  .Jobs .Foreman-view {
+    margin-top: 60rem;
+    font-size: 100px;
+    width: 45rem;
+    margin-left: -2rem;
+  }
+  .Jobs .Technician-view {
+    margin-top: 70rem;
+    font-size: 100px;
+    width: 50rem;
+    margin-left: -2rem;
+  }
+}
+
+/*******************************************Media query working only in ipad landscape device************************/
+
+/*working only in ipad landscape device*/
+@media all and (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  .Main-Jobs {
+    width: 175rem;
+  }
+  .Main-Jobs .Jobs {
+    margin-left: 35rem;
+  }
+  .Main-Jobs .Jobs .Supervisor-view {
+    margin-top: 15rem;
+    font-size: 100px;
+    width: 50rem;
+    margin-left: -2rem;
+  }
+  .Main-Jobs button {
+    width: 110rem;
+    height: 45vh;
+    font-size: 110px;
+    margin-top: 3rem;
+    margin-left: 5rem;
+  }
+  .Main-Jobs button img {
+    width: 15rem;
+    margin-left: 25px;
+    height: 30vh;
+  }
+  .Jobs .Foreman-view {
+    margin-top: 20rem;
+    font-size: 100px;
+    width: 45rem;
+    margin-left: -2rem;
+  }
+  .Jobs .Technician-view {
+    margin-top: 35rem;
+    font-size: 100px;
+    width: 50rem;
+    margin-left: -2rem;
+  }
+}
+
+/**********************************************Media Query for Large devices ***********************************/
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .Main-Jobs .Jobs .Supervisor-view {
+    margin-top: 3rem;
+    font-size: 40px;
+    margin-left: 2rem;
+  }
+  .Main-Jobs button {
+    width: 40%;
+    height: 15vh;
+    font-size: 32px;
+    margin-top: 1rem;
+    margin-left: 20rem;
+  }
+  .Main-Jobs button img {
+    width: 13%;
+    height: 9vh;
+  }
+  .Jobs .Foreman-view {
+    margin-top: 6rem;
+    font-size: 35px;
+    width: 50%;
+    margin-left: 4rem;
+  }
+  .Jobs .Technician-view {
+    margin-top: 10rem;
+    font-size: 35px;
+    width: 50%;
+    margin-left: 5rem;
+  }
+
+  .Assigned-jobs {
+    width: 100%;
+  }
+
+  .In-progress-jobs {
+    width: 100%;
+  }
+}
+
+/************************************* Media Query ******************************/
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .Main-Jobs {
+    background-color: green;
+  }
+}

@@ -44,7 +44,7 @@ function ManagerView() {
         <Header name={"Anisur Rahman"} />
         <div className="foremantable_class">
           <h3>
-            <b>In Progress Jobs</b>{" "}
+            <b>Assigned Pending Jobs</b>{" "}
           </h3>
         </div>
 
@@ -53,35 +53,37 @@ function ManagerView() {
             <tr className="col_tabclass">
               <th className="new_jordcard">Job Cards</th>
               <th>Date</th>
-
               <th>Status</th>
             </tr>
             <tr className="col_tabclass">
-              <td>{TechnicianData[3].JobCard}</td>
-              <td>{TechnicianData[3].Date}</td>
+              <td>{TechnicianData[0].JobCard}</td>
+              <td>{TechnicianData[0].Date}</td>
               <td>
-                {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
+                {TechnicianData[0].Status} <img src="./logo/assigned@3x.png" alt="logo" onClick={Submit} />
               </td>
             </tr>
+
             <tr className="col_tabclass">
-              <td>{TechnicianData[3].JobCard}</td>
-              <td>{TechnicianData[3].Date}</td>
+              <td>{TechnicianData[0].JobCard}</td>
+              <td>{TechnicianData[0].Date}</td>
               <td>
-                {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
+                {TechnicianData[0].Status} <img src="./logo/assigned@3x.png" alt="logo" onClick={Submit} />
               </td>
             </tr>
+
             <tr className="col_tabclass">
-              <td>{TechnicianData[3].JobCard}</td>
-              <td>{TechnicianData[3].Date}</td>
+              <td>{TechnicianData[0].JobCard}</td>
+              <td>{TechnicianData[0].Date}</td>
               <td>
-                {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
+                {TechnicianData[0].Status} <img src="./logo/assigned@3x.png" alt="logo" onClick={Submit} />
               </td>
             </tr>
+
             <tr className="col_tabclass">
-              <td>{TechnicianData[3].JobCard}</td>
-              <td>{TechnicianData[3].Date}</td>
+              <td>{TechnicianData[0].JobCard}</td>
+              <td>{TechnicianData[0].Date}</td>
               <td>
-                {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
+                {TechnicianData[0].Status} <img src="./logo/assigned@3x.png" alt="logo" onClick={Submit} />
               </td>
             </tr>
           </table>

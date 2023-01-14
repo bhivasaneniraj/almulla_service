@@ -1,6 +1,6 @@
 import React from "react"
 import { Button, Col, Container, Row, Form } from "react-bootstrap"
-import "../../foreman.css"
+import "./foreman.css"
 
 function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
   const options = [
@@ -21,7 +21,7 @@ function ForemanCoolComplaint({ complaint, failure, coolComponent, datas }) {
   return (
     <>
       <div className="tw0_page_complaint">
-        <div className="heading">
+        <div className="heading-component">
           <Col>
             <Row>
               <div className="d-flex flex-row justify-content-between">

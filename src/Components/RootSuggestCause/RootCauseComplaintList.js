@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
-
+import "./RootCauseComplaint.css"
 function RootCauseComplaintList(props) {
-  const { setRootCauseComplaint, rootCauseComplaintList, loseBelt, setLoseBelt, noBelt, setNoBelt, setbeltIssue, beltIssue, changeBelt, setChangeBelt, submitComplaint, checked } = props
+  const { setRootCauseComplaint, rootCauseComplaintList, loseBelt, setLoseBelt, noBelt, setNoBelt, setbeltIssue, beltIssue, changeBelt, setChangeBelt, submitComplaint, checked, clickHandler } = props
 
   const handleRootCauseComplaintList = (e, fail) => {
     if (!fail) {
@@ -45,6 +45,11 @@ function RootCauseComplaintList(props) {
             {" "}
             SAVE
           </button>
+          <div>
+            <button className="btn_rootCause" onClick={clickHandler}>
+              ...Add Probable Root Cause
+            </button>
+          </div>
         </div>
       </div>
     </>

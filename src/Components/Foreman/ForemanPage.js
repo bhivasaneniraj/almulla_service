@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react"
 import ForemTailComponent from "./ForemanTailComponent"
 import ForemanCoolComplaint from "./ForemanCoolComplaint"
 import PhysicalRemarks from "../PhysicalRemaks/PhysicalRemark"
-import Pagetwocomponent from "../pagetwocomponent"
-import "../../foreman.css"
+import Pagetwocomponent from "../CoolTailComplaint/pagetwocomponent"
+import "./foreman.css"
 import ErrorModel from "../ThankYouFolder/Error"
-
+import Header from "../HeadingComponents/Header"
 import { useNavigate } from "react-router-dom"
 
 function Foremanpage() {
@@ -332,26 +332,7 @@ function Foremanpage() {
   return (
     <>
       <div className="main">
-        <div className="foreman">
-          <img src="/images/bitmap@3x.png" alt="logo" />
-          <div className="v2"></div>
-          <h3>
-            <b>Welcome to Al Mulla Industries Service Mobile Solutions</b>{" "}
-          </h3>
-        </div>
-        <div className="header">
-          <span>Shabbir </span>
-
-          <div className="Logout">
-            <i>
-              <img className="Logout_Butoon" src="./images/shape@3x.png" alt="" onClick={() => (window.location.href = "/")} />
-            </i>
-
-            <h1 className="head1">
-              <b onClick={() => (window.location.href = "/")}>Logout</b>{" "}
-            </h1>
-          </div>
-        </div>
+        <Header name={"Shabbir"} />
         <div className="CardReference">
           <h2 className="card_ref">
             <b>Job Card Reference Number - {Referenceno}</b>{" "}

@@ -1,3 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.foreman_class img {
+  width: 133.3pt;
+  height: 38pt;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.v2 {
+  border-right: 1px dashed black;
+  height: 70px;
+  position: absolute;
+  left: 58%;
+  margin-left: -540px;
+  top: 15px;
+}
+
+.foreman_class h3 {
+  font-size: 14pt;
+  margin-left: 15%;
+  margin-top: -50px;
+  width: 375pt;
+  height: 37pt;
+  margin-bottom: 0px;
+  color: rgb(0, 0, 0);
+}
+
+.header_text span {
+  font-size: 14pt;
+  margin-left: 2px;
+  width: 372pt;
+  height: 37pt;
+}
+
+.header_class span {
+  font-size: 14pt;
+  margin-left: 213px;
+  width: 372pt;
+  height: 37pt;
+}
+
+.header_class {
+  margin-top: -2%;
+}
+
+.Logout_class {
+  margin-left: 91%;
+  margin-top: -58px;
+  width: 16pt;
+  height: 18.5pt;
+}
+
+.Logout_class .head2 {
+  font-size: 14pt;
+  width: 44pt;
+  cursor: pointer;
+  height: 16pt;
+  margin-left: 30px;
+  margin-top: -23px;
+}
+
+.foremantable_class h3 {
+  margin-top: 90px;
+  margin-left: 10px;
+  font-size: 18pt;
+  color: rgb(0, 0, 0);
+}
+
+.foremantable_class {
+  font-size: 15px;
+  border-bottom: 1px solid #00a53e;
+  padding-bottom: 5px;
+  margin: 0 0px;
+  margin-top: -10px;
+}
+
+.Logout_class .Logout_logo img {
+  width: 16pt;
+  cursor: pointer;
+  height: 18.5pt;
+  margin-top: 10px;
+}
+
+/*********************************** Table *************************************************************/
+
+.App_class .tab_class {
+  width: 98%;
+  margin-left: 12px;
+  height: 40vh;
+  border-spacing: 1px 1px;
+  border-collapse: separate;
+  text-align: left;
+}
+
+.App_class {
+  margin-top: 20px;
+}
+
+.col_tabclass .new_jordcard {
+  width: 60%;
+  text-align: left;
+}
+
+.col_tabclass th {
+  text-align: left;
+}
+
+.new_jordcard th tr td {
+  text-align: left;
+}
+
+.col_tabclass td {
+  text-align: left;
+}
+
+.col_tabclass img {
+  float: right;
+  cursor: pointer;
+  width: 10%;
+}
+
+.tab_class tr {
+  font-size: 16pt;
+  letter-spacing: 0.01pt;
+}
+
+/********************************************************  <Technician.js> ***********************************************/
+
+.Page_two_logoAndLogOut_out {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+}
+
+.Page_two_logoAndLogOut_out img {
+  width: 133.3pt;
+  margin-left: 1rem;
+  height: 38pt;
+}
+.Page_two_logoAndLogOut_out .vert_line {
+  border-right: 2px dashed rgb(0, 0, 0);
+  height: 40pt;
+  width: 1px;
+  position: absolute;
+  left: 15%;
+  /* margin-left: -39rem; */
+  /* margin-left: -540px; */
+  top: 15px;
+}
+.Page_two_logoAndLogOut_out h3 {
+  font-size: 14pt;
+  color: rgb(0, 0, 0);
+  width: 500pt;
+  height: 37pt;
+  text-align: center;
+  margin-top: 1%;
+  margin-right: 45.5%;
+}
+
+.header-text span {
+  margin-left: 209px;
+}
+.header_text {
+  position: relative;
+  bottom: 2.5rem;
+  padding-left: 229px;
+}
+
+.LogOut_out {
+  margin-top: -6rem;
+  margin-right: 3rem;
+}
+
+.LogOut_out i {
+  display: flex;
+  justify-content: end;
+}
+
+.LogOut_out img {
+  width: 16pt;
+  cursor: pointer;
+  height: 18.5pt;
+  margin-top: 1rem;
+  margin-right: 3rem;
+}
+
+.head_er {
+  cursor: pointer;
+  padding-left: 82.5rem;
+  font-size: 19px;
+  margin-top: -1.5rem;
+}
+
+.CardReference_ref_card {
+  margin-top: 65px;
+  margin-left: 17px;
+}
+
+.CardReference_ref_card .card_ref_ref_card {
+  font-size: 15pt;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid #00a53e;
+  padding-bottom: 5px;
+  margin: 20px 0px;
+}
+
+.locAt_tion {
+  position: relative;
+  bottom: 25px;
+  font-size: 20px;
+  margin: -3px;
+}
+
+.locAt_tion span {
+  margin-right: 20px;
+}
+.para_graph {
+  display: flex;
+  font-size: 14pt;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-left: 17px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+.tabular_table {
+  margin: 20px 0;
+  font-size: 18px;
+  margin: auto;
+  width: 97vw;
+  margin: 15px;
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+.tabular_table tr th {
+  background-color: rgb(8, 136, 38);
+  padding: 10px;
+  width: 170px;
+  text-align: left;
+  color: white;
+  font-size: 17px;
+}
+
+.tabular_table tr td {
+  background-color: rgb(237, 242, 242);
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.tabular_table tr .dataT {
+  background-color: rgb(188, 242, 204);
+}
+
+.tabular_table tr .dataT2 {
+  background-color: rgb(188, 242, 204);
+}
+
+.tabular_table tr .dataT3 {
+  background-color: rgb(255, 190, 186);
+}
+.tabular_table tr .dataT4 {
+  background-color: rgb(255, 190, 186);
+}
+
+.job_card_card {
+  margin-top: -12rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: 81%;
+}
+
+.job_cardbtn_btn {
+  background-color: rgb(8, 136, 38);
+  color: white;
+  font-size: 20pt;
+  width: 320pt;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.89pt;
+  margin-left: -180px;
+  margin-top: 33%;
+  margin-bottom: 35px;
+  height: 55pt;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 6pt;
+}
+
+/*************************<TechnicianCoolUnit.js>*************/
+.Break_Unit {
+  display: flex;
+  font-size: 18pt;
+  letter-spacing: -0.01pt;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+.datatable_table .tabular_tab {
+  margin: 20px 0;
+  font-size: 18px;
+  margin: auto;
+  width: 56vw;
+  margin: 15px;
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+
+.tabular_tab th {
+  text-align: left;
+}
+
+.datatable_table .tabular_tab i {
+  margin-left: 92%;
+  margin-top: -7%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #00a53e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tabular_tab .portable_cause i {
+  margin-left: 83%;
+  margin-top: 1rem;
+  margin-top: -3rem;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #00a53e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tabular_tab .Suggest i {
+  margin-left: 83%;
+  margin-top: 1rem;
+  margin-top: -3rem;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #00a53e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tabular_tab th {
+  text-align: left;
+  width: 30rem;
+  height: 10vh;
+  font-size: 18px;
+}
+
+.tabular_tab td {
+  text-align: left;
+  font-size: 18px;
+}
+
+.datatable_table .tabular_tab .Suggest {
+  width: 14rem;
+  padding-top: 0rem;
+}
+
+.datatable_table .tabular_tab .portable_cause {
+  width: 14rem;
+  padding-top: 0rem;
+}
+.display_tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.1rem;
+  width: 36rem;
+}
+.display_tables .portable_root .Potable_root_Cause {
+  width: 18rem;
+  margin-left: -16px;
+  margin-top: 1rem;
+  height: 25vh;
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+
+.display_tables .portable_root .Potable_root_Cause th {
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+.display_tables .portable_root .Potable_root_Cause thead th {
+  background-color: rgb(8, 136, 38);
+  padding: 10px;
+  width: 170px;
+  text-align: left;
+  height: 10vh;
+  color: white;
+  font-size: 17px;
+}
+
+.root_suggest .Suggest_Cause thead th {
+  background-color: rgb(8, 136, 38);
+  padding: 10px;
+  width: 170px;
+  text-align: left;
+  color: white;
+  font-size: 17px;
+}
+
+.datatable_table {
+  display: inline-table;
+}
+
+table {
+  float: left;
+}
+
+.root_suggest .Suggest_Cause {
+  width: 18rem;
+  margin-left: -18px;
+  margin-top: 1rem;
+  height: 25vh;
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+
+/**********************************************************************************/
 .RootCause {
   position: absolute;
   top: 36.9rem;
@@ -29,4 +469,49 @@
   color: rgb(255, 255, 255);
   font-size: 20pt;
   letter-spacing: 0.89pt;
+}
+
+.table_Div {
+  width: 99%;
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+
+.tab_Rw {
+}
+
+.tab_Col {
+  width: 18rem;
+  text-align: left;
+}
+
+.tab_Col th {
+  width: 10rem;
+  text-align: left;
+}
+
+.Cooling-unit {
+  height: 3.2rem;
+  text-align: left;
+}
+
+.tab_Col i {
+  margin-left: 89%;
+  margin-top: -27px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #00a53e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Technician-coolingUnit {
+  height: 600px;
+  width: 87rem;
+  margin-left: 1rem;
+  margin-top: 15.3rem;
 }

@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header_img {
+  margin-top: 0rem;
+}
+
+.header_img img {
+  height: 3rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.vl {
+  border-right: 2px dashed rgb(0, 0, 0);
+  height: 48pt;
+  width: 1px;
+  position: absolute;
+  left: 14%;
+  top: 13px;
+}
+
+.header_img h3 {
+  padding-left: 13rem;
+  position: absolute;
+  top: 1rem;
+  font-size: 15pt;
+}
+
+.header_text span {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  position: relative;
+  top: 7rem;
+  right: 13rem;
+}
+
+.header_img span {
+  margin-left: 13.1rem;
+  position: absolute;
+  top: 6%;
+  font-size: 15pt;
+}
+
+.heading {
+  position: absolute;
+  left: 80rem;
+  margin-top: -40px;
+}
+
+.logout_btn i img {
+  width: 1.5rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.header_logout_btn {
+  font-size: 20px;
+  cursor: pointer;
+  display: contents;
+}
+
+.Button_btn {
+  width: 10rem;
+  height: 6vh;
+  margin-top: 2rem;
+  margin-left: 77rem;
+  border-radius: 10px;
+}
+
+.Button_btn:hover {
+  background-color: rgb(8, 136, 38);
+}
+
+/************************************** Media query For Mobile Screen *************************/
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .header_img img {
+    width: 17rem;
+    height: 10vh;
+    margin-top: 40px;
+  }
+  .vl {
+    border-right: 10px dashed rgb(0, 0, 0);
+  }
+  .header_img h3 {
+    font-size: 33px;
+    padding-left: 18px;
+    margin-top: 1.5rem;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .header_img span {
+    font-size: 36px;
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 2rem;
+    padding-left: 6rem;
+  }
+  .heading {
+    position: relative;
+    left: 62rem;
+    margin-top: -20px;
+  }
+  .logout_btn i img {
+    width: 3rem;
+  }
+  .header_logout_btn {
+    font-size: 35px;
+  }
+}
+
+/********************************************Media Query for low resolution  Tablets, Ipads*************************/
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .header_img img {
+    width: 25rem;
+    margin-top: 20px;
+    height: 15vh;
+  }
+  .vl {
+    border-right: 6px dashed rgb(0, 0, 0);
+    position: absolute;
+    left: 58%;
+    height: 20vh;
+  }
+  .header_img h3 {
+    font-size: 50px;
+    padding-left: 50px;
+    margin-top: 1rem;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .header_img span {
+    font-size: 50px;
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 2.3rem;
+    padding-left: 16rem;
+  }
+  .heading {
+    position: relative;
+    left: 64rem;
+    margin-top: -100px;
+  }
+  .logout_btn i img {
+    width: 4rem;
+    margin-left: 55rem;
+    margin-top: -16px;
+  }
+  .header_logout_btn {
+    font-size: 50px;
+  }
+}
+
+/******************************************************* Media Query for Tablets Ipads portrait mode*********************************/
+/*working only in ipad portrait device*/
+@media only screen and (width: 768px) and (height: 1024px) and (orientation: portrait) {
+  .header_img img {
+    width: 30rem;
+    margin-top: 50px;
+    height: 15vh;
+  }
+
+  .vl {
+    border-right: 7px dashed rgb(0, 0, 0);
+    position: absolute;
+    left: 68%;
+    margin-top: 15px;
+    height: 22vh;
+  }
+  .header_img h3 {
+    font-size: 70px;
+    padding-left: 65px;
+    margin-top: 3rem;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .header_img span {
+    font-size: 75px;
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 5.3rem;
+    padding-left: 22.2rem;
+  }
+  .heading {
+    position: relative;
+    width: 105rem;
+    margin-left: 1px;
+    margin-top: -130px;
+  }
+  .logout_btn i img {
+    width: 5rem;
+    margin-left: 83rem;
+    margin-top: -60px;
+  }
+  .header_logout_btn {
+    font-size: 70px;
+  }
+}
+
+/*******************************************Media query working only in ipad landscape device************************/
+
+/*working only in ipad landscape device*/
+@media all and (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  .header_img img {
+    width: 30rem;
+    margin-top: 50px;
+    height: 20vh;
+  }
+
+  .vl {
+    border-right: 7px dashed rgb(0, 0, 0);
+    position: absolute;
+    left: 52%;
+    margin-top: 15px;
+    height: 30vh;
+  }
+  .header_img h3 {
+    font-size: 70px;
+    padding-left: 65px;
+    margin-top: 3rem;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .header_img span {
+    font-size: 75px;
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 6rem;
+    padding-left: 22.2rem;
+  }
+  .heading {
+    position: relative;
+    width: 105rem;
+    margin-left: 1px;
+    margin-top: -130px;
+  }
+  .logout_btn i img {
+    width: 5rem;
+    margin-left: 83rem;
+    margin-top: -60px;
+  }
+  .header_logout_btn {
+    font-size: 70px;
+  }
+}
+
+/*************************************** Media query For Laptop and desktops **********************/
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1180px) and (max-width: 1280px) {
+  .header_img img {
+    width: 15rem;
+    height: 4rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+  .vl {
+    border-right: 3px dashed rgb(0, 0, 0);
+    height: 80pt;
+    width: 1px;
+    margin-left: 6rem;
+  }
+  .header_img h3 {
+    font-size: 30px;
+    width: 100rem;
+    padding-left: 17rem;
+    margin-top: 1rem;
+  }
+  .header_img span {
+    font-size: 30px;
+    padding-left: 4rem;
+  }
+  .heading {
+    position: absolute;
+    left: 100rem;
+    margin-top: -70px;
+  }
+  .logout_btn i img {
+    width: 3rem;
+    margin-top: -1rem;
+    margin-left: -10rem;
+    padding-right: 1rem;
+  }
+  .header_logout_btn {
+    font-size: 35px;
+  }
+  .header_text span {
+    font-size: 35px;
+  }
+}
+
+/*****************************************MEdia query for laptops and Desktops ************************/
+@media (min-width: 1025px) and (max-width: 1181px) {
+  .header_img img {
+    width: 16rem;
+    height: 5rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+  .vl {
+    border-right: 3px dashed rgb(0, 0, 0);
+    height: 80pt;
+    width: 1px;
+    margin-left: 3rem;
+  }
+  .header_img h3 {
+    font-size: 35px;
+    width: 100rem;
+    padding-left: 18rem;
+    margin-top: 1rem;
+  }
+  .header_img span {
+    font-size: 35px;
+    padding-left: 5rem;
+  }
+  .heading {
+    position: absolute;
+    left: 111rem;
+    margin-top: -70px;
+  }
+  .logout_btn i img {
+    width: 3rem;
+    margin-top: -1rem;
+    margin-left: -10rem;
+    padding-right: 1rem;
+  }
+  .header_logout_btn {
+    font-size: 42px;
+  }
+  .header_text span {
+    font-size: 42px;
+  }
+}
+
+/**********************************************Media Query for Large devices ***********************************/
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .header_img {
+    width: 80rem;
+  }
+  .vl {
+    border-right: 2px dashed rgb(0, 0, 0);
+    height: 10vh;
+    width: 1px;
+    margin-left: 1rem;
+  }
+  .header_img h3 {
+    font-size: 22px;
+    width: 85rem;
+    padding-left: 14rem;
+    margin-top: 0rem;
+  }
+  .header_img span {
+    font-size: 22px;
+    padding-left: 1rem;
+  }
+  .heading {
+    position: absolute;
+  }
+  .logout_btn i img {
+    width: 1.2rem;
+    margin-top: -5px;
+    margin-left: -30px;
+  }
+  .header_logout_btn {
+    font-size: 22px;
+  }
+  .header_text span {
+    font-size: 42px;
+  }
+}
+
+/************************************* Media Query ******************************/
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body {
+    background-color: green;
+  }
+}

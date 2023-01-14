@@ -18,76 +18,11 @@
 
 /*********************************************************** foreman *********************************************/
 
-.foreman {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 10px;
-  align-items: center;
-}
-
-.foreman img {
-  width: 133.3pt;
-  height: 38pt;
-}
-
-.v2 {
-  border-right: 2px dashed rgb(0, 0, 0);
-  height: 40pt;
-  width: 1pt;
-  position: absolute;
-  left: 52%;
-  /* margin-left: -39rem; */
-  top: 20px;
-}
-
-.foreman h3 {
-  font-size: 14pt;
-  color: rgb(0, 0, 0);
-  width: 500pt;
-  height: 37pt;
-  text-align: center;
-  margin-top: 1%;
-  margin-right: 46%;
-}
 /***************************************************************<foreman/> ***********************************/
 
 /********************************************************** <header> *****************************************/
 
-.header span {
-  font-size: 14pt;
-  margin-left: 230px;
-}
-
-.header {
-  margin-top: -3%;
-}
-
 /************************************************************ <header/> ***************************************/
-
-.Logout {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-top: -5px;
-  margin-right: 28px;
-}
-
-.Logout i {
-  font-size: 14pt;
-  letter-spacing: -0.01pt;
-  padding-right: 6px;
-  margin-left: 92%;
-  /* margin-bottom: -15px; */
-  margin-top: -65px;
-}
-
-.Logout .head1 {
-  font-size: 14pt;
-  letter-spacing: 0.01pt;
-  color: rgb(0, 0, 0);
-  margin-left: 4px;
-  margin-top: -56px;
-}
 
 /******************************************************************** <Logout/> ****************************************/
 
@@ -97,8 +32,8 @@
   font-size: 15pt;
   color: rgb(0, 0, 0);
   border-bottom: 1px solid #00a53e;
-  padding-bottom: 5px;
-  margin: 20px 0px;
+  padding-bottom: 0px;
+  margin-top: 5rem;
 }
 
 .CardReference .card_ref .loc {
@@ -132,12 +67,12 @@
 
 .paragraph {
   display: flex;
-  font-size: 14pt;
+  font-size: 16pt;
   color: rgb(0, 0, 0);
   font-weight: bold;
   margin-left: 17px;
   margin-bottom: 5px;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 /********************************************************<datatable> **************************************/
@@ -212,6 +147,17 @@
 .dataT4 {
   background-color: rgb(255, 190, 186);
 }
+
+.heading-component {
+  position: relative;
+  left: 1%;
+}
+
+.headi_ng {
+  position: relative;
+  left: 1%;
+}
+
 /*******************************************************<datatable/> ********************************************/
 
 /*********************************************  <chckbox> ************************************************************/
@@ -349,7 +295,7 @@
 
 .tw0_page_complaint {
   height: 30%;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .tw0_page_complaint h2 {
@@ -505,10 +451,6 @@
   background-position-x: 100%;
   background-position-y: 5px;
   border: none;
-}
-
-.Logout i .Logout_Butoon {
-  height: 4vh;
 }
 
 .Card_job {

@@ -1,13 +1,13 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import "./Manager.css"
+import "./Technician.css"
 import Header from "../HeadingComponents/Header"
 
-function ManagerView() {
+function TechnicianWorkInProgress() {
   const navigate = useNavigate()
 
   const Submit = () => {
-    navigate("/Managerpage")
+    navigate("/technicianpage")
   }
 
   const TechnicianData = [
@@ -15,19 +15,19 @@ function ManagerView() {
       id: 1,
       JobCard: "17/30866",
       Date: "07.12.2022",
-      Status: "Assigned",
+      Status: "Work in Progress",
     },
     {
       id: 2,
       JobCard: "17/730847",
       Date: "16.09.2022",
-      Status: "Completed",
+      Status: "Work in Progress",
     },
     {
       id: 3,
       JobCard: "17/83221",
       Date: "16.09.2022",
-      Status: "Completed",
+      Status: "Work in Progress",
     },
     {
       id: 4,
@@ -37,11 +37,12 @@ function ManagerView() {
     },
   ]
 
-  var named = "Anisur Rahman"
+  var named = "Shakeel Siddhiqui"
+
   return (
     <>
       <div className="Main_class">
-        <Header name={"Anisur Rahman"} />
+        <Header name={"Shakeel Siddhiqui"} />
         <div className="foremantable_class">
           <h3>
             <b>In Progress Jobs</b>{" "}
@@ -63,6 +64,7 @@ function ManagerView() {
                 {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
               </td>
             </tr>
+
             <tr className="col_tabclass">
               <td>{TechnicianData[3].JobCard}</td>
               <td>{TechnicianData[3].Date}</td>
@@ -77,6 +79,7 @@ function ManagerView() {
                 {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
               </td>
             </tr>
+
             <tr className="col_tabclass">
               <td>{TechnicianData[3].JobCard}</td>
               <td>{TechnicianData[3].Date}</td>
@@ -91,4 +94,4 @@ function ManagerView() {
   )
 }
 
-export default ManagerView
+export default TechnicianWorkInProgress

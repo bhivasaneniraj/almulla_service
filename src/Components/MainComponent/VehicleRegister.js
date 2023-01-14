@@ -1,28 +1,26 @@
 import React from "react"
 import moment from "moment"
-import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table"
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import CoolComplaints from "./Components/CoolComplaints"
-import FailureReason from "./Components/FailureReason"
-import TailComplaint from "./Components/TailComplaint"
+import CoolComplaints from "../CoolTailComplaint/CoolComplaints"
+import TailComplaint from "../CoolTailComplaint/TailComplaint"
 import "./Style.css"
-import Pagetwocomponent from "./Components/pagetwocomponent"
-import PageTwoTailComponent from "./PageTwoTailComponent"
-
-import ErrorModel from "./Components/ThankYouFolder/Error"
-import { Button } from "react-bootstrap"
-import PhysicalRemark from "./Components/PhysicalRemaks/PhysicalRemark"
+import Pagetwocomponent from "../CoolTailComplaint/pagetwocomponent"
+import PageTwoTailComponent from "../CoolTailComplaint/PageTwoTailComponent"
+import Header from "../HeadingComponents/Header"
+import ErrorModel from "../ThankYouFolder/Error"
+// import { Button } from "react-bootstrap"
+import PhysicalRemark from "../PhysicalRemaks/PhysicalRemark"
+import SearchBar from "../SearchBar/SearchBar"
 
 function VehicleRegister() {
   const [text, settext] = useState()
   const [blackBg, setblackBg] = useState("none")
   const [tailBlackBg, setTailBlackBg] = useState("none")
-  const [faillist, setfaillist] = useState("none")
-  const [omplistf, setomplistf] = useState("block")
+  // const [faillist, setfaillist] = useState("none")
+  // const [omplistf, setomplistf] = useState("block")
   const [completSubmite, setcompletSubmite] = useState()
-  const [omdemo, setomdemo] = useState([])
+  // const [omdemo, setomdemo] = useState([])
   const [data, setData] = useState([])
   const [show, setShow] = useState(false)
   const [checkedAllBox, setCheckedAllBox] = useState(false)
@@ -30,19 +28,21 @@ function VehicleRegister() {
   const [checkedSecond, setCheckedSecond] = useState(false)
   const [searchTextInput, setSearchTextInput] = useState("")
   const [failureComplaints, SetFailureComplaints] = useState("")
-  const [customerComplaint, setCustomerComplaint] = useState([])
+  // const [customerComplaint, setCustomerComplaint] = useState([])
   const [failureComplaintsList, setFailureComplaintsList] = useState([])
   const [TailLiftComplaint, setTailLiftComplaint] = useState([])
   const [CustComplaint, setCustComplaint] = useState([])
-  const [pagetwocomplaintlist, setpagetwocomplainlist] = useState(false)
+  // const [pagetwocomplaintlist, setpagetwocomplainlist] = useState(false)
   const [msg, setMsg] = useState("")
   const [eValue, setEValue] = useState()
   const [arrayList, setArrayList] = useState([])
-  const [ListArray, setListArray] = useState([])
+  // const [ListArray, setListArray] = useState([])
   const [tailArrayList, setTailArrayList] = useState([])
-  const [tailCustomerComplaints, setTailCustomerComplaints] = useState()
+  // const [tailCustomerComplaints, setTailCustomerComplaints] = useState()
   const [tailFailureComplaints, setTailFailureComplaints] = useState([])
   const [close, setClose] = useState(true)
+  const [cancelPopUp, setCancelPopUp] = useState(true)
+  const [serialNo, setSerialNo] = useState()
 
   // This function on Submit popup message .
   function submit() {
@@ -59,14 +59,30 @@ function VehicleRegister() {
     }
   }
 
+  const handleCancel = (index, e) => {
+    setTailArrayList(tailArrayList.filter((v, i) => i !== index))
+    if (index === 0) {
+      setTailLiftComplaint([])
+    }
+  }
+
   // This function used to delete the Failure reason (minus button)
   const handleDeleteFun = (index, e) => {
     setFailureComplaintsList(failureComplaintsList.filter((v, i) => i !== index))
   }
 
+  const handleCancelFun = (index, e) => {
+    setTailFailureComplaints(tailFailureComplaints.filter((v, i) => i !== index))
+    console.log("hello")
+  }
+
   // This function used to cancel the customer complaint popup
   const compCancel = () => {
     setClose(false)
+  }
+
+  const ComplaintCancel = () => {
+    setCancelPopUp(false)
   }
 
   //  function used for multiple checkbox in Customer Catering Service table.
@@ -113,24 +129,25 @@ function VehicleRegister() {
   const complaint = () => {
     setblackBg("block")
     setClose(true)
-    setomplistf("block")
+    // setomplistf("block")
   }
 
   const tailComplaint = () => {
     setTailBlackBg("block")
+    setCancelPopUp(true)
   }
 
-  const demooo = (e) => {
-    setcompletSubmite(e.target.value)
-  }
+  // const demooo = (e) => {
+  //   setcompletSubmite(e.target.value)
+  // }
 
   // function used to save the customer complaint to the table for cooling unit.
   const compSubmite = () => {
     if (!arrayList.includes(eValue)) setArrayList((prev) => prev.concat(eValue))
     console.log(completSubmite)
-    setCustomerComplaint(completSubmite)
+    // setCustomerComplaint(completSubmite)
     setblackBg("none")
-    setomplistf("none")
+    // setomplistf("none")
   }
 
   // function used to save the customer complaint to tbale for tail lift
@@ -198,7 +215,13 @@ function VehicleRegister() {
       },
     ]
 
-    if (searchTextInput === "17/30866") {
+    if (searchTextInput === "17/30866" && serialNo === "KTNumber") {
+      setData(tabledata)
+      setShow(true)
+    } else if (searchTextInput === "VKA94286893" && serialNo === "Serial No") {
+      setData(tabledata)
+      setShow(true)
+    } else if (searchTextInput === "NK004102-F" && serialNo === "Chassis") {
       setData(tabledata)
       setShow(true)
     } else {
@@ -298,59 +321,8 @@ function VehicleRegister() {
   return (
     <>
       <div className="main_div">
-        <div className="Page_two_logoAndLogOut">
-          <img src="/images/bitmap@3x.png" alt="example" />
-          <div className="vl"></div>
-          <h3>
-            <b> Welcome to Al Mulla Industries Service Mobile Solutions</b>
-          </h3>
-          <br />
-        </div>
-
-        <div className="heading">
-          <span>Anisur Rahman </span>
-
-          <div className="Page_two_LogOut">
-            <i>
-              <img src="./images/shape@3x.png" alt="" onClick={() => (window.location.href = "/")} />
-            </i>
-            <h1 className="head">
-              <b onClick={() => (window.location.href = "/")}>Logout</b>{" "}
-            </h1>
-          </div>
-        </div>
-        <div className="Page_two_search_Chooes_box">
-          <h2 className="bottom">
-            <b> Vehicle Receiver</b>{" "}
-          </h2>
-          <Button variant="outline-success" className="Button" onClick={() => (window.location.href = "/ManagerView")}>
-            Pending Jobs
-          </Button>
-          <div className="page_two_middel_box">
-            <div className="page_two_chooes">
-              <div className="kt">
-                <input type="radio" name="chooes" checked className="choesBTN" />
-                <h2>
-                  <b>KT Number</b>{" "}
-                </h2>
-              </div>
-              <div className="page_two_or">
-                <p> O </p>
-                <p> R </p>
-              </div>
-              <div className="chassis">
-                <input type="radio" name="chooes" className="choesBTN" />
-                <h2>
-                  <b>Chassis</b>{" "}
-                </h2>
-              </div>
-            </div>
-            <div className="page_two_serchbar">
-              <input type="text" placeholder="Enter number" onChange={ktnum} />
-              <button onClick={Submit}> Search </button>
-            </div>
-          </div>
-        </div>
+        <Header name={"Anisur Rahman"} />
+        <SearchBar ktnum={ktnum} Submit={Submit} setSerialNo={setSerialNo} />
 
         {show && (
           <div className="hideshow">
@@ -453,20 +425,23 @@ function VehicleRegister() {
               {checkedFirst && <CoolComplaints complaint={complaint} arrayList={arrayList} failureComplaintsList={failureComplaintsList} deleteRow={handleDelete} deleteFailRow={handleDeleteFun} />}
             </div>
 
-            {checkedSecond && <TailComplaint tailArrayList={tailArrayList} tailFailureComplaints={tailFailureComplaints} tailComplaint={tailComplaint} />}
+            {checkedSecond && <TailComplaint tailArrayList={tailArrayList} tailFailureComplaints={tailFailureComplaints} tailComplaint={tailComplaint} cancelRow={handleCancel} cancelRowFun={handleCancelFun} />}
             {close && (
               <div className="main_black_div" style={{ display: blackBg }}>
-                <div className="page_two_complaint_list" onChange={demooo} style={{ display: omplistf }}>
+                <div className="page_two_complaint_list">
+                  {/* //onChange={//demooo} style={{ display: omplistf }} */}
                   <Pagetwocomponent compSubmite={compSubmite} failureComplaints={failureComplaints} handleRadioButton={handleRadioButton} compCancel={compCancel} failureComplaintsList={failureComplaintsList} setFailureComplaintsList={setFailureComplaintsList} eValue={eValue} />
                 </div>
               </div>
             )}
 
-            <div className="main_black_div" style={{ display: tailBlackBg }}>
-              <div className="page_two_complaint_list">
-                <PageTwoTailComponent compTailSubmite={compTailSumbite} handleTailRadioButton={handleTailRadioButton} tailFailureComplaints={tailFailureComplaints} setTailFailureComplaints={setTailFailureComplaints} eValue={eValue} />
+            {cancelPopUp && (
+              <div className="main_black_div" style={{ display: tailBlackBg }}>
+                <div className="page_two_complaint_list">
+                  <PageTwoTailComponent compTailSubmite={compTailSumbite} handleTailRadioButton={handleTailRadioButton} tailFailureComplaints={tailFailureComplaints} setTailFailureComplaints={setTailFailureComplaints} ComplaintCancel={ComplaintCancel} eValue={eValue} />
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="drop_down_values">
               <b>Assign to Foreman - </b>

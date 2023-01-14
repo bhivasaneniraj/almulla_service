@@ -9,6 +9,7 @@
   width: 450px;
   display: flex;
   flex-direction: column;
+  margin-top: 0rem;
   align-items: center;
 }
 
@@ -19,7 +20,7 @@
 .Main h2 {
   font-size: 20px;
   margin-bottom: 3rem;
-  margin-right: 22.5rem;
+  margin-right: 24.5rem;
 }
 .Img img {
   width: 15rem;
@@ -42,6 +43,10 @@
 
 .icon {
   margin-right: 10px;
+}
+
+.icons {
+  margin-right: 8px;
 }
 
 .inputBox {

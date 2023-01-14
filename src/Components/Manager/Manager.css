@@ -5,50 +5,15 @@
   box-sizing: border-box;
 }
 
-.Page_two_logoAndLogOut_log {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 10px;
-  align-items: center;
-}
-
-.Page_two_logoAndLogOut_log img {
-  width: 133.3pt;
-  height: 38pt;
-}
-
-.verticle_l {
-  border-right: 2px dashed rgb(0, 0, 0);
-  height: 40pt;
-  width: 1px;
-  position: absolute;
-  left: 15%;
-  /* margin-left: -39rem; */
-  /* margin-left: -540px; */
-  top: 15px;
-}
-
-.Page_two_logoAndLogOut_log h3 {
-  font-size: 14pt;
-  color: rgb(0, 0, 0);
-  width: 500pt;
-  height: 37pt;
-  text-align: center;
-  margin-top: 1%;
-  margin-right: 44.5%;
-}
-
 .CardReference_ref {
-  margin-top: 20px;
-  margin-left: 17px;
+  margin-top: 70px;
 }
 
 .CardReference_ref .cardref_ref {
-  font-size: 15pt;
   color: rgb(0, 0, 0);
   border-bottom: 1px solid #00a53e;
   padding-bottom: 5px;
-  margin: 20px 0px;
+  margin: 20px 15px;
   font-size: 18pt;
 }
 .loc span {
@@ -118,7 +83,7 @@
   font-weight: bold;
   margin-left: 17px;
   margin-bottom: 5px;
-  margin-top: 30px;
+  margin-top: 0rem;
 }
 .header-img {
   position: absolute;
@@ -129,40 +94,6 @@
 .images {
   width: 28vh;
   height: 7vh;
-}
-
-.header-text {
-  position: relative;
-  bottom: 2.5rem;
-  padding-left: 30px;
-}
-
-.LogOut {
-  position: absolute;
-  top: 4%;
-  right: 10px;
-}
-
-.Log_out_logo {
-  width: 16pt;
-  cursor: pointer;
-  height: 18.5pt;
-  margin-right: 5rem;
-}
-
-.correct-img {
-  display: flex;
-  justify-content: end;
-  cursor: pointer;
-}
-
-.header_1 {
-  font-size: 14pt;
-  letter-spacing: 0.01pt;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  margin-left: 32px;
-  margin-top: -24px;
 }
 
 .Card {
@@ -181,10 +112,6 @@
 
 .btn_div {
   padding-left: 73rem;
-}
-
-.header-text .log_name {
-  margin-left: 200px;
 }
 
 /*************************************************<ManagerView.js> Media query For Mobiles **************************/
@@ -497,9 +424,7 @@
     display: inline-block;
     white-space: nowrap;
   }
-  .heading {
-    width: 48rem;
-  }
+
   .header-text {
   }
 

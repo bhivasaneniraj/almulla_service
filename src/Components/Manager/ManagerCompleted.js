@@ -15,7 +15,7 @@ function ManagerView() {
       id: 1,
       JobCard: "17/30866",
       Date: "07.12.2022",
-      Status: "Assigned",
+      Status: "Completed",
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ function ManagerView() {
       id: 4,
       JobCard: "17/09384",
       Date: "17.09.2022",
-      Status: "Work in Progress ",
+      Status: "Completed ",
     },
   ]
 
@@ -44,7 +44,7 @@ function ManagerView() {
         <Header name={"Anisur Rahman"} />
         <div className="foremantable_class">
           <h3>
-            <b>In Progress Jobs</b>{" "}
+            <b>Completed Jobs</b>{" "}
           </h3>
         </div>
 
@@ -57,31 +57,34 @@ function ManagerView() {
               <th>Status</th>
             </tr>
             <tr className="col_tabclass">
-              <td>{TechnicianData[3].JobCard}</td>
-              <td>{TechnicianData[3].Date}</td>
+              <td>{TechnicianData[0].JobCard}</td>
+              <td>{TechnicianData[0].Date}</td>
               <td>
-                {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
+                {TechnicianData[0].Status} <img src="./logo/nounTick3923816@3x.png" alt="logo" />
               </td>
             </tr>
+
+            <tr className="col_tabclass">
+              <td>{TechnicianData[1].JobCard}</td>
+              <td>{TechnicianData[1].Date}</td>
+              <td>
+                {TechnicianData[1].Status} <img src="./logo/nounTick3923816@3x.png" alt="logo" />
+              </td>
+            </tr>
+
+            <tr className="col_tabclass">
+              <td>{TechnicianData[2].JobCard}</td>
+              <td>{TechnicianData[2].Date}</td>
+              <td>
+                {TechnicianData[2].Status} <img src="./logo/nounTick3923816@3x.png" alt="logo" />
+              </td>
+            </tr>
+
             <tr className="col_tabclass">
               <td>{TechnicianData[3].JobCard}</td>
               <td>{TechnicianData[3].Date}</td>
               <td>
-                {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
-              </td>
-            </tr>
-            <tr className="col_tabclass">
-              <td>{TechnicianData[3].JobCard}</td>
-              <td>{TechnicianData[3].Date}</td>
-              <td>
-                {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
-              </td>
-            </tr>
-            <tr className="col_tabclass">
-              <td>{TechnicianData[3].JobCard}</td>
-              <td>{TechnicianData[3].Date}</td>
-              <td>
-                {TechnicianData[3].Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
+                {TechnicianData[3].Status} <img src="./logo/nounTick3923816@3x.png" alt="logo" />
               </td>
             </tr>
           </table>

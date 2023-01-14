@@ -1,0 +1,79 @@
+.page_two_table span {
+  display: flex;
+  font-size: 15pt;
+  letter-spacing: 0.58pt;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-left: 17px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.page_two_table table {
+  margin: 20px 0;
+  font-size: 18px;
+  margin: auto;
+  width: 217vh;
+  margin: 15px;
+  border-spacing: 2px 1px;
+  border-collapse: separate;
+}
+
+tr th {
+  background-color: rgb(8, 136, 38);
+  padding: 10px;
+  width: 170px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+}
+
+.Service {
+  text-align: left;
+}
+
+.tab {
+  background-color: rgb(237, 242, 242);
+}
+
+tr td {
+  background-color: rgb(237, 242, 242);
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.chck1 {
+  accent-color: rgb(8, 136, 38);
+  width: 24px;
+  height: 23px;
+  border: 1px solid rgb(29, 249, 80);
+  cursor: pointer;
+}
+
+/********************************************Media query for desktops and laptops****************************/
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .page_two_table table {
+    width: 105rem;
+  }
+  .page_two_table span {
+    font-size: 30px;
+  }
+  tr th {
+    background-color: rgb(8, 136, 38);
+    padding: 10px;
+    width: 170px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+  }
+  input[type="checkbox"] {
+    width: 2rem;
+    height: 4vh;
+  }
+  tr td {
+    font-size: 27px;
+  }
+}

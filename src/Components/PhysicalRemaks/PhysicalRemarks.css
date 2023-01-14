@@ -6,10 +6,9 @@
   margin-top: 15rem;
 }
 .tablecheckbox .checktable {
-  width: 162vh;
-  top: 6%;
-  margin-left: 25%;
-  margin-top: -20%;
+  width: 72%;
+  margin-left: 26%;
+  margin-top: -18%;
 }
 
 .tablecheckbox h2 {
@@ -102,11 +101,8 @@
 input[type="checkbox"] {
   -webkit-appearance: initial;
   appearance: initial;
-
   border: 1px solid rgb(29, 249, 80);
   border-radius: 4pt;
-
-  position: relative;
 }
 input[type="checkbox"]:checked {
   background: rgb(15, 95, 34);
