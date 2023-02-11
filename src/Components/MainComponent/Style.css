@@ -87,6 +87,7 @@ tr td {
   padding: 10px;
   text-align: left;
   font-size: 15px;
+  height: 9vh;
 }
 
 .page_two_table span {
@@ -1034,6 +1035,10 @@ input:focus {
 
   Table .Vehicle_details th {
     font-size: 32px;
+  }
+
+  .Vehicle_details tr th {
+    height: 10vh;
   }
   table tbody td {
     font-size: 32px;

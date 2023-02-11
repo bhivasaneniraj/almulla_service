@@ -8,7 +8,7 @@
 .tablecheckbox .checktable {
   width: 72%;
   margin-left: 26%;
-  margin-top: -18%;
+  margin-top: -20%;
 }
 
 .tablecheckbox h2 {
@@ -44,6 +44,7 @@
 .checktable td {
   text-align: left;
   font-size: 16px;
+  height: 7vh;
 }
 
 .checktable .scratches {
@@ -99,10 +100,10 @@
 }
 
 input[type="checkbox"] {
-  -webkit-appearance: initial;
   appearance: initial;
   border: 1px solid rgb(29, 249, 80);
   border-radius: 4pt;
+  position: relative;
 }
 input[type="checkbox"]:checked {
   background: rgb(15, 95, 34);

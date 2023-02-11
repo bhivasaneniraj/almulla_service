@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "../Technician/Technician.css"
+import "../../Technician.css"
 
 function RootCause({ rootCauseComplaintList, handleShowBtn }) {
   return (

@@ -6,7 +6,7 @@ function TechnicainJobsButtons() {
   return (
     <>
       <div className="Main-Jobs">
-        <Header name={"Shakeel Siddiqi"} />
+        <Header name={"Shakeel Siddiqi - Technician"} />
         <div className="Jobs">
           <h1 className="Technician-view">
             <strong> Technician View</strong>

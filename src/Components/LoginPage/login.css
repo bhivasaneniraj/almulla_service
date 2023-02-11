@@ -8,500 +8,607 @@
   box-sizing: border-box;
 }
 
-.Main {
+.Main-component {
   align-items: center;
   display: flex;
   justify-content: center;
   margin: auto;
-  margin-left: 32%;
+  margin-left: 23%;
   width: 50%;
   padding: 10px;
-  margin-top: -35px;
   height: 100vh;
 }
 
-.inputbtn .images img {
+form .images {
+  width: 28vh;
+  position: fixed;
+  top: 10%;
+  margin-left: -5rem;
+  height: 7vh;
+}
+
+.Input-btn .images img {
   display: block;
   margin-left: 115%;
   margin-right: auto;
   width: 160%;
 }
 
-.inputbtn .images h3 {
+.Input-btn .images h3 {
   width: 430pt;
   height: 20pt;
   color: rgb(51, 182, 82);
   font-size: 16pt;
-  margin-left: 45%;
-  margin-top: 8%;
+  margin-left: 46%;
+  margin-top: 20%;
   letter-spacing: -0.01pt;
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
-
-.inputbtn input {
+.input-form .form-group input {
   width: 350pt;
   height: 49pt;
   border-radius: 4pt;
-
-  margin-top: 30px;
-
+  margin-top: 20px;
   align-items: center;
-  margin-left: 90%;
+  margin-left: 10%;
   border-color: rgb(0, 105, 70);
   box-sizing: border-box;
   border-width: thin;
   padding-left: 10px;
 }
 
-/* .images{
-  display: block;
-  margin-left: 50%;
-  margin-right: auto;
-  margin-bottom: 50%;
- 
-} */
-
-.images {
-  width: 30vh;
-  height: 9vh;
-  margin-left: 290px;
-  margin-bottom: 65px;
+.input-form {
+  margin-top: 10rem;
 }
 
-.inputbtn {
-  margin-top: 10%;
-  margin-right: 180%;
-}
-
-.Main .submitbtn button {
+.Main-component form button {
   width: 350pt;
   height: 55pt;
-  margin-left: 90%;
-  margin-top: 3%;
   border-radius: 6pt;
-  color: rgb(255, 255, 255);
+  font-size: 30px;
+  margin-top: 0.5rem;
+  margin-left: 3.4rem;
   background-color: rgb(8, 136, 38);
-  font-size: 23pt;
-  letter-spacing: 0.89pt;
-  overflow-x: 374pt;
-  overflow-y: 643pt;
-  border-color: rgb(8, 136, 38);
-  border-width: thin;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.Main .achorTag a {
-  font-size: 14pt;
-  width: 18rem;
-  font-family: Roboto-Bold;
-  color: rgb(0, 105, 70);
-  text-decoration: none;
-  position: absolute;
-  left: 45.5%;
-}
-
-.Main .achorTag {
-  padding-top: 10px;
-}
-
-.register {
-  padding-top: 2rem;
-  position: relative;
-  left: 66%;
-}
-
-.Main .inputbtn p {
-  position: relative;
-  left: 40rem;
-  color: rgb(0, 105, 70);
-}
-
-.Register {
-  margin-top: -15px;
-}
-
-.Register .Register_btn {
-  width: 350pt;
-  height: 45pt;
-  margin-left: 90%;
-  margin-top: 0%;
-  border-radius: 6pt;
-  color: rgb(255, 255, 255);
-  background-color: rgb(8, 136, 38);
-  font-size: 18pt;
-  letter-spacing: 0.89pt;
-  overflow-x: 374pt;
-  overflow-y: 643pt;
-  border-color: rgb(8, 136, 38);
-  border-width: thin;
-}
-
-.Register .Register_btn:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-/* 
-.images {
-  margin-left: 100%;
-  margin-bottom: 20%;
-} */
-
-/* .inputbtn {
-  margin-top: 50%;
-  align-items: center;
-  justify-content: center;
-  margin-left: -140px;
-} */
-
-/* .submitbtn {
-  margin-left: -116%;
-  margin-top: 12px;
-} */
-
-.inputbtn2 .btn2 {
-  margin-top: 12px;
-}
-
-input::placeholder {
-  font-weight: bold;
-  font-size: 18px;
-
+.form-group input::placeholder {
   color: rgb(0, 0, 0);
-
-  margin-left: 10% !important;
 }
 
-.inputbtn .sbbntn:hover {
+.Main-component form button:hover {
+  background-color: rgb(8, 136, 38);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.anchortg:hover {
-  color: rgb(0, 105, 70);
+.Main-component form p {
+  margin-left: 17.5rem;
 }
 
-/*********** Media Query for login page Media Query for low resolution  Tablets, Ipads  *****************************/
+.Main-component form a {
+  position: absolute;
+  left: 40rem;
+  margin-top: 4rem;
+  text-decoration: none;
+}
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .Main {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 25rem;
-    margin-top: 50rem;
-  }
-
-  .Main .inputbtn {
-  }
-
-  .inputbtn .images img {
-    width: 60rem;
-    margin-left: 100rem;
-  }
-  .inputbtn .images h3 {
-    font-size: 78px;
-    width: 100rem;
-    margin-left: 80rem;
-  }
-
-  .inputbtn input {
-    width: 100rem;
-    margin-top: 20rem;
-    height: 32vh;
-    border: 2px solid rgb(0, 105, 70);
-    margin-left: 100rem;
-  }
-
-  .inputbtn input[type="email"] {
-    font-size: 90px;
-  }
-
-  .inputbtn input[type="password"] {
-    font-size: 90px;
-  }
-
-  .inputbtn input::placeholder {
-    font-size: 95px;
-  }
-
-  .inputbtn .submitbtn {
-    margin-right: 89rem;
-  }
-
-  .inputbtn .submitbtn button {
-    width: 100rem;
-    height: 35vh;
-    margin-top: 20px;
-    font-size: 145px;
-  }
-
-  .Main .inputbtn .achorTag {
-    position: relative;
-    left: 18%;
-  }
-
-  .Main .inputbtn .achorTag a {
-    font-size: 90px;
-    width: 50rem;
-  }
+.Input-btn .error {
+  color: red;
+  text-align: end;
 }
 
 /*************************************Media Query For Mobiles**************************/
 
-/* Media Query for Mobile Devices */
-@media (min-width: 320px) and (max-width: 480px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .Main {
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .Main-component {
     align-items: center;
     justify-content: center;
-    display: flex;
-    margin-left: 45%;
-    /* width: 45rem; */
-    margin-top: 30rem;
+  }
+  .input-form {
+    margin-top: 7rem;
   }
 
-  .inputbtn .images img {
-    width: 40rem;
-    margin-left: 5rem;
+  .Input-btn .images h3 {
+    padding-left: 0rem;
   }
 
-  .inputbtn .images {
-    margin-top: 35rem;
+  .Main-component form p {
+    margin-left: 17rem;
   }
-
-  .inputbtn input::placeholder {
-    font-size: 70px;
+  .Input-btn .images img {
+    margin-left: 15rem;
+    max-width: 120%;
+    margin-top: 0rem;
   }
-
-  .inputbtn input[type="email"] {
-    font-size: 60px;
-  }
-
-  .inputbtn input[type="password"] {
-    font-size: 60px;
-  }
-  .inputbtn2 {
-    margin-top: -10rem;
-  }
-
-  .inputbtn .images h3 {
-    margin-left: -6rem;
-    font-size: 50px;
-    width: 65rem;
-  }
-  .inputbtn {
-    width: 130%;
-  }
-  .Main .inputbtn input {
-    margin-left: 14.5rem;
-    width: 60rem;
-    height: 22vh;
-    margin-top: 12rem;
-    border: 1px solid rgb(0, 105, 70);
-  }
-
-  .Main .inputbtn .submitbtn {
-    margin-right: 24.5rem;
-  }
-
-  .Main .inputbtn .submitbtn button {
-    margin-left: 14.5rem;
-    width: 60rem;
-    height: 25vh;
-    font-size: 100px;
-  }
-
-  .inputbtn .achorTag {
-    position: relative;
-    left: 44%;
-  }
-  .Main .inputbtn .achorTag a {
-    font-size: 60px;
-    width: 40rem;
+  .Main-component form a {
+    position: absolute;
+    margin-left: 0rem;
   }
 }
 
-/*********************************Media Query For Ipads***********************
-
-
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .Main {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: 5rem;
-    margin-left: 25rem;
-  }
-
-  .Main .inputbtn .images img {
-    margin-left: 22rem;
-  }
-
-  .Main .inputbtn .images h3 {
-    font-size: 27px;
-    margin-left: 15.5rem;
-  }
-
-  .inputbtn input {
-    margin-left: 32rem;
-    height: 11vh;
-    margin-top: 5rem;
-    width: 40rem;
-  }
-
-  .inputbtn .submitbtn button {
-    margin-left: 32rem;
-    height: 15vh;
-    font-size: 50px;
-    width: 40rem;
-    margin-top: 1rem;
-  }
-  .inputbtn input::placeholder {
-    font-size: 30px;
-  }
-
-  .inputbtn input[type="email"] {
-    font-size: 30px;
-  }
-
-  .inputbtn input[type="password"] {
-    font-size: 30px;
-  }
-
-  .inputbtn .achorTag {
-    position: relative;
-    left: 13rem;
-  }
-
-  .inputbtn .achorTag a {
-    font-size: 25px;
-  }
-}
-
-/******************************** Media Query For Ipad Potraits ********************/
-
-/* @media (min-width: 1025px) and (max-width: 1180px) {
-  .Main {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-
-  .inputbtn .images img {
-    margin-left: 34rem;
-  }
-
-  .inputbtn .images h3 {
-    margin-left: 29rem;
-    font-size: 27px;
-  }
-
-  .inputbtn input {
-    margin-left: 45rem;
-    height: 11vh;
-    width: 40rem;
-    margin-top: 5rem;
-  }
-
-  .inputbtn .submitbtn button {
-    margin-left: 45rem;
-    height: 12vh;
-    font-size: 40px;
-    width: 40rem;
-    margin-top: 1rem;
-  }
-
-  .inputbtn input[type="email"] {
-    font-size: 28px;
-  }
-
-  .inputbtn input[type="password"] {
-    font-size: 28px;
-  }
-
-  .inputbtn input::placeholder {
-    font-size: 25px;
-  }
-
-  .inputbtn .achorTag a {
-    font-size: 25px;
-    margin-left: -4rem;
-  }
-} */
-
-/* Media Query for Laptops and Desktops */
-/* @media (min-width: 1025px) and (max-width: 1280px) {
-  body {
-    background-color: green;
-  }
-} */
-/* Media Query for La
-rge screens */
-/* @media (min-width: 1281px) {
-  body {
-    background-color: white;
-  }
-} */
-/****************************************************************************/
+/**************************************Media Query for laptops and Desktops ****************************************/
 
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {
-  .inputbtn .images img {
-    margin-left: 12rem;
+  .Main-component {
+    align-items: center;
+    justify-content: center;
   }
-  .images {
-    margin-left: 50rem;
+  .Input-btn .images img {
+    margin-left: 15rem;
+    max-width: 120%;
+    margin-top: -2rem;
   }
-  .inputbtn .images h3 {
-    font-size: 35px;
-    width: 50rem;
-    margin-left: 35px;
-  }
-
-  .inputbtn {
-    margin-top: 10%;
-    margin-right: 170%;
-  }
-  .inputbtn input {
-    width: 45rem;
-    margin-top: 5rem;
-    height: 10vh;
-    border: 1px solid rgb(0, 105, 70);
-    margin-left: 55rem;
-  }
-  .Main .submitbtn button {
-    width: 45rem;
-    margin-top: 1rem;
-    height: 12vh;
-    margin-left: 55rem;
-    font-size: 60px;
-  }
-  .inputbtn input[type="email"] {
-    font-size: 40px;
+  .input-form {
+    margin-top: 7rem;
   }
 
-  .inputbtn input[type="password"] {
-    font-size: 40px;
-  }
-
-  .inputbtn input::placeholder {
-    font-size: 40px;
-  }
-  .Main .achorTag a {
-    font-size: 30px;
-    width: 40rem;
-  }
-  .Main .achorTag {
-    position: relative;
-    margin-left: 45rem;
+  .Main-component form a {
+    position: absolute;
+    left: 36rem;
   }
 }
 
-/****************************************Media Query for large screen ***********/
+@media (min-width: 1025px) and (max-width: 1270px) {
+  .Main-component form a {
+    position: absolute;
+    left: 35.5rem;
+  }
+}
 
-/* Media Query for Large screens */
-@media (min-width: 1281px) {
+@media (min-width: 1025px) and (max-width: 1275px) {
+  .Main-component form a {
+    position: absolute;
+    left: 35rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1230px) {
+  .Main-component form a {
+    position: absolute;
+    left: 34rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .Main-component form a {
+    position: absolute;
+    left: 33rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1170px) {
+  .Main-component form a {
+    position: absolute;
+    left: 32rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1120px) {
+  .Main-component form a {
+    position: absolute;
+    left: 31rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1190px) {
+  .Main-component form a {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1160px) {
+  .Main-component form a {
+    text-align: center;
+    margin-left: -3rem;
+  }
+}
+
+/**********************************Media Query For Tablets and Ipads for ipad Mini******************************************/
+
+/* //iPad 1, iPad 2, iPad Mini */
+@media screen and (device-width: 768px) and (device-height: 1024px) {
+  .Main-component {
+    align-items: center;
+    justify-content: center;
+  }
+  .Input-btn .images img {
+    margin-left: 15rem;
+    max-width: 80%;
+  }
+  form .images {
+    margin-top: -5rem;
+  }
+  .Input-btn .images h3 {
+    text-align: center;
+    margin-left: 5rem;
+    margin-top: 1rem;
+  }
+  .input-form {
+    margin-top: -24.5rem;
+  }
+  .Main-component form a {
+    position: absolute;
+    left: 20.5rem;
+  }
+}
+
+@media screen and (device-width: 1024px) and (device-height: 768px) {
+  .Main-component {
+    align-items: center;
+    justify-content: center;
+  }
+
+  form .images {
+    margin-top: -3rem;
+  }
+  .Input-btn .images img {
+    margin-left: 15rem;
+    max-width: 100%;
+  }
+  .Input-btn .images h3 {
+    text-align: center;
+    margin-left: 5rem;
+    margin-top: 1rem;
+  }
+
+  .input-form {
+    margin-top: -10rem;
+  }
+  .Main-component form a {
+    position: absolute;
+    left: 28rem;
+  }
+
+  .Main-component form button {
+    height: 9vh;
+  }
+  .Main-component form a {
+    position: absolute;
+    left: 28rem;
+    margin-top: 3.5rem;
+  }
+}
+
+/*******************************Media Query For Low Resolution *****************************************************/
+
+/* Media Query for low resolution  Tablets, Ipads */
+/* @media (max-width: 767px) {
+  .Main-component {
+    align-items: center;
+    justify-content: center;
+  }
+  .inputbtn .images img {
+    margin-left: 15rem;
+    max-width: 130%;
+  }
+  .inputbtn .images h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-left: 3rem;
+  }
+
+  .form_group .form-group input {
+    width: 25rem;
+    height: 10vh;
+    margin-left: 3.5rem;
+  }
+
+  .Main-component form button {
+    width: 25rem;
+    height: 12vh;
+  }
+  .Main-component form p {
+    margin-left: 15rem;
+  }
+  .Main-component form a {
+    position: absolute;
+    left: 20rem;
+    top: 25rem;
+  }
+
+  .form_group {
+    margin-top: 7rem;
+  }
+}
+
+@media (max-width: 725px) {
+  .Main-component form a {
+    position: absolute;
+    left: 19rem;
+    top: 25rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .Main-component form a {
+    position: absolute;
+    left: 18rem;
+    top: 25rem;
+  }
+}
+
+@media (max-width: 663px) {
+  .Main-component form a {
+    position: absolute;
+    left: 17rem;
+    top: 25rem;
+  }
+}
+@media (max-width: 635px) {
+  .Main-component form a {
+    position: absolute;
+    left: 16rem;
+    top: 25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .Main-component form a {
+    position: absolute;
+    left: 15rem;
+    top: 25rem;
+  }
+}
+@media (max-width: 565px) {
+  .Main-component form a {
+    position: absolute;
+    left: 14rem;
+    top: 25rem;
+  }
+}
+@media (max-width: 525px) {
+  .Main-component form a {
+    position: absolute;
+    left: 13rem;
+    top: 25rem;
+  }
+}
+@media (max-width: 500px) {
+  .Main-component form a {
+    position: absolute;
+    left: 12rem;
+    top: 25rem;
+  }
+  .inputbtn .images img {
+    margin-left: 15rem;
+    max-width: 130%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Main-component {
+    align-items: center;
+    justify-content: center;
+  }
+  .inputbtn .images img {
+    margin-left: 14rem;
+    max-width: 130%;
+  }
+  .inputbtn .images h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-left: 5rem;
+    margin-top: 1rem;
+  }
+  .Main-component form a {
+    position: absolute;
+    left: 28rem;
+  }
+  .form_group {
+    margin-top: 7rem;
+  }
+} */
+
+/* @media (max-width: 1023px) {
+    .inputbtn .images img {
+      margin-left: 14rem;
+      max-width: 130%;
+    }
+    .inputbtn .images h3 {
+      text-align: center;
+      font-size: 18px;
+      margin-left: 3rem;
+      margin-top: 1rem;
+    }
+    .form_group .form-group input {
+      width: 25rem;
+      height: 10vh;
+      margin-left: 3.5rem;
+    }
+    .Main-component form button {
+      width: 25rem;
+      height: 12vh;
+    }
+    .Main-component form p {
+      margin-left: 15rem;
+    }
+  } */
+
+/* @media (max-width: 1023px) {
+  .Main-component form a {
+    position: absolute;
+    left: 27rem;
+  }
+}
+
+@media (max-width: 955px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 3rem;
+    left: 26rem;
+  }
+}
+
+@media (max-width: 925px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 3rem;
+    left: 25rem;
+  }
+}
+
+@media (max-width: 895px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 3rem;
+    left: 24rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 3rem;
+    left: 23rem;
+  }
+}
+
+@media (max-width: 826px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 3rem;
+    left: 22rem;
+  }
+}
+
+@media (max-width: 790px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 3rem;
+    left: 21rem;
+  }
+} */
+
+@media (max-width: 766px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 4rem;
+    left: 20rem;
+  }
+}
+
+@media (max-width: 735px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 4rem;
+    left: 19rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 4rem;
+    left: 18rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 4rem;
+    left: 17rem;
+  }
+}
+
+@media (max-width: 626px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 4rem;
+    left: 16rem;
+  }
+}
+
+@media (max-width: 590px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 4rem;
+    left: 15rem;
+  }
+}
+
+@media (max-width: 562px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 4rem;
+    left: 14rem;
+  }
+}
+@media (max-width: 526px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 4rem;
+    left: 13rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .Main-component form a {
+    position: absolute;
+    margin-top: 4rem;
+    left: 12rem;
+  }
+}
+
+/**************************************Media Query for Mobiles ************************/
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .Main-component {
+    align-items: center;
+    margin-left: 1rem;
+    justify-content: center;
+  }
+  .inputbtn .images img {
+    position: relative;
+    bottom: 36rem;
+    margin-left: 14rem;
+  }
+  .inputbtn .images h3 {
+    position: absolute;
+    bottom: 32rem;
+    left: -15rem;
+    padding-top: 1rem;
+  }
+
+  .Main-component form a {
+    margin-top: 4rem;
+  }
+
+  .form_group .form-group input::placeholder {
+    font-size: 15px;
+  }
+  .form_group .form-group input {
+    font-size: 15px;
+  }
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) {
+  .Main-component form a {
+    margin-top: 7rem;
+  }
+}
+
+@media screen and (device-width: 360px) and (device-height: 740px) {
+  .Main-component form a {
+    margin-top: 13rem;
+  }
+  .inputbtn .images img {
+    position: relative;
+    bottom: 36rem;
+    max-width: 100%;
+    margin-left: 14rem;
+  }
+  .Main-component form button {
+    height: 10vh;
+  }
+}
+
+@media screen and (device-width: 384px) and (device-height: 640px) {
+  .Main-component form a {
+    margin-top: 10rem;
+  }
 }

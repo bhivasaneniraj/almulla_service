@@ -86,9 +86,9 @@
   margin-top: 10px;
 }
 
-/*********************************** Table *************************************************************/
+/*********************************** <TechnicianAssignedJob.js/> *************************************************************/
 
-.App_class .tab_class {
+.App_class .Main-table {
   width: 98%;
   margin-left: 12px;
   height: 40vh;
@@ -101,34 +101,83 @@
   margin-top: 20px;
 }
 
-.col_tabclass .new_jordcard {
-  width: 60%;
+.Main-table .col_tabclass .new_jordcard {
   text-align: left;
 }
 
-.col_tabclass th {
+.Main-table .col_tabclass th {
   text-align: left;
+  width: 20rem;
 }
 
 .new_jordcard th tr td {
   text-align: left;
 }
 
-.col_tabclass td {
+.Main-table .col_tabclass td {
   text-align: left;
+  font-size: 18px;
 }
 
-.col_tabclass img {
+.Main-table .col_tabclass img {
   float: right;
   cursor: pointer;
-  width: 10%;
+  width: 7%;
 }
 
-.tab_class tr {
+.Main-table tr {
   font-size: 16pt;
   letter-spacing: 0.01pt;
 }
 
+.Time_stamp {
+  display: inline;
+  padding-left: 3rem;
+}
+/*************************************<TechnicianWorkinProgress.js/> *****************************/
+
+.time_stamp {
+  display: inline;
+  padding-left: 3rem;
+}
+
+.Main_table .Table_Column th {
+  text-align: left;
+  width: 25rem;
+}
+
+.Main_table img {
+  float: right;
+  width: 7%;
+}
+
+.Main_table tr {
+  font-size: 16pt;
+  letter-spacing: 0.01pt;
+}
+
+.Main-table .Table-Column td {
+  text-align: left;
+  font-size: 18px;
+}
+
+.Table_Column .new_jordcard th tr td {
+  text-align: left;
+}
+
+.App_class .Main_table {
+  width: 98%;
+  margin-left: 12px;
+  height: 40vh;
+  border-spacing: 1px 1px;
+  border-collapse: separate;
+  text-align: left;
+}
+
+.Main_table .Table-column td {
+  text-align: left;
+  font-size: 18px;
+}
 /********************************************************  <Technician.js> ***********************************************/
 
 .Page_two_logoAndLogOut_out {
@@ -446,14 +495,10 @@ table {
 }
 
 .failureReason {
-  margin-top: 42.9rem;
+  margin-top: 43.9rem;
   position: absolute;
-  width: 65rem;
-  left: -35rem;
-}
-
-.RootCauseReason {
-  margin-top: 19.4rem;
+  width: 66rem;
+  left: -37rem;
 }
 
 .Save_Button_btn {
@@ -471,10 +516,14 @@ table {
   letter-spacing: 0.89pt;
 }
 
+.Cooling-unit p {
+  font-size: 20px;
+  padding-left: 1rem;
+}
+
 .table_Div {
-  width: 99%;
-  border-spacing: 2px 1px;
-  border-collapse: separate;
+  width: 172%;
+  margin-left: 1rem;
 }
 
 .tab_Rw {
@@ -485,33 +534,48 @@ table {
   text-align: left;
 }
 
-.tab_Col th {
-  width: 10rem;
-  text-align: left;
+.main_black_div {
+  background: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  position: absolute;
+  top: -1%;
+  width: 100vw;
+  height: 180vh;
 }
 
-.Cooling-unit {
-  height: 3.2rem;
-  text-align: left;
-}
-
-.tab_Col i {
-  margin-left: 89%;
-  margin-top: -27px;
-  width: 30px;
-  height: 30px;
+.page_two_complaint_list {
   background-color: white;
-  color: #00a53e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  cursor: pointer;
+  flex-direction: column;
+  width: 92%;
+  height: 120vh;
+  padding: 20px 0;
+  margin-top: 15rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.Technician-coolingUnit {
-  height: 600px;
-  width: 87rem;
-  margin-left: 1rem;
-  margin-top: 15.3rem;
+.Fail_reason .freason {
+  font-size: 20pt;
+  margin-left: 0px;
+  width: 20rem;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0.01pt;
+}
+
+.page_two_complaint_list h3 {
+  font-weight: bold;
+  /* margin-left: 26%; */
+  font-size: 20pt;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.Save_button {
+  padding-left: 13rem;
+  margin-top: 9rem;
 }

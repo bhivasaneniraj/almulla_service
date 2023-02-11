@@ -17,6 +17,7 @@ function Pagetwocomplaintlist({ handleRadioButton, compSubmite, compCancel, fail
   const [airHoseBroken, setAirHoseBroken] = useState(false)
   const [showTextBox, setShowTextBox] = useState()
   const [hideTextBox, setHideTextBox] = useState()
+  const [selectedOption, setSelectedOption] = useState("option1")
 
   console.log(hideTextBox)
 

@@ -3,73 +3,87 @@ import { useNavigate, useSearchParams } from "react-router-dom"
 import "./login.css"
 
 function Login() {
-  const managerUsername = "anisurRahman"
+  const [usernameText, setusernameText] = useState("")
+  const [passwordText, setpasswordText] = useState("")
+  const [errorMessage, setErrorMessage] = useState(false)
+
+  const managerUsername = "salman@gmail.com"
   const managerPassword = "123456"
 
-  const foremanUsername = "shabir"
+  const supervisorUsername = "anisurRahman@gmail.com"
+  const supervisorPassword = "123456"
+
+  const foremanUsername = "shabir@gmail.com"
   const foremanPassword = "123456"
 
-  const technician = "shakil"
+  const technician = "shakil@gmail.com"
   const technicianpassword = "123456"
 
   const navigate = useNavigate()
 
-  const [usernameText, setusernameText] = useState()
-  const [passwordText, setpasswordText] = useState()
+  const register = () => {
+    navigate("/Registration")
+  }
 
-  const hello = (e) => {
+  const handleUsername = (e) => {
     setusernameText(e.target.value)
   }
 
-  const passw = (e) => {
+  const handlePassword = (e) => {
     setpasswordText(e.target.value)
   }
 
   const Submit = () => {
     if (managerUsername === usernameText && managerPassword === passwordText) {
+      navigate("/ManagerViewJob")
+      setErrorMessage(true)
+    } else if (supervisorUsername === usernameText && supervisorPassword === passwordText) {
       navigate("/SupervisorJobs")
+      setErrorMessage(true)
     } else if (foremanUsername === usernameText && foremanPassword === passwordText) {
       navigate("/ForemanJobs")
+      setErrorMessage(true)
     } else if (technician === usernameText && technicianpassword === passwordText) {
       navigate("/TechnicianJobs")
+      setErrorMessage(true)
     } else {
-      alert("Invalid username or password!!")
+      setErrorMessage("Invalid UserName or Password")
     }
   }
 
   return (
     <>
-      <div className="Main">
-        <div className="inputbtn">
-          <div className="images">
-            <img src="/images/bitmap@2x.png" alt="example" />
-            <h3>
-              <b>Al Mulla Industries Service Mobile Solutions</b>
-            </h3>
-          </div>
-          <input type="email" placeholder="User Name" className="btn1" onChange={hello} />
-          <div className="inputbtn2">
-            <input type="password" placeholder="Password" className="btn2" onChange={passw} />
-          </div>
-          {/* <div className="SendOtp">
-            <button className="Send_Otp">Send OTP</button>
-          </div> */}
-          <div className="submitbtn">
-            <button className="sbbntn" onClick={Submit}>
+      <div className="Main-component">
+        <div className="Input-btn">
+          <form>
+            <div className="images">
+              <img src="/images/bitmap@2x.png" alt="example" />
+              <h3>
+                <b>Al Mulla Industries Service Mobile Solutions</b>
+              </h3>
+            </div>
+            <div className="input-form">
+              <div className="form-group">
+                <input onChange={handleUsername} value={usernameText} name="email" type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User Name" required />
+              </div>
+              <div class="form-group">
+                <input onChange={handlePassword} value={passwordText} name="password" type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" required />
+              </div>
+            </div>
+            {errorMessage && <p className="error">{errorMessage}</p>}
+            <button type="submit" className="btn btn-primary" onClick={Submit}>
               Login
             </button>
-          </div>
-          <p>OR</p>
-          <div className="Register">
-            <button className="Register_btn" onClick={() => (window.location.href = "/Registration")}>
+            <p>OR</p>
+            <button style={{ marginTop: "-1rem" }} type="submit" className="btn btn-primary" onClick={register}>
               Register
             </button>
-          </div>
-          <div className="achorTag">
-            <a href="#" className="anchortg" onClick={() => (window.location.href = "/passwordReset")}>
-              <b>Forgot Password?</b>{" "}
-            </a>
-          </div>
+            <b>
+              <a href="#" className="link-success" onClick={() => (window.location.href = "/passwordReset")}>
+                Forgot Password?
+              </a>
+            </b>
+          </form>
         </div>
       </div>
     </>

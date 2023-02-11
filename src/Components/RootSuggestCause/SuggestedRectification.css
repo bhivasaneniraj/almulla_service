@@ -4,3 +4,35 @@
   font-size: xx-large;
   padding-left: 39rem;
 }
+
+/* .Suggested-retification-fail-reasons {
+  position: relative;
+  display: inline-grid;
+  bottom: 15.7rem;
+  margin-left: 25rem;
+} */
+
+.Text-area textarea {
+  margin-top: 1rem;
+  height: 17vh;
+  position: fixed;
+  width: 22rem;
+  background-color: #b4f8c8;
+  color: rgb(0, 0, 0);
+}
+
+.Suggested-retification-fail-reasons {
+  position: fixed;
+  bottom: 23.5rem;
+  /* top: 0rem; */
+  width: 20rem;
+  left: 57rem;
+}
+
+.Suggested-retification-fail-reasons h3 {
+  font-size: 20pt;
+  margin-left: 0px;
+  width: 20rem;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0.01pt;
+}

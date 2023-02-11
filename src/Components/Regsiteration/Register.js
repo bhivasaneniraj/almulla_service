@@ -6,11 +6,24 @@ function Register() {
   const [Error, setError] = useState("none")
   const [btnName, setBtnName] = useState("Send OTP")
   const [show, setShow] = useState(false)
+  const [employeeId, setEmployeeId] = useState("")
+  const [mobileNumber, setMobileNumber] = useState("")
+  const [optNumber, setOtpNumber] = useState("")
+  const [errorMessage, setErrorMessage] = useState(false)
 
   const handleClick = () => {
     setBtnName("Resend OTP")
     console.log("click")
     setShow(true)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (employeeId.length == 0 || mobileNumber.length == 0 || optNumber.length == 0) {
+      setErrorMessage(true)
+    } else {
+      setErrorMessage(false)
+    }
   }
   return (
     <>
@@ -27,16 +40,17 @@ function Register() {
         <div className="Register_form">
           <div className="inputBox">
             <i className="fa-solid fa-user icon"></i>
-            <input type="text" required />
+            <input type="id" onChange={(e) => setEmployeeId(e.target.value)} required />
             <div className="underline"></div>
             <label className="Register_page"> Employee ID</label>
           </div>
           <div className="inputBox">
             <i className="fa-solid fa-mobile icon"></i>
-            <input type="text" required />
+            <input type="tel" onChange={(e) => setMobileNumber(e.target.value)} required />
             <div className="underline"></div>
             <label className="Register_page">Mobile Number </label>
           </div>
+
           <div className="err_msg">
             {/* <h3 style={{ display: err }}>  Please Enter Correct Username</h3> */}
             <h3 style={{ display: Error }}> Please Enter Valid Credential. </h3>
@@ -53,7 +67,7 @@ function Register() {
             </div>
           )}
           <div className="Submit_btn">
-            <button onClick={() => (window.location.href = "/")}>Login</button>
+            <button onClick={handleSubmit}>Login</button>
           </div>
         </div>
       </div>

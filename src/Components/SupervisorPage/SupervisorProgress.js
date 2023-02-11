@@ -1,17 +1,17 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import "./Technician.css"
+import "./Supervisor.css"
 import Header from "../HeadingComponents/Header"
 import moment from "moment/moment"
 
-function TechnicianWorkInProgress() {
+function SupervisorProgress() {
   const navigate = useNavigate()
 
   const Submit = () => {
-    navigate("/technicianpage")
+    navigate("/Managerpage")
   }
 
-  const TechnicianData = [
+  const supervisorData = [
     {
       id: 1,
       JobCard: "17/30866",
@@ -42,36 +42,36 @@ function TechnicianWorkInProgress() {
     },
   ]
 
-  var named = "Shakeel Siddhiqui"
-
+  var named = "Anisur Rahman"
   return (
     <>
       <div className="Main_class">
-        <Header name={"Shakeel Siddhiqui - Technician"} />
+        <Header name={"Anisur Rahman - Supervisor"} />
         <div className="foremantable_class">
           <h3>
             <b>In Progress Jobs</b>{" "}
           </h3>
         </div>
 
-        <div className="App_class">
-          <table className="Main_table">
+        <div className="Supervisor-progress">
+          <table className="Supervisor-progress-job">
             <thead>
-              <tr className="Table_Column">
+              <tr className="col_tabclass">
                 <th className="new_jordcard">Job Cards</th>
+
                 <th>Work in Progress Jobs Date & Time</th>
                 <th>Status</th>
               </tr>
             </thead>
-            {TechnicianData.map((val, index) => {
+            {supervisorData.map((val, index) => {
               return (
                 <>
                   <tbody key={index}>
-                    <tr key={index} className="Table-column">
+                    <tr key={index} className="col_tabclass">
                       <td>{val.JobCard}</td>
                       <td>
                         {val.Date}
-                        <td className="time_stamp">{val.time}</td>
+                        <td className="time-stamp">{val.time}</td>
                       </td>
                       <td>
                         {val.Status} <img src="./logo/workinprogress@3x.png" alt="logo" />
@@ -88,4 +88,4 @@ function TechnicianWorkInProgress() {
   )
 }
 
-export default TechnicianWorkInProgress
+export default SupervisorProgress

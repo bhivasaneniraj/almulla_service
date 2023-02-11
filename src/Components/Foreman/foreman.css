@@ -293,111 +293,30 @@
 
 /***************************************************<ForemanCoolCOmplaint.js>********************************/
 
-.tw0_page_complaint {
-  height: 30%;
-  margin-top: 0px;
-}
-
-.tw0_page_complaint h2 {
-  font-size: 18pt;
+.Break-down-Cooling-Unit {
   color: rgb(0, 0, 0);
-  padding-left: 1%;
-}
-
-.Break_down_analysis {
   font-size: 18pt;
-  margin-top: 100px;
-  padding-left: 20px;
+  margin-top: 6rem;
+  padding-left: 1rem;
+  width: 30rem;
 }
 
-.foreman_cooling_table {
-  background-color: rgb(8, 136, 38);
-  margin-top: 5px;
-  color: white;
-  font-size: 14pt;
-  font-weight: bold;
-  height: 50px;
-  display: flex;
+.Drop-down-button {
+  display: inline-block;
 }
 
-.tw0_page_complaint .custom_tab {
-  font-size: 16pt;
-  margin-left: 1%;
-  text-align: left;
-  width: 97%;
-  background-color: rgb(8, 136, 38);
-}
-
-.tw0_page_complaint .head_ing .DPdown {
-  padding-left: 62%;
-  margin-bottom: 35px;
-}
-
-.head_ing h2 {
-  margin-top: 10px;
-}
-
-.drop_down,
-.dropdown-center,
-.dropend,
-.dropstart,
-.dropup,
-.dropup-center {
-  position: relative;
-  border: none;
-  height: 34px;
-  width: 431px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(226, 245, 231);
-  border-radius: 0.5rem;
-}
-
-.horizontal_line {
-  border-bottom: 1px solid #00a53e;
-  padding-bottom: 20%;
-  width: 113%;
-  margin-left: -72px;
-}
-
-.down_value {
+.Select-values {
   width: 456pt;
-  margin-right: 30px;
   margin-top: 90px;
   height: 37pt;
+  margin-left: 19rem;
   display: flex;
   border: 1.5px solid rgba(200, 200, 200, 0.5);
   background-color: rgb(226, 245, 231);
   border-radius: 6pt;
 }
 
-.down_value p {
-  margin-top: 11px;
-  font-size: 14pt;
-  width: 55%;
-  margin-left: 10px;
-}
-
-.down_values {
-  width: 456pt;
-  margin-right: 2px;
-  margin-top: 35px;
-  height: 37pt;
-  display: flex;
-  border: 1.5px solid rgba(200, 200, 200, 0.5);
-  background-color: rgb(226, 245, 231);
-  border-radius: 6pt;
-}
-
-.down_values p {
-  margin-top: 11px;
-  font-size: 14pt;
-  width: 55%;
-  margin-left: 10px;
-}
-
-.down_value .Drop_select {
+.select {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -416,6 +335,73 @@
   border: none;
 }
 
+.Select-values p {
+  margin-top: 11px;
+  font-size: 14pt;
+  width: 55%;
+  margin-left: 10px;
+}
+
+.Cooling-table {
+  overflow-x: auto;
+}
+
+.Cooling-Table table {
+  border-collapse: separate;
+  border-spacing: 1px;
+  margin-top: 2rem;
+  width: 97%;
+  margin-left: 1rem;
+}
+
+.Cooling-Table table th,
+td {
+  text-align: left;
+  padding: 8px;
+  height: 4.2rem;
+}
+
+.Cooling-Table table i {
+  margin-left: 90%;
+  margin-top: -8%;
+  margin-right: 3px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #00a53e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main_black_Background {
+  background: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  position: absolute;
+  display: block;
+  top: -1%;
+  width: 100vw;
+  height: 215vh;
+}
+
+.Foreman-Cool-complaint-lists {
+  background-color: white;
+  flex-direction: column;
+  width: 92%;
+  height: 100vh;
+  display: block;
+  padding: 20px 0;
+  margin-top: 30rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /****************************************<ForemanTailComponent> *********************************/
 
 .tw00_page_complaint {
@@ -423,19 +409,49 @@
   margin-top: 12%;
 }
 
+.Drop-Down {
+  display: inline-block;
+}
+
 .tw00_page_complaint .headi_ng {
   margin-top: -12%;
 }
 
+.Drop-down-value p {
+  margin-top: 11px;
+  font-size: 14pt;
+  width: 55%;
+  margin-left: 10px;
+}
 .Break_down_Tail_lift {
   color: rgb(0, 0, 0);
   font-size: 18pt;
-  margin-top: 45px;
-  padding-left: 0px;
+  margin-top: 6rem;
+  padding-left: 1rem;
+  width: 30rem;
 }
 
-.down_values .Drop_select_btn {
-  -webkit-appearance: none;
+.Tail-lift-table {
+  overflow-x: auto;
+}
+
+.Tail-lift-table table th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+.Drop-down-value {
+  width: 456pt;
+  margin-top: 90px;
+  height: 37pt;
+  margin-left: 19rem;
+  display: flex;
+  border: 1.5px solid rgba(200, 200, 200, 0.5);
+  background-color: rgb(226, 245, 231);
+  border-radius: 6pt;
+}
+.Drop_select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
@@ -460,6 +476,33 @@
   margin-left: -6%;
 }
 
+.tw0_page_complaint table {
+  margin-top: 2rem;
+  border-collapse: separate;
+  border-spacing: 1px;
+  width: 97%;
+  margin-left: 1rem;
+}
+
+.tw0_page_complaint table thead {
+  height: 4.2rem;
+}
+
+.tw0_page_complaint table i {
+  margin-left: 90%;
+  margin-top: -8%;
+  margin-right: 3px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #00a53e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .job_cardbtn_btn:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
@@ -471,9 +514,7 @@
   width: 320pt;
   color: rgb(255, 255, 255);
   letter-spacing: 0.89pt;
-  /* margin-right: 23px; */
   margin-left: -180px;
-  /* margin-bottom: 109%; */
 
   margin-top: 33%;
 
@@ -495,30 +536,27 @@
   height: 4vh;
 }
 
-Select {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -webkit-padding-end: 55px;
-  -moz-padding-end: 20px;
-  -webkit-padding-start: 2px;
-  -moz-padding-start: 2px;
-  background-color: rgb(237, 242, 242);
-  background-position: center right;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 2px;
-  /* box-shadow: 0px 1px 3px rgb(0 0 0 / 10%); */
-  color: rgb(31, 30, 30);
-  font-size: inherit;
-  margin: 0;
-  overflow: hidden;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.faliure_div {
+  border: 1rem solid white;
+  box-shadow: 10rem black;
 }
+
+.Foreman-tail-Complaint-list {
+  background-color: white;
+  flex-direction: column;
+  width: 92%;
+  height: 100vh;
+  display: block;
+  padding: 20px 0;
+  margin-top: 32rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /**********************Media Query for ForemanPage Tablet ipad potrait mode****************/
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -544,3 +582,5 @@ Select {
   margin-top: 1%;
   margin-right: 75rem; */
 }
+
+/******************************Horizontal-Line **********************************/

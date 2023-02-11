@@ -36,6 +36,7 @@
 }
 .tabular_data td {
   text-align: left;
+  height: 9vh;
 }
 .tabular_data .dataT2 {
   background-color: rgb(188, 242, 204);
@@ -114,6 +115,120 @@
   padding-left: 73rem;
 }
 
+/**************************************<SupervisorAssignedJob.js/> *****************************/
+.Supervisor-Assgned {
+  margin-top: 20px;
+}
+
+.Supervisor-Assgned .Supervisor-Assigned-jobs-table {
+  width: 98%;
+  margin-left: 12px;
+  height: 40vh;
+  border-spacing: 1px 1px;
+  border-collapse: separate;
+  text-align: left;
+}
+
+.Supervisor-Assgned .time-stamp {
+  display: inline;
+  padding-left: 3rem;
+  padding-top: 0rem;
+}
+
+.Supervisor-Assigned-jobs-table .col_tabclass th {
+  text-align: left;
+  font-size: 20px;
+  width: 0rem;
+}
+
+.Supervisor-Assigned-jobs-table .col_tabclass td {
+  font-size: 18px;
+}
+
+.Supervisor-Assigned-jobs-table .col_tabclass img {
+  float: right;
+  cursor: pointer;
+  width: 12%;
+}
+
+.date-time-stamp {
+  display: inline;
+  padding-left: 3rem;
+  padding-top: 0rem;
+}
+
+/***********************************<SupervisorCompletedJob.js/>***************************************************/
+
+.Supervisor-completed {
+  margin-top: 20px;
+}
+
+.Supervisor-completed .Supervisor-completed-jobs {
+  width: 98%;
+  margin-left: 12px;
+  height: 40vh;
+  border-spacing: 1px 1px;
+  border-collapse: separate;
+  text-align: left;
+}
+
+.Supervisor-completed-jobs .time-stamp {
+  display: inline;
+  padding-left: 3rem;
+  padding-top: 0rem;
+}
+
+.Supervisor-completed-jobs .col_tabclass th {
+  text-align: left;
+  width: 20rem;
+  font-size: 20px;
+}
+
+.Supervisor-completed-jobs .col_tabclass td {
+  font-size: 18px;
+}
+
+.Supervisor-completed-jobs .col_tabclass img {
+  float: right;
+  cursor: pointer;
+  width: 7%;
+}
+/*******************************************<ForemanProgress.js/>*****************************************************/
+
+.Supervisor-progress {
+  margin-top: 20px;
+}
+
+.Supervisor-progress .Supervisor-progress-job {
+  width: 98%;
+  margin-left: 12px;
+  height: 40vh;
+  border-spacing: 1px 1px;
+  border-collapse: separate;
+  text-align: left;
+}
+
+.Supervisor-progress-job .time-stamp {
+  display: inline;
+  padding-left: 3rem;
+  padding-top: 0rem;
+}
+
+.Supervisor-progress-job .col_tabclass th {
+  text-align: left;
+  width: 20rem;
+  font-size: 20px;
+}
+
+.Supervisor-progress-job .col_tabclass td {
+  font-size: 18px;
+}
+
+.Supervisor-progress-job .col_tabclass img {
+  float: right;
+  cursor: pointer;
+  width: 8%;
+}
 /*************************************************<ManagerView.js> Media query For Mobiles **************************/
 
 /* Media Query for Mobile Devices */
@@ -177,7 +292,7 @@
   }
 }
 
-/*********************************************<ManagerView.js>**********************************/
+/*********************************************<SupervisorProgress.js>**********************************/
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (max-width: 767px) and (min-width: 481px) {
@@ -234,6 +349,12 @@
   .App_class .tab_class {
     margin-left: 5px;
   }
+}
+
+.tab_class .logo {
+  float: right;
+  cursor: pointer;
+  width: 9%;
 }
 
 /******************************************<ManagerView.js>************************************/
@@ -479,3 +600,5 @@
     font-size: 30px;
   }
 }
+
+/**********************************************************************/

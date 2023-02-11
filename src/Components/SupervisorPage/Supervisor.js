@@ -1,14 +1,39 @@
-import React, { useEffect, useRef } from "react"
-import { Col, Container, Row } from "react-bootstrap"
+import React, { useEffect, useState } from "react"
+import { Col, Row } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
-import TechnicianCoolingUnit from "./TechnicianCoolUnit"
-import Header from "../HeadingComponents/Header"
-import "./Technician.css"
 import ErrorModel from "../ThankYouFolder/Error"
 import FailureReason from "../CoolTailComplaint/FailureReason"
+import PhysicalRemark from "../PhysicalRemaks/PhysicalRemark"
+import "./Supervisor.css"
+import Header from "../HeadingComponents/Header"
+import ManagerTailComplaint from "./SupervisorTailComplaint"
 
-function Technician() {
+const tabledata = [
+  {
+    id: 1,
+    UnitDetail: "Cooling Unit",
+    KTNo: "17/30866",
+    SerialNo: "VKA94286893",
+    Chassis: " NK004102-F",
+    Model: "CITIMAX-400",
+    Date: "16.10.2022",
+    WarrantyStart: " 13.06.2022",
+    WarrantyEnd: " 16.06.2023",
+  },
+  {
+    id: 2,
+    UnitDetail: "Tail Lift",
+    KTNo: "17/30866",
+    SerialNo: "21084589",
+    Chassis: "9031793-N",
+    Model: "ALU,24V,1500KG",
+    Date: " 16.09.2022",
+    WarrantyStart: " 27.06.2021",
+    WarrantyEnd: " 26.06.2022",
+  },
+]
+
+function Supervisor() {
   const [blackBg, setblackBg] = useState("none")
   const [eValue, setEValue] = useState()
   const [msg, setMsg] = useState("")
@@ -21,7 +46,7 @@ function Technician() {
   const [engineCylinderHead, setEngineCylinderHead] = useState(false)
   const [engineOilFilter, setEngineOilFilter] = useState(false)
   const [failureComplaintsList, setFailureComplaintsList] = useState([])
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
   const [hideElem, setHideElem] = useState(false)
 
   //* new Failuer states
@@ -47,8 +72,7 @@ function Technician() {
   //!                      Root complaint                       //
 
   const handleChangeRootText = (e) => {
-    const text = e.target.value.replace(/[^a-z]/gi, "")
-    setRootValue(text)
+    setRootValue(e.target.value)
   }
 
   const HandleFailuerComplaint = () => {
@@ -89,6 +113,7 @@ function Technician() {
   const complaint = () => {
     setblackBg("block")
     setShow(true)
+    setomplistf("block")
   }
 
   const tabledata = [
@@ -138,17 +163,30 @@ function Technician() {
   var location = "Shuwaikh Van 1"
   var refer = "915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES"
 
+  const datas = [
+    {
+      id: 1,
+      customerComplaint: "Periodic maintenance  service ",
+      failureReason: "Unit Service",
+      probableRootCause: "Derive belt expand",
+      suggestedRectifiction: "Belt Replacement",
+    },
+  ]
+
+  var Referenceno = "300021572"
+  var location = "Shuwaikh Van 1"
+  var refer = "915974 - BOUTIQAAT INTERNATIONAL CATERING SERVICES"
+
   return (
     <>
-      <Header name={"shakeel siddiqui"} />
-
-      <div className="Page_two_logoAndLogOut_out">
-        <div className="CardReference_ref_card" style={{ width: "100rem" }}>
-          <h2 className="card_ref_ref_card">
+      <Header name={"Anisur Rahman - Supervisor"} />
+      <div className="Refrence-Number">
+        <div className="CardReference_ref">
+          <h2 className="cardref_ref">
             <b>Job Card Reference Number - {Referenceno}</b>{" "}
           </h2>
           <div className="d-flex justify-content-end loc">
-            <div className="locAt_tion">
+            <div className="loc">
               <b>
                 {" "}
                 <span>Location : {location}</span>
@@ -160,50 +198,54 @@ function Technician() {
 
       <b>
         {" "}
-        <p className="para_graph">Customer {refer} </p>{" "}
+        <p className="paragraph">Customer {refer} </p>{" "}
       </b>
-      <div className="datatable">
-        <table className="tabular_table">
-          <thead>
-            <tr>
-              <th>Unit Details</th>
-              <th>KT No.</th>
-              <th>Serial No.</th>
-              <th>Chassis</th>
-              <th>Model</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          {tabledata.map((val, index) => {
-            return (
-              <>
-                <tbody key={index}>
-                  <tr>
-                    <td>{val.UnitDetail}</td>
-                    <td>{val.KTNo}</td>
-                    <td>{val.SerialNo} </td>
-                    <td>{val.Chassis} </td>
-                    <td> {val.Model} </td>
-                    <td> {val.Date}</td>
-                  </tr>
-                </tbody>
-              </>
-            )
-          })}
+      <div className="datatable_data">
+        <table className="tabular_data">
+          <tr>
+            <th>Unit Details</th>
+            <th>KT No.</th>
+            <th>Serial No.</th>
+            <th>Chassis</th>
+            <th>Model</th>
+            <th>Date</th>
+            <th>Warranty Start</th>
+            <th>Warranty End</th>
+          </tr>
+
+          <tr>
+            <td>{tabledata[0].UnitDetail}</td>
+            <td>{tabledata[0].KTNo}</td>
+            <td>{tabledata[0].SerialNo} </td>
+            <td>{tabledata[0].Chassis} </td>
+            <td> {tabledata[0].Model} </td>
+            <td> {tabledata[0].Date}</td>
+            <td className="dataT"> {tabledata[0].WarrantyStart}</td>
+
+            <td className="dataT2"> {tabledata[0].WarrantyEnd}</td>
+          </tr>
+
+          <tr>
+            <td>{tabledata[1].UnitDetail}</td>
+            <td>{tabledata[1].KTNo}</td>
+            <td>{tabledata[1].SerialNo} </td>
+            <td>{tabledata[1].Chassis} </td>
+            <td> {tabledata[1].Model} </td>
+            <td> {tabledata[1].Date}</td>
+            <td className="dataT3"> {tabledata[1].WarrantyStart}</td>
+
+            <td className="dataT4"> {tabledata[1].WarrantyEnd}</td>
+          </tr>
         </table>
       </div>
 
-      <div style={{ height: "600px", width: "50rem", marginTop: "15.3rem" }}>
-        <TechnicianCoolingUnit complaint={complaint} failureComplaintsList={failureComplaintsList} newFailureComplaintList={textEVlaue} setFailureComplaintList={setFailureComplaintsList} probableRootCause={rootEValue} valueOfRetification={checkedValue} newProbableRoot={rootCauseCauseComplaintList} />
-        {/* <RootCause
-          rootCauseComplaintList={rootCauseCauseComplaintList}
-          handleShowBtn={complaint}
-        /> */}
+      <div style={{ height: "700px" }}>
+        <ManagerTailComplaint complaint={complaint} failureComplaintsList={failureComplaintsList} newFailureComplaintList={textEVlaue} setFailureComplaintList={setFailureComplaintsList} probableRootCause={rootEValue} valueOfRetification={checkedValue} newProbableRoot={rootCauseCauseComplaintList} />
       </div>
 
       {show && (
         <div className="main_black_div" style={{ display: blackBg }}>
-          <div className="page_two_complaint_list" onChange={demooo} style={{ display: omplistf }}>
+          <div className="page_two_complaint_list" onChange={demooo} style={{ display: omplistf, position: "absolute", top: "25rem" }}>
             <div className="failureReason">
               <FailureReason handleCheckComponent={handleCheckComponent} setFailureComplaintsList={setFailureComplaintsList} failureComplaintsList={failureComplaintsList} engineOilDrain={engineOilDrain} setEngineOilDrain={setEngineOilDrain} engineOilHose={engineOilHose} setEngineOilHose={setEngineOilHose} engineCylinderHead={engineCylinderHead} setEngineCylinderHead={setEngineCylinderHead} engineOilFilter={engineOilFilter} setEngineOilFilter={setEngineOilFilter} HandleFailuerComplaint={HandleFailuerComplaint} clickHandler={clickHandler} submitComplaint={reasonSubmit} cancelComplaint={cancelComplaint} handleChangeText={handleChangeText} textNote={textValue} handleChangeRootText={handleChangeRootText} rootValue={rootValue} textEVlaue={eRootValue} rootCauseCauseComplaintList={rootCauseCauseComplaintList} setRootCauseComplaintList={setRootCauseComplaintList} setCheckedValue={setCheckedValue} checkedValue={checkedValue} />
             </div>
@@ -211,9 +253,9 @@ function Technician() {
         </div>
       )}
 
-      {msg && <ErrorModel title={msg.title} message={msg.message} onClick={() => (window.location.href = "/TechnicianAssignedJob")} />}
-      <div className="job_card_card">
-        <button className="job_cardbtn_btn" onClick={submit}>
+      {msg && <ErrorModel title={msg.title} message={msg.message} onClick={() => (window.location.href = "/SupervisorAssignedJob")} />}
+      <div className="job_card_button">
+        <button className="job_cardbtn_btn_btn" onClick={submit}>
           <b>Send for Quote Preparation</b>{" "}
         </button>
       </div>
@@ -221,4 +263,4 @@ function Technician() {
   )
 }
 
-export default Technician
+export default Supervisor

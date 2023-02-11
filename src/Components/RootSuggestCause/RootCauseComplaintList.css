@@ -1,0 +1,52 @@
+.btn_rootCause {
+  border: none;
+  background-color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-top: 1.8rem;
+  color: green;
+  font-size: large;
+}
+
+.RootCauseReason {
+  position: absolute;
+  top: 0rem;
+  width: 20rem;
+  left: 69.5rem;
+}
+
+.Probable-root-cause-Fail-reason {
+}
+
+.Probable-root-cause-Fail-reason h3 {
+  font-size: 20pt;
+  margin-left: 0px;
+  width: 20rem;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0.01pt;
+}
+
+.Probable-root-cause-Fail-reason input[type="checkbox"] {
+  appearance: initial;
+  border: 1px solid rgb(29, 249, 80);
+  border-radius: 4pt;
+  position: relative;
+}
+
+.Probable-root-cause-Fail-reason input {
+  cursor: pointer;
+}
+
+.Probable-root-cause-Fail-reason .lable {
+  padding-left: 40px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  font-size: 18pt;
+}
+
+.Root-cause-text-area textarea {
+  margin-top: 1rem;
+  height: 17vh;
+  background-color: #b4f8c8;
+  color: rgb(0, 0, 0);
+}

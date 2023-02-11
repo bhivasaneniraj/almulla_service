@@ -9,7 +9,8 @@
   width: 450px;
   display: flex;
   flex-direction: column;
-  margin-top: 0rem;
+  margin-top: 3rem;
+  margin-left: 30rem;
   align-items: center;
 }
 
@@ -130,4 +131,82 @@
 
 .Submit_btn button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*************************************Media Query For Large Devices *************************************/
+@media (max-width: 1373px) {
+  .Main {
+    align-items: center;
+    margin-left: 30rem;
+    margin-top: 6rem;
+    justify-content: center;
+  }
+}
+@media screen and (device-width: 1371px) and (device-height: 732px) {
+  .Main {
+    align-items: center;
+    margin-left: 30rem;
+    margin-top: 5rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (device-width: 1369px) and (device-height: 732px) {
+  .Main {
+    align-items: center;
+    margin-left: 30rem;
+    margin-top: 5rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1264px) {
+  .Main {
+    align-items: center;
+    margin-left: 25rem;
+    margin-top: 4rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1164px) {
+  .Main {
+    align-items: center;
+    margin-left: 22rem;
+    margin-top: 3rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1156px) {
+  .Main {
+    align-items: center;
+    margin-left: 22rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1088px) {
+  .Main {
+    margin-top: 0rem;
+  }
+  .Img img {
+    width: 12rem;
+    padding-top: 1rem;
+  }
+  .Register_form {
+    margin-top: -3rem;
+  }
+}
+
+@media (max-width: 1010px) {
+  .Main {
+    margin-left: 16rem;
+  }
+}
+@media (max-width: 958px) {
+  .Main h2 {
+    margin-top: -1rem;
+  }
 }

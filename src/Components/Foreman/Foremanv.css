@@ -98,6 +98,7 @@
 
 .table_for .Fore_Man_Data td {
   text-align: left;
+  font-size: 18px;
 }
 
 .table_for .Fore_Man_Data th {
@@ -117,9 +118,102 @@
 .Fore_Man_Data .Assi_gned {
   cursor: pointer;
   margin-top: 1px;
-  width: 8%;
+  width: 9%;
 }
 
+.table_for .Stamp-time {
+  display: inline;
+  padding-left: 3rem;
+  padding-top: 0rem;
+}
+
+/****************************************<ForemanCompleted.js/> ****************************/
+
+.App_class .Main-Table-tab {
+  width: 98%;
+  margin-left: 12px;
+  height: 40vh;
+  border-spacing: 1px 1px;
+  border-collapse: separate;
+  text-align: left;
+}
+
+.App_class {
+  margin-top: 20px;
+}
+
+.Main-Table-tab .col_tabclass td {
+  text-align: left;
+  font-size: 18px;
+}
+
+.Main-Table-tab .col_tabclass th {
+  text-align: left;
+}
+
+.Main-Table-tab .col_tabclass img {
+  float: right;
+  margin-top: 1px;
+}
+
+.Main-Table-tab tr {
+  font-size: 16pt;
+  letter-spacing: 0.01pt;
+}
+
+.Main-Table-tab .col_tabclass .ProgressJob-foreman {
+  margin-top: 1px;
+  width: 7%;
+}
+
+.Main-Table-tab .Stamp-time {
+  display: inline;
+  padding-left: 3rem;
+  padding-top: 0rem;
+}
+/******************************************** <ForemanProgress.js/> **************************************/
+.app_foreman .Foreman-progress-table {
+  width: 98%;
+  margin-left: 12px;
+  height: 40vh;
+  border-spacing: 1px 1px;
+  border-collapse: separate;
+  text-align: left;
+}
+
+.app_foreman {
+  margin-top: 20px;
+}
+
+.Foreman-progress-table .Fore_Man_Data td {
+  text-align: left;
+  font-size: 18px;
+}
+
+.Foreman-progress-table .Fore_Man_Data th {
+  text-align: left;
+}
+
+.Foreman-progress-table .Fore_Man_Data img {
+  float: right;
+  margin-top: 1px;
+  width: 9%;
+}
+
+.Foreman-progress-table tr {
+  font-size: 16pt;
+  letter-spacing: 0.01pt;
+}
+
+.Foreman-progress-table .Stamp-time {
+  display: inline;
+  padding-left: 3rem;
+  padding-top: 0rem;
+}
+
+.Foreman-progress-table .Progress-jobs {
+  width: 15rem;
+}
 /*********************************************** button functionality*******************************/
 
 /* .buttoni {

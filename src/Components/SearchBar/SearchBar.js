@@ -1,9 +1,16 @@
 import React from "react"
 import { useState } from "react"
 import "./SearchBar.css"
+import NewVehicleRegistration from "../NewVehicleRegistration/NewVehicleRegistration"
 
 function SearchBar(props) {
   const [newVehicleRegisterBlackBg, setNewVehicleRegisterBlackBg] = useState("none")
+  const [cancelButton, setCancelButton] = useState(true)
+
+  const Cancel = () => {
+    props.setBackgroundDisplay("block")
+    setNewVehicleRegisterBlackBg("none")
+  }
 
   // const [cancelVehicle, setCancelVehicle] = useState(true)
 
@@ -11,8 +18,9 @@ function SearchBar(props) {
   //   setCancelVehicle(false)
   // }
   const VehicleRegister = () => {
+    props.setBackgroundDisplay("none")
     setNewVehicleRegisterBlackBg("block")
-    // setCancelVehicle(true)
+    setCancelButton(true)
   }
 
   return (
@@ -68,72 +76,7 @@ function SearchBar(props) {
             <button onClick={props.Submit}> Search </button>
           </div>
         </div>
-        <div className="Registration-form" style={{ display: newVehicleRegisterBlackBg }}>
-          <div className="New-register">
-            <div className="Register">
-              <h1>
-                <b>New Vehicle Registration</b>{" "}
-              </h1>
-              <form>
-                <h3>Client Details</h3>
-                <div className="form-group form">
-                  <label for="exampleInputEmail1">Name</label>
-                  <input type="Text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name " />
-                </div>
-                <div class="form-group form">
-                  <label for="exampleInputPassword1">Contact Number</label>
-                  <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Enter Contact Number" />
-                </div>
-                <div className="form-group forms">
-                  <label for="exampleInputEmail1">Email Address</label>
-                  <input type="Email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email " />
-                </div>
-                <div className="form-group forms">
-                  <label for="exampleInputEmail1">Post Box Number</label>
-                  <input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter PostBox Number " />
-                </div>
-                <div className="form-group form-address">
-                  <label for="exampleInputEmail1">Address</label>
-                  <input type="text" className="form-control Address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address " />
-                </div>
-              </form>
-              <hr className="new" />
-              <form className="vehicle-details">
-                <h3>Vehicle Details</h3>
-                <div className="form-group vnumber">
-                  <label for="exampleInputNumber1">KT.No</label>
-                  <input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="KT.No " />
-                </div>
-                <div class="form-group vnumber">
-                  <label for="exampleInputNumber1">Chassis Number</label>
-                  <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Enter Chassis Number" />
-                </div>
-                <div className="form-group vnumber">
-                  <label for="exampleInputNumber1">Unit Serial Number</label>
-                  <input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Serial Number " />
-                </div>
-                <div className="form-group vnumber">
-                  <label for="exampleInputNumber1">Unit Model Number</label>
-                  <input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Model Number " />
-                </div>
-                <div className="form-group form-Vehicle vnumber">
-                  <label for="exampleInputEmail1">Vehicle Manufacturer</label>
-                  <input type="text" className="form-control Address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Vehicle Manufacturer " />
-                </div>
-                <div className="form-group vehicle-address">
-                  <label for="exampleInputEmail1">Address</label>
-                  <input type="text" className="form-control Vehicle-Address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address" />
-                </div>
-              </form>
-              <button type="button" className="cancel-button">
-                Close
-              </button>
-              <button type="button" className="save-button">
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
+        <NewVehicleRegistration newVehicleRegisterBlackBg={newVehicleRegisterBlackBg} Cancel={Cancel} />
       </div>
     </>
   )

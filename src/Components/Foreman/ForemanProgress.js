@@ -8,18 +8,18 @@ const ForemanData = [
   {
     id: 1,
     JobCard: "17/30866",
-    time: moment().format("LT"),
+    time: "-",
     Date: "07.12.2022",
-    Technician: "Rehan",
-    Status: "Assigned",
+    Technician: "-",
+    Status: "Work in Progress",
   },
   {
     id: 2,
     JobCard: "17/730847",
-    time: "10:50 AM",
+    time: moment().format("LT"),
     Date: "16.09.2022",
     Technician: "Faisal  ",
-    Status: "Assigned",
+    Status: "Work in Progress",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const ForemanData = [
     time: "1:00 PM",
     Date: "16.09.2022",
     Technician: "Hafizullah",
-    Status: "Assigned",
+    Status: "Work in Progress",
   },
   {
     id: 4,
@@ -35,11 +35,13 @@ const ForemanData = [
     time: "2:05 PM",
     Date: "17.09.2022",
     Technician: "Jameel",
-    Status: "Assigned",
+    Status: "Work in Progress ",
   },
 ]
 
-function ForemanAssigned() {
+var name = "Shabbir"
+
+function FormanProgress() {
   const navigate = useNavigate()
 
   return (
@@ -48,15 +50,15 @@ function ForemanAssigned() {
         <Header name={"Shabbir - Foreman"} />
         <div className="Table_foreman">
           <h3 Foreman_heading>
-            <b>Foreman Assigned Jobs</b>{" "}
+            <b>In Progress Jobs</b>{" "}
           </h3>
         </div>
         <div className="app_foreman">
-          <table className="table_for">
+          <table className="Foreman-progress-table">
             <thead>
               <tr className="Fore_Man_Data">
                 <th className="Assiged_for">Job Cards</th>
-                <th className="Assigned_jobs_foreman">Assigned Jobs Date & Time</th>
+                <th className="Progress-jobs">Work in Progress Jobs Date & Time</th>
                 <th>Technician</th>
                 <th>Status</th>
               </tr>
@@ -65,15 +67,14 @@ function ForemanAssigned() {
               return (
                 <>
                   <tbody key={index}>
-                    <tr className="Fore_Man_Data">
+                    <tr key={index} className="Fore_Man_Data">
                       <td>{val.JobCard}</td>
-
                       <td>
                         {val.Date} <td className="Stamp-time">{val.time}</td>
                       </td>
                       <td>{val.Technician}</td>
                       <td>
-                        {val.Status} <img src="./logo/assigned@3x.png" alt="logo" className="Assi_gned" onClick={() => navigate("/Foremanpage")} />
+                        {val.Status} <img src="./logo/workinprogress@3x.png" alt="logo" className="Assi_gned" onClick={() => navigate("/Foremanpage")} />
                       </td>
                     </tr>
                   </tbody>
@@ -87,4 +88,4 @@ function ForemanAssigned() {
   )
 }
 
-export default ForemanAssigned
+export default FormanProgress

@@ -1,0 +1,54 @@
+.Manager-Job {
+  font-size: 15px;
+  border-bottom: 1px solid #00a53e;
+  padding-bottom: 5px;
+  margin: 0 0px;
+  margin-top: -10px;
+}
+
+.Manager-Job h3 {
+  margin-top: 90px;
+  margin-left: 10px;
+  font-size: 18pt;
+  color: rgb(0, 0, 0);
+}
+
+.Manager-table {
+  margin-top: 20px;
+}
+
+.Manager-table .table-view {
+  width: 98%;
+  margin-left: 12px;
+  height: 40vh;
+  border-spacing: 1px 1px;
+  border-collapse: separate;
+  text-align: left;
+}
+
+.table-view thead tr {
+  font-size: 16pt;
+  letter-spacing: 0.01pt;
+}
+
+.table-view thead tr th {
+  text-align: left;
+}
+
+.table-view tbody tr td {
+  text-align: left;
+  font-size: 18px;
+}
+
+.progress-table {
+  margin-top: 1px;
+  width: 10%;
+  float: right;
+}
+
+.table-view .Table-time-stamp {
+  display: inline;
+  padding-left: 3rem;
+  /* float: right; */
+  padding-top: 0rem;
+}

@@ -7,7 +7,7 @@ function SupervisorButton() {
   return (
     <>
       <div className="Main-Jobs">
-        <Header name={"Anisur Rahman"} />
+        <Header name={"Anisur Rahman - Supervisor"} />
         <div className="Jobs">
           <h1 className="Supervisor-view">
             <strong> Supervisor View</strong>
